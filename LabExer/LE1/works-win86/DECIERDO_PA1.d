@@ -1,0 +1,1 @@
+ DECIERDO_PA1.d  DECIERDO_PA1.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/LabExer/LE1/works-win86/DECIERDO_PA1.c

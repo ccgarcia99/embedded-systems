@@ -1,0 +1,7 @@
+05/02/2024 - v1.0.0
+	Changes:
+	- Created works-win86 directiory(directory for MPLAB workspace files from windows).
+	- Changed "works" to "works-linux".
+	- Created isis-files directory for Proteus project files.
+	TODO:
+	- Figure out how to load MPLAB X hex files into Proteus projects.
