@@ -1,0 +1,1 @@
+ DECIERDO_LE2-3.d  DECIERDO_LE2-3.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/LabExer/LE2/LE2-3/works-win86/DECIERDO_LE2-3.c
