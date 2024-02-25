@@ -18,34 +18,34 @@ config CONFIG 0 2007 2007 1 2
 $BajanDecierdo_LE3.obj
 cinit CODE 0 15 15 6 2
 intentry CODE 0 4 4 E 2
-text3 CODE 0 1B 1B 43 2
-text2 CODE 0 8D 8D 20 2
-text1 CODE 0 AD AD 1D 2
-maintext CODE 0 5E 5E 2F 2
+text3 CODE 0 1B 1B 34 2
+text2 CODE 0 7A 7A 20 2
+text1 CODE 0 9A 9A 1D 2
+maintext CODE 0 4F 4F 2B 2
 cstackBANK0 BANK0 1 20 20 3 1
-cstackCOMMON COMMON 1 70 70 7 1
-bssBANK0 BANK0 1 23 23 1 1
-bitbssCOMMON COMMON 1 3B8 77 1 1
+cstackCOMMON COMMON 1 70 70 6 1
+bssCOMMON COMMON 1 77 77 1 1
+bitbssCOMMON COMMON 1 3B0 76 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK0 0024-006F 1
+BANK0 0023-006F 1
 BANK1 00A0-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
 CODE 0003-0003 2
-CODE 00CA-1FFF 2
+CODE 00B7-1FFF 2
 COMMON 0078-007D 1
 CONST 0003-0003 2
-CONST 00CA-1FFF 2
+CONST 00B7-1FFF 2
 EEDATA 2100-21FF 2
 ENTRY 0003-0003 2
-ENTRY 00CA-1FFF 2
+ENTRY 00B7-1FFF 2
 IDLOC 2000-2003 2
-RAM 0024-006F 1
+RAM 0023-006F 1
 RAM 00A0-00EF 1
 RAM 0110-016F 1
 RAM 0190-01EF 1
@@ -55,9 +55,9 @@ SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
 STRCODE 0003-0003 2
-STRCODE 00CA-1FFF 2
+STRCODE 00B7-1FFF 2
 STRING 0003-0003 2
-STRING 00CA-1FFF 2
+STRING 00B7-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -73,7 +73,7 @@ STRING 00CA-1FFF 2
 %LINETAB
 $BajanDecierdo_LE3.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":61 4 intentry CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":59 4 intentry CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":220 15 cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":223 15 cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":239 15 cinit CODE
@@ -81,59 +81,67 @@ $BajanDecierdo_LE3.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":248 17 cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":249 17 cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3.as":250 18 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":73 1B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":74 1C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":75 1D text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":76 22 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":77 24 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":78 26 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":79 28 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":80 2A text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":81 2C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":82 2E text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":83 30 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":84 37 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":85 3A text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":74 3B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":87 58 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":88 5C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":19 5E maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":20 5E maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":22 61 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":23 65 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":24 66 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":26 68 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":27 69 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":29 6A maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":31 6C maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":32 6D maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":34 6E maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":37 6F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":38 79 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":39 7B maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":40 81 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":41 85 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":43 86 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":44 87 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":46 88 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":36 8C maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":61 8D text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":62 8D text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":63 8F text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":64 90 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":65 9B text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":66 9C text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":67 9E text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":68 9F text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":69 A1 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":71 A2 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":51 AD text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":52 AD text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":53 BA text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":54 BE text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":56 BF text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":57 C1 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":52 C9 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":71 1B text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":72 1C text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":73 1D text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":74 1E text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":75 1F text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":76 20 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":77 21 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":78 22 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":79 23 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":80 24 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":81 25 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":82 26 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":83 27 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":84 28 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":85 29 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":86 2A text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":87 2B text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":88 2C text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":89 2D text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":90 2E text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":91 2F text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":93 30 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":72 31 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":94 4E text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":19 4F maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":20 4F maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":22 50 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":23 54 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":24 55 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":26 57 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":27 58 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":29 59 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":31 5B maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":32 5C maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":34 5D maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":38 5E maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":39 5F maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":40 65 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":41 68 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":43 69 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":37 6B maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":38 76 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":45 78 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":36 79 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":59 7A text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":60 7A text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":61 7C text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":62 7D text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":63 7E text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":64 87 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":65 8B text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":66 8C text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":67 8E text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":69 8F text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":50 9A text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":51 9A text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":52 A7 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":53 AB text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":54 AC text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":55 AE text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c":51 B6 text1 CODE
 $startup.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\startup.as":40 0 functab CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\startup.as":41 0 functab CODE
@@ -163,7 +171,7 @@ __S1 78 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _GIE 5F 0 ABS 0 - BajanDecierdo_LE3.obj
-_ISR 11A 0 CODE 0 text2 BajanDecierdo_LE3.obj
+_ISR F4 0 CODE 0 text2 BajanDecierdo_LE3.obj
 __Hintentry 24 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
 __CFG_BOREN$ON 0 0 ABS 0 - BajanDecierdo_LE3.obj
@@ -174,14 +182,14 @@ _T0IE 5D 0 ABS 0 - BajanDecierdo_LE3.obj
 _T0IF 5A 0 ABS 0 - BajanDecierdo_LE3.obj
 _INTE 5C 0 ABS 0 - BajanDecierdo_LE3.obj
 _INTF 59 0 ABS 0 - BajanDecierdo_LE3.obj
-_main BC 0 CODE 0 maintext BajanDecierdo_LE3.obj
+_main 9E 0 CODE 0 maintext BajanDecierdo_LE3.obj
 ___sp 0 0 STACK 2 stack startup.obj
 btemp 7E 0 ABS 0 - BajanDecierdo_LE3.obj
 ltemp 7E 0 ABS 0 - BajanDecierdo_LE3.obj
 ttemp 7E 0 ABS 0 - BajanDecierdo_LE3.obj
 wtemp 7E 0 ABS 0 - BajanDecierdo_LE3.obj
 start 24 0 CODE 0 init startup.obj
-_int_flag 3B8 -341 COMMON 1 bitbssCOMMON BajanDecierdo_LE3.obj
+_int_flag 3B0 -33A COMMON 1 bitbssCOMMON BajanDecierdo_LE3.obj
 _TRISB 86 0 ABS 0 - BajanDecierdo_LE3.obj
 _TRISC 87 0 ABS 0 - BajanDecierdo_LE3.obj
 reset_vec 0 0 CODE 0 reset_vec startup.obj
@@ -203,16 +211,16 @@ wtemp3 84 0 ABS 0 - BajanDecierdo_LE3.obj
 ttemp4 7F 0 ABS 0 - BajanDecierdo_LE3.obj
 wtemp4 86 0 ABS 0 - BajanDecierdo_LE3.obj
 wtemp5 88 0 ABS 0 - BajanDecierdo_LE3.obj
-__end_of_delay 194 0 CODE 0 text1 BajanDecierdo_LE3.obj
+__end_of_delay 16E 0 CODE 0 text1 BajanDecierdo_LE3.obj
 wtemp6 7F 0 ABS 0 - BajanDecierdo_LE3.obj
 interrupt_function 8 0 CODE 0 intentry BajanDecierdo_LE3.obj
 __Hconfig 4010 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_delay 15A 0 CODE 0 text1 BajanDecierdo_LE3.obj
+_delay 134 0 CODE 0 text1 BajanDecierdo_LE3.obj
 __size_of_keypress 0 0 ABS 0 - BajanDecierdo_LE3.obj
-__end_of_ISR 15A 0 CODE 0 text2 BajanDecierdo_LE3.obj
+__end_of_ISR 134 0 CODE 0 text2 BajanDecierdo_LE3.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
 _OPTION_REG 81 0 ABS 0 - BajanDecierdo_LE3.obj
@@ -235,17 +243,17 @@ _keypress 36 0 CODE 0 text3 BajanDecierdo_LE3.obj
 __size_of_delay 0 0 ABS 0 - BajanDecierdo_LE3.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
-keypress@kpad 71 0 COMMON 1 cstackCOMMON BajanDecierdo_LE3.obj
+keypress@kpad 70 0 COMMON 1 cstackCOMMON BajanDecierdo_LE3.obj
 stackhi 0 0 ABS 0 - startup.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_segCnt 23 0 BANK0 1 bssBANK0 BajanDecierdo_LE3.obj
+_segCnt 77 0 COMMON 1 bssCOMMON BajanDecierdo_LE3.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 BajanDecierdo_LE3.obj
 stacklo 0 0 ABS 0 - startup.obj
 saved_w 7E 0 ABS 0 - BajanDecierdo_LE3.obj
 __Hinit 24 0 CODE 0 init -
 __Linit 24 0 CODE 0 init -
-__end_of_main 11A 0 CODE 0 maintext BajanDecierdo_LE3.obj
+__end_of_main F4 0 CODE 0 maintext BajanDecierdo_LE3.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
 end_of_initialization 2E 0 CODE 0 cinit BajanDecierdo_LE3.obj
@@ -265,8 +273,8 @@ ___latbits 2 0 ABS 0 - BajanDecierdo_LE3.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
 __ptext0 0 0 CODE 0 text0 BajanDecierdo_LE3.obj
-__ptext1 15A 0 CODE 0 text1 BajanDecierdo_LE3.obj
-__ptext2 11A 0 CODE 0 text2 BajanDecierdo_LE3.obj
+__ptext1 134 0 CODE 0 text1 BajanDecierdo_LE3.obj
+__ptext2 F4 0 CODE 0 text2 BajanDecierdo_LE3.obj
 __ptext3 36 0 CODE 0 text3 BajanDecierdo_LE3.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -277,7 +285,7 @@ __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
 __Hspace_0 2008 0 ABS 0 - -
 __Lspace_0 0 0 ABS 0 - -
-__Hspace_1 3B9 0 ABS 0 - -
+__Hspace_1 3B1 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -286,10 +294,10 @@ __Lcinit 2A 0 CODE 0 cinit -
 __Hspace_3 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __size_of_main 0 0 ABS 0 - BajanDecierdo_LE3.obj
-__HbssBANK0 0 0 ABS 0 bssBANK0 -
-__LbssBANK0 0 0 ABS 0 bssBANK0 -
-__pbssBANK0 23 0 BANK0 1 bssBANK0 BajanDecierdo_LE3.obj
-__end_of_keypress BC 0 CODE 0 text3 BajanDecierdo_LE3.obj
+__end_of_keypress 9E 0 CODE 0 text3 BajanDecierdo_LE3.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON BajanDecierdo_LE3.obj
 __Hend_init 2A 0 CODE 0 end_init -
 __Lend_init 24 0 CODE 0 end_init -
 delay@overflows 20 0 BANK0 1 cstackBANK0 BajanDecierdo_LE3.obj
@@ -309,12 +317,12 @@ __CFG_CPD$OFF 0 0 ABS 0 - BajanDecierdo_LE3.obj
 start_initialization 2A 0 CODE 0 cinit BajanDecierdo_LE3.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__pmaintext BC 0 CODE 0 maintext BajanDecierdo_LE3.obj
+__pmaintext 9E 0 CODE 0 maintext BajanDecierdo_LE3.obj
 __initialization 2A 0 CODE 0 cinit BajanDecierdo_LE3.obj
 __HbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
 __LbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
 __CFG_CP$OFF 0 0 ABS 0 - BajanDecierdo_LE3.obj
-__pbitbssCOMMON 3B8 -341 COMMON 1 bitbssCOMMON BajanDecierdo_LE3.obj
+__pbitbssCOMMON 3B0 -33A COMMON 1 bitbssCOMMON BajanDecierdo_LE3.obj
 __CFG_LVP$OFF 0 0 ABS 0 - BajanDecierdo_LE3.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -342,7 +350,7 @@ __CFG_LVP$OFF 0 0 ABS 0 - BajanDecierdo_LE3.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 3 2
-intentry 0 4 8 C6 2
+intentry 0 4 8 B3 2
 config 0 2007 400E 1 2
 cstackCOMMON 1 70 70 8 1
-cstackBANK0 1 20 20 4 1
+cstackBANK0 1 20 20 3 1

@@ -1132,183 +1132,213 @@ Version 3.2 HI-TECH Software Intermediate Code
 "42
 }
 [e :U 101 ]
-"43
-}
 [; ;BajanDecierdo_LE3-3.c: 42: }
-[; ;BajanDecierdo_LE3-3.c: 43: } else {
+[; ;BajanDecierdo_LE3-3.c: 43: PORTC = segCnt;
+"43
+[e = _PORTC _segCnt ]
+"44
+}
+[; ;BajanDecierdo_LE3-3.c: 44: } else {
 [e $U 102  ]
 [e :U 100 ]
 {
-[; ;BajanDecierdo_LE3-3.c: 44: int_flag = 0;
-"44
-[e = _int_flag -> -> 0 `i `b ]
+[; ;BajanDecierdo_LE3-3.c: 45: int_flag = 0;
 "45
+[e = _int_flag -> -> 0 `i `b ]
+"46
 }
 [e :U 102 ]
-[; ;BajanDecierdo_LE3-3.c: 45: }
-[; ;BajanDecierdo_LE3-3.c: 46: PORTC = segCnt;
-"46
-[e = _PORTC _segCnt ]
 "47
 }
 [e :U 97 ]
 "36
 [e $U 98  ]
 [e :U 99 ]
+[; ;BajanDecierdo_LE3-3.c: 46: }
 [; ;BajanDecierdo_LE3-3.c: 47: }
 [; ;BajanDecierdo_LE3-3.c: 48: }
 "48
 [e :UE 96 ]
 }
-"51
+"50
 [v _delay `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;BajanDecierdo_LE3-3.c: 51: void delay(int overflows) {
+[; ;BajanDecierdo_LE3-3.c: 50: void delay(int overflows) {
 [e :U _delay ]
 [v _overflows `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;BajanDecierdo_LE3-3.c: 52: while(overflows > 0) {
-"52
+[; ;BajanDecierdo_LE3-3.c: 51: while(overflows > 0) {
+"51
 [e $U 104  ]
 [e :U 105 ]
 {
-[; ;BajanDecierdo_LE3-3.c: 53: TMR0 = 231;
-"53
+[; ;BajanDecierdo_LE3-3.c: 52: TMR0 = 231;
+"52
 [e = _TMR0 -> -> 231 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 54: T0IF = 0;
-"54
+[; ;BajanDecierdo_LE3-3.c: 53: T0IF = 0;
+"53
 [e = _T0IF -> -> 0 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 56: while(!T0IF);
-"56
+[; ;BajanDecierdo_LE3-3.c: 54: while(!T0IF);
+"54
 [e $U 107  ]
 [e :U 108 ]
 [e :U 107 ]
 [e $ ! _T0IF 108  ]
 [e :U 109 ]
-[; ;BajanDecierdo_LE3-3.c: 57: overflows--;
-"57
+[; ;BajanDecierdo_LE3-3.c: 55: overflows--;
+"55
 [e -- _overflows -> 1 `i ]
-"58
+"56
 }
 [e :U 104 ]
-"52
+"51
 [e $ > _overflows -> 0 `i 105  ]
 [e :U 106 ]
-[; ;BajanDecierdo_LE3-3.c: 58: }
-[; ;BajanDecierdo_LE3-3.c: 59: }
-"59
+[; ;BajanDecierdo_LE3-3.c: 56: }
+[; ;BajanDecierdo_LE3-3.c: 57: }
+"57
 [e :UE 103 ]
 }
 [v F1093 `(v ~T0 @X0 1 tf ]
-"61
+"59
 [v _ISR `IF1093 ~T0 @X0 1 e ]
 {
-[; ;BajanDecierdo_LE3-3.c: 61: void interrupt ISR() {
+[; ;BajanDecierdo_LE3-3.c: 59: void interrupt ISR() {
 [e :U _ISR ]
 [f ]
-[; ;BajanDecierdo_LE3-3.c: 62: if(INTF) {
-"62
+[; ;BajanDecierdo_LE3-3.c: 60: if(INTF) {
+"60
 [e $ ! _INTF 111  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 63: INTF = 0;
-"63
+[; ;BajanDecierdo_LE3-3.c: 61: INTF = 0;
+"61
 [e = _INTF -> -> 0 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 64: segCnt = keypress(PORTD);
-"64
-[e = _segCnt ( _keypress (1 _PORTD ]
-[; ;BajanDecierdo_LE3-3.c: 65: int_flag = 1;
-"65
+[; ;BajanDecierdo_LE3-3.c: 62: int_flag = 1;
+"62
 [e = _int_flag -> -> 1 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 66: PORTC = segCnt;
-"66
+[; ;BajanDecierdo_LE3-3.c: 63: segCnt = keypress(PORTD);
+"63
+[e = _segCnt ( _keypress (1 _PORTD ]
+[; ;BajanDecierdo_LE3-3.c: 64: PORTC = segCnt;
+"64
 [e = _PORTC _segCnt ]
-"67
+"65
 }
-[; ;BajanDecierdo_LE3-3.c: 67: }
+[; ;BajanDecierdo_LE3-3.c: 65: }
 [e $U 112  ]
-"68
+"66
 [e :U 111 ]
-[; ;BajanDecierdo_LE3-3.c: 68: else if(T0IF) {
+[; ;BajanDecierdo_LE3-3.c: 66: else if(T0IF) {
 [e $ ! _T0IF 113  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 69: T0IF = 0;
-"69
+[; ;BajanDecierdo_LE3-3.c: 67: T0IF = 0;
+"67
 [e = _T0IF -> -> 0 `i `b ]
-"70
+"68
 }
 [e :U 113 ]
-"71
+"69
 [e :U 112 ]
-[; ;BajanDecierdo_LE3-3.c: 70: }
-[; ;BajanDecierdo_LE3-3.c: 71: }
+[; ;BajanDecierdo_LE3-3.c: 68: }
+[; ;BajanDecierdo_LE3-3.c: 69: }
 [e :UE 110 ]
 }
-"73
+"71
 [v _keypress `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;BajanDecierdo_LE3-3.c: 73: unsigned char keypress(unsigned char kpad) {
+[; ;BajanDecierdo_LE3-3.c: 71: unsigned char keypress(unsigned char kpad) {
 [e :U _keypress ]
 [v _kpad `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;BajanDecierdo_LE3-3.c: 74: switch(kpad) {
-"74
+[; ;BajanDecierdo_LE3-3.c: 72: switch(kpad) {
+"72
 [e $U 116  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 75: case 0x00: segCnt = 0x01; break;
-"75
+[; ;BajanDecierdo_LE3-3.c: 73: case 0x00: return 0x01;
+"73
 [e :U 117 ]
-[e = _segCnt -> -> 1 `i `uc ]
+[e ) -> -> 1 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 74: break;
+"74
 [e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 76: case 0x01: segCnt = 0x02; break;
-"76
+[; ;BajanDecierdo_LE3-3.c: 75: case 0x01: return 0x02;
+"75
 [e :U 118 ]
-[e = _segCnt -> -> 2 `i `uc ]
+[e ) -> -> 2 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 76: break;
+"76
 [e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 77: case 0x02: segCnt = 0x03; break;
+[; ;BajanDecierdo_LE3-3.c: 77: case 0x02: return 0x03;
 "77
 [e :U 119 ]
-[e = _segCnt -> -> 3 `i `uc ]
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 78: case 0x04: segCnt = 0x04; break;
+[e ) -> -> 3 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 78: break;
 "78
-[e :U 120 ]
-[e = _segCnt -> -> 4 `i `uc ]
 [e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 79: case 0x05: segCnt = 0x05; break;
+[; ;BajanDecierdo_LE3-3.c: 79: case 0x04: return 0x04;
 "79
-[e :U 121 ]
-[e = _segCnt -> -> 5 `i `uc ]
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 80: case 0x06: segCnt = 0x06; break;
+[e :U 120 ]
+[e ) -> -> 4 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 80: break;
 "80
-[e :U 122 ]
-[e = _segCnt -> -> 6 `i `uc ]
 [e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 81: case 0x08: segCnt = 0x07; break;
+[; ;BajanDecierdo_LE3-3.c: 81: case 0x05: return 0x05;
 "81
-[e :U 123 ]
-[e = _segCnt -> -> 7 `i `uc ]
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 82: case 0x09: segCnt = 0x08; break;
+[e :U 121 ]
+[e ) -> -> 5 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 82: break;
 "82
-[e :U 124 ]
-[e = _segCnt -> -> 8 `i `uc ]
 [e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 83: case 0x0A: segCnt = 0x09; break;
+[; ;BajanDecierdo_LE3-3.c: 83: case 0x06: return 0x06;
 "83
-[e :U 125 ]
-[e = _segCnt -> -> 9 `i `uc ]
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 84: default: segCnt = 0x00; break;
+[e :U 122 ]
+[e ) -> -> 6 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 84: break;
 "84
-[e :U 126 ]
-[e = _segCnt -> -> 0 `i `uc ]
 [e $U 115  ]
+[; ;BajanDecierdo_LE3-3.c: 85: case 0x08: return 0x07;
 "85
-}
-[; ;BajanDecierdo_LE3-3.c: 85: }
+[e :U 123 ]
+[e ) -> -> 7 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 86: break;
+"86
 [e $U 115  ]
-"74
+[; ;BajanDecierdo_LE3-3.c: 87: case 0x09: return 0x08;
+"87
+[e :U 124 ]
+[e ) -> -> 8 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 88: break;
+"88
+[e $U 115  ]
+[; ;BajanDecierdo_LE3-3.c: 89: case 0x0A: return 0x09;
+"89
+[e :U 125 ]
+[e ) -> -> 9 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 90: break;
+"90
+[e $U 115  ]
+[; ;BajanDecierdo_LE3-3.c: 91: default: return 0x00;
+"91
+[e :U 126 ]
+[e ) -> -> 0 `i `uc ]
+[e $UE 114  ]
+[; ;BajanDecierdo_LE3-3.c: 92: break;
+"92
+[e $U 115  ]
+"93
+}
+[; ;BajanDecierdo_LE3-3.c: 93: }
+[e $U 115  ]
+"72
 [e :U 116 ]
 [e [\ _kpad , $ -> -> 0 `i `uc 117
  , $ -> -> 1 `i `uc 118
@@ -1320,16 +1350,9 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 9 `i `uc 124
  , $ -> -> 10 `i `uc 125
  126 ]
-"85
+"93
 [e :U 115 ]
-[; ;BajanDecierdo_LE3-3.c: 87: PORTC = segCnt;
-"87
-[e = _PORTC _segCnt ]
-[; ;BajanDecierdo_LE3-3.c: 88: return segCnt;
-"88
-[e ) _segCnt ]
-[e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 89: }
-"89
+[; ;BajanDecierdo_LE3-3.c: 94: }
+"94
 [e :UE 114 ]
 }

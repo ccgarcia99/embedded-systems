@@ -1,6 +1,6 @@
-_delay: CODE, 173 0 29
-_ISR: CODE, 141 0 32
-_main: CODE, 94 0 47
+_delay: CODE, 154 0 29
+_ISR: CODE, 122 0 32
+_main: CODE, 79 0 43
 __initialization: CODE, 21 0 2
-_keypress: CODE, 27 0 67
-Total: 177
+_keypress: CODE, 27 0 52
+Total: 158

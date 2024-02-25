@@ -34,25 +34,23 @@ void main() {
     GIE = 1; // Global interrupt enable
 
     while(1) {
-        delay(122); // Wait for a specified amount of overflows
+        delay(122);
         if(!int_flag) {
             segCnt++;
-			if(segCnt > 9){
-				segCnt = 0;
-			}
+            if(segCnt > 9){
+                segCnt = 0;
+            }
+            PORTC = segCnt; // Update the display with the new value
         } else {
             int_flag = 0; // Clear the interrupt flag after processing
         }
-        PORTC = segCnt; // Update the display with the new value
     }
 }
-
 
 void delay(int overflows) {
     while(overflows > 0) {
         TMR0 = 231;
         T0IF = 0;
-
         while(!T0IF);
         overflows--;
     }
@@ -61,8 +59,8 @@ void delay(int overflows) {
 void interrupt ISR() {
     if(INTF) {
         INTF = 0;
-        segCnt = keypress(PORTD);
         int_flag = 1;
+        segCnt = keypress(PORTD);
         PORTC = segCnt;
     }
     else if(T0IF) {
@@ -72,18 +70,25 @@ void interrupt ISR() {
 
 unsigned char keypress(unsigned char kpad) {
     switch(kpad) {
-        case 0x00: segCnt = 0x01; break;
-        case 0x01: segCnt = 0x02; break;
-        case 0x02: segCnt = 0x03; break;
-        case 0x04: segCnt = 0x04; break;
-        case 0x05: segCnt = 0x05; break;
-        case 0x06: segCnt = 0x06; break;
-        case 0x08: segCnt = 0x07; break;
-        case 0x09: segCnt = 0x08; break;
-        case 0x0A: segCnt = 0x09; break;
-        default: segCnt = 0x00; break;
+        case 0x00: return 0x01;
+		break;
+        case 0x01: return 0x02;
+		break;
+        case 0x02: return 0x03;
+		break;
+        case 0x04: return 0x04;
+		break;
+        case 0x05: return 0x05;
+		break;
+        case 0x06: return 0x06;
+		break;
+        case 0x08: return 0x07;
+		break;
+        case 0x09: return 0x08;
+		break;
+        case 0x0A: return 0x09;
+		break;
+        default: return 0x00;
+		break;
     }
-
-    PORTC = segCnt;
-    return segCnt;
 }
