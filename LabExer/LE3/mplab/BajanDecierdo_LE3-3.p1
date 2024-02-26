@@ -12,10 +12,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTF `Vb ~T0 @X0 0 e@89 ]
 "1217
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
-"2627
-[v _T0IE `Vb ~T0 @X0 0 e@93 ]
-"2629
-[v _T0IF `Vb ~T0 @X0 0 e@90 ]
+"2647
+[v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
+"2649
+[v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "2441
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
 "12 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c
@@ -24,10 +24,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "53
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"329
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "14 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c
 [v _keypress `(uc ~T0 @X0 0 ef1`uc ]
-"329 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f877a.h: 47: extern volatile unsigned char INDF @ 0x000;
@@ -1071,141 +1071,145 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _segCnt
 -> -> 0 `i `uc
 ]
-[; ;BajanDecierdo_LE3-3.c: 17: unsigned char segCnt = 0;
+[; ;BajanDecierdo_LE3-3.c: 17: unsigned char segCnt = 0x00;
 "19
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [; ;BajanDecierdo_LE3-3.c: 19: void main() {
 [e :U _main ]
 [f ]
-[; ;BajanDecierdo_LE3-3.c: 20: segCnt = 0;
+[; ;BajanDecierdo_LE3-3.c: 20: TRISB = 0x01;
 "20
-[e = _segCnt -> -> 0 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 22: TRISB = 0x01;
-"22
 [e = _TRISB -> -> 1 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 23: TRISC = 0x00;
-"23
+[; ;BajanDecierdo_LE3-3.c: 21: TRISC = 0x00;
+"21
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 24: TRISD = 0x0F;
-"24
+[; ;BajanDecierdo_LE3-3.c: 22: TRISD = 0x0F;
+"22
 [e = _TRISD -> -> 15 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 26: INTE = 1;
-"26
+[; ;BajanDecierdo_LE3-3.c: 24: INTE = 1;
+"24
 [e = _INTE -> -> 1 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 27: INTF = 0;
-"27
+[; ;BajanDecierdo_LE3-3.c: 25: INTF = 0;
+"25
 [e = _INTF -> -> 0 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 29: OPTION_REG = 0x04;
+[; ;BajanDecierdo_LE3-3.c: 27: OPTION_REG = 0x44;
+"27
+[e = _OPTION_REG -> -> 68 `i `uc ]
+[; ;BajanDecierdo_LE3-3.c: 29: TMR0IE = 1;
 "29
-[e = _OPTION_REG -> -> 4 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 31: T0IE = 1;
-"31
-[e = _T0IE -> -> 1 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 32: T0IF = 0;
+[e = _TMR0IE -> -> 1 `i `b ]
+[; ;BajanDecierdo_LE3-3.c: 30: TMR0IF = 0;
+"30
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;BajanDecierdo_LE3-3.c: 32: GIE = 1;
 "32
-[e = _T0IF -> -> 0 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 34: GIE = 1;
-"34
 [e = _GIE -> -> 1 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 36: while(1) {
-"36
+[; ;BajanDecierdo_LE3-3.c: 34: while(1) {
+"34
 [e :U 98 ]
 {
-[; ;BajanDecierdo_LE3-3.c: 37: delay(122);
-"37
-[e ( _delay (1 -> 122 `i ]
-[; ;BajanDecierdo_LE3-3.c: 38: if(!int_flag) {
-"38
+[; ;BajanDecierdo_LE3-3.c: 35: delay(98);
+"35
+[e ( _delay (1 -> 98 `i ]
+[; ;BajanDecierdo_LE3-3.c: 36: if(!int_flag){;
+"36
 [e $ ! ! _int_flag 100  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 39: segCnt++;
-"39
-[e ++ _segCnt -> -> 1 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 40: if(segCnt > 9){
-"40
+[; ;BajanDecierdo_LE3-3.c: 37: if(segCnt > 9){
+"37
 [e $ ! > -> _segCnt `i -> 9 `i 101  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 41: segCnt = 0;
-"41
+[; ;BajanDecierdo_LE3-3.c: 38: segCnt = 0;
+"38
 [e = _segCnt -> -> 0 `i `uc ]
-"42
+"39
 }
 [e :U 101 ]
-[; ;BajanDecierdo_LE3-3.c: 42: }
-[; ;BajanDecierdo_LE3-3.c: 43: PORTC = segCnt;
-"43
+[; ;BajanDecierdo_LE3-3.c: 39: }
+[; ;BajanDecierdo_LE3-3.c: 40: PORTC = segCnt;
+"40
 [e = _PORTC _segCnt ]
-"44
+[; ;BajanDecierdo_LE3-3.c: 41: segCnt++;
+"41
+[e ++ _segCnt -> -> 1 `i `uc ]
+"42
 }
-[; ;BajanDecierdo_LE3-3.c: 44: } else {
+[; ;BajanDecierdo_LE3-3.c: 42: }else{
 [e $U 102  ]
 [e :U 100 ]
 {
-[; ;BajanDecierdo_LE3-3.c: 45: int_flag = 0;
-"45
+[; ;BajanDecierdo_LE3-3.c: 43: int_flag = 0;
+"43
 [e = _int_flag -> -> 0 `i `b ]
-"46
+"44
 }
 [e :U 102 ]
-"47
+"45
 }
 [e :U 97 ]
-"36
+"34
 [e $U 98  ]
 [e :U 99 ]
+[; ;BajanDecierdo_LE3-3.c: 44: }
+[; ;BajanDecierdo_LE3-3.c: 45: }
 [; ;BajanDecierdo_LE3-3.c: 46: }
-[; ;BajanDecierdo_LE3-3.c: 47: }
-[; ;BajanDecierdo_LE3-3.c: 48: }
-"48
+"46
 [e :UE 96 ]
 }
-"50
+"48
 [v _delay `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;BajanDecierdo_LE3-3.c: 50: void delay(int overflows) {
+[; ;BajanDecierdo_LE3-3.c: 48: void delay(int overflows) {
 [e :U _delay ]
 [v _overflows `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;BajanDecierdo_LE3-3.c: 51: while(overflows > 0) {
-"51
+[; ;BajanDecierdo_LE3-3.c: 49: while(overflows > 0) {
+"49
 [e $U 104  ]
 [e :U 105 ]
 {
-[; ;BajanDecierdo_LE3-3.c: 52: TMR0 = 231;
-"52
+[; ;BajanDecierdo_LE3-3.c: 50: TMR0 = 231;
+"50
 [e = _TMR0 -> -> 231 `i `uc ]
-[; ;BajanDecierdo_LE3-3.c: 53: T0IF = 0;
-"53
-[e = _T0IF -> -> 0 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 54: while(!T0IF);
-"54
+[; ;BajanDecierdo_LE3-3.c: 51: TMR0IF = 0;
+"51
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;BajanDecierdo_LE3-3.c: 52: while(!TMR0IF);
+"52
 [e $U 107  ]
 [e :U 108 ]
 [e :U 107 ]
-[e $ ! _T0IF 108  ]
+[e $ ! _TMR0IF 108  ]
 [e :U 109 ]
-[; ;BajanDecierdo_LE3-3.c: 55: overflows--;
-"55
+[; ;BajanDecierdo_LE3-3.c: 53: overflows--;
+"53
 [e -- _overflows -> 1 `i ]
-"56
+"54
 }
 [e :U 104 ]
-"51
+"49
 [e $ > _overflows -> 0 `i 105  ]
 [e :U 106 ]
-[; ;BajanDecierdo_LE3-3.c: 56: }
-[; ;BajanDecierdo_LE3-3.c: 57: }
-"57
+[; ;BajanDecierdo_LE3-3.c: 54: }
+[; ;BajanDecierdo_LE3-3.c: 55: }
+"55
 [e :UE 103 ]
 }
 [v F1093 `(v ~T0 @X0 1 tf ]
-"59
+"57
 [v _ISR `IF1093 ~T0 @X0 1 e ]
 {
-[; ;BajanDecierdo_LE3-3.c: 59: void interrupt ISR() {
+[; ;BajanDecierdo_LE3-3.c: 57: void interrupt ISR() {
 [e :U _ISR ]
 [f ]
+"58
+[v _data `uc ~T0 @X0 1 a ]
+[; ;BajanDecierdo_LE3-3.c: 58: unsigned char data = PORTD & 0x0F;
+[e = _data -> & -> _PORTD `i -> 15 `i `uc ]
+[; ;BajanDecierdo_LE3-3.c: 59: GIE = 0;
+"59
+[e = _GIE -> -> 0 `i `b ]
 [; ;BajanDecierdo_LE3-3.c: 60: if(INTF) {
 "60
 [e $ ! _INTF 111  ]
@@ -1216,31 +1220,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;BajanDecierdo_LE3-3.c: 62: int_flag = 1;
 "62
 [e = _int_flag -> -> 1 `i `b ]
-[; ;BajanDecierdo_LE3-3.c: 63: segCnt = keypress(PORTD);
+[; ;BajanDecierdo_LE3-3.c: 63: segCnt = keypress(data);
 "63
-[e = _segCnt ( _keypress (1 _PORTD ]
-[; ;BajanDecierdo_LE3-3.c: 64: PORTC = segCnt;
+[e = _segCnt ( _keypress (1 _data ]
 "64
-[e = _PORTC _segCnt ]
-"65
 }
-[; ;BajanDecierdo_LE3-3.c: 65: }
+[; ;BajanDecierdo_LE3-3.c: 64: }
 [e $U 112  ]
-"66
+"65
 [e :U 111 ]
-[; ;BajanDecierdo_LE3-3.c: 66: else if(T0IF) {
-[e $ ! _T0IF 113  ]
+[; ;BajanDecierdo_LE3-3.c: 65: else if(TMR0IF) {
+[e $ ! _TMR0IF 113  ]
 {
-[; ;BajanDecierdo_LE3-3.c: 67: T0IF = 0;
+[; ;BajanDecierdo_LE3-3.c: 66: TMR0IF = 0;
+"66
+[e = _TMR0IF -> -> 0 `i `b ]
 "67
-[e = _T0IF -> -> 0 `i `b ]
-"68
 }
 [e :U 113 ]
-"69
+"68
 [e :U 112 ]
-[; ;BajanDecierdo_LE3-3.c: 68: }
+[; ;BajanDecierdo_LE3-3.c: 67: }
+[; ;BajanDecierdo_LE3-3.c: 68: GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
 [; ;BajanDecierdo_LE3-3.c: 69: }
+"69
 [e :UE 110 ]
 }
 "71
@@ -1259,84 +1263,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 117 ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 74: break;
+[; ;BajanDecierdo_LE3-3.c: 74: case 0x01: return 0x02;
 "74
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 75: case 0x01: return 0x02;
-"75
 [e :U 118 ]
 [e ) -> -> 2 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 76: break;
-"76
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 77: case 0x02: return 0x03;
-"77
+[; ;BajanDecierdo_LE3-3.c: 75: case 0x02: return 0x03;
+"75
 [e :U 119 ]
 [e ) -> -> 3 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 78: break;
-"78
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 79: case 0x04: return 0x04;
-"79
+[; ;BajanDecierdo_LE3-3.c: 76: case 0x04: return 0x04;
+"76
 [e :U 120 ]
 [e ) -> -> 4 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 80: break;
-"80
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 81: case 0x05: return 0x05;
-"81
+[; ;BajanDecierdo_LE3-3.c: 77: case 0x05: return 0x05;
+"77
 [e :U 121 ]
 [e ) -> -> 5 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 82: break;
-"82
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 83: case 0x06: return 0x06;
-"83
+[; ;BajanDecierdo_LE3-3.c: 78: case 0x06: return 0x06;
+"78
 [e :U 122 ]
 [e ) -> -> 6 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 84: break;
-"84
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 85: case 0x08: return 0x07;
-"85
+[; ;BajanDecierdo_LE3-3.c: 79: case 0x08: return 0x07;
+"79
 [e :U 123 ]
 [e ) -> -> 7 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 86: break;
-"86
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 87: case 0x09: return 0x08;
-"87
+[; ;BajanDecierdo_LE3-3.c: 80: case 0x09: return 0x08;
+"80
 [e :U 124 ]
 [e ) -> -> 8 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 88: break;
-"88
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 89: case 0x0A: return 0x09;
-"89
+[; ;BajanDecierdo_LE3-3.c: 81: case 0x0A: return 0x09;
+"81
 [e :U 125 ]
 [e ) -> -> 9 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 90: break;
-"90
-[e $U 115  ]
-[; ;BajanDecierdo_LE3-3.c: 91: default: return 0x00;
-"91
+[; ;BajanDecierdo_LE3-3.c: 82: default: return 0x00;
+"82
 [e :U 126 ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 114  ]
-[; ;BajanDecierdo_LE3-3.c: 92: break;
-"92
-[e $U 115  ]
-"93
+"83
 }
-[; ;BajanDecierdo_LE3-3.c: 93: }
+[; ;BajanDecierdo_LE3-3.c: 83: }
 [e $U 115  ]
 "72
 [e :U 116 ]
@@ -1350,9 +1324,9 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 9 `i `uc 124
  , $ -> -> 10 `i `uc 125
  126 ]
-"93
+"83
 [e :U 115 ]
-[; ;BajanDecierdo_LE3-3.c: 94: }
-"94
+[; ;BajanDecierdo_LE3-3.c: 84: }
+"84
 [e :UE 114 ]
 }

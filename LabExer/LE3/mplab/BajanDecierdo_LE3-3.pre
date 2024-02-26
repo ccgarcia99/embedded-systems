@@ -1441,11 +1441,9 @@ void interrupt ISR();
 unsigned char keypress(unsigned char kpad);
 
 bit int_flag = 0;
-unsigned char segCnt = 0;
+unsigned char segCnt = 0x00;
 
 void main() {
-segCnt = 0;
-
 TRISB = 0x01;
 TRISC = 0x00;
 TRISD = 0x0F;
@@ -1453,22 +1451,22 @@ TRISD = 0x0F;
 INTE = 1;
 INTF = 0;
 
-OPTION_REG = 0x04;
+OPTION_REG = 0x44;
 
-T0IE = 1;
-T0IF = 0;
+TMR0IE = 1;
+TMR0IF = 0;
 
 GIE = 1;
 
 while(1) {
-delay(122);
-if(!int_flag) {
-segCnt++;
+delay(98);
+if(!int_flag){;
 if(segCnt > 9){
 segCnt = 0;
 }
 PORTC = segCnt;
-} else {
+segCnt++;
+}else{
 int_flag = 0;
 }
 }
@@ -1477,45 +1475,37 @@ int_flag = 0;
 void delay(int overflows) {
 while(overflows > 0) {
 TMR0 = 231;
-T0IF = 0;
-while(!T0IF);
+TMR0IF = 0;
+while(!TMR0IF);
 overflows--;
 }
 }
 
 void interrupt ISR() {
+unsigned char data = PORTD & 0x0F;
+GIE = 0;
 if(INTF) {
 INTF = 0;
 int_flag = 1;
-segCnt = keypress(PORTD);
-PORTC = segCnt;
+segCnt = keypress(data);
 }
-else if(T0IF) {
-T0IF = 0;
+else if(TMR0IF) {
+TMR0IF = 0;
 }
+GIE = 1;
 }
 
 unsigned char keypress(unsigned char kpad) {
 switch(kpad) {
 case 0x00: return 0x01;
-break;
 case 0x01: return 0x02;
-break;
 case 0x02: return 0x03;
-break;
 case 0x04: return 0x04;
-break;
 case 0x05: return 0x05;
-break;
 case 0x06: return 0x06;
-break;
 case 0x08: return 0x07;
-break;
 case 0x09: return 0x08;
-break;
 case 0x0A: return 0x09;
-break;
 default: return 0x00;
-break;
 }
 }

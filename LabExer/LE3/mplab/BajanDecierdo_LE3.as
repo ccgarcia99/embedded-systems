@@ -165,8 +165,8 @@ EECON2 equ 018Dh ;#
 	FNCALL	intlevel1,_ISR
 	global	intlevel1
 	FNROOT	intlevel1
-	global	_segCnt
 	global	_int_flag
+	global	_segCnt
 	global	_PORTC
 _PORTC	set	0x7
 	global	_PORTD
@@ -179,10 +179,10 @@ _GIE	set	0x5F
 _INTE	set	0x5C
 	global	_INTF
 _INTF	set	0x59
-	global	_T0IE
-_T0IE	set	0x5D
-	global	_T0IF
-_T0IF	set	0x5A
+	global	_TMR0IE
+_TMR0IE	set	0x5D
+	global	_TMR0IF
+_TMR0IF	set	0x5A
 	global	_OPTION_REG
 _OPTION_REG	set	0x81
 	global	_TRISB
@@ -227,9 +227,9 @@ __pbitbssCOMMON:
 _int_flag:
        ds      1
 
-psect	bssCOMMON,class=COMMON,space=1,noexec
-global __pbssCOMMON
-__pbssCOMMON:
+psect	bssBANK0,class=BANK0,space=1,noexec
+global __pbssBANK0
+__pbssBANK0:
 _segCnt:
        ds      1
 
@@ -237,9 +237,9 @@ _segCnt:
 ; Clear objects allocated to BITCOMMON
 psect cinit,class=CODE,delta=2,merge=1
 	clrf	((__pbitbssCOMMON/8)+0)&07Fh
-; Clear objects allocated to COMMON
+; Clear objects allocated to BANK0
 psect cinit,class=CODE,delta=2,merge=1
-	clrf	((__pbssCOMMON)+0)&07Fh
+	clrf	((__pbssBANK0)+0)&07Fh
 psect cinit,class=CODE,delta=2,merge=1
 global end_of_initialization,__end_of__initialization
 
@@ -260,7 +260,9 @@ keypress@kpad:	; 1 bytes @ 0x0
 	ds	1
 ??_ISR:	; 0 bytes @ 0x1
 	ds	5
-??_delay:	; 0 bytes @ 0x6
+	global	ISR@data
+ISR@data:	; 1 bytes @ 0x6
+	ds	1
 psect	cstackBANK0,class=BANK0,space=1,noexec
 global __pcstackBANK0
 __pcstackBANK0:
@@ -268,6 +270,7 @@ __pcstackBANK0:
 	global	delay@overflows
 delay@overflows:	; 2 bytes @ 0x0
 	ds	2
+??_delay:	; 0 bytes @ 0x2
 ??_main:	; 0 bytes @ 0x2
 	ds	1
 ;!
@@ -281,8 +284,8 @@ delay@overflows:	; 2 bytes @ 0x0
 ;!
 ;!Auto Spaces:
 ;!    Space          Size  Autos    Used
-;!    COMMON           14      6       8
-;!    BANK0            80      3       3
+;!    COMMON           14      7       8
+;!    BANK0            80      3       4
 ;!    BANK1            80      0       0
 ;!    BANK3            96      0       0
 ;!    BANK2            96      0       0
@@ -344,22 +347,22 @@ delay@overflows:	; 2 bytes @ 0x0
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (0) _main                                                 1     1      0      78
+;! (0) _main                                                 1     1      0      99
 ;!                                              2 BANK0      1     1      0
 ;!                              _delay
 ;! ---------------------------------------------------------------------------------
-;! (1) _delay                                                2     0      2      78
+;! (1) _delay                                                2     0      2      99
 ;!                                              0 BANK0      2     0      2
 ;! ---------------------------------------------------------------------------------
 ;! Estimated maximum stack depth 1
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (2) _ISR                                                  5     5      0      15
-;!                                              1 COMMON     5     5      0
+;! (2) _ISR                                                  6     6      0      45
+;!                                              1 COMMON     6     6      0
 ;!                           _keypress
 ;! ---------------------------------------------------------------------------------
-;! (3) _keypress                                             1     1      0      15
+;! (3) _keypress                                             1     1      0      22
 ;!                                              0 COMMON     1     1      0
 ;! ---------------------------------------------------------------------------------
 ;! Estimated maximum stack depth 3
@@ -381,17 +384,17 @@ delay@overflows:	; 2 bytes @ 0x0
 ;!EEDATA             100      0       0       0        0.0%
 ;!NULL                 0      0       0       0        0.0%
 ;!CODE                 0      0       0       0        0.0%
-;!COMMON               E      6       8       1       57.1%
+;!COMMON               E      7       8       1       57.1%
 ;!BITSFR0              0      0       0       1        0.0%
 ;!SFR0                 0      0       0       1        0.0%
 ;!BITSFR1              0      0       0       2        0.0%
 ;!SFR1                 0      0       0       2        0.0%
 ;!STACK                0      0       0       2        0.0%
-;!ABS                  0      0       B       3        0.0%
+;!ABS                  0      0       C       3        0.0%
 ;!BITBANK0            50      0       0       4        0.0%
 ;!BITSFR3              0      0       0       4        0.0%
 ;!SFR3                 0      0       0       4        0.0%
-;!BANK0               50      3       3       5        3.8%
+;!BANK0               50      3       4       5        5.0%
 ;!BITSFR2              0      0       0       5        0.0%
 ;!SFR2                 0      0       0       5        0.0%
 ;!BITBANK1            50      0       0       6        0.0%
@@ -400,7 +403,7 @@ delay@overflows:	; 2 bytes @ 0x0
 ;!BANK3               60      0       0       9        0.0%
 ;!BITBANK2            60      0       0      10        0.0%
 ;!BANK2               60      0       0      11        0.0%
-;!DATA                 0      0       B      12        0.0%
+;!DATA                 0      0       C      12        0.0%
 
 	global	_main
 
@@ -449,140 +452,139 @@ _main:
 ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
 	line	20
 	
-l680:	
-;BajanDecierdo_LE3-3.c: 20: segCnt = 0;
-	clrf	(_segCnt)
-	line	22
-	
-l682:	
-;BajanDecierdo_LE3-3.c: 22: TRISB = 0x01;
+l734:	
+;BajanDecierdo_LE3-3.c: 20: TRISB = 0x01;
 	movlw	(01h)
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
 	movwf	(134)^080h	;volatile
-	line	23
+	line	21
 	
-l684:	
-;BajanDecierdo_LE3-3.c: 23: TRISC = 0x00;
+l736:	
+;BajanDecierdo_LE3-3.c: 21: TRISC = 0x00;
 	clrf	(135)^080h	;volatile
-	line	24
-;BajanDecierdo_LE3-3.c: 24: TRISD = 0x0F;
+	line	22
+	
+l738:	
+;BajanDecierdo_LE3-3.c: 22: TRISD = 0x0F;
 	movlw	(0Fh)
 	movwf	(136)^080h	;volatile
-	line	26
+	line	24
 	
-l686:	
-;BajanDecierdo_LE3-3.c: 26: INTE = 1;
+l740:	
+;BajanDecierdo_LE3-3.c: 24: INTE = 1;
 	bsf	(92/8),(92)&7	;volatile
+	line	25
+	
+l742:	
+;BajanDecierdo_LE3-3.c: 25: INTF = 0;
+	bcf	(89/8),(89)&7	;volatile
 	line	27
 	
-l688:	
-;BajanDecierdo_LE3-3.c: 27: INTF = 0;
-	bcf	(89/8),(89)&7	;volatile
-	line	29
-;BajanDecierdo_LE3-3.c: 29: OPTION_REG = 0x04;
-	movlw	(04h)
+l744:	
+;BajanDecierdo_LE3-3.c: 27: OPTION_REG = 0x44;
+	movlw	(044h)
 	movwf	(129)^080h	;volatile
-	line	31
+	line	29
 	
-l690:	
-;BajanDecierdo_LE3-3.c: 31: T0IE = 1;
+l746:	
+;BajanDecierdo_LE3-3.c: 29: TMR0IE = 1;
 	bsf	(93/8),(93)&7	;volatile
+	line	30
+	
+l748:	
+;BajanDecierdo_LE3-3.c: 30: TMR0IF = 0;
+	bcf	(90/8),(90)&7	;volatile
 	line	32
 	
-l692:	
-;BajanDecierdo_LE3-3.c: 32: T0IF = 0;
-	bcf	(90/8),(90)&7	;volatile
-	line	34
-	
-l694:	
-;BajanDecierdo_LE3-3.c: 34: GIE = 1;
+l750:	
+;BajanDecierdo_LE3-3.c: 32: GIE = 1;
 	bsf	(95/8),(95)&7	;volatile
-	goto	l696
-	line	36
-;BajanDecierdo_LE3-3.c: 36: while(1) {
+	goto	l752
+	line	34
+;BajanDecierdo_LE3-3.c: 34: while(1) {
 	
 l35:	
-	line	37
+	line	35
 	
-l696:	
-;BajanDecierdo_LE3-3.c: 37: delay(122);
-	movlw	low(07Ah)
+l752:	
+;BajanDecierdo_LE3-3.c: 35: delay(98);
+	movlw	low(062h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(delay@overflows)
-	movlw	high(07Ah)
+	movlw	high(062h)
 	movwf	((delay@overflows))+1
 	fcall	_delay
-	line	38
+	line	36
 	
-l698:	
-;BajanDecierdo_LE3-3.c: 38: if(!int_flag) {
+l754:	
+;BajanDecierdo_LE3-3.c: 36: if(!int_flag){;
 	btfsc	(_int_flag/8),(_int_flag)&7
-	goto	u111
-	goto	u110
-u111:
+	goto	u151
+	goto	u150
+u151:
 	goto	l36
-u110:
-	line	39
+u150:
+	line	37
 	
-l700:	
-;BajanDecierdo_LE3-3.c: 39: segCnt++;
-	movlw	(01h)
+l756:	
+;BajanDecierdo_LE3-3.c: 37: if(segCnt > 9){
+	movlw	(0Ah)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
+	subwf	(_segCnt),w
+	skipc
+	goto	u161
+	goto	u160
+u161:
+	goto	l760
+u160:
+	line	38
+	
+l758:	
+;BajanDecierdo_LE3-3.c: 38: segCnt = 0;
+	clrf	(_segCnt)
+	goto	l760
+	line	39
+	
+l37:	
+	line	40
+	
+l760:	
+;BajanDecierdo_LE3-3.c: 39: }
+;BajanDecierdo_LE3-3.c: 40: PORTC = segCnt;
+	movf	(_segCnt),w
+	movwf	(7)	;volatile
+	line	41
+	
+l762:	
+;BajanDecierdo_LE3-3.c: 41: segCnt++;
+	movlw	(01h)
 	movwf	(??_main+0)+0
 	movf	(??_main+0)+0,w
 	addwf	(_segCnt),f
-	line	40
-	
-l702:	
-;BajanDecierdo_LE3-3.c: 40: if(segCnt > 9){
-	movlw	(0Ah)
-	subwf	(_segCnt),w
-	skipc
-	goto	u121
-	goto	u120
-u121:
-	goto	l706
-u120:
-	line	41
-	
-l704:	
-;BajanDecierdo_LE3-3.c: 41: segCnt = 0;
-	clrf	(_segCnt)
-	goto	l706
 	line	42
-	
-l37:	
-	line	43
-	
-l706:	
-;BajanDecierdo_LE3-3.c: 42: }
-;BajanDecierdo_LE3-3.c: 43: PORTC = segCnt;
-	movf	(_segCnt),w
-	movwf	(7)	;volatile
-	line	44
-;BajanDecierdo_LE3-3.c: 44: } else {
-	goto	l696
+;BajanDecierdo_LE3-3.c: 42: }else{
+	goto	l752
 	
 l36:	
-	line	45
-;BajanDecierdo_LE3-3.c: 45: int_flag = 0;
+	line	43
+;BajanDecierdo_LE3-3.c: 43: int_flag = 0;
 	bcf	(_int_flag/8),(_int_flag)&7
-	goto	l696
-	line	46
+	goto	l752
+	line	44
 	
 l38:	
-	goto	l696
-	line	47
+	goto	l752
+	line	45
 	
 l39:	
-	line	36
-	goto	l696
+	line	34
+	goto	l752
 	
 l40:	
-	line	48
+	line	46
 	
 l41:	
 	global	start
@@ -595,7 +597,7 @@ GLOBAL	__end_of_main
 
 ;; *************** function _delay *****************
 ;; Defined at:
-;;		line 50 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
+;;		line 48 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
 ;; Parameters:    Size  Location     Type
 ;;  overflows       2    0[BANK0 ] int 
 ;; Auto vars:     Size  Location     Type
@@ -623,12 +625,12 @@ GLOBAL	__end_of_main
 ;; This function uses a non-reentrant model
 ;;
 psect	text1,local,class=CODE,delta=2,merge=1
-	line	50
+	line	48
 global __ptext1
 __ptext1:	;psect for function _delay
 psect	text1
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
-	line	50
+	line	48
 	global	__size_of_delay
 	__size_of_delay	equ	__end_of_delay-_delay
 	
@@ -636,46 +638,46 @@ _delay:
 ;incstack = 0
 	opt	stack 5
 ; Regs used in _delay: [wreg+btemp+1]
-	line	51
+	line	49
 	
-l670:	
-;BajanDecierdo_LE3-3.c: 51: while(overflows > 0) {
-	goto	l678
+l724:	
+;BajanDecierdo_LE3-3.c: 49: while(overflows > 0) {
+	goto	l732
 	
 l45:	
-	line	52
+	line	50
 	
-l672:	
-;BajanDecierdo_LE3-3.c: 52: TMR0 = 231;
+l726:	
+;BajanDecierdo_LE3-3.c: 50: TMR0 = 231;
 	movlw	(0E7h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(1)	;volatile
-	line	53
+	line	51
 	
-l674:	
-;BajanDecierdo_LE3-3.c: 53: T0IF = 0;
+l728:	
+;BajanDecierdo_LE3-3.c: 51: TMR0IF = 0;
 	bcf	(90/8),(90)&7	;volatile
-	line	54
-;BajanDecierdo_LE3-3.c: 54: while(!T0IF);
+	line	52
+;BajanDecierdo_LE3-3.c: 52: while(!TMR0IF);
 	goto	l46
 	
 l47:	
 	
 l46:	
 	btfss	(90/8),(90)&7	;volatile
-	goto	u91
-	goto	u90
-u91:
+	goto	u131
+	goto	u130
+u131:
 	goto	l46
-u90:
-	goto	l676
+u130:
+	goto	l730
 	
 l48:	
-	line	55
+	line	53
 	
-l676:	
-;BajanDecierdo_LE3-3.c: 55: overflows--;
+l730:	
+;BajanDecierdo_LE3-3.c: 53: overflows--;
 	movlw	low(-1)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -684,13 +686,13 @@ l676:
 	incf	(delay@overflows+1),f
 	movlw	high(-1)
 	addwf	(delay@overflows+1),f
-	goto	l678
-	line	56
+	goto	l732
+	line	54
 	
 l44:	
-	line	51
+	line	49
 	
-l678:	
+l732:	
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movf	(delay@overflows+1),w
@@ -699,21 +701,21 @@ l678:
 	movlw	(high(01h))^80h
 	subwf	btemp+1,w
 	skipz
-	goto	u105
+	goto	u145
 	movlw	low(01h)
 	subwf	(delay@overflows),w
-u105:
+u145:
 
 	skipnc
-	goto	u101
-	goto	u100
-u101:
-	goto	l672
-u100:
+	goto	u141
+	goto	u140
+u141:
+	goto	l726
+u140:
 	goto	l50
 	
 l49:	
-	line	57
+	line	55
 	
 l50:	
 	return
@@ -725,11 +727,11 @@ GLOBAL	__end_of_delay
 
 ;; *************** function _ISR *****************
 ;; Defined at:
-;;		line 59 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
+;;		line 57 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  data            1    6[COMMON] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -740,10 +742,10 @@ GLOBAL	__end_of_delay
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         0       0       0       0       0
+;;      Locals:         1       0       0       0       0
 ;;      Temps:          5       0       0       0       0
-;;      Totals:         5       0       0       0       0
-;;Total ram usage:        5 bytes
+;;      Totals:         6       0       0       0       0
+;;Total ram usage:        6 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    1
 ;; This function calls:
@@ -753,12 +755,12 @@ GLOBAL	__end_of_delay
 ;; This function uses a non-reentrant model
 ;;
 psect	text2,local,class=CODE,delta=2,merge=1
-	line	59
+	line	57
 global __ptext2
 __ptext2:	;psect for function _ISR
 psect	text2
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE3\mplab\BajanDecierdo_LE3-3.c"
-	line	59
+	line	57
 	global	__size_of_ISR
 	__size_of_ISR	equ	__end_of_ISR-_ISR
 	
@@ -786,19 +788,33 @@ interrupt_function:
 	movwf	(??_ISR+4)
 	ljmp	_ISR
 psect	text2
+	line	58
+	
+i1l712:	
+;BajanDecierdo_LE3-3.c: 58: unsigned char data = PORTD & 0x0F;
+	movf	(8),w	;volatile
+	andlw	0Fh
+	movwf	(??_ISR+0)+0
+	movf	(??_ISR+0)+0,w
+	movwf	(ISR@data)
+	line	59
+	
+i1l714:	
+;BajanDecierdo_LE3-3.c: 59: GIE = 0;
+	bcf	(95/8),(95)&7	;volatile
 	line	60
 	
-i1l632:	
+i1l716:	
 ;BajanDecierdo_LE3-3.c: 60: if(INTF) {
 	btfss	(89/8),(89)&7	;volatile
-	goto	u5_21
-	goto	u5_20
-u5_21:
+	goto	u11_21
+	goto	u11_20
+u11_21:
 	goto	i1l53
-u5_20:
+u11_20:
 	line	61
 	
-i1l634:	
+i1l718:	
 ;BajanDecierdo_LE3-3.c: 61: INTF = 0;
 	bcf	(89/8),(89)&7	;volatile
 	line	62
@@ -806,47 +822,44 @@ i1l634:
 	bsf	(_int_flag/8),(_int_flag)&7
 	line	63
 	
-i1l636:	
-;BajanDecierdo_LE3-3.c: 63: segCnt = keypress(PORTD);
-	movf	(8),w	;volatile
+i1l720:	
+;BajanDecierdo_LE3-3.c: 63: segCnt = keypress(data);
+	movf	(ISR@data),w
 	fcall	_keypress
 	movwf	(??_ISR+0)+0
 	movf	(??_ISR+0)+0,w
-	movwf	(_segCnt)
-	line	64
-	
-i1l638:	
-;BajanDecierdo_LE3-3.c: 64: PORTC = segCnt;
-	movf	(_segCnt),w
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movwf	(7)	;volatile
+	movwf	(_segCnt)
+	line	64
+;BajanDecierdo_LE3-3.c: 64: }
+	goto	i1l54
 	line	65
-;BajanDecierdo_LE3-3.c: 65: }
-	goto	i1l56
-	line	66
 	
 i1l53:	
-;BajanDecierdo_LE3-3.c: 66: else if(T0IF) {
+;BajanDecierdo_LE3-3.c: 65: else if(TMR0IF) {
 	btfss	(90/8),(90)&7	;volatile
-	goto	u6_21
-	goto	u6_20
-u6_21:
-	goto	i1l56
-u6_20:
+	goto	u12_21
+	goto	u12_20
+u12_21:
+	goto	i1l54
+u12_20:
+	line	66
+	
+i1l722:	
+;BajanDecierdo_LE3-3.c: 66: TMR0IF = 0;
+	bcf	(90/8),(90)&7	;volatile
+	goto	i1l54
 	line	67
 	
-i1l640:	
-;BajanDecierdo_LE3-3.c: 67: T0IF = 0;
-	bcf	(90/8),(90)&7	;volatile
-	goto	i1l56
+i1l55:	
 	line	68
 	
-i1l55:	
-	goto	i1l56
-	line	69
-	
 i1l54:	
+;BajanDecierdo_LE3-3.c: 67: }
+;BajanDecierdo_LE3-3.c: 68: GIE = 1;
+	bsf	(95/8),(95)&7	;volatile
+	line	69
 	
 i1l56:	
 	movf	(??_ISR+4),w
@@ -912,179 +925,129 @@ _keypress:
 	movwf	(keypress@kpad)
 	line	72
 	
-i1l538:	
+i1l636:	
 ;BajanDecierdo_LE3-3.c: 72: switch(kpad) {
-	goto	i1l602
+	goto	i1l680
 	line	73
 ;BajanDecierdo_LE3-3.c: 73: case 0x00: return 0x01;
 	
 i1l60:	
 	
-i1l540:	
+i1l638:	
 	movlw	(01h)
 	goto	i1l61
 	
-i1l542:	
+i1l640:	
 	goto	i1l61
 	line	74
+;BajanDecierdo_LE3-3.c: 74: case 0x01: return 0x02;
 	
-i1l544:	
-;BajanDecierdo_LE3-3.c: 74: break;
-	goto	i1l61
-	line	75
-;BajanDecierdo_LE3-3.c: 75: case 0x01: return 0x02;
+i1l62:	
 	
-i1l63:	
-	
-i1l546:	
+i1l642:	
 	movlw	(02h)
 	goto	i1l61
 	
-i1l548:	
+i1l644:	
 	goto	i1l61
-	line	76
+	line	75
+;BajanDecierdo_LE3-3.c: 75: case 0x02: return 0x03;
 	
-i1l550:	
-;BajanDecierdo_LE3-3.c: 76: break;
-	goto	i1l61
-	line	77
-;BajanDecierdo_LE3-3.c: 77: case 0x02: return 0x03;
+i1l63:	
 	
-i1l64:	
-	
-i1l552:	
+i1l646:	
 	movlw	(03h)
 	goto	i1l61
 	
-i1l554:	
+i1l648:	
 	goto	i1l61
-	line	78
+	line	76
+;BajanDecierdo_LE3-3.c: 76: case 0x04: return 0x04;
 	
-i1l556:	
-;BajanDecierdo_LE3-3.c: 78: break;
-	goto	i1l61
-	line	79
-;BajanDecierdo_LE3-3.c: 79: case 0x04: return 0x04;
+i1l64:	
 	
-i1l65:	
-	
-i1l558:	
+i1l650:	
 	movlw	(04h)
 	goto	i1l61
 	
-i1l560:	
+i1l652:	
 	goto	i1l61
-	line	80
+	line	77
+;BajanDecierdo_LE3-3.c: 77: case 0x05: return 0x05;
 	
-i1l562:	
-;BajanDecierdo_LE3-3.c: 80: break;
-	goto	i1l61
-	line	81
-;BajanDecierdo_LE3-3.c: 81: case 0x05: return 0x05;
+i1l65:	
 	
-i1l66:	
-	
-i1l564:	
+i1l654:	
 	movlw	(05h)
 	goto	i1l61
 	
-i1l566:	
+i1l656:	
 	goto	i1l61
-	line	82
+	line	78
+;BajanDecierdo_LE3-3.c: 78: case 0x06: return 0x06;
 	
-i1l568:	
-;BajanDecierdo_LE3-3.c: 82: break;
-	goto	i1l61
-	line	83
-;BajanDecierdo_LE3-3.c: 83: case 0x06: return 0x06;
+i1l66:	
 	
-i1l67:	
-	
-i1l570:	
+i1l658:	
 	movlw	(06h)
 	goto	i1l61
 	
-i1l572:	
+i1l660:	
 	goto	i1l61
-	line	84
+	line	79
+;BajanDecierdo_LE3-3.c: 79: case 0x08: return 0x07;
 	
-i1l574:	
-;BajanDecierdo_LE3-3.c: 84: break;
-	goto	i1l61
-	line	85
-;BajanDecierdo_LE3-3.c: 85: case 0x08: return 0x07;
+i1l67:	
 	
-i1l68:	
-	
-i1l576:	
+i1l662:	
 	movlw	(07h)
 	goto	i1l61
 	
-i1l578:	
+i1l664:	
 	goto	i1l61
-	line	86
+	line	80
+;BajanDecierdo_LE3-3.c: 80: case 0x09: return 0x08;
 	
-i1l580:	
-;BajanDecierdo_LE3-3.c: 86: break;
-	goto	i1l61
-	line	87
-;BajanDecierdo_LE3-3.c: 87: case 0x09: return 0x08;
+i1l68:	
 	
-i1l69:	
-	
-i1l582:	
+i1l666:	
 	movlw	(08h)
 	goto	i1l61
 	
-i1l584:	
+i1l668:	
 	goto	i1l61
-	line	88
+	line	81
+;BajanDecierdo_LE3-3.c: 81: case 0x0A: return 0x09;
 	
-i1l586:	
-;BajanDecierdo_LE3-3.c: 88: break;
-	goto	i1l61
-	line	89
-;BajanDecierdo_LE3-3.c: 89: case 0x0A: return 0x09;
+i1l69:	
 	
-i1l70:	
-	
-i1l588:	
+i1l670:	
 	movlw	(09h)
 	goto	i1l61
 	
-i1l590:	
+i1l672:	
 	goto	i1l61
-	line	90
+	line	82
+;BajanDecierdo_LE3-3.c: 82: default: return 0x00;
 	
-i1l592:	
-;BajanDecierdo_LE3-3.c: 90: break;
-	goto	i1l61
-	line	91
-;BajanDecierdo_LE3-3.c: 91: default: return 0x00;
+i1l70:	
 	
-i1l71:	
-	
-i1l594:	
+i1l674:	
 	movlw	(0)
 	goto	i1l61
 	
-i1l596:	
+i1l676:	
 	goto	i1l61
-	line	92
+	line	83
 	
-i1l598:	
-;BajanDecierdo_LE3-3.c: 92: break;
-	goto	i1l61
-	line	93
-	
-i1l600:	
-;BajanDecierdo_LE3-3.c: 93: }
+i1l678:	
+;BajanDecierdo_LE3-3.c: 83: }
 	goto	i1l61
 	line	72
 	
 i1l59:	
 	
-i1l602:	
+i1l680:	
 	movf	(keypress@kpad),w
 	; Switch size 1, requested type "space"
 ; Number of cases is 9, Range of values is 0 to 10
@@ -1098,38 +1061,38 @@ i1l602:
 	opt asmopt_off
 	xorlw	0^0	; case 0
 	skipnz
-	goto	i1l540
+	goto	i1l638
 	xorlw	1^0	; case 1
 	skipnz
-	goto	i1l546
+	goto	i1l642
 	xorlw	2^1	; case 2
 	skipnz
-	goto	i1l552
+	goto	i1l646
 	xorlw	4^2	; case 4
 	skipnz
-	goto	i1l558
+	goto	i1l650
 	xorlw	5^4	; case 5
 	skipnz
-	goto	i1l564
+	goto	i1l654
 	xorlw	6^5	; case 6
 	skipnz
-	goto	i1l570
+	goto	i1l658
 	xorlw	8^6	; case 8
 	skipnz
-	goto	i1l576
+	goto	i1l662
 	xorlw	9^8	; case 9
 	skipnz
-	goto	i1l582
+	goto	i1l666
 	xorlw	10^9	; case 10
 	skipnz
-	goto	i1l588
-	goto	i1l594
+	goto	i1l670
+	goto	i1l674
 	opt asmopt_on
 
-	line	93
+	line	83
 	
-i1l62:	
-	line	94
+i1l71:	
+	line	84
 	
 i1l61:	
 	return
