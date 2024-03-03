@@ -166,6 +166,8 @@ EECON2 equ 018Dh ;#
 	FNCALL	intlevel1,_ISR
 	global	intlevel1
 	FNROOT	intlevel1
+	global	_PORTB
+_PORTB	set	0x6
 	global	_PORTC
 _PORTC	set	0x7
 	global	_TMR0
@@ -424,7 +426,7 @@ _main:
 ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
 	line	20
 	
-l537:	
+l539:	
 ;main.c: 20: TRISB = 0x01;
 	movlw	(01h)
 	bsf	status, 5	;RP0=1, select bank1
@@ -432,12 +434,12 @@ l537:
 	movwf	(134)^080h	;volatile
 	line	21
 	
-l539:	
+l541:	
 ;main.c: 21: TRISC = 0x00;
 	clrf	(135)^080h	;volatile
 	line	24
 	
-l541:	
+l543:	
 ;main.c: 24: OPTION_REG = 0x44;
 	movlw	(044h)
 	movwf	(129)^080h	;volatile
@@ -448,36 +450,36 @@ l541:
 	clrf	(1)	;volatile
 	line	28
 	
-l543:	
+l545:	
 ;main.c: 28: INTE = 1;
 	bsf	(92/8),(92)&7	;volatile
 	line	29
 	
-l545:	
+l547:	
 ;main.c: 29: INTF = 0;
 	bcf	(89/8),(89)&7	;volatile
 	line	30
 	
-l547:	
+l549:	
 ;main.c: 30: GIE = 1;
 	bsf	(95/8),(95)&7	;volatile
-	goto	l549
+	goto	l551
 	line	32
 ;main.c: 32: while(1)
 	
-l25:	
+l27:	
 	line	34
 	
-l549:	
+l551:	
 ;main.c: 33: {
-;main.c: 34: PORTC = 0x07;
-	movlw	(07h)
+;main.c: 34: PORTB = 0xE0;
+	movlw	(0E0h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movwf	(7)	;volatile
+	movwf	(6)	;volatile
 	line	35
 	
-l551:	
+l553:	
 ;main.c: 35: delay(122);
 	movlw	low(07Ah)
 	movwf	(delay@overflows)
@@ -486,31 +488,31 @@ l551:
 	fcall	_delay
 	line	37
 	
-l553:	
-;main.c: 37: PORTC = 0x00;
+l555:	
+;main.c: 37: PORTB = 0x00;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	clrf	(7)	;volatile
+	clrf	(6)	;volatile
 	line	38
 	
-l555:	
+l557:	
 ;main.c: 38: delay(122);
 	movlw	low(07Ah)
 	movwf	(delay@overflows)
 	movlw	high(07Ah)
 	movwf	((delay@overflows))+1
 	fcall	_delay
-	goto	l549
+	goto	l551
 	line	39
 	
-l26:	
+l28:	
 	line	32
-	goto	l549
+	goto	l551
 	
-l27:	
+l29:	
 	line	40
 	
-l28:	
+l30:	
 	global	start
 	ljmp	start
 	opt stack 0
@@ -564,14 +566,14 @@ _delay:
 ; Regs used in _delay: [wreg+status,2+btemp+1]
 	line	44
 	
-l511:	
+l513:	
 ;main.c: 44: while(overflows > 0)
-	goto	l519
+	goto	l521
 	
-l32:	
+l34:	
 	line	46
 	
-l513:	
+l515:	
 ;main.c: 45: {
 ;main.c: 46: TMR0 = 0;
 	bcf	status, 5	;RP0=0, select bank0
@@ -579,28 +581,28 @@ l513:
 	clrf	(1)	;volatile
 	line	47
 	
-l515:	
+l517:	
 ;main.c: 47: TMR0IF = 0;
 	bcf	(90/8),(90)&7	;volatile
 	line	49
 ;main.c: 49: while(!TMR0IF);
-	goto	l33
+	goto	l35
 	
-l34:	
+l36:	
 	
-l33:	
+l35:	
 	btfss	(90/8),(90)&7	;volatile
 	goto	u31
 	goto	u30
 u31:
-	goto	l33
+	goto	l35
 u30:
-	goto	l517
+	goto	l519
 	
-l35:	
+l37:	
 	line	50
 	
-l517:	
+l519:	
 ;main.c: 50: overflows--;
 	movlw	low(-1)
 	addwf	(delay@overflows),f
@@ -608,13 +610,13 @@ l517:
 	incf	(delay@overflows+1),f
 	movlw	high(-1)
 	addwf	(delay@overflows+1),f
-	goto	l519
+	goto	l521
 	line	51
 	
-l31:	
+l33:	
 	line	44
 	
-l519:	
+l521:	
 	movf	(delay@overflows+1),w
 	xorlw	80h
 	movwf	btemp+1
@@ -630,14 +632,14 @@ u45:
 	goto	u41
 	goto	u40
 u41:
-	goto	l513
+	goto	l515
 u40:
-	goto	l37
+	goto	l39
 	
-l36:	
+l38:	
 	line	52
 	
-l37:	
+l39:	
 	return
 	opt stack 0
 GLOBAL	__end_of_delay
@@ -710,7 +712,7 @@ interrupt_function:
 psect	text2
 	line	56
 	
-i1l557:	
+i1l559:	
 ;main.c: 56: GIE = 0;
 	bcf	(95/8),(95)&7	;volatile
 	line	57
@@ -719,32 +721,32 @@ i1l557:
 	goto	u5_21
 	goto	u5_20
 u5_21:
-	goto	i1l563
+	goto	i1l565
 u5_20:
 	line	59
 	
-i1l559:	
+i1l561:	
 ;main.c: 58: {
 ;main.c: 59: series();
 	fcall	_series
 	line	60
 	
-i1l561:	
+i1l563:	
 ;main.c: 60: INTF = 0;
 	bcf	(89/8),(89)&7	;volatile
-	goto	i1l563
+	goto	i1l565
 	line	61
 	
-i1l40:	
+i1l42:	
 	line	62
 	
-i1l563:	
+i1l565:	
 ;main.c: 61: }
 ;main.c: 62: GIE = 1;
 	bsf	(95/8),(95)&7	;volatile
 	line	63
 	
-i1l41:	
+i1l43:	
 	movf	(??_ISR+3),w
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -809,13 +811,13 @@ _series:
 ; Regs used in _series: [wreg+status,2+status,0+btemp+1+pclath+cstack]
 	line	67
 	
-i1l521:	
+i1l523:	
 ;main.c: 67: PORTC = 0x00; delay(122);
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	clrf	(7)	;volatile
 	
-i1l523:	
+i1l525:	
 	movlw	low(07Ah)
 	movwf	(i1delay@overflows)
 	movlw	high(07Ah)
@@ -823,14 +825,14 @@ i1l523:
 	fcall	i1_delay
 	line	68
 	
-i1l525:	
+i1l527:	
 ;main.c: 68: PORTC = 0x01; delay(122);
 	movlw	(01h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(7)	;volatile
 	
-i1l527:	
+i1l529:	
 	movlw	low(07Ah)
 	movwf	(i1delay@overflows)
 	movlw	high(07Ah)
@@ -838,14 +840,14 @@ i1l527:
 	fcall	i1_delay
 	line	69
 	
-i1l529:	
+i1l531:	
 ;main.c: 69: PORTC = 0x02; delay(122);
 	movlw	(02h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(7)	;volatile
 	
-i1l531:	
+i1l533:	
 	movlw	low(07Ah)
 	movwf	(i1delay@overflows)
 	movlw	high(07Ah)
@@ -853,14 +855,14 @@ i1l531:
 	fcall	i1_delay
 	line	70
 	
-i1l533:	
+i1l535:	
 ;main.c: 70: PORTC = 0x04; delay(122);
 	movlw	(04h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(7)	;volatile
 	
-i1l535:	
+i1l537:	
 	movlw	low(07Ah)
 	movwf	(i1delay@overflows)
 	movlw	high(07Ah)
@@ -868,7 +870,7 @@ i1l535:
 	fcall	i1_delay
 	line	71
 	
-i1l44:	
+i1l46:	
 	return
 	opt stack 0
 GLOBAL	__end_of_series
@@ -920,14 +922,14 @@ i1_delay:
 ; Regs used in i1_delay: [wreg+status,2+btemp+1]
 	line	44
 	
-i1l501:	
+i1l503:	
 ;main.c: 44: while(overflows > 0)
-	goto	i1l509
+	goto	i1l511
 	
-i1l32:	
+i1l34:	
 	line	46
 	
-i1l503:	
+i1l505:	
 ;main.c: 45: {
 ;main.c: 46: TMR0 = 0;
 	bcf	status, 5	;RP0=0, select bank0
@@ -935,28 +937,28 @@ i1l503:
 	clrf	(1)	;volatile
 	line	47
 	
-i1l505:	
+i1l507:	
 ;main.c: 47: TMR0IF = 0;
 	bcf	(90/8),(90)&7	;volatile
 	line	49
 ;main.c: 49: while(!TMR0IF);
-	goto	i1l33
+	goto	i1l35
 	
-i1l34:	
+i1l36:	
 	
-i1l33:	
+i1l35:	
 	btfss	(90/8),(90)&7	;volatile
 	goto	u1_21
 	goto	u1_20
 u1_21:
-	goto	i1l33
+	goto	i1l35
 u1_20:
-	goto	i1l507
+	goto	i1l509
 	
-i1l35:	
+i1l37:	
 	line	50
 	
-i1l507:	
+i1l509:	
 ;main.c: 50: overflows--;
 	movlw	low(-1)
 	addwf	(i1delay@overflows),f
@@ -964,13 +966,13 @@ i1l507:
 	incf	(i1delay@overflows+1),f
 	movlw	high(-1)
 	addwf	(i1delay@overflows+1),f
-	goto	i1l509
+	goto	i1l511
 	line	51
 	
-i1l31:	
+i1l33:	
 	line	44
 	
-i1l509:	
+i1l511:	
 	movf	(i1delay@overflows+1),w
 	xorlw	80h
 	movwf	btemp+1
@@ -986,14 +988,14 @@ u2_25:
 	goto	u2_21
 	goto	u2_20
 u2_21:
-	goto	i1l503
+	goto	i1l505
 u2_20:
-	goto	i1l37
+	goto	i1l39
 	
-i1l36:	
+i1l38:	
 	line	52
 	
-i1l37:	
+i1l39:	
 	return
 	opt stack 0
 GLOBAL	__end_ofi1_delay

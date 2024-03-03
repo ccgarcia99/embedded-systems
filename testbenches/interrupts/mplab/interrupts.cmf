@@ -72,11 +72,11 @@ STRING 00B9-1FFF 2
 $interrupts.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\main.c":54 4 intentry CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":213 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":216 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":222 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":223 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":224 16 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":215 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":218 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":224 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":225 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\interrupts.as":226 16 cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\main.c":65 19 text3 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\main.c":67 19 text3 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\main.c":68 25 text3 CODE
@@ -165,6 +165,7 @@ start 24 0 CODE 0 init startup.obj
 _TRISB 86 0 ABS 0 - interrupts.obj
 _TRISC 87 0 ABS 0 - interrupts.obj
 reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - interrupts.obj
 _PORTC 7 0 ABS 0 - interrupts.obj
 ltemp0 7E 0 ABS 0 - interrupts.obj
 ttemp0 7E 0 ABS 0 - interrupts.obj

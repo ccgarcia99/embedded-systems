@@ -4,7 +4,7 @@ Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
   -h+interrupts.sym --cmf=interrupts.cmf -z -Q16F877A \
-  -oC:\Users\ACER\AppData\Local\Temp\sdso.6 -Minterrupts.map -E1 -ver=XC8 \
+  -oC:\Users\ACER\AppData\Local\Temp\scho.6 -Minterrupts.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -137,6 +137,7 @@ _INTE                    (abs)        005C
 _INTF                    (abs)        0059
 _ISR                     text2        00A2
 _OPTION_REG              (abs)        0081
+_PORTB                   (abs)        0006
 _PORTC                   (abs)        0007
 _TMR0                    (abs)        0001
 _TMR0IF                  (abs)        005A

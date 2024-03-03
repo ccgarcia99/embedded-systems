@@ -114,6 +114,8 @@
 [v _series series `(v  1 e 0 0 ]
 "53 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"207
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "268
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "1217

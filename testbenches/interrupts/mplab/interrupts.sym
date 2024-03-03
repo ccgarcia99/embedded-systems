@@ -23,6 +23,7 @@ start 12 0 CODE 0
 _TRISB 86 0 ABS 0
 _TRISC 87 0 ABS 0
 reset_vec 0 0 CODE 0
+_PORTB 6 0 ABS 0
 _PORTC 7 0 ABS 0
 ltemp0 7E 0 ABS 0
 ttemp0 7E 0 ABS 0
@@ -169,11 +170,11 @@ interrupts.obj
 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 2761 0 0 CODE 0
 interrupts.as
-213 15 0 CODE 0
-216 15 0 CODE 0
-222 15 0 CODE 0
-223 15 0 CODE 0
-224 16 0 CODE 0
+215 15 0 CODE 0
+218 15 0 CODE 0
+224 15 0 CODE 0
+225 15 0 CODE 0
+226 16 0 CODE 0
 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\interrupts\mplab\main.c
 18 4B 0 CODE 0
 20 4B 0 CODE 0

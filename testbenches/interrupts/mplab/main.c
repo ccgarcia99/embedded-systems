@@ -31,10 +31,10 @@ void main()
 
     while(1)
     {
-        PORTC = 0x07; // Set RC0, RC1, RC2 to 1
+        PORTB = 0xE0; // Set RC0, RC1, RC2 to 1
         delay(122);
         
-        PORTC = 0x00; // Clear RC0, RC1, RC2
+        PORTB = 0x00; // Clear RC0, RC1, RC2
         delay(122);
     }
 }
