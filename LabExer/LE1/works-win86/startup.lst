@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-                                                                                                           Mon Feb 05 15:35:04 2024
+                                                                                                           Sun Mar 10 14:53:32 2024
 
 
      1                           
@@ -81,7 +81,7 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
     75                           ;	Watchdog Timer Enable bit
     76                           ;	WDTE = OFF, WDT disabled
     77                           ;	Power-up Timer Enable bit
-    78                           ;	PWRTE = ON, PWRT enabled
+    78                           ;	PWRTE = OFF, PWRT disabled
     79                           ;	Flash Program Memory Code Protection bit
     80                           ;	CP = OFF, Code protection off
     81                           ;	Brown-out Reset Enable bit
@@ -95,18 +95,18 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
     89                           ;	Flash Program Memory Write Enable bits
     90                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
     91                           ;	Oscillator Selection bits
-    92                           ;	FOSC = XT, XT oscillator
+    92                           ;	FOSC = HS, HS oscillator
     93                           
     94                           	psect	config
     95                           		org 0x0
-    96  2007                     		dw 0xFF71
-    97  2007  FF71               
+    96  2007                     		dw 0xFF7A
+    97  2007  FF7A               
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                               Mon Feb 05 15:35:04 2024
+Symbol Table                                                                                               Sun Mar 10 14:53:32 2024
 
-               ___sp 0000                 _main 07B7                 start 0000               stackhi 0000  
+               ___sp 0000                 _main 07F2                 start 0000               stackhi 0000  
              stacklo 0000  start_initialization 07FC             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

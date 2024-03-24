@@ -1,9 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"1335 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"207
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"2685 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _TRISB0 `Vb ~T0 @X0 0 e@1072 ]
+"2687
+[v _TRISB1 `Vb ~T0 @X0 0 e@1073 ]
+"2511
+[v _RB0 `Vb ~T0 @X0 0 e@48 ]
+"2513
+[v _RB1 `Vb ~T0 @X0 0 e@49 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f877a.h: 47: extern volatile unsigned char INDF @ 0x000;
@@ -1017,78 +1021,66 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-"3 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c
-[p x FOSC=XT ]
-"4
-[p x WDTE=OFF ]
+"4 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c
+[p x FOSC=HS ]
 "5
-[p x PWRTE=ON ]
+[p x WDTE=OFF ]
 "6
-[p x BOREN=ON ]
+[p x PWRTE=OFF ]
 "7
-[p x LVP=OFF ]
+[p x BOREN=ON ]
 "8
-[p x CPD=OFF ]
+[p x LVP=OFF ]
 "9
-[p x WRT=OFF ]
+[p x CPD=OFF ]
 "10
+[p x WRT=OFF ]
+"11
 [p x CP=OFF ]
-"12
+"15
 [v _main `(v ~T0 @X0 1 ef ]
-"13
 {
-[; ;DECIERDO_PA1.c: 12: void main()
-[; ;DECIERDO_PA1.c: 13: {
+[; ;DECIERDO_PA1.c: 15: void main() {
 [e :U _main ]
 [f ]
-"14
-[v _cnt `i ~T0 @X0 1 a ]
-[; ;DECIERDO_PA1.c: 14: int cnt;
-[; ;DECIERDO_PA1.c: 15: TRISB = 0x00;
-"15
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;DECIERDO_PA1.c: 17: for(;;)
+[; ;DECIERDO_PA1.c: 16: TRISB0 = 1;
+"16
+[e = _TRISB0 -> -> 1 `i `b ]
+[; ;DECIERDO_PA1.c: 17: TRISB1 = 0;
 "17
-{
-"18
-[e :U 97 ]
-[; ;DECIERDO_PA1.c: 18: {
-{
-[; ;DECIERDO_PA1.c: 19: for(cnt=0;cnt<10000;cnt++);
+[e = _TRISB1 -> -> 0 `i `b ]
+[; ;DECIERDO_PA1.c: 19: while(1) {
 "19
+[e :U 98 ]
 {
-[e = _cnt -> 0 `i ]
-[e $ < _cnt -> 10000 `i 100  ]
+[; ;DECIERDO_PA1.c: 20: if (RB0 == 1) {
+"20
+[e $ ! == -> _RB0 `i -> 1 `i 100  ]
+{
+[; ;DECIERDO_PA1.c: 21: RB1 = 1;
+"21
+[e = _RB1 -> -> 1 `i `b ]
+"22
+}
+[; ;DECIERDO_PA1.c: 22: } else {
 [e $U 101  ]
 [e :U 100 ]
-[e ++ _cnt -> 1 `i ]
-[e $ < _cnt -> 10000 `i 100  ]
-[e :U 101 ]
-}
-[; ;DECIERDO_PA1.c: 20: PORTB = 0x01;
-"20
-[e = _PORTB -> -> 1 `i `uc ]
-[; ;DECIERDO_PA1.c: 21: for(cnt=0;cnt<10000;cnt++);
-"21
 {
-[e = _cnt -> 0 `i ]
-[e $ < _cnt -> 10000 `i 103  ]
-[e $U 104  ]
-[e :U 103 ]
-[e ++ _cnt -> 1 `i ]
-[e $ < _cnt -> 10000 `i 103  ]
-[e :U 104 ]
-}
-[; ;DECIERDO_PA1.c: 22: PORTB = 0x00;
-"22
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;DECIERDO_PA1.c: 23: RB1 = 0;
 "23
-}
-[; ;DECIERDO_PA1.c: 23: }
-[e $U 97  ]
-[e :U 98 ]
-}
-[; ;DECIERDO_PA1.c: 24: }
+[e = _RB1 -> -> 0 `i `b ]
 "24
+}
+[e :U 101 ]
+"25
+}
+[e :U 97 ]
+"19
+[e $U 98  ]
+[e :U 99 ]
+[; ;DECIERDO_PA1.c: 24: }
+[; ;DECIERDO_PA1.c: 25: }
+[; ;DECIERDO_PA1.c: 26: }
+"26
 [e :UE 96 ]
 }

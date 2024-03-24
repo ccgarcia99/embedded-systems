@@ -1,0 +1,5 @@
+_main: CODE, 1999 0 45
+__initialization: CODE, 2044 0 0
+_delay_1s: CODE, 1968 0 31
+_initTimer0: CODE, 1959 0 9
+Total: 85

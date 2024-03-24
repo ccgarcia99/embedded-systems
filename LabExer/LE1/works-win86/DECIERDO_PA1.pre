@@ -1426,26 +1426,27 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 extern __nonreentrant void _delay(unsigned long);
 
 
-# 3 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c"
-#pragma config FOSC = XT
+# 4 "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c"
+#pragma config FOSC = HS
 #pragma config WDTE = OFF
-#pragma config PWRTE = ON
+#pragma config PWRTE = OFF
 #pragma config BOREN = ON
 #pragma config LVP = OFF
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
 
-void main()
-{
-int cnt;
-TRISB = 0x00;
 
-for(;;)
-{
-for(cnt=0;cnt<10000;cnt++);
-PORTB = 0x01;
-for(cnt=0;cnt<10000;cnt++);
-PORTB = 0x00;
+
+void main() {
+TRISB0 = 1;
+TRISB1 = 0;
+
+while(1) {
+if (RB0 == 1) {
+RB1 = 1;
+} else {
+RB1 = 0;
+}
 }
 }

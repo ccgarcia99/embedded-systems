@@ -160,10 +160,14 @@ EECON1 equ 018Ch ;#
 # 2301 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h"
 EECON2 equ 018Dh ;# 
 	FNROOT	_main
-	global	_PORTB
-_PORTB	set	0x6
-	global	_TRISB
-_TRISB	set	0x86
+	global	_RB0
+_RB0	set	0x30
+	global	_RB1
+_RB1	set	0x31
+	global	_TRISB0
+_TRISB0	set	0x430
+	global	_TRISB1
+_TRISB1	set	0x431
 psect	maintext,global,class=CODE,delta=2,split=1
 ; #config settings
 	file	"C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h"
@@ -172,8 +176,8 @@ global __pmaintext
 __pmaintext:	;psect for function _main
 global __CFG_WDTE$OFF
 __CFG_WDTE$OFF equ 0x0
-global __CFG_PWRTE$ON
-__CFG_PWRTE$ON equ 0x0
+global __CFG_PWRTE$OFF
+__CFG_PWRTE$OFF equ 0x0
 global __CFG_CP$OFF
 __CFG_CP$OFF equ 0x0
 global __CFG_BOREN$ON
@@ -184,8 +188,8 @@ global __CFG_CPD$OFF
 __CFG_CPD$OFF equ 0x0
 global __CFG_WRT$OFF
 __CFG_WRT$OFF equ 0x0
-global __CFG_FOSC$XT
-__CFG_FOSC$XT equ 0x0
+global __CFG_FOSC$HS
+__CFG_FOSC$HS equ 0x0
 	file	"DECIERDO_PA1.as"
 	line	#
 psect cinit,class=CODE,delta=2
@@ -207,9 +211,6 @@ global __pcstackCOMMON
 __pcstackCOMMON:
 ?_main:	; 0 bytes @ 0x0
 ??_main:	; 0 bytes @ 0x0
-	global	main@cnt
-main@cnt:	; 2 bytes @ 0x0
-	ds	2
 ;!
 ;!Data Sizes:
 ;!    Strings     0
@@ -221,7 +222,7 @@ main@cnt:	; 2 bytes @ 0x0
 ;!
 ;!Auto Spaces:
 ;!    Space          Size  Autos    Used
-;!    COMMON           14      2       2
+;!    COMMON           14      0       0
 ;!    BANK0            80      0       0
 ;!    BANK1            80      0       0
 ;!    BANK3            96      0       0
@@ -264,8 +265,7 @@ main@cnt:	; 2 bytes @ 0x0
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (0) _main                                                 2     2      0      60
-;!                                              0 COMMON     2     2      0
+;! (0) _main                                                 0     0      0       0
 ;! ---------------------------------------------------------------------------------
 ;! Estimated maximum stack depth 0
 ;! ---------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ main@cnt:	; 2 bytes @ 0x0
 ;!EEDATA             100      0       0       0        0.0%
 ;!NULL                 0      0       0       0        0.0%
 ;!CODE                 0      0       0       0        0.0%
-;!COMMON               E      2       2       1       14.3%
+;!COMMON               E      0       0       1        0.0%
 ;!BITSFR0              0      0       0       1        0.0%
 ;!SFR0                 0      0       0       1        0.0%
 ;!BITSFR1              0      0       0       2        0.0%
@@ -307,25 +307,25 @@ main@cnt:	; 2 bytes @ 0x0
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 12 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c"
+;;		line 15 in file "D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  cnt             2    0[COMMON] int 
+;;		None
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
-;;		wreg, status,2, btemp+1
+;;		None
 ;; Tracked objects:
 ;;		On entry : 17F/0
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         2       0       0       0       0
+;;      Locals:         0       0       0       0       0
 ;;      Temps:          0       0       0       0       0
-;;      Totals:         2       0       0       0       0
-;;Total ram usage:        2 bytes
+;;      Totals:         0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; This function calls:
 ;;		Nothing
 ;; This function is called by:
@@ -335,170 +335,65 @@ main@cnt:	; 2 bytes @ 0x0
 psect	maintext
 psect	maintext
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE1\works-win86\DECIERDO_PA1.c"
-	line	12
+	line	15
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
 	
 _main:	
 ;incstack = 0
 	opt	stack 8
-; Regs used in _main: [wreg+status,2+btemp+1]
-	line	15
+; Regs used in _main: []
+	line	16
 	
-l470:	
-;DECIERDO_PA1.c: 14: int cnt;
-;DECIERDO_PA1.c: 15: TRISB = 0x00;
+l473:	
+;DECIERDO_PA1.c: 16: TRISB0 = 1;
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
-	clrf	(134)^080h	;volatile
-	line	18
-;DECIERDO_PA1.c: 17: for(;;)
-	
-l7:	
+	bsf	(1072/8)^080h,(1072)&7	;volatile
+	line	17
+;DECIERDO_PA1.c: 17: TRISB1 = 0;
+	bcf	(1073/8)^080h,(1073)&7	;volatile
 	line	19
-;DECIERDO_PA1.c: 18: {
-;DECIERDO_PA1.c: 19: for(cnt=0;cnt<10000;cnt++);
-	clrf	(main@cnt)
-	clrf	(main@cnt+1)
+;DECIERDO_PA1.c: 19: while(1) {
 	
-l472:	
-	movf	(main@cnt+1),w
-	xorlw	80h
-	movwf	btemp+1
-	movlw	(high(02710h))^80h
-	subwf	btemp+1,w
-	skipz
-	goto	u15
-	movlw	low(02710h)
-	subwf	(main@cnt),w
-u15:
-
-	skipc
+l11:	
+	line	20
+;DECIERDO_PA1.c: 20: if (RB0 == 1) {
+	bcf	status, 5	;RP0=0, select bank0
+	btfss	(48/8),(48)&7	;volatile
 	goto	u11
 	goto	u10
 u11:
-	goto	l476
+	goto	l12
 u10:
-	goto	l480
-	
-l474:	
-	goto	l480
-	
-l8:	
-	
-l476:	
-	movlw	low(01h)
-	addwf	(main@cnt),f
-	skipnc
-	incf	(main@cnt+1),f
-	movlw	high(01h)
-	addwf	(main@cnt+1),f
-	
-l478:	
-	movf	(main@cnt+1),w
-	xorlw	80h
-	movwf	btemp+1
-	movlw	(high(02710h))^80h
-	subwf	btemp+1,w
-	skipz
-	goto	u25
-	movlw	low(02710h)
-	subwf	(main@cnt),w
-u25:
-
-	skipc
-	goto	u21
-	goto	u20
-u21:
-	goto	l476
-u20:
-	goto	l480
-	
-l9:	
-	line	20
-	
-l480:	
-;DECIERDO_PA1.c: 20: PORTB = 0x01;
-	movlw	(01h)
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	status, 6	;RP1=0, select bank0
-	movwf	(6)	;volatile
 	line	21
 	
-l482:	
-;DECIERDO_PA1.c: 21: for(cnt=0;cnt<10000;cnt++);
-	clrf	(main@cnt)
-	clrf	(main@cnt+1)
-	
-l484:	
-	movf	(main@cnt+1),w
-	xorlw	80h
-	movwf	btemp+1
-	movlw	(high(02710h))^80h
-	subwf	btemp+1,w
-	skipz
-	goto	u35
-	movlw	low(02710h)
-	subwf	(main@cnt),w
-u35:
-
-	skipc
-	goto	u31
-	goto	u30
-u31:
-	goto	l488
-u30:
-	goto	l492
-	
-l486:	
-	goto	l492
-	
-l10:	
-	
-l488:	
-	movlw	low(01h)
-	addwf	(main@cnt),f
-	skipnc
-	incf	(main@cnt+1),f
-	movlw	high(01h)
-	addwf	(main@cnt+1),f
-	
-l490:	
-	movf	(main@cnt+1),w
-	xorlw	80h
-	movwf	btemp+1
-	movlw	(high(02710h))^80h
-	subwf	btemp+1,w
-	skipz
-	goto	u45
-	movlw	low(02710h)
-	subwf	(main@cnt),w
-u45:
-
-	skipc
-	goto	u41
-	goto	u40
-u41:
-	goto	l488
-u40:
-	goto	l492
-	
-l11:	
+l475:	
+;DECIERDO_PA1.c: 21: RB1 = 1;
+	bsf	(49/8),(49)&7	;volatile
 	line	22
-	
-l492:	
-;DECIERDO_PA1.c: 22: PORTB = 0x00;
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	status, 6	;RP1=0, select bank0
-	clrf	(6)	;volatile
-	line	23
-;DECIERDO_PA1.c: 23: }
-	goto	l7
+;DECIERDO_PA1.c: 22: } else {
+	goto	l11
 	
 l12:	
+	line	23
+;DECIERDO_PA1.c: 23: RB1 = 0;
+	bcf	(49/8),(49)&7	;volatile
+	goto	l11
 	line	24
 	
 l13:	
+	goto	l11
+	line	25
+	
+l14:	
+	line	19
+	goto	l11
+	
+l15:	
+	line	26
+	
+l16:	
 	global	start
 	ljmp	start
 	opt stack 0

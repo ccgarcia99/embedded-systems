@@ -76,7 +76,7 @@ start
 ;	Watchdog Timer Enable bit
 ;	WDTE = OFF, WDT disabled
 ;	Power-up Timer Enable bit
-;	PWRTE = ON, PWRT enabled
+;	PWRTE = OFF, PWRT disabled
 ;	Flash Program Memory Code Protection bit
 ;	CP = OFF, Code protection off
 ;	Brown-out Reset Enable bit
@@ -90,11 +90,11 @@ start
 ;	Flash Program Memory Write Enable bits
 ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
 ;	Oscillator Selection bits
-;	FOSC = XT, XT oscillator
+;	FOSC = HS, HS oscillator
 
 	psect	config
 		org 0x0
-		dw 0xFF71
+		dw 0xFF7A
 
 
 psect common,class=COMMON,space=1
