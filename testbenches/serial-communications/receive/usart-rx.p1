@@ -11,7 +11,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
 "1029
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"17 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h
 [v _delay `(v ~T0 @X0 0 ef1`i ]
 "1035 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
@@ -20,10 +20,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 "2629
 [v _T0IF `Vb ~T0 @X0 0 e@90 ]
 [p mainexit ]
-"1457
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "1335
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1457
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"329
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"2715
+[v _TRISC7 `Vb ~T0 @X0 0 e@1087 ]
+"2713
+[v _TRISC6 `Vb ~T0 @X0 0 e@1086 ]
 "1217
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
 "53
@@ -34,12 +40,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "2441
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
-"2713
-[v _TRISC6 `Vb ~T0 @X0 0 e@1086 ]
-"2715
-[v _TRISC7 `Vb ~T0 @X0 0 e@1087 ]
-"329
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f877a.h: 47: extern volatile unsigned char INDF @ 0x000;
@@ -1058,7 +1058,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usart-processes.h: 16: void serial_handshake(void);
 [; ;usart-processes.h: 17: void delay(int overflows);
 [; ;usart-processes.h: 18: unsigned char serial_read(void);
-"20 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h
+"20 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h
 [v _serial_init `(v ~T0 @X0 1 ef ]
 "21
 {
@@ -1221,31 +1221,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 111 ]
 [; ;usart-processes.h: 74: {
 {
-[; ;usart-processes.h: 75: while (!T0IF);
+[; ;usart-processes.h: 75: while (!T0IF)
 "75
 [e $U 115  ]
 [e :U 116 ]
+[; ;usart-processes.h: 76: ;
+"76
 [e :U 115 ]
+"75
 [e $ ! _T0IF 116  ]
 [e :U 117 ]
-[; ;usart-processes.h: 76: T0IF = 0;
-"76
-[e = _T0IF -> -> 0 `i `b ]
+[; ;usart-processes.h: 77: T0IF = 0;
 "77
+[e = _T0IF -> -> 0 `i `b ]
+"78
 }
 "73
 [e ++ _i -> 1 `i ]
 [e :U 114 ]
 [e $ < _i _overflows 111  ]
 [e :U 112 ]
-"77
-}
-[; ;usart-processes.h: 77: }
-[; ;usart-processes.h: 78: }
 "78
+}
+[; ;usart-processes.h: 78: }
+[; ;usart-processes.h: 79: }
+"79
 [e :UE 110 ]
 }
-"14 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c
+"14 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c
 [p x FOSC=XT ]
 "15
 [p x WDTE=OFF ]
@@ -1265,199 +1268,77 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _main `(v ~T0 @X0 1 ef ]
 "25
 {
-[; ;usart-tx.c: 24: void main(void)
-[; ;usart-tx.c: 25: {
+[; ;usart-rx.c: 24: void main()
+[; ;usart-rx.c: 25: {
 [e :U _main ]
 [f ]
-"26
-[v _dataIN `uc ~T0 @X0 1 a ]
-[; ;usart-tx.c: 26: unsigned char dataIN = 0x00;
-[e = _dataIN -> -> 0 `i `uc ]
 "27
-[v _dataOUT `uc ~T0 @X0 1 a ]
-[; ;usart-tx.c: 27: unsigned char dataOUT = 0x00;
-[e = _dataOUT -> -> 0 `i `uc ]
+[v _dataIN `uc ~T0 @X0 1 a ]
+[; ;usart-rx.c: 27: unsigned char dataIN = 0;
+[e = _dataIN -> -> 0 `i `uc ]
 "28
-[v _DAVBL `uc ~T0 @X0 1 a ]
-[; ;usart-tx.c: 28: unsigned char DAVBL = 0x00;
-[e = _DAVBL -> -> 0 `i `uc ]
-[; ;usart-tx.c: 29: TRISD = 0x1F;
-"29
-[e = _TRISD -> -> 31 `i `uc ]
-[; ;usart-tx.c: 30: TRISB = 0x00;
-"30
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;usart-tx.c: 33: OPTION_REG = 0x44;
-"33
-[e = _OPTION_REG -> -> 68 `i `uc ]
-[; ;usart-tx.c: 34: TMR0 = 0;
-"34
-[e = _TMR0 -> -> 0 `i `uc ]
-[; ;usart-tx.c: 35: TMR0IE = 1;
-"35
-[e = _TMR0IE -> -> 1 `i `b ]
-[; ;usart-tx.c: 36: TMR0IF = 0;
-"36
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;usart-tx.c: 37: GIE = 1;
-"37
-[e = _GIE -> -> 1 `i `b ]
-[; ;usart-tx.c: 40: TRISC6 = 0;
-"40
-[e = _TRISC6 -> -> 0 `i `b ]
-[; ;usart-tx.c: 41: TRISC7 = 1;
-"41
-[e = _TRISC7 -> -> 1 `i `b ]
-[; ;usart-tx.c: 42: serial_init();
-"42
-[e ( _serial_init ..  ]
-[; ;usart-tx.c: 47: while (1)
-"47
-[e :U 120 ]
-[; ;usart-tx.c: 48: {
-"48
-{
-[; ;usart-tx.c: 49: DAVBL = PORTD & 0x10;
-"49
-[e = _DAVBL -> & -> _PORTD `i -> 16 `i `uc ]
-[; ;usart-tx.c: 50: if (DAVBL == 0x10)
-"50
-[e $ ! == -> _DAVBL `i -> 16 `i 122  ]
-[; ;usart-tx.c: 51: {
-"51
-{
-[; ;usart-tx.c: 52: dataIN = PORTD & 0x0F;
-"52
-[e = _dataIN -> & -> _PORTD `i -> 15 `i `uc ]
-[; ;usart-tx.c: 53: switch (dataIN)
-"53
-[e $U 124  ]
-[; ;usart-tx.c: 54: {
-"54
-{
-[; ;usart-tx.c: 55: case 0x00:
-"55
-[e :U 125 ]
-[; ;usart-tx.c: 56: dataOUT = 0x01;
-"56
-[e = _dataOUT -> -> 1 `i `uc ]
-[; ;usart-tx.c: 57: break;
-"57
-[e $U 123  ]
-[; ;usart-tx.c: 58: case 0x01:
-"58
-[e :U 126 ]
-[; ;usart-tx.c: 59: dataOUT = 0x02;
-"59
-[e = _dataOUT -> -> 2 `i `uc ]
-[; ;usart-tx.c: 60: break;
-"60
-[e $U 123  ]
-[; ;usart-tx.c: 61: case 0x02:
-"61
-[e :U 127 ]
-[; ;usart-tx.c: 62: dataOUT = 0x03;
-"62
-[e = _dataOUT -> -> 3 `i `uc ]
-[; ;usart-tx.c: 63: break;
-"63
-[e $U 123  ]
-[; ;usart-tx.c: 64: case 0x04:
-"64
-[e :U 128 ]
-[; ;usart-tx.c: 65: dataOUT = 0x04;
-"65
-[e = _dataOUT -> -> 4 `i `uc ]
-[; ;usart-tx.c: 66: break;
-"66
-[e $U 123  ]
-[; ;usart-tx.c: 67: case 0x05:
-"67
-[e :U 129 ]
-[; ;usart-tx.c: 68: dataOUT = 0x05;
-"68
-[e = _dataOUT -> -> 5 `i `uc ]
-[; ;usart-tx.c: 69: break;
-"69
-[e $U 123  ]
-[; ;usart-tx.c: 70: case 0x06:
-"70
-[e :U 130 ]
-[; ;usart-tx.c: 71: dataOUT = 0x06;
-"71
-[e = _dataOUT -> -> 6 `i `uc ]
-[; ;usart-tx.c: 72: break;
-"72
-[e $U 123  ]
-[; ;usart-tx.c: 73: case 0x08:
-"73
-[e :U 131 ]
-[; ;usart-tx.c: 74: dataOUT = 0x07;
-"74
-[e = _dataOUT -> -> 7 `i `uc ]
-[; ;usart-tx.c: 75: break;
-"75
-[e $U 123  ]
-[; ;usart-tx.c: 76: case 0x09:
-"76
-[e :U 132 ]
-[; ;usart-tx.c: 77: dataOUT = 0x08;
-"77
-[e = _dataOUT -> -> 8 `i `uc ]
-[; ;usart-tx.c: 78: break;
-"78
-[e $U 123  ]
-[; ;usart-tx.c: 79: case 0x0A:
-"79
-[e :U 133 ]
-[; ;usart-tx.c: 80: dataOUT = 0x09;
-"80
-[e = _dataOUT -> -> 9 `i `uc ]
-[; ;usart-tx.c: 81: break;
-"81
-[e $U 123  ]
-[; ;usart-tx.c: 82: default:
-"82
-[e :U 134 ]
-[; ;usart-tx.c: 83: dataOUT = 0x00;
-"83
+[v _dataOUT `uc ~T0 @X0 1 a ]
+[; ;usart-rx.c: 28: unsigned char dataOUT = 0;
 [e = _dataOUT -> -> 0 `i `uc ]
-[; ;usart-tx.c: 84: break;
-"84
-[e $U 123  ]
-"85
-}
-[; ;usart-tx.c: 85: }
-[e $U 123  ]
+[; ;usart-rx.c: 31: TRISB = 0x00;
+"31
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;usart-rx.c: 32: PORTB = 0x00;
+"32
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;usart-rx.c: 33: TRISD = 0x00;
+"33
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;usart-rx.c: 34: PORTD = 0x00;
+"34
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;usart-rx.c: 35: TRISC7 = 1;
+"35
+[e = _TRISC7 -> -> 1 `i `b ]
+[; ;usart-rx.c: 36: TRISC6 = 0;
+"36
+[e = _TRISC6 -> -> 0 `i `b ]
+[; ;usart-rx.c: 39: OPTION_REG = 0x44;
+"39
+[e = _OPTION_REG -> -> 68 `i `uc ]
+[; ;usart-rx.c: 40: TMR0 = 0;
+"40
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;usart-rx.c: 41: TMR0IE = 1;
+"41
+[e = _TMR0IE -> -> 1 `i `b ]
+[; ;usart-rx.c: 42: TMR0IF = 0;
+"42
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;usart-rx.c: 43: GIE = 1;
+"43
+[e = _GIE -> -> 1 `i `b ]
+[; ;usart-rx.c: 46: serial_init();
+"46
+[e ( _serial_init ..  ]
+[; ;usart-rx.c: 49: while(1)
+"49
+[e :U 120 ]
+[; ;usart-rx.c: 50: {
+"50
+{
+[; ;usart-rx.c: 51: dataIN = serial_read();
+"51
+[e = _dataIN ( _serial_read ..  ]
+[; ;usart-rx.c: 52: dataOUT = dataIN;
+"52
+[e = _dataOUT _dataIN ]
+[; ;usart-rx.c: 53: PORTD = dataOUT;
 "53
-[e :U 124 ]
-[e [\ _dataIN , $ -> -> 0 `i `uc 125
- , $ -> -> 1 `i `uc 126
- , $ -> -> 2 `i `uc 127
- , $ -> -> 4 `i `uc 128
- , $ -> -> 5 `i `uc 129
- , $ -> -> 6 `i `uc 130
- , $ -> -> 8 `i `uc 131
- , $ -> -> 9 `i `uc 132
- , $ -> -> 10 `i `uc 133
- 134 ]
-"85
-[e :U 123 ]
-[; ;usart-tx.c: 86: serial_send(dataOUT);
-"86
-[e ( _serial_send (1 _dataOUT ]
-"87
-}
-[e :U 122 ]
-"88
+[e = _PORTD _dataOUT ]
+"54
 }
 [e :U 119 ]
-"47
+"49
 [e $U 120  ]
 [e :U 121 ]
-[; ;usart-tx.c: 87: }
-[; ;usart-tx.c: 88: }
-[; ;usart-tx.c: 89: }
-"89
+[; ;usart-rx.c: 54: }
+[; ;usart-rx.c: 55: }
+"55
 [e :UE 118 ]
 }

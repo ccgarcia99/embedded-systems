@@ -160,8 +160,7 @@ EECON1 equ 018Ch ;#
 # 2301 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h"
 EECON2 equ 018Dh ;# 
 	FNCALL	_main,_serial_init
-	FNCALL	_main,_serial_send
-	FNCALL	_serial_send,_delay
+	FNCALL	_main,_serial_read
 	FNROOT	_main
 	global	_PORTB
 _PORTB	set	0x6
@@ -223,7 +222,7 @@ global __CFG_WRT$OFF
 __CFG_WRT$OFF equ 0x0
 global __CFG_FOSC$XT
 __CFG_FOSC$XT equ 0x0
-	file	"usart.as"
+	file	"usart-rx.as"
 	line	#
 psect cinit,class=CODE,delta=2
 global start_initialization
@@ -242,33 +241,18 @@ ljmp _main	;jump to C main() function
 psect	cstackCOMMON,class=COMMON,space=1,noexec
 global __pcstackCOMMON
 __pcstackCOMMON:
-?_delay:	; 0 bytes @ 0x0
 ?_serial_init:	; 0 bytes @ 0x0
 ??_serial_init:	; 0 bytes @ 0x0
-?_serial_send:	; 0 bytes @ 0x0
+??_serial_read:	; 0 bytes @ 0x0
 ?_main:	; 0 bytes @ 0x0
-	global	delay@overflows
-delay@overflows:	; 2 bytes @ 0x0
-	ds	2
-??_delay:	; 0 bytes @ 0x2
-	ds	1
-	global	delay@i
-delay@i:	; 2 bytes @ 0x3
-	ds	2
-??_serial_send:	; 0 bytes @ 0x5
-	global	serial_send@data
-serial_send@data:	; 1 bytes @ 0x5
-	ds	1
-??_main:	; 0 bytes @ 0x6
+??_main:	; 0 bytes @ 0x0
+?_serial_read:	; 1 bytes @ 0x0
 	ds	1
 	global	main@dataIN
-main@dataIN:	; 1 bytes @ 0x7
-	ds	1
-	global	main@DAVBL
-main@DAVBL:	; 1 bytes @ 0x8
+main@dataIN:	; 1 bytes @ 0x1
 	ds	1
 	global	main@dataOUT
-main@dataOUT:	; 1 bytes @ 0x9
+main@dataOUT:	; 1 bytes @ 0x2
 	ds	1
 ;!
 ;!Data Sizes:
@@ -281,7 +265,7 @@ main@dataOUT:	; 1 bytes @ 0x9
 ;!
 ;!Auto Spaces:
 ;!    Space          Size  Autos    Used
-;!    COMMON           14     10      10
+;!    COMMON           14      3       3
 ;!    BANK0            80      0       0
 ;!    BANK1            80      0       0
 ;!    BANK3            96      0       0
@@ -296,8 +280,7 @@ main@dataOUT:	; 1 bytes @ 0x9
 ;!
 ;!Critical Paths under _main in COMMON
 ;!
-;!    _main->_serial_send
-;!    _serial_send->_delay
+;!    None.
 ;!
 ;!Critical Paths under _main in BANK0
 ;!
@@ -325,29 +308,23 @@ main@dataOUT:	; 1 bytes @ 0x9
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (0) _main                                                 4     4      0     262
-;!                                              6 COMMON     4     4      0
+;! (0) _main                                                 3     3      0      30
+;!                                              0 COMMON     3     3      0
 ;!                        _serial_init
-;!                        _serial_send
+;!                        _serial_read
 ;! ---------------------------------------------------------------------------------
-;! (1) _serial_send                                          1     1      0     217
-;!                                              5 COMMON     1     1      0
-;!                              _delay
-;! ---------------------------------------------------------------------------------
-;! (2) _delay                                                5     3      2     202
-;!                                              0 COMMON     5     3      2
+;! (1) _serial_read                                          0     0      0       0
 ;! ---------------------------------------------------------------------------------
 ;! (1) _serial_init                                          0     0      0       0
 ;! ---------------------------------------------------------------------------------
-;! Estimated maximum stack depth 2
+;! Estimated maximum stack depth 1
 ;! ---------------------------------------------------------------------------------
 ;!
 ;! Call Graph Graphs:
 ;!
 ;! _main (ROOT)
 ;!   _serial_init
-;!   _serial_send
-;!     _delay
+;!   _serial_read
 ;!
 
 ;! Address spaces:
@@ -357,7 +334,7 @@ main@dataOUT:	; 1 bytes @ 0x9
 ;!EEDATA             100      0       0       0        0.0%
 ;!NULL                 0      0       0       0        0.0%
 ;!CODE                 0      0       0       0        0.0%
-;!COMMON               E      A       A       1       71.4%
+;!COMMON               E      3       3       1       21.4%
 ;!BITSFR0              0      0       0       1        0.0%
 ;!SFR0                 0      0       0       1        0.0%
 ;!BITSFR1              0      0       0       2        0.0%
@@ -382,596 +359,256 @@ main@dataOUT:	; 1 bytes @ 0x9
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  dataOUT         1    9[COMMON] unsigned char 
-;;  DAVBL           1    8[COMMON] unsigned char 
-;;  dataIN          1    7[COMMON] unsigned char 
+;;  dataOUT         1    2[COMMON] unsigned char 
+;;  dataIN          1    1[COMMON] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
-;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+;;		wreg, status,2, status,0, pclath, cstack
 ;; Tracked objects:
 ;;		On entry : 17F/0
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         3       0       0       0       0
+;;      Locals:         2       0       0       0       0
 ;;      Temps:          1       0       0       0       0
-;;      Totals:         4       0       0       0       0
-;;Total ram usage:        4 bytes
-;; Hardware stack levels required when called:    2
+;;      Totals:         3       0       0       0       0
+;;Total ram usage:        3 bytes
+;; Hardware stack levels required when called:    1
 ;; This function calls:
 ;;		_serial_init
-;;		_serial_send
+;;		_serial_read
 ;; This function is called by:
 ;;		Startup code after reset
 ;; This function uses a non-reentrant model
 ;;
 psect	maintext,global,class=CODE,delta=2,split=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c"
 	line	24
 global __pmaintext
 __pmaintext:	;psect for function _main
 psect	maintext
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c"
 	line	24
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
 	
 _main:	
 ;incstack = 0
-	opt	stack 6
-; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
-	line	26
-	
-l592:	
-;usart-tx.c: 26: unsigned char dataIN = 0x00;
-	clrf	(main@dataIN)
+	opt	stack 7
+; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
 	line	27
-;usart-tx.c: 27: unsigned char dataOUT = 0x00;
-	clrf	(main@dataOUT)
-	line	28
-;usart-tx.c: 28: unsigned char DAVBL = 0x00;
-	clrf	(main@DAVBL)
-	line	29
 	
-l594:	
-;usart-tx.c: 29: TRISD = 0x1F;
-	movlw	(01Fh)
+l581:	
+;usart-rx.c: 27: unsigned char dataIN = 0;
+	clrf	(main@dataIN)
+	line	28
+;usart-rx.c: 28: unsigned char dataOUT = 0;
+	clrf	(main@dataOUT)
+	line	31
+;usart-rx.c: 31: TRISB = 0x00;
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
-	movwf	(136)^080h	;volatile
-	line	30
-	
-l596:	
-;usart-tx.c: 30: TRISB = 0x00;
 	clrf	(134)^080h	;volatile
+	line	32
+;usart-rx.c: 32: PORTB = 0x00;
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	status, 6	;RP1=0, select bank0
+	clrf	(6)	;volatile
 	line	33
-;usart-tx.c: 33: OPTION_REG = 0x44;
+;usart-rx.c: 33: TRISD = 0x00;
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	status, 6	;RP1=0, select bank1
+	clrf	(136)^080h	;volatile
+	line	34
+;usart-rx.c: 34: PORTD = 0x00;
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	status, 6	;RP1=0, select bank0
+	clrf	(8)	;volatile
+	line	35
+	
+l583:	
+;usart-rx.c: 35: TRISC7 = 1;
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	status, 6	;RP1=0, select bank1
+	bsf	(1087/8)^080h,(1087)&7	;volatile
+	line	36
+	
+l585:	
+;usart-rx.c: 36: TRISC6 = 0;
+	bcf	(1086/8)^080h,(1086)&7	;volatile
+	line	39
+	
+l587:	
+;usart-rx.c: 39: OPTION_REG = 0x44;
 	movlw	(044h)
 	movwf	(129)^080h	;volatile
-	line	34
+	line	40
 	
-l598:	
-;usart-tx.c: 34: TMR0 = 0;
+l589:	
+;usart-rx.c: 40: TMR0 = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	clrf	(1)	;volatile
-	line	35
-	
-l600:	
-;usart-tx.c: 35: TMR0IE = 1;
-	bsf	(93/8),(93)&7	;volatile
-	line	36
-	
-l602:	
-;usart-tx.c: 36: TMR0IF = 0;
-	bcf	(90/8),(90)&7	;volatile
-	line	37
-	
-l604:	
-;usart-tx.c: 37: GIE = 1;
-	bsf	(95/8),(95)&7	;volatile
-	line	40
-	
-l606:	
-;usart-tx.c: 40: TRISC6 = 0;
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	status, 6	;RP1=0, select bank1
-	bcf	(1086/8)^080h,(1086)&7	;volatile
 	line	41
 	
-l608:	
-;usart-tx.c: 41: TRISC7 = 1;
-	bsf	(1087/8)^080h,(1087)&7	;volatile
+l591:	
+;usart-rx.c: 41: TMR0IE = 1;
+	bsf	(93/8),(93)&7	;volatile
 	line	42
 	
-l610:	
-;usart-tx.c: 42: serial_init();
+l593:	
+;usart-rx.c: 42: TMR0IF = 0;
+	bcf	(90/8),(90)&7	;volatile
+	line	43
+	
+l595:	
+;usart-rx.c: 43: GIE = 1;
+	bsf	(95/8),(95)&7	;volatile
+	line	46
+	
+l597:	
+;usart-rx.c: 46: serial_init();
 	fcall	_serial_init
-	goto	l612
-	line	47
-;usart-tx.c: 47: while (1)
+	goto	l599
+	line	49
+;usart-rx.c: 49: while(1)
 	
 l73:	
-	line	49
+	line	51
 	
-l612:	
-;usart-tx.c: 48: {
-;usart-tx.c: 49: DAVBL = PORTD & 0x10;
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	status, 6	;RP1=0, select bank0
-	movf	(8),w	;volatile
-	andlw	010h
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@DAVBL)
-	line	50
-	
-l614:	
-;usart-tx.c: 50: if (DAVBL == 0x10)
-	movf	(main@DAVBL),w
-	xorlw	010h
-	skipz
-	goto	u71
-	goto	u70
-u71:
-	goto	l612
-u70:
-	line	52
-	
-l616:	
-;usart-tx.c: 51: {
-;usart-tx.c: 52: dataIN = PORTD & 0x0F;
-	movf	(8),w	;volatile
-	andlw	0Fh
+l599:	
+;usart-rx.c: 50: {
+;usart-rx.c: 51: dataIN = serial_read();
+	fcall	_serial_read
 	movwf	(??_main+0)+0
 	movf	(??_main+0)+0,w
 	movwf	(main@dataIN)
-	line	53
-;usart-tx.c: 53: switch (dataIN)
-	goto	l638
-	line	55
-;usart-tx.c: 54: {
-;usart-tx.c: 55: case 0x00:
+	line	52
 	
-l76:	
-	line	56
-;usart-tx.c: 56: dataOUT = 0x01;
-	clrf	(main@dataOUT)
-	incf	(main@dataOUT),f
-	line	57
-;usart-tx.c: 57: break;
-	goto	l640
-	line	58
-;usart-tx.c: 58: case 0x01:
-	
-l78:	
-	line	59
-	
-l618:	
-;usart-tx.c: 59: dataOUT = 0x02;
-	movlw	(02h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	60
-;usart-tx.c: 60: break;
-	goto	l640
-	line	61
-;usart-tx.c: 61: case 0x02:
-	
-l79:	
-	line	62
-	
-l620:	
-;usart-tx.c: 62: dataOUT = 0x03;
-	movlw	(03h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	63
-;usart-tx.c: 63: break;
-	goto	l640
-	line	64
-;usart-tx.c: 64: case 0x04:
-	
-l80:	
-	line	65
-	
-l622:	
-;usart-tx.c: 65: dataOUT = 0x04;
-	movlw	(04h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	66
-;usart-tx.c: 66: break;
-	goto	l640
-	line	67
-;usart-tx.c: 67: case 0x05:
-	
-l81:	
-	line	68
-	
-l624:	
-;usart-tx.c: 68: dataOUT = 0x05;
-	movlw	(05h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	69
-;usart-tx.c: 69: break;
-	goto	l640
-	line	70
-;usart-tx.c: 70: case 0x06:
-	
-l82:	
-	line	71
-	
-l626:	
-;usart-tx.c: 71: dataOUT = 0x06;
-	movlw	(06h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	72
-;usart-tx.c: 72: break;
-	goto	l640
-	line	73
-;usart-tx.c: 73: case 0x08:
-	
-l83:	
-	line	74
-	
-l628:	
-;usart-tx.c: 74: dataOUT = 0x07;
-	movlw	(07h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	75
-;usart-tx.c: 75: break;
-	goto	l640
-	line	76
-;usart-tx.c: 76: case 0x09:
-	
-l84:	
-	line	77
-	
-l630:	
-;usart-tx.c: 77: dataOUT = 0x08;
-	movlw	(08h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	78
-;usart-tx.c: 78: break;
-	goto	l640
-	line	79
-;usart-tx.c: 79: case 0x0A:
-	
-l85:	
-	line	80
-	
-l632:	
-;usart-tx.c: 80: dataOUT = 0x09;
-	movlw	(09h)
-	movwf	(??_main+0)+0
-	movf	(??_main+0)+0,w
-	movwf	(main@dataOUT)
-	line	81
-;usart-tx.c: 81: break;
-	goto	l640
-	line	82
-;usart-tx.c: 82: default:
-	
-l86:	
-	line	83
-	
-l634:	
-;usart-tx.c: 83: dataOUT = 0x00;
-	clrf	(main@dataOUT)
-	line	84
-;usart-tx.c: 84: break;
-	goto	l640
-	line	85
-	
-l636:	
-;usart-tx.c: 85: }
-	goto	l640
-	line	53
-	
-l75:	
-	
-l638:	
+l601:	
+;usart-rx.c: 52: dataOUT = dataIN;
 	movf	(main@dataIN),w
-	; Switch size 1, requested type "space"
-; Number of cases is 9, Range of values is 0 to 10
-; switch strategies available:
-; Name         Instructions Cycles
-; simple_byte           28    15 (average)
-; direct_byte           41     8 (fixed)
-; jumptable            260     6 (fixed)
-;	Chosen strategy is simple_byte
-
-	opt asmopt_off
-	xorlw	0^0	; case 0
-	skipnz
-	goto	l76
-	xorlw	1^0	; case 1
-	skipnz
-	goto	l618
-	xorlw	2^1	; case 2
-	skipnz
-	goto	l620
-	xorlw	4^2	; case 4
-	skipnz
-	goto	l622
-	xorlw	5^4	; case 5
-	skipnz
-	goto	l624
-	xorlw	6^5	; case 6
-	skipnz
-	goto	l626
-	xorlw	8^6	; case 8
-	skipnz
-	goto	l628
-	xorlw	9^8	; case 9
-	skipnz
-	goto	l630
-	xorlw	10^9	; case 10
-	skipnz
-	goto	l632
-	goto	l634
-	opt asmopt_on
-
-	line	85
+	movwf	(??_main+0)+0
+	movf	(??_main+0)+0,w
+	movwf	(main@dataOUT)
+	line	53
 	
-l77:	
-	line	86
-	
-l640:	
-;usart-tx.c: 86: serial_send(dataOUT);
+l603:	
+;usart-rx.c: 53: PORTD = dataOUT;
 	movf	(main@dataOUT),w
-	fcall	_serial_send
-	goto	l612
-	line	87
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	status, 6	;RP1=0, select bank0
+	movwf	(8)	;volatile
+	goto	l599
+	line	54
 	
 l74:	
-	goto	l612
-	line	88
+	line	49
+	goto	l599
 	
-l87:	
-	line	47
-	goto	l612
+l75:	
+	line	55
 	
-l88:	
-	line	89
-	
-l89:	
+l76:	
 	global	start
 	ljmp	start
 	opt stack 0
 GLOBAL	__end_of_main
 	__end_of_main:
 	signat	_main,88
-	global	_serial_send
+	global	_serial_read
 
-;; *************** function _serial_send *****************
+;; *************** function _serial_read *****************
 ;; Defined at:
-;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
+;;		line 40 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
 ;; Parameters:    Size  Location     Type
-;;  data            1    wreg     unsigned char 
+;;		None
 ;; Auto vars:     Size  Location     Type
-;;  data            1    5[COMMON] unsigned char 
+;;		None
 ;; Return value:  Size  Location     Type
-;;		None               void
+;;                  1    wreg      unsigned char 
 ;; Registers used:
-;;		wreg, status,2, status,0, pclath, cstack
+;;		wreg
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         1       0       0       0       0
+;;      Locals:         0       0       0       0       0
 ;;      Temps:          0       0       0       0       0
-;;      Totals:         1       0       0       0       0
-;;Total ram usage:        1 bytes
+;;      Totals:         0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
-;; Hardware stack levels required when called:    1
 ;; This function calls:
-;;		_delay
+;;		Nothing
 ;; This function is called by:
 ;;		_main
 ;;		_serial_handshake
 ;; This function uses a non-reentrant model
 ;;
 psect	text1,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
-	line	33
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
+	line	40
 global __ptext1
-__ptext1:	;psect for function _serial_send
+__ptext1:	;psect for function _serial_read
 psect	text1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
-	line	33
-	global	__size_of_serial_send
-	__size_of_serial_send	equ	__end_of_serial_send-_serial_send
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
+	line	40
+	global	__size_of_serial_read
+	__size_of_serial_read	equ	__end_of_serial_read-_serial_read
 	
-_serial_send:	
+_serial_read:	
 ;incstack = 0
-	opt	stack 6
-; Regs used in _serial_send: [wreg+status,2+status,0+pclath+cstack]
-;serial_send@data stored from wreg
-	movwf	(serial_send@data)
-	line	35
+	opt	stack 7
+; Regs used in _serial_read: [wreg]
+	line	42
 	
-l556:	
-;usart-processes.h: 35: while (!TXIF);
-	goto	l46
+l545:	
+;usart-processes.h: 42: while (!RCIF);
+	goto	l52
 	
-l47:	
+l53:	
 	
-l46:	
+l52:	
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	btfss	(100/8),(100)&7	;volatile
-	goto	u31
-	goto	u30
-u31:
-	goto	l46
-u30:
-	goto	l558
-	
-l48:	
-	line	36
-	
-l558:	
-;usart-processes.h: 36: TXREG = data;
-	movf	(serial_send@data),w
-	movwf	(25)	;volatile
-	line	37
-	
-l560:	
-;usart-processes.h: 37: delay(10);
-	movlw	low(0Ah)
-	movwf	(delay@overflows)
-	movlw	high(0Ah)
-	movwf	((delay@overflows))+1
-	fcall	_delay
-	line	38
-	
-l49:	
-	return
-	opt stack 0
-GLOBAL	__end_of_serial_send
-	__end_of_serial_send:
-	signat	_serial_send,4216
-	global	_delay
-
-;; *************** function _delay *****************
-;; Defined at:
-;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
-;; Parameters:    Size  Location     Type
-;;  overflows       2    0[COMMON] int 
-;; Auto vars:     Size  Location     Type
-;;  i               2    3[COMMON] int 
-;; Return value:  Size  Location     Type
-;;		None               void
-;; Registers used:
-;;		wreg, status,2
-;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
-;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-;;      Params:         2       0       0       0       0
-;;      Locals:         2       0       0       0       0
-;;      Temps:          1       0       0       0       0
-;;      Totals:         5       0       0       0       0
-;;Total ram usage:        5 bytes
-;; Hardware stack levels used:    1
-;; This function calls:
-;;		Nothing
-;; This function is called by:
-;;		_serial_send
-;;		_serial_handshake
-;; This function uses a non-reentrant model
-;;
-psect	text2,local,class=CODE,delta=2,merge=1
-	line	70
-global __ptext2
-__ptext2:	;psect for function _delay
-psect	text2
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
-	line	70
-	global	__size_of_delay
-	__size_of_delay	equ	__end_of_delay-_delay
-	
-_delay:	
-;incstack = 0
-	opt	stack 6
-; Regs used in _delay: [wreg+status,2]
-	line	73
-	
-l546:	
-;usart-processes.h: 72: int i;
-;usart-processes.h: 73: for (i = 0; i < overflows; i++)
-	clrf	(delay@i)
-	clrf	(delay@i+1)
-	goto	l64
-	line	74
-	
-l65:	
-	line	75
-;usart-processes.h: 74: {
-;usart-processes.h: 75: while (!T0IF);
-	goto	l66
-	
-l67:	
-	
-l66:	
-	btfss	(90/8),(90)&7	;volatile
-	goto	u11
-	goto	u10
-u11:
-	goto	l66
-u10:
-	
-l68:	
-	line	76
-;usart-processes.h: 76: T0IF = 0;
-	bcf	(90/8),(90)&7	;volatile
-	line	73
-	
-l548:	
-	movlw	low(01h)
-	addwf	(delay@i),f
-	skipnc
-	incf	(delay@i+1),f
-	movlw	high(01h)
-	addwf	(delay@i+1),f
-	
-l64:	
-	movf	(delay@i+1),w
-	xorlw	80h
-	movwf	(??_delay+0)+0
-	movf	(delay@overflows+1),w
-	xorlw	80h
-	subwf	(??_delay+0)+0,w
-	skipz
-	goto	u25
-	movf	(delay@overflows),w
-	subwf	(delay@i),w
-u25:
-
-	skipc
+	btfss	(101/8),(101)&7	;volatile
 	goto	u21
 	goto	u20
 u21:
-	goto	l66
+	goto	l52
 u20:
-	goto	l70
+	goto	l547
 	
-l69:	
-	line	78
+l54:	
+	line	43
 	
-l70:	
+l547:	
+;usart-processes.h: 43: return RCREG;
+	movf	(26),w	;volatile
+	goto	l55
+	
+l549:	
+	line	44
+	
+l55:	
 	return
 	opt stack 0
-GLOBAL	__end_of_delay
-	__end_of_delay:
-	signat	_delay,4216
+GLOBAL	__end_of_serial_read
+	__end_of_serial_read:
+	signat	_serial_read,89
 	global	_serial_init
 
 ;; *************** function _serial_init *****************
 ;; Defined at:
-;;		line 20 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
+;;		line 20 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -997,12 +634,12 @@ GLOBAL	__end_of_delay
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text3,local,class=CODE,delta=2,merge=1
+psect	text2,local,class=CODE,delta=2,merge=1
 	line	20
-global __ptext3
-__ptext3:	;psect for function _serial_init
-psect	text3
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
+global __ptext2
+__ptext2:	;psect for function _serial_init
+psect	text2
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
 	line	20
 	global	__size_of_serial_init
 	__size_of_serial_init	equ	__end_of_serial_init-_serial_init
@@ -1013,7 +650,7 @@ _serial_init:
 ; Regs used in _serial_init: [wreg]
 	line	23
 	
-l550:	
+l533:	
 ;usart-processes.h: 23: TXSTA = 0b00100100;
 	movlw	(024h)
 	bsf	status, 5	;RP0=1, select bank1
@@ -1021,7 +658,7 @@ l550:
 	movwf	(152)^080h	;volatile
 	line	24
 	
-l552:	
+l535:	
 ;usart-processes.h: 24: TXIF = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -1032,7 +669,7 @@ l552:
 	movwf	(24)	;volatile
 	line	28
 	
-l554:	
+l537:	
 ;usart-processes.h: 28: RCIF = 0;
 	bcf	(101/8),(101)&7	;volatile
 	line	30

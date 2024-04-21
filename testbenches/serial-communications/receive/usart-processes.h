@@ -29,19 +29,18 @@ void serial_init(void)
 
     SPBRG = 25; // 9600 baud rate, assuming Fosc = 4MHz & BRGH = 1
 }
-
+// TODO: fix the handshake routine
+// ISSUE: The handshake routine is not working as expected, impedes the communication between devices
 void serial_send(unsigned char data)
 {
-    while (!TXIF)
-        ;         // wait for the previous transmission to finish
+    while (!TXIF);         // wait for the previous transmission to finish
     TXREG = data; // send the data
     delay(10);    // wait for the data to be sent
 }
 
 unsigned char serial_read(void)
 {
-    while (!RCIF)
-        ;         // wait for the data to be received
+    while (!RCIF);         // wait for the data to be received
     return RCREG; // return the received data
 }
 
@@ -53,6 +52,7 @@ void serial_handshake()
 
     // Improved handshake receive logic
     unsigned char response = 0;
+    unsigned char serialCheck = 0;
     do
     {
         response = serial_read(); // Attempt to read the handshake response
@@ -62,8 +62,8 @@ void serial_handshake()
     } while (response != 0x01); // Ensure we exit if the right response is received
 
     // Proceed if the correct handshake is confirmed
-    unsigned char serialCheck = serial_read(); // read the data from the other device
-    PORTB = serialCheck;                       // display the data on PORTB
+    serialCheck = serial_read(); // read the data from the other device
+    PORTB = serialCheck;         // display the data on PORTB
     delay(500);
     PORTB = 0x00; // clear the PORTB, signifying the handshake is complete
 }

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-                                                                                                           Sun Apr 21 11:44:22 2024
+                                                                                                           Sun Apr 21 11:44:05 2024
 
 
      1                           
@@ -13,8 +13,8 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
      7                           	;
      8                           	; Compiler options:
      9                           	;
-    10                           	; -ousart.cof -musart.map --summary=default --output=default \
-    11                           	; usart-tx.p1 --chip=16F877A -P --runtime=default --opt=default -N-1 \
+    10                           	; -ousart-rx.cof -musart-rx.map --summary=default --output=default \
+    11                           	; usart-rx.p1 --chip=16F877A -P --runtime=default --opt=default -N-1 \
     12                           	; -D__DEBUG=1 -g --asmlist --errformat=Error   [%n] %f; %l.%c %s \
     13                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
     14                           	;
@@ -103,9 +103,9 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                               Sun Apr 21 11:44:22 2024
+Symbol Table                                                                                               Sun Apr 21 11:44:05 2024
 
-               ___sp 0000                 _main 0796                 start 0000               stackhi 0000  
+               ___sp 0000                 _main 07CC                 start 0000               stackhi 0000  
              stacklo 0000  start_initialization 07FC             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

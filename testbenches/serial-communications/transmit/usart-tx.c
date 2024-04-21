@@ -21,14 +21,11 @@
 #pragma config CP = OFF
 #define _XTAL_FREQ 4000000
 
-unsigned char serial_read(void);
-
 void main(void)
 {
-    unsigned char serialCheck = 0x00; // check if the handshake signal is received
-    unsigned char dataIN = 0x00;      // read in from PORTD
-    unsigned char dataOUT = 0x00;     // send out to PORTB
-    unsigned char DAVBL = 0x00;       // check if data available in PORTD, clear initially
+    unsigned char dataIN = 0x00;  // read in from PORTD
+    unsigned char dataOUT = 0x00; // send out to PORTB
+    unsigned char DAVBL = 0x00;   // check if data available in PORTD, clear initially
     TRISD = 0x1F;
     TRISB = 0x00; // PORTB as output
 
@@ -37,6 +34,7 @@ void main(void)
     TMR0 = 0;          // clear the timer
     TMR0IE = 1;        // enable the timer interrupt
     TMR0IF = 0;        // clear the timer interrupt flag
+    GIE = 1;           // enable global interrupts
 
     // initialize the serial ports
     TRISC6 = 0; // TX pin set as output
@@ -44,7 +42,9 @@ void main(void)
     serial_init();
 
     // device handshake routine
-    serial_handshake();
+    // TODO: fix the handshake routine
+    // ISSUE: The handshake routine is not working as expected, impedes the communication between devices
+    // serial_handshake();
 
     while (1)
     {

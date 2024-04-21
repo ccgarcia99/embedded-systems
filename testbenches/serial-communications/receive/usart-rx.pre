@@ -1,5 +1,5 @@
 
-# 1 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+# 1 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c"
 
 # 21 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -1425,7 +1425,7 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 14 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h"
+# 14 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-processes.h"
 void serial_init(void);
 void serial_send(unsigned char data);
 void serial_handshake(void);
@@ -1487,13 +1487,14 @@ void delay(int overflows)
 int i;
 for (i = 0; i < overflows; i++)
 {
-while (!T0IF);
+while (!T0IF)
+;
 T0IF = 0;
 }
 }
 
 
-# 14 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+# 14 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\receive\usart-rx.c"
 #pragma config FOSC = XT
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -1504,13 +1505,19 @@ T0IF = 0;
 #pragma config CP = OFF
 
 
-void main(void)
+void main()
 {
-unsigned char dataIN = 0x00;
-unsigned char dataOUT = 0x00;
-unsigned char DAVBL = 0x00;
-TRISD = 0x1F;
+
+unsigned char dataIN = 0;
+unsigned char dataOUT = 0;
+
+
 TRISB = 0x00;
+PORTB = 0x00;
+TRISD = 0x00;
+PORTD = 0x00;
+TRISC7 = 1;
+TRISC6 = 0;
 
 
 OPTION_REG = 0x44;
@@ -1520,53 +1527,13 @@ TMR0IF = 0;
 GIE = 1;
 
 
-TRISC6 = 0;
-TRISC7 = 1;
 serial_init();
 
 
-
-
-while (1)
+while(1)
 {
-DAVBL = PORTD & 0x10;
-if (DAVBL == 0x10)
-{
-dataIN = PORTD & 0x0F;
-switch (dataIN)
-{
-case 0x00:
-dataOUT = 0x01;
-break;
-case 0x01:
-dataOUT = 0x02;
-break;
-case 0x02:
-dataOUT = 0x03;
-break;
-case 0x04:
-dataOUT = 0x04;
-break;
-case 0x05:
-dataOUT = 0x05;
-break;
-case 0x06:
-dataOUT = 0x06;
-break;
-case 0x08:
-dataOUT = 0x07;
-break;
-case 0x09:
-dataOUT = 0x08;
-break;
-case 0x0A:
-dataOUT = 0x09;
-break;
-default:
-dataOUT = 0x00;
-break;
-}
-serial_send(dataOUT);
-}
+dataIN = serial_read();
+dataOUT = dataIN;
+PORTD = dataOUT;
 }
 }

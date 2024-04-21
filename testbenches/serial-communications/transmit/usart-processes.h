@@ -32,19 +32,19 @@ void serial_init(void)
 
 void serial_send(unsigned char data)
 {
-    while (!TXIF)
-        ;         // wait for the previous transmission to finish
+    while (!TXIF);         // wait for the previous transmission to finish
     TXREG = data; // send the data
     delay(10);    // wait for the data to be sent
 }
 
 unsigned char serial_read(void)
 {
-    while (!RCIF)
-        ;         // wait for the data to be received
+    while (!RCIF);         // wait for the data to be received
     return RCREG; // return the received data
 }
 
+//TODO: fix the handshake routine
+//ISSUE: The handshake routine is not working as expected, impedes the communication between devices
 void serial_handshake()
 {
     // device handshake routine
@@ -53,6 +53,7 @@ void serial_handshake()
 
     // Improved handshake receive logic
     unsigned char response = 0;
+    unsigned char serialCheck = 0;
     do
     {
         response = serial_read(); // Attempt to read the handshake response
@@ -62,7 +63,7 @@ void serial_handshake()
     } while (response != 0x01); // Ensure we exit if the right response is received
 
     // Proceed if the correct handshake is confirmed
-    unsigned char serialCheck = serial_read(); // read the data from the other device
+    serialCheck = serial_read(); // read the data from the other device
     PORTB = serialCheck;                       // display the data on PORTB
     delay(500);
     PORTB = 0x00; // clear the PORTB, signifying the handshake is complete
@@ -73,8 +74,7 @@ void delay(int overflows)
     int i;
     for (i = 0; i < overflows; i++)
     {
-        while (!T0IF)
-            ;
+        while (!T0IF);
         T0IF = 0;
     }
 }

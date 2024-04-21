@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
-                                                                                               Sun Apr 21 11:06:55 2024
+                                                                                               Sun Apr 21 11:44:22 2024
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      1                           	processor	16F877A
@@ -14,848 +14,645 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      8                           	psect	text1,local,class=CODE,merge=1,delta=2
      9                           	psect	text2,local,class=CODE,merge=1,delta=2
     10                           	psect	text3,local,class=CODE,merge=1,delta=2
-    11                           	psect	text4,local,class=CODE,merge=1,delta=2
-    12                           	psect	text5,local,class=CODE,merge=1,delta=2
-    13                           	dabs	1,0x7E,2
-    14  0000                     	;# 
-    15  0001                     	;# 
-    16  0002                     	;# 
-    17  0003                     	;# 
-    18  0004                     	;# 
-    19  0005                     	;# 
-    20  0006                     	;# 
-    21  0007                     	;# 
-    22  0008                     	;# 
-    23  0009                     	;# 
-    24  000A                     	;# 
-    25  000B                     	;# 
-    26  000C                     	;# 
-    27  000D                     	;# 
-    28  000E                     	;# 
-    29  000E                     	;# 
-    30  000F                     	;# 
-    31  0010                     	;# 
-    32  0011                     	;# 
-    33  0012                     	;# 
-    34  0013                     	;# 
-    35  0014                     	;# 
-    36  0015                     	;# 
-    37  0015                     	;# 
-    38  0016                     	;# 
-    39  0017                     	;# 
-    40  0018                     	;# 
-    41  0019                     	;# 
-    42  001A                     	;# 
-    43  001B                     	;# 
-    44  001B                     	;# 
-    45  001C                     	;# 
-    46  001D                     	;# 
-    47  001E                     	;# 
-    48  001F                     	;# 
-    49  0081                     	;# 
-    50  0085                     	;# 
-    51  0086                     	;# 
-    52  0087                     	;# 
-    53  0088                     	;# 
-    54  0089                     	;# 
-    55  008C                     	;# 
-    56  008D                     	;# 
-    57  008E                     	;# 
-    58  0091                     	;# 
-    59  0092                     	;# 
-    60  0093                     	;# 
-    61  0094                     	;# 
-    62  0098                     	;# 
-    63  0099                     	;# 
-    64  009C                     	;# 
-    65  009D                     	;# 
-    66  009E                     	;# 
-    67  009F                     	;# 
-    68  010C                     	;# 
-    69  010D                     	;# 
-    70  010E                     	;# 
-    71  010F                     	;# 
-    72  018C                     	;# 
-    73  018D                     	;# 
-    74  0006                     _PORTB	set	6
-    75  0008                     _PORTD	set	8
-    76  001A                     _RCREG	set	26
-    77  0018                     _RCSTA	set	24
-    78  0001                     _TMR0	set	1
-    79  0019                     _TXREG	set	25
-    80  0065                     _RCIF	set	101
-    81  005A                     _T0IF	set	90
-    82  005D                     _TMR0IE	set	93
-    83  005A                     _TMR0IF	set	90
-    84  0064                     _TXIF	set	100
-    85  0081                     _OPTION_REG	set	129
-    86  0099                     _SPBRG	set	153
-    87  0086                     _TRISB	set	134
-    88  0088                     _TRISD	set	136
-    89  0098                     _TXSTA	set	152
-    90  043E                     _TRISC6	set	1086
-    91  043F                     _TRISC7	set	1087
-    92                           
-    93                           	psect	text0
-    94  0000                     __ptext0:	
-    95                           ; #config settings
+    11                           	dabs	1,0x7E,2
+    12  0000                     	;# 
+    13  0001                     	;# 
+    14  0002                     	;# 
+    15  0003                     	;# 
+    16  0004                     	;# 
+    17  0005                     	;# 
+    18  0006                     	;# 
+    19  0007                     	;# 
+    20  0008                     	;# 
+    21  0009                     	;# 
+    22  000A                     	;# 
+    23  000B                     	;# 
+    24  000C                     	;# 
+    25  000D                     	;# 
+    26  000E                     	;# 
+    27  000E                     	;# 
+    28  000F                     	;# 
+    29  0010                     	;# 
+    30  0011                     	;# 
+    31  0012                     	;# 
+    32  0013                     	;# 
+    33  0014                     	;# 
+    34  0015                     	;# 
+    35  0015                     	;# 
+    36  0016                     	;# 
+    37  0017                     	;# 
+    38  0018                     	;# 
+    39  0019                     	;# 
+    40  001A                     	;# 
+    41  001B                     	;# 
+    42  001B                     	;# 
+    43  001C                     	;# 
+    44  001D                     	;# 
+    45  001E                     	;# 
+    46  001F                     	;# 
+    47  0081                     	;# 
+    48  0085                     	;# 
+    49  0086                     	;# 
+    50  0087                     	;# 
+    51  0088                     	;# 
+    52  0089                     	;# 
+    53  008C                     	;# 
+    54  008D                     	;# 
+    55  008E                     	;# 
+    56  0091                     	;# 
+    57  0092                     	;# 
+    58  0093                     	;# 
+    59  0094                     	;# 
+    60  0098                     	;# 
+    61  0099                     	;# 
+    62  009C                     	;# 
+    63  009D                     	;# 
+    64  009E                     	;# 
+    65  009F                     	;# 
+    66  010C                     	;# 
+    67  010D                     	;# 
+    68  010E                     	;# 
+    69  010F                     	;# 
+    70  018C                     	;# 
+    71  018D                     	;# 
+    72  0006                     _PORTB	set	6
+    73  0008                     _PORTD	set	8
+    74  001A                     _RCREG	set	26
+    75  0018                     _RCSTA	set	24
+    76  0001                     _TMR0	set	1
+    77  0019                     _TXREG	set	25
+    78  005F                     _GIE	set	95
+    79  0065                     _RCIF	set	101
+    80  005A                     _T0IF	set	90
+    81  005D                     _TMR0IE	set	93
+    82  005A                     _TMR0IF	set	90
+    83  0064                     _TXIF	set	100
+    84  0081                     _OPTION_REG	set	129
+    85  0099                     _SPBRG	set	153
+    86  0086                     _TRISB	set	134
+    87  0088                     _TRISD	set	136
+    88  0098                     _TXSTA	set	152
+    89  043E                     _TRISC6	set	1086
+    90  043F                     _TRISC7	set	1087
+    91                           
+    92                           	psect	text0
+    93  0000                     __ptext0:	
+    94                           ; #config settings
+    95                           
     96                           
-    97                           
-    98                           ;psect for function _serial_read
-    99  0000                     
-   100                           	psect	cinit
-   101  07FC                     start_initialization:	
-   102  07FC                     __initialization:	
-   103  07FC                     end_of_initialization:	
-   104                           ;End of C runtime variable initialization code
-   105                           
-   106  07FC                     __end_of__initialization:	
-   107  07FC  0183               	clrf	3
-   108  07FD  120A  118A  2F91   	ljmp	_main	;jump to C main() function
-   109                           
-   110                           	psect	cstackCOMMON
-   111  0070                     __pcstackCOMMON:	
-   112  0070                     ?_delay:	
-   113  0070                     ?_serial_init:	
-   114                           ; 0 bytes @ 0x0
-   115                           
-   116  0070                     ??_serial_init:	
-   117                           ; 0 bytes @ 0x0
-   118                           
-   119  0070                     ?_serial_send:	
-   120                           ; 0 bytes @ 0x0
-   121                           
-   122  0070                     ??_serial_read:	
-   123                           ; 0 bytes @ 0x0
-   124                           
-   125  0070                     ?_serial_handshake:	
-   126                           ; 0 bytes @ 0x0
+    97                           ;psect for function _serial_init
+    98  0000                     
+    99                           	psect	cinit
+   100  07FC                     start_initialization:	
+   101  07FC                     __initialization:	
+   102  07FC                     end_of_initialization:	
+   103                           ;End of C runtime variable initialization code
+   104                           
+   105  07FC                     __end_of__initialization:	
+   106  07FC  0183               	clrf	3
+   107  07FD  120A  118A  2F96   	ljmp	_main	;jump to C main() function
+   108                           
+   109                           	psect	cstackCOMMON
+   110  0070                     __pcstackCOMMON:	
+   111  0070                     ?_delay:	
+   112  0070                     ?_serial_init:	
+   113                           ; 0 bytes @ 0x0
+   114                           
+   115  0070                     ??_serial_init:	
+   116                           ; 0 bytes @ 0x0
+   117                           
+   118  0070                     ?_serial_send:	
+   119                           ; 0 bytes @ 0x0
+   120                           
+   121  0070                     ?_main:	
+   122                           ; 0 bytes @ 0x0
+   123                           
+   124  0070                     delay@overflows:	
+   125                           ; 0 bytes @ 0x0
+   126                           
    127                           
-   128  0070                     ?_main:	
-   129                           ; 0 bytes @ 0x0
-   130                           
-   131  0070                     ?_serial_read:	
-   132                           ; 0 bytes @ 0x0
-   133                           
-   134  0070                     delay@overflows:	
-   135                           ; 1 bytes @ 0x0
-   136                           
-   137                           
-   138                           ; 2 bytes @ 0x0
-   139  0070                     	ds	2
-   140  0072                     ??_delay:	
+   128                           ; 2 bytes @ 0x0
+   129  0070                     	ds	2
+   130  0072                     ??_delay:	
+   131                           
+   132                           ; 0 bytes @ 0x2
+   133  0072                     	ds	1
+   134  0073                     delay@i:	
+   135                           
+   136                           ; 2 bytes @ 0x3
+   137  0073                     	ds	2
+   138  0075                     ??_serial_send:	
+   139  0075                     serial_send@data:	
+   140                           ; 0 bytes @ 0x5
    141                           
-   142                           ; 0 bytes @ 0x2
-   143  0072                     	ds	1
-   144  0073                     delay@i:	
-   145                           
-   146                           ; 2 bytes @ 0x3
-   147  0073                     	ds	2
-   148  0075                     ??_serial_send:	
-   149  0075                     serial_send@data:	
-   150                           ; 0 bytes @ 0x5
-   151                           
-   152                           
-   153                           ; 1 bytes @ 0x5
-   154  0075                     	ds	1
-   155  0076                     ??_serial_handshake:	
-   156                           
-   157                           ; 0 bytes @ 0x6
-   158  0076                     	ds	1
-   159  0077                     serial_handshake@serialCheck:	
-   160                           
-   161                           ; 1 bytes @ 0x7
-   162  0077                     	ds	1
-   163  0078                     serial_handshake@response:	
-   164                           
-   165                           ; 1 bytes @ 0x8
-   166  0078                     	ds	1
-   167  0079                     ??_main:	
-   168                           
-   169                           ; 0 bytes @ 0x9
-   170  0079                     	ds	1
-   171  007A                     main@serialCheck:	
-   172                           
-   173                           ; 1 bytes @ 0xA
-   174  007A                     	ds	1
-   175  007B                     main@dataIN:	
-   176                           
-   177                           ; 1 bytes @ 0xB
-   178  007B                     	ds	1
-   179  007C                     main@DAVBL:	
-   180                           
-   181                           ; 1 bytes @ 0xC
-   182  007C                     	ds	1
-   183  007D                     main@dataOUT:	
-   184                           
-   185                           ; 1 bytes @ 0xD
-   186  007D                     	ds	1
-   187                           
-   188                           	psect	maintext
-   189  0791                     __pmaintext:	
-   190 ;;
-   191 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
-   192 ;;
-   193 ;; *************** function _main *****************
-   194 ;; Defined at:
-   195 ;;		line 26 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
-   196 ;; Parameters:    Size  Location     Type
-   197 ;;		None
-   198 ;; Auto vars:     Size  Location     Type
-   199 ;;  dataOUT         1   13[COMMON] unsigned char 
-   200 ;;  DAVBL           1   12[COMMON] unsigned char 
-   201 ;;  dataIN          1   11[COMMON] unsigned char 
-   202 ;;  serialCheck     1   10[COMMON] unsigned char 
-   203 ;; Return value:  Size  Location     Type
-   204 ;;		None               void
-   205 ;; Registers used:
-   206 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
-   207 ;; Tracked objects:
-   208 ;;		On entry : 17F/0
-   209 ;;		On exit  : 0/0
-   210 ;;		Unchanged: 0/0
-   211 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   212 ;;      Params:         0       0       0       0       0
-   213 ;;      Locals:         4       0       0       0       0
-   214 ;;      Temps:          1       0       0       0       0
-   215 ;;      Totals:         5       0       0       0       0
-   216 ;;Total ram usage:        5 bytes
-   217 ;; Hardware stack levels required when called:    3
-   218 ;; This function calls:
-   219 ;;		_serial_handshake
-   220 ;;		_serial_init
-   221 ;;		_serial_send
-   222 ;; This function is called by:
-   223 ;;		Startup code after reset
-   224 ;; This function uses a non-reentrant model
-   225 ;;
-   226                           
+   142                           
+   143                           ; 1 bytes @ 0x5
+   144  0075                     	ds	1
+   145  0076                     ??_main:	
+   146                           
+   147                           ; 0 bytes @ 0x6
+   148  0076                     	ds	1
+   149  0077                     main@dataIN:	
+   150                           
+   151                           ; 1 bytes @ 0x7
+   152  0077                     	ds	1
+   153  0078                     main@DAVBL:	
+   154                           
+   155                           ; 1 bytes @ 0x8
+   156  0078                     	ds	1
+   157  0079                     main@dataOUT:	
+   158                           
+   159                           ; 1 bytes @ 0x9
+   160  0079                     	ds	1
+   161                           
+   162                           	psect	maintext
+   163  0796                     __pmaintext:	
+   164 ;;
+   165 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   166 ;;
+   167 ;; *************** function _main *****************
+   168 ;; Defined at:
+   169 ;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c"
+   170 ;; Parameters:    Size  Location     Type
+   171 ;;		None
+   172 ;; Auto vars:     Size  Location     Type
+   173 ;;  dataOUT         1    9[COMMON] unsigned char 
+   174 ;;  DAVBL           1    8[COMMON] unsigned char 
+   175 ;;  dataIN          1    7[COMMON] unsigned char 
+   176 ;; Return value:  Size  Location     Type
+   177 ;;		None               void
+   178 ;; Registers used:
+   179 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   180 ;; Tracked objects:
+   181 ;;		On entry : 17F/0
+   182 ;;		On exit  : 0/0
+   183 ;;		Unchanged: 0/0
+   184 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   185 ;;      Params:         0       0       0       0       0
+   186 ;;      Locals:         3       0       0       0       0
+   187 ;;      Temps:          1       0       0       0       0
+   188 ;;      Totals:         4       0       0       0       0
+   189 ;;Total ram usage:        4 bytes
+   190 ;; Hardware stack levels required when called:    2
+   191 ;; This function calls:
+   192 ;;		_serial_init
+   193 ;;		_serial_send
+   194 ;; This function is called by:
+   195 ;;		Startup code after reset
+   196 ;; This function uses a non-reentrant model
+   197 ;;
+   198                           
+   199                           
+   200                           ;psect for function _main
+   201  0796                     _main:	
+   202                           
+   203                           ;usart-tx.c: 26: unsigned char dataIN = 0x00;
+   204                           
+   205                           ;incstack = 0
+   206                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   207  0796  01F7               	clrf	main@dataIN
+   208                           
+   209                           ;usart-tx.c: 27: unsigned char dataOUT = 0x00;
+   210  0797  01F9               	clrf	main@dataOUT
+   211                           
+   212                           ;usart-tx.c: 28: unsigned char DAVBL = 0x00;
+   213  0798  01F8               	clrf	main@DAVBL
+   214                           
+   215                           ;usart-tx.c: 29: TRISD = 0x1F;
+   216  0799  301F               	movlw	31
+   217  079A  1683               	bsf	3,5	;RP0=1, select bank1
+   218  079B  1303               	bcf	3,6	;RP1=0, select bank1
+   219  079C  0088               	movwf	8	;volatile
+   220                           
+   221                           ;usart-tx.c: 30: TRISB = 0x00;
+   222  079D  0186               	clrf	6	;volatile
+   223                           
+   224                           ;usart-tx.c: 33: OPTION_REG = 0x44;
+   225  079E  3044               	movlw	68
+   226  079F  0081               	movwf	1	;volatile
    227                           
-   228                           ;psect for function _main
-   229  0791                     _main:	
-   230                           
-   231                           ;usart-tx.c: 28: unsigned char serialCheck = 0x00;
+   228                           ;usart-tx.c: 34: TMR0 = 0;
+   229  07A0  1283               	bcf	3,5	;RP0=0, select bank0
+   230  07A1  1303               	bcf	3,6	;RP1=0, select bank0
+   231  07A2  0181               	clrf	1	;volatile
    232                           
-   233                           ;incstack = 0
-   234                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
-   235  0791  01FA               	clrf	main@serialCheck
-   236                           
-   237                           ;usart-tx.c: 29: unsigned char dataIN = 0x00;
-   238  0792  01FB               	clrf	main@dataIN
-   239                           
-   240                           ;usart-tx.c: 30: unsigned char dataOUT = 0x00;
-   241  0793  01FD               	clrf	main@dataOUT
-   242                           
-   243                           ;usart-tx.c: 31: unsigned char DAVBL = 0x00;
-   244  0794  01FC               	clrf	main@DAVBL
-   245                           
-   246                           ;usart-tx.c: 32: TRISD = 0x1F;
-   247  0795  301F               	movlw	31
-   248  0796  1683               	bsf	3,5	;RP0=1, select bank1
-   249  0797  1303               	bcf	3,6	;RP1=0, select bank1
-   250  0798  0088               	movwf	8	;volatile
-   251                           
-   252                           ;usart-tx.c: 33: TRISB = 0x00;
-   253  0799  0186               	clrf	6	;volatile
+   233                           ;usart-tx.c: 35: TMR0IE = 1;
+   234  07A3  168B               	bsf	11,5	;volatile
+   235                           
+   236                           ;usart-tx.c: 36: TMR0IF = 0;
+   237  07A4  110B               	bcf	11,2	;volatile
+   238                           
+   239                           ;usart-tx.c: 37: GIE = 1;
+   240  07A5  178B               	bsf	11,7	;volatile
+   241                           
+   242                           ;usart-tx.c: 40: TRISC6 = 0;
+   243  07A6  1683               	bsf	3,5	;RP0=1, select bank1
+   244  07A7  1303               	bcf	3,6	;RP1=0, select bank1
+   245  07A8  1307               	bcf	7,6	;volatile
+   246                           
+   247                           ;usart-tx.c: 41: TRISC7 = 1;
+   248  07A9  1787               	bsf	7,7	;volatile
+   249                           
+   250                           ;usart-tx.c: 42: serial_init();
+   251  07AA  120A  118A  2760  120A  118A  	fcall	_serial_init
+   252  07AF                     l612:	
+   253                           ;usart-tx.c: 47: while (1)
    254                           
-   255                           ;usart-tx.c: 36: OPTION_REG = 0x44;
-   256  079A  3044               	movlw	68
-   257  079B  0081               	movwf	1	;volatile
-   258                           
-   259                           ;usart-tx.c: 37: TMR0 = 0;
-   260  079C  1283               	bcf	3,5	;RP0=0, select bank0
-   261  079D  1303               	bcf	3,6	;RP1=0, select bank0
-   262  079E  0181               	clrf	1	;volatile
-   263                           
-   264                           ;usart-tx.c: 38: TMR0IE = 1;
-   265  079F  168B               	bsf	11,5	;volatile
-   266                           
-   267                           ;usart-tx.c: 39: TMR0IF = 0;
-   268  07A0  110B               	bcf	11,2	;volatile
-   269                           
-   270                           ;usart-tx.c: 42: TRISC6 = 0;
-   271  07A1  1683               	bsf	3,5	;RP0=1, select bank1
-   272  07A2  1303               	bcf	3,6	;RP1=0, select bank1
-   273  07A3  1307               	bcf	7,6	;volatile
-   274                           
-   275                           ;usart-tx.c: 43: TRISC7 = 1;
-   276  07A4  1787               	bsf	7,7	;volatile
-   277                           
-   278                           ;usart-tx.c: 44: serial_init();
-   279  07A5  120A  118A  272A  120A  118A  	fcall	_serial_init
-   280                           
-   281                           ;usart-tx.c: 47: serial_handshake();
-   282  07AA  120A  118A  2751  120A  118A  	fcall	_serial_handshake
-   283  07AF                     l71:	
-   284                           ;usart-tx.c: 49: while (1)
+   255                           
+   256                           ;usart-tx.c: 48: {
+   257                           ;usart-tx.c: 49: DAVBL = PORTD & 0x10;
+   258  07AF  1283               	bcf	3,5	;RP0=0, select bank0
+   259  07B0  1303               	bcf	3,6	;RP1=0, select bank0
+   260  07B1  0808               	movf	8,w	;volatile
+   261  07B2  3910               	andlw	16
+   262  07B3  00F6               	movwf	??_main
+   263  07B4  0876               	movf	??_main,w
+   264  07B5  00F8               	movwf	main@DAVBL
+   265                           
+   266                           ;usart-tx.c: 50: if (DAVBL == 0x10)
+   267  07B6  0878               	movf	main@DAVBL,w
+   268  07B7  3A10               	xorlw	16
+   269  07B8  1D03               	skipz
+   270  07B9  2FAF               	goto	l612
+   271                           
+   272                           ;usart-tx.c: 51: {
+   273                           ;usart-tx.c: 52: dataIN = PORTD & 0x0F;
+   274  07BA  0808               	movf	8,w	;volatile
+   275  07BB  390F               	andlw	15
+   276  07BC  00F6               	movwf	??_main
+   277  07BD  0876               	movf	??_main,w
+   278  07BE  00F7               	movwf	main@dataIN
+   279                           
+   280                           ;usart-tx.c: 53: switch (dataIN)
+   281  07BF  2FD8               	goto	l638
+   282  07C0                     l76:	
+   283                           ;usart-tx.c: 54: {
+   284                           ;usart-tx.c: 55: case 0x00:
    285                           
    286                           
-   287                           ;usart-tx.c: 50: {
-   288                           ;usart-tx.c: 51: DAVBL = PORTD & 0x10;
-   289  07AF  1283               	bcf	3,5	;RP0=0, select bank0
-   290  07B0  1303               	bcf	3,6	;RP1=0, select bank0
-   291  07B1  0808               	movf	8,w	;volatile
-   292  07B2  3910               	andlw	16
-   293  07B3  00F9               	movwf	??_main
-   294  07B4  0879               	movf	??_main,w
-   295  07B5  00FC               	movwf	main@DAVBL
+   287                           ;usart-tx.c: 56: dataOUT = 0x01;
+   288  07C0  01F9               	clrf	main@dataOUT
+   289  07C1  0AF9               	incf	main@dataOUT,f
+   290                           
+   291                           ;usart-tx.c: 57: break;
+   292  07C2  2FF5               	goto	l640
+   293  07C3                     l618:	
+   294                           ;usart-tx.c: 58: case 0x01:
+   295                           
    296                           
-   297                           ;usart-tx.c: 52: if (DAVBL == 0x10)
-   298  07B6  087C               	movf	main@DAVBL,w
-   299  07B7  3A10               	xorlw	16
-   300  07B8  1D03               	skipz
-   301  07B9  2FAF               	goto	l71
+   297                           ;usart-tx.c: 59: dataOUT = 0x02;
+   298  07C3  3002               	movlw	2
+   299  07C4  2FD2               	goto	L7
+   300  07C5                     l620:	
+   301                           ;usart-tx.c: 61: case 0x02:
    302                           
-   303                           ;usart-tx.c: 53: {
-   304                           ;usart-tx.c: 54: dataIN = PORTD & 0x0F;
-   305  07BA  0808               	movf	8,w	;volatile
-   306  07BB  390F               	andlw	15
-   307  07BC  00F9               	movwf	??_main
-   308  07BD  0879               	movf	??_main,w
-   309  07BE  00FB               	movwf	main@dataIN
-   310                           
-   311                           ;usart-tx.c: 55: switch (dataIN)
-   312  07BF  2FD8               	goto	l632
-   313  07C0                     l74:	
-   314                           ;usart-tx.c: 56: {
-   315                           ;usart-tx.c: 57: case 0x00:
-   316                           
-   317                           
-   318                           ;usart-tx.c: 58: dataOUT = 0x01;
-   319  07C0  01FD               	clrf	main@dataOUT
-   320  07C1  0AFD               	incf	main@dataOUT,f
-   321                           
-   322                           ;usart-tx.c: 59: break;
-   323  07C2  2FF5               	goto	l634
-   324  07C3                     l612:	
-   325                           ;usart-tx.c: 60: case 0x01:
-   326                           
-   327                           
-   328                           ;usart-tx.c: 61: dataOUT = 0x02;
-   329  07C3  3002               	movlw	2
-   330  07C4  2FD2               	goto	L7
-   331  07C5                     l614:	
-   332                           ;usart-tx.c: 63: case 0x02:
-   333                           
-   334                           ;usart-tx.c: 62: break;
-   335                           
-   336                           
-   337                           ;usart-tx.c: 64: dataOUT = 0x03;
-   338  07C5  3003               	movlw	3
-   339  07C6  2FD2               	goto	L7
-   340  07C7                     l616:	
-   341                           ;usart-tx.c: 66: case 0x04:
-   342                           
-   343                           ;usart-tx.c: 65: break;
-   344                           
-   345                           
-   346                           ;usart-tx.c: 67: dataOUT = 0x04;
-   347  07C7  3004               	movlw	4
-   348  07C8  2FD2               	goto	L7
-   349  07C9                     l618:	
-   350                           ;usart-tx.c: 69: case 0x05:
-   351                           
-   352                           ;usart-tx.c: 68: break;
-   353                           
-   354                           
-   355                           ;usart-tx.c: 70: dataOUT = 0x05;
-   356  07C9  3005               	movlw	5
-   357  07CA  2FD2               	goto	L7
-   358  07CB                     l620:	
-   359                           ;usart-tx.c: 72: case 0x06:
-   360                           
-   361                           ;usart-tx.c: 71: break;
-   362                           
-   363                           
-   364                           ;usart-tx.c: 73: dataOUT = 0x06;
-   365  07CB  3006               	movlw	6
-   366  07CC  2FD2               	goto	L7
-   367  07CD                     l622:	
-   368                           ;usart-tx.c: 75: case 0x08:
-   369                           
-   370                           ;usart-tx.c: 74: break;
+   303                           ;usart-tx.c: 60: break;
+   304                           
+   305                           
+   306                           ;usart-tx.c: 62: dataOUT = 0x03;
+   307  07C5  3003               	movlw	3
+   308  07C6  2FD2               	goto	L7
+   309  07C7                     l622:	
+   310                           ;usart-tx.c: 64: case 0x04:
+   311                           
+   312                           ;usart-tx.c: 63: break;
+   313                           
+   314                           
+   315                           ;usart-tx.c: 65: dataOUT = 0x04;
+   316  07C7  3004               	movlw	4
+   317  07C8  2FD2               	goto	L7
+   318  07C9                     l624:	
+   319                           ;usart-tx.c: 67: case 0x05:
+   320                           
+   321                           ;usart-tx.c: 66: break;
+   322                           
+   323                           
+   324                           ;usart-tx.c: 68: dataOUT = 0x05;
+   325  07C9  3005               	movlw	5
+   326  07CA  2FD2               	goto	L7
+   327  07CB                     l626:	
+   328                           ;usart-tx.c: 70: case 0x06:
+   329                           
+   330                           ;usart-tx.c: 69: break;
+   331                           
+   332                           
+   333                           ;usart-tx.c: 71: dataOUT = 0x06;
+   334  07CB  3006               	movlw	6
+   335  07CC  2FD2               	goto	L7
+   336  07CD                     l628:	
+   337                           ;usart-tx.c: 73: case 0x08:
+   338                           
+   339                           ;usart-tx.c: 72: break;
+   340                           
+   341                           
+   342                           ;usart-tx.c: 74: dataOUT = 0x07;
+   343  07CD  3007               	movlw	7
+   344  07CE  2FD2               	goto	L7
+   345  07CF                     l630:	
+   346                           ;usart-tx.c: 76: case 0x09:
+   347                           
+   348                           ;usart-tx.c: 75: break;
+   349                           
+   350                           
+   351                           ;usart-tx.c: 77: dataOUT = 0x08;
+   352  07CF  3008               	movlw	8
+   353  07D0  2FD2               	goto	L7
+   354  07D1                     l632:	
+   355                           ;usart-tx.c: 79: case 0x0A:
+   356                           
+   357                           ;usart-tx.c: 78: break;
+   358                           
+   359                           
+   360                           ;usart-tx.c: 80: dataOUT = 0x09;
+   361  07D1  3009               	movlw	9
+   362  07D2                     L7:	
+   363  07D2  00F6               	movwf	??_main
+   364  07D3  0876               	movf	??_main,w
+   365  07D4  00F9               	movwf	main@dataOUT
+   366                           
+   367                           ;usart-tx.c: 81: break;
+   368  07D5  2FF5               	goto	l640
+   369  07D6                     l634:	
+   370                           ;usart-tx.c: 82: default:
    371                           
    372                           
-   373                           ;usart-tx.c: 76: dataOUT = 0x07;
-   374  07CD  3007               	movlw	7
-   375  07CE  2FD2               	goto	L7
-   376  07CF                     l624:	
-   377                           ;usart-tx.c: 78: case 0x09:
-   378                           
-   379                           ;usart-tx.c: 77: break;
-   380                           
-   381                           
-   382                           ;usart-tx.c: 79: dataOUT = 0x08;
-   383  07CF  3008               	movlw	8
-   384  07D0  2FD2               	goto	L7
-   385  07D1                     l626:	
-   386                           ;usart-tx.c: 81: case 0x0A:
-   387                           
-   388                           ;usart-tx.c: 80: break;
-   389                           
-   390                           
-   391                           ;usart-tx.c: 82: dataOUT = 0x09;
-   392  07D1  3009               	movlw	9
-   393  07D2                     L7:	
-   394  07D2  00F9               	movwf	??_main
-   395  07D3  0879               	movf	??_main,w
-   396  07D4  00FD               	movwf	main@dataOUT
-   397                           
-   398                           ;usart-tx.c: 83: break;
-   399  07D5  2FF5               	goto	l634
-   400  07D6                     l628:	
-   401                           ;usart-tx.c: 84: default:
-   402                           
-   403                           
-   404                           ;usart-tx.c: 85: dataOUT = 0x00;
-   405  07D6  01FD               	clrf	main@dataOUT
-   406                           
-   407                           ;usart-tx.c: 87: }
-   408                           
-   409                           ;usart-tx.c: 86: break;
-   410  07D7  2FF5               	goto	l634
-   411  07D8                     l632:	
-   412  07D8  087B               	movf	main@dataIN,w
-   413                           
-   414                           ; Switch size 1, requested type "space"
-   415                           ; Number of cases is 9, Range of values is 0 to 10
-   416                           ; switch strategies available:
-   417                           ; Name         Instructions Cycles
-   418                           ; simple_byte           28    15 (average)
-   419                           ; direct_byte           41     8 (fixed)
-   420                           ; jumptable            260     6 (fixed)
-   421                           ;	Chosen strategy is simple_byte
-   422  07D9  3A00               	xorlw	0	; case 0
-   423  07DA  1903               	skipnz
-   424  07DB  2FC0               	goto	l74
-   425  07DC  3A01               	xorlw	1	; case 1
-   426  07DD  1903               	skipnz
-   427  07DE  2FC3               	goto	l612
-   428  07DF  3A03               	xorlw	3	; case 2
-   429  07E0  1903               	skipnz
-   430  07E1  2FC5               	goto	l614
-   431  07E2  3A06               	xorlw	6	; case 4
-   432  07E3  1903               	skipnz
-   433  07E4  2FC7               	goto	l616
-   434  07E5  3A01               	xorlw	1	; case 5
-   435  07E6  1903               	skipnz
-   436  07E7  2FC9               	goto	l618
-   437  07E8  3A03               	xorlw	3	; case 6
-   438  07E9  1903               	skipnz
-   439  07EA  2FCB               	goto	l620
-   440  07EB  3A0E               	xorlw	14	; case 8
-   441  07EC  1903               	skipnz
-   442  07ED  2FCD               	goto	l622
-   443  07EE  3A01               	xorlw	1	; case 9
-   444  07EF  1903               	skipnz
-   445  07F0  2FCF               	goto	l624
-   446  07F1  3A03               	xorlw	3	; case 10
-   447  07F2  1903               	skipnz
-   448  07F3  2FD1               	goto	l626
-   449  07F4  2FD6               	goto	l628
-   450  07F5                     l634:	
-   451                           
-   452                           ;usart-tx.c: 88: serial_send(dataOUT);
-   453  07F5  087D               	movf	main@dataOUT,w
-   454  07F6  120A  118A  271B  120A  118A  	fcall	_serial_send
-   455  07FB  2FAF               	goto	l71
-   456  07FC                     __end_of_main:	
-   457                           
-   458                           	psect	text1
-   459  072A                     __ptext1:	
-   460 ;; *************** function _serial_init *****************
-   461 ;; Defined at:
-   462 ;;		line 20 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
+   373                           ;usart-tx.c: 83: dataOUT = 0x00;
+   374  07D6  01F9               	clrf	main@dataOUT
+   375                           
+   376                           ;usart-tx.c: 85: }
+   377                           
+   378                           ;usart-tx.c: 84: break;
+   379  07D7  2FF5               	goto	l640
+   380  07D8                     l638:	
+   381  07D8  0877               	movf	main@dataIN,w
+   382                           
+   383                           ; Switch size 1, requested type "space"
+   384                           ; Number of cases is 9, Range of values is 0 to 10
+   385                           ; switch strategies available:
+   386                           ; Name         Instructions Cycles
+   387                           ; simple_byte           28    15 (average)
+   388                           ; direct_byte           41     8 (fixed)
+   389                           ; jumptable            260     6 (fixed)
+   390                           ;	Chosen strategy is simple_byte
+   391  07D9  3A00               	xorlw	0	; case 0
+   392  07DA  1903               	skipnz
+   393  07DB  2FC0               	goto	l76
+   394  07DC  3A01               	xorlw	1	; case 1
+   395  07DD  1903               	skipnz
+   396  07DE  2FC3               	goto	l618
+   397  07DF  3A03               	xorlw	3	; case 2
+   398  07E0  1903               	skipnz
+   399  07E1  2FC5               	goto	l620
+   400  07E2  3A06               	xorlw	6	; case 4
+   401  07E3  1903               	skipnz
+   402  07E4  2FC7               	goto	l622
+   403  07E5  3A01               	xorlw	1	; case 5
+   404  07E6  1903               	skipnz
+   405  07E7  2FC9               	goto	l624
+   406  07E8  3A03               	xorlw	3	; case 6
+   407  07E9  1903               	skipnz
+   408  07EA  2FCB               	goto	l626
+   409  07EB  3A0E               	xorlw	14	; case 8
+   410  07EC  1903               	skipnz
+   411  07ED  2FCD               	goto	l628
+   412  07EE  3A01               	xorlw	1	; case 9
+   413  07EF  1903               	skipnz
+   414  07F0  2FCF               	goto	l630
+   415  07F1  3A03               	xorlw	3	; case 10
+   416  07F2  1903               	skipnz
+   417  07F3  2FD1               	goto	l632
+   418  07F4  2FD6               	goto	l634
+   419  07F5                     l640:	
+   420                           
+   421                           ;usart-tx.c: 86: serial_send(dataOUT);
+   422  07F5  0879               	movf	main@dataOUT,w
+   423  07F6  120A  118A  276F  120A  118A  	fcall	_serial_send
+   424  07FB  2FAF               	goto	l612
+   425  07FC                     __end_of_main:	
+   426                           
+   427                           	psect	text1
+   428  076F                     __ptext1:	
+   429 ;; *************** function _serial_send *****************
+   430 ;; Defined at:
+   431 ;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
       +s.h"
-   463 ;; Parameters:    Size  Location     Type
-   464 ;;		None
-   465 ;; Auto vars:     Size  Location     Type
-   466 ;;		None
-   467 ;; Return value:  Size  Location     Type
-   468 ;;		None               void
-   469 ;; Registers used:
-   470 ;;		wreg
-   471 ;; Tracked objects:
-   472 ;;		On entry : 0/0
-   473 ;;		On exit  : 0/0
-   474 ;;		Unchanged: 0/0
-   475 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   476 ;;      Params:         0       0       0       0       0
-   477 ;;      Locals:         0       0       0       0       0
-   478 ;;      Temps:          0       0       0       0       0
-   479 ;;      Totals:         0       0       0       0       0
-   480 ;;Total ram usage:        0 bytes
-   481 ;; Hardware stack levels used:    1
-   482 ;; This function calls:
-   483 ;;		Nothing
-   484 ;; This function is called by:
-   485 ;;		_main
-   486 ;; This function uses a non-reentrant model
-   487 ;;
+   432 ;; Parameters:    Size  Location     Type
+   433 ;;  data            1    wreg     unsigned char 
+   434 ;; Auto vars:     Size  Location     Type
+   435 ;;  data            1    5[COMMON] unsigned char 
+   436 ;; Return value:  Size  Location     Type
+   437 ;;		None               void
+   438 ;; Registers used:
+   439 ;;		wreg, status,2, status,0, pclath, cstack
+   440 ;; Tracked objects:
+   441 ;;		On entry : 0/0
+   442 ;;		On exit  : 0/0
+   443 ;;		Unchanged: 0/0
+   444 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   445 ;;      Params:         0       0       0       0       0
+   446 ;;      Locals:         1       0       0       0       0
+   447 ;;      Temps:          0       0       0       0       0
+   448 ;;      Totals:         1       0       0       0       0
+   449 ;;Total ram usage:        1 bytes
+   450 ;; Hardware stack levels used:    1
+   451 ;; Hardware stack levels required when called:    1
+   452 ;; This function calls:
+   453 ;;		_delay
+   454 ;; This function is called by:
+   455 ;;		_main
+   456 ;;		_serial_handshake
+   457 ;; This function uses a non-reentrant model
+   458 ;;
+   459                           
+   460                           
+   461                           ;psect for function _serial_send
+   462  076F                     _serial_send:	
+   463                           
+   464                           ;incstack = 0
+   465                           ; Regs used in _serial_send: [wreg+status,2+status,0+pclath+cstack]
+   466                           ;serial_send@data stored from wreg
+   467  076F  00F5               	movwf	serial_send@data
+   468  0770                     l46:	
+   469                           ;usart-processes.h: 35: while (!TXIF);
+   470                           
+   471  0770  1283               	bcf	3,5	;RP0=0, select bank0
+   472  0771  1303               	bcf	3,6	;RP1=0, select bank0
+   473  0772  1E0C               	btfss	12,4	;volatile
+   474  0773  2F70               	goto	l46
+   475                           
+   476                           ;usart-processes.h: 36: TXREG = data;
+   477  0774  0875               	movf	serial_send@data,w
+   478  0775  0099               	movwf	25	;volatile
+   479                           
+   480                           ;usart-processes.h: 37: delay(10);
+   481  0776  300A               	movlw	10
+   482  0777  00F0               	movwf	delay@overflows
+   483  0778  3000               	movlw	0
+   484  0779  00F1               	movwf	delay@overflows+1
+   485  077A  120A  118A  277E   	fcall	_delay
+   486  077D  0008               	return
+   487  077E                     __end_of_serial_send:	
    488                           
-   489                           
-   490                           ;psect for function _serial_init
-   491  072A                     _serial_init:	
-   492                           
-   493                           ;usart-processes.h: 23: TXSTA = 0b00100100;
-   494                           
-   495                           ;incstack = 0
-   496                           ; Regs used in _serial_init: [wreg]
-   497  072A  3024               	movlw	36
-   498  072B  1683               	bsf	3,5	;RP0=1, select bank1
-   499  072C  1303               	bcf	3,6	;RP1=0, select bank1
-   500  072D  0098               	movwf	24	;volatile
-   501                           
-   502                           ;usart-processes.h: 24: TXIF = 0;
-   503  072E  1283               	bcf	3,5	;RP0=0, select bank0
-   504  072F  1303               	bcf	3,6	;RP1=0, select bank0
-   505  0730  120C               	bcf	12,4	;volatile
-   506                           
-   507                           ;usart-processes.h: 27: RCSTA = 0b10010000;
-   508  0731  3090               	movlw	144
-   509  0732  0098               	movwf	24	;volatile
-   510                           
-   511                           ;usart-processes.h: 28: RCIF = 0;
-   512  0733  128C               	bcf	12,5	;volatile
-   513                           
-   514                           ;usart-processes.h: 30: SPBRG = 25;
-   515  0734  3019               	movlw	25
-   516  0735  1683               	bsf	3,5	;RP0=1, select bank1
-   517  0736  1303               	bcf	3,6	;RP1=0, select bank1
-   518  0737  0099               	movwf	25	;volatile
-   519  0738  0008               	return
-   520  0739                     __end_of_serial_init:	
+   489                           	psect	text2
+   490  077E                     __ptext2:	
+   491 ;; *************** function _delay *****************
+   492 ;; Defined at:
+   493 ;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
+      +s.h"
+   494 ;; Parameters:    Size  Location     Type
+   495 ;;  overflows       2    0[COMMON] int 
+   496 ;; Auto vars:     Size  Location     Type
+   497 ;;  i               2    3[COMMON] int 
+   498 ;; Return value:  Size  Location     Type
+   499 ;;		None               void
+   500 ;; Registers used:
+   501 ;;		wreg, status,2
+   502 ;; Tracked objects:
+   503 ;;		On entry : 0/0
+   504 ;;		On exit  : 0/0
+   505 ;;		Unchanged: 0/0
+   506 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   507 ;;      Params:         2       0       0       0       0
+   508 ;;      Locals:         2       0       0       0       0
+   509 ;;      Temps:          1       0       0       0       0
+   510 ;;      Totals:         5       0       0       0       0
+   511 ;;Total ram usage:        5 bytes
+   512 ;; Hardware stack levels used:    1
+   513 ;; This function calls:
+   514 ;;		Nothing
+   515 ;; This function is called by:
+   516 ;;		_serial_send
+   517 ;;		_serial_handshake
+   518 ;; This function uses a non-reentrant model
+   519 ;;
+   520                           
    521                           
-   522                           	psect	text2
-   523  0751                     __ptext2:	
-   524 ;; *************** function _serial_handshake *****************
-   525 ;; Defined at:
-   526 ;;		line 48 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
+   522                           ;psect for function _delay
+   523  077E                     _delay:	
+   524                           
+   525                           ;usart-processes.h: 72: int i;
+   526                           ;usart-processes.h: 73: for (i = 0; i < overflows; i++)
+   527                           
+   528                           ;incstack = 0
+   529                           ; Regs used in _delay: [wreg+status,2]
+   530  077E  01F3               	clrf	delay@i
+   531  077F  01F4               	clrf	delay@i+1
+   532  0780                     l64:	
+   533  0780  0874               	movf	delay@i+1,w
+   534  0781  3A80               	xorlw	128
+   535  0782  00F2               	movwf	??_delay
+   536  0783  0871               	movf	delay@overflows+1,w
+   537  0784  3A80               	xorlw	128
+   538  0785  0272               	subwf	??_delay,w
+   539  0786  1D03               	skipz
+   540  0787  2F8A               	goto	u25
+   541  0788  0870               	movf	delay@overflows,w
+   542  0789  0273               	subwf	delay@i,w
+   543  078A                     u25:	
+   544  078A  1803               	btfsc	3,0
+   545  078B  0008               	return
+   546  078C                     l66:	
+   547                           ;usart-processes.h: 74: {
+   548                           ;usart-processes.h: 75: while (!T0IF);
+   549                           
+   550  078C  1D0B               	btfss	11,2	;volatile
+   551  078D  2F8C               	goto	l66
+   552                           
+   553                           ;usart-processes.h: 76: T0IF = 0;
+   554  078E  110B               	bcf	11,2	;volatile
+   555  078F  3001               	movlw	1
+   556  0790  07F3               	addwf	delay@i,f
+   557  0791  1803               	skipnc
+   558  0792  0AF4               	incf	delay@i+1,f
+   559  0793  3000               	movlw	0
+   560  0794  07F4               	addwf	delay@i+1,f
+   561  0795  2F80               	goto	l64
+   562  0796                     __end_of_delay:	
+   563                           
+   564                           	psect	text3
+   565  0760                     __ptext3:	
+   566 ;; *************** function _serial_init *****************
+   567 ;; Defined at:
+   568 ;;		line 20 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
       +s.h"
-   527 ;; Parameters:    Size  Location     Type
-   528 ;;		None
-   529 ;; Auto vars:     Size  Location     Type
-   530 ;;  response        1    8[COMMON] unsigned char 
-   531 ;;  serialCheck     1    7[COMMON] unsigned char 
-   532 ;; Return value:  Size  Location     Type
-   533 ;;		None               void
-   534 ;; Registers used:
-   535 ;;		wreg, status,2, status,0, pclath, cstack
-   536 ;; Tracked objects:
-   537 ;;		On entry : 0/0
-   538 ;;		On exit  : 0/0
-   539 ;;		Unchanged: 0/0
-   540 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   541 ;;      Params:         0       0       0       0       0
-   542 ;;      Locals:         2       0       0       0       0
-   543 ;;      Temps:          1       0       0       0       0
-   544 ;;      Totals:         3       0       0       0       0
-   545 ;;Total ram usage:        3 bytes
-   546 ;; Hardware stack levels used:    1
-   547 ;; Hardware stack levels required when called:    2
-   548 ;; This function calls:
-   549 ;;		_delay
-   550 ;;		_serial_read
-   551 ;;		_serial_send
-   552 ;; This function is called by:
-   553 ;;		_main
-   554 ;; This function uses a non-reentrant model
-   555 ;;
-   556                           
-   557                           
-   558                           ;psect for function _serial_handshake
-   559  0751                     _serial_handshake:	
-   560                           
-   561                           ;usart-processes.h: 51: delay(100);
-   562                           
-   563                           ;incstack = 0
-   564                           ; Regs used in _serial_handshake: [wreg+status,2+status,0+pclath+cstack]
-   565  0751  3064               	movlw	100
-   566  0752  00F0               	movwf	delay@overflows
-   567  0753  3000               	movlw	0
-   568  0754  00F1               	movwf	delay@overflows+1
-   569  0755  120A  118A  2739  120A  118A  	fcall	_delay
-   570                           
-   571                           ;usart-processes.h: 52: serial_send(0x01);
-   572  075A  3001               	movlw	1
-   573  075B  120A  118A  271B  120A  118A  	fcall	_serial_send
-   574                           
-   575                           ;usart-processes.h: 55: unsigned char response = 0;
-   576  0760  01F8               	clrf	serial_handshake@response
-   577  0761                     l570:	
-   578                           ;usart-processes.h: 56: do
-   579                           
-   580                           
-   581                           ;usart-processes.h: 57: {
-   582                           ;usart-processes.h: 58: response = serial_read();
-   583  0761  120A  118A  2715  120A  118A  	fcall	_serial_read
-   584  0766  00F6               	movwf	??_serial_handshake
-   585  0767  0876               	movf	??_serial_handshake,w
-   586  0768  00F8               	movwf	serial_handshake@response
-   587                           
-   588                           ;usart-processes.h: 59: if (response == 0x01)
-   589  0769  0878               	movf	serial_handshake@response,w
-   590  076A  3A01               	xorlw	1
-   591  076B  1903               	btfsc	3,2
-   592  076C  2F7A               	goto	l580
-   593                           
-   594                           ;usart-processes.h: 61: delay(10);
+   569 ;; Parameters:    Size  Location     Type
+   570 ;;		None
+   571 ;; Auto vars:     Size  Location     Type
+   572 ;;		None
+   573 ;; Return value:  Size  Location     Type
+   574 ;;		None               void
+   575 ;; Registers used:
+   576 ;;		wreg
+   577 ;; Tracked objects:
+   578 ;;		On entry : 0/0
+   579 ;;		On exit  : 0/0
+   580 ;;		Unchanged: 0/0
+   581 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   582 ;;      Params:         0       0       0       0       0
+   583 ;;      Locals:         0       0       0       0       0
+   584 ;;      Temps:          0       0       0       0       0
+   585 ;;      Totals:         0       0       0       0       0
+   586 ;;Total ram usage:        0 bytes
+   587 ;; Hardware stack levels used:    1
+   588 ;; This function calls:
+   589 ;;		Nothing
+   590 ;; This function is called by:
+   591 ;;		_main
+   592 ;; This function uses a non-reentrant model
+   593 ;;
+   594                           
    595                           
-   596                           ;usart-processes.h: 60: break;
-   597  076D  300A               	movlw	10
-   598  076E  00F0               	movwf	delay@overflows
-   599  076F  3000               	movlw	0
-   600  0770  00F1               	movwf	delay@overflows+1
-   601  0771  120A  118A  2739  120A  118A  	fcall	_delay
-   602                           
-   603                           ;usart-processes.h: 62: } while (response != 0x01);
-   604  0776  0878               	movf	serial_handshake@response,w
-   605  0777  3A01               	xorlw	1
-   606  0778  1D03               	skipz
-   607  0779  2F61               	goto	l570
-   608  077A                     l580:	
-   609                           
-   610                           ;usart-processes.h: 65: unsigned char serialCheck = serial_read();
-   611  077A  120A  118A  2715  120A  118A  	fcall	_serial_read
-   612  077F  00F6               	movwf	??_serial_handshake
-   613  0780  0876               	movf	??_serial_handshake,w
-   614  0781  00F7               	movwf	serial_handshake@serialCheck
-   615                           
-   616                           ;usart-processes.h: 66: PORTB = serialCheck;
-   617  0782  0877               	movf	serial_handshake@serialCheck,w
-   618  0783  1283               	bcf	3,5	;RP0=0, select bank0
-   619  0784  1303               	bcf	3,6	;RP1=0, select bank0
-   620  0785  0086               	movwf	6	;volatile
-   621                           
-   622                           ;usart-processes.h: 67: delay(500);
-   623  0786  30F4               	movlw	244
-   624  0787  00F0               	movwf	delay@overflows
-   625  0788  3001               	movlw	1
-   626  0789  00F1               	movwf	delay@overflows+1
-   627  078A  120A  118A  2739   	fcall	_delay
-   628                           
-   629                           ;usart-processes.h: 68: PORTB = 0x00;
-   630  078D  1283               	bcf	3,5	;RP0=0, select bank0
-   631  078E  1303               	bcf	3,6	;RP1=0, select bank0
-   632  078F  0186               	clrf	6	;volatile
-   633  0790  0008               	return
-   634  0791                     __end_of_serial_handshake:	
-   635                           
-   636                           	psect	text3
-   637  071B                     __ptext3:	
-   638 ;; *************** function _serial_send *****************
-   639 ;; Defined at:
-   640 ;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
-      +s.h"
-   641 ;; Parameters:    Size  Location     Type
-   642 ;;  data            1    wreg     unsigned char 
-   643 ;; Auto vars:     Size  Location     Type
-   644 ;;  data            1    5[COMMON] unsigned char 
-   645 ;; Return value:  Size  Location     Type
-   646 ;;		None               void
-   647 ;; Registers used:
-   648 ;;		wreg, status,2, status,0, pclath, cstack
-   649 ;; Tracked objects:
-   650 ;;		On entry : 0/0
-   651 ;;		On exit  : 0/0
-   652 ;;		Unchanged: 0/0
-   653 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   654 ;;      Params:         0       0       0       0       0
-   655 ;;      Locals:         1       0       0       0       0
-   656 ;;      Temps:          0       0       0       0       0
-   657 ;;      Totals:         1       0       0       0       0
-   658 ;;Total ram usage:        1 bytes
-   659 ;; Hardware stack levels used:    1
-   660 ;; Hardware stack levels required when called:    1
-   661 ;; This function calls:
-   662 ;;		_delay
-   663 ;; This function is called by:
-   664 ;;		_serial_handshake
-   665 ;;		_main
-   666 ;; This function uses a non-reentrant model
-   667 ;;
-   668                           
-   669                           
-   670                           ;psect for function _serial_send
-   671  071B                     _serial_send:	
-   672                           
-   673                           ;incstack = 0
-   674                           ; Regs used in _serial_send: [wreg+status,2+status,0+pclath+cstack]
-   675                           ;serial_send@data stored from wreg
-   676  071B  00F5               	movwf	serial_send@data
-   677  071C                     l44:	
-   678                           ;usart-processes.h: 36: ;
-   679                           
-   680                           ;usart-processes.h: 35: while (!TXIF)
-   681                           
-   682  071C  1283               	bcf	3,5	;RP0=0, select bank0
-   683  071D  1303               	bcf	3,6	;RP1=0, select bank0
-   684  071E  1E0C               	btfss	12,4	;volatile
-   685  071F  2F1C               	goto	l44
-   686                           
-   687                           ;usart-processes.h: 37: TXREG = data;
-   688  0720  0875               	movf	serial_send@data,w
-   689  0721  0099               	movwf	25	;volatile
-   690                           
-   691                           ;usart-processes.h: 38: delay(10);
-   692  0722  300A               	movlw	10
-   693  0723  00F0               	movwf	delay@overflows
-   694  0724  3000               	movlw	0
-   695  0725  00F1               	movwf	delay@overflows+1
-   696  0726  120A  118A  2739   	fcall	_delay
-   697  0729  0008               	return
-   698  072A                     __end_of_serial_send:	
-   699                           
-   700                           	psect	text4
-   701  0739                     __ptext4:	
-   702 ;; *************** function _delay *****************
-   703 ;; Defined at:
-   704 ;;		line 71 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
-      +s.h"
-   705 ;; Parameters:    Size  Location     Type
-   706 ;;  overflows       2    0[COMMON] int 
-   707 ;; Auto vars:     Size  Location     Type
-   708 ;;  i               2    3[COMMON] int 
-   709 ;; Return value:  Size  Location     Type
-   710 ;;		None               void
-   711 ;; Registers used:
-   712 ;;		wreg, status,2
-   713 ;; Tracked objects:
-   714 ;;		On entry : 0/0
-   715 ;;		On exit  : 0/0
-   716 ;;		Unchanged: 0/0
-   717 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   718 ;;      Params:         2       0       0       0       0
-   719 ;;      Locals:         2       0       0       0       0
-   720 ;;      Temps:          1       0       0       0       0
-   721 ;;      Totals:         5       0       0       0       0
-   722 ;;Total ram usage:        5 bytes
-   723 ;; Hardware stack levels used:    1
-   724 ;; This function calls:
-   725 ;;		Nothing
-   726 ;; This function is called by:
-   727 ;;		_serial_send
-   728 ;;		_serial_handshake
-   729 ;; This function uses a non-reentrant model
-   730 ;;
-   731                           
-   732                           
-   733                           ;psect for function _delay
-   734  0739                     _delay:	
-   735                           
-   736                           ;usart-processes.h: 73: int i;
-   737                           ;usart-processes.h: 74: for (i = 0; i < overflows; i++)
-   738                           
-   739                           ;incstack = 0
-   740                           ; Regs used in _delay: [wreg+status,2]
-   741  0739  01F3               	clrf	delay@i
-   742  073A  01F4               	clrf	delay@i+1
-   743  073B                     l62:	
-   744  073B  0874               	movf	delay@i+1,w
-   745  073C  3A80               	xorlw	128
-   746  073D  00F2               	movwf	??_delay
-   747  073E  0871               	movf	delay@overflows+1,w
-   748  073F  3A80               	xorlw	128
-   749  0740  0272               	subwf	??_delay,w
-   750  0741  1D03               	skipz
-   751  0742  2F45               	goto	u25
-   752  0743  0870               	movf	delay@overflows,w
-   753  0744  0273               	subwf	delay@i,w
-   754  0745                     u25:	
-   755  0745  1803               	btfsc	3,0
-   756  0746  0008               	return
-   757  0747                     l64:	
-   758                           ;usart-processes.h: 77: ;
-   759                           
-   760                           ;usart-processes.h: 75: {
-   761                           ;usart-processes.h: 76: while (!T0IF)
-   762                           
-   763  0747  1D0B               	btfss	11,2	;volatile
-   764  0748  2F47               	goto	l64
-   765                           
-   766                           ;usart-processes.h: 78: T0IF = 0;
-   767  0749  110B               	bcf	11,2	;volatile
-   768  074A  3001               	movlw	1
-   769  074B  07F3               	addwf	delay@i,f
-   770  074C  1803               	skipnc
-   771  074D  0AF4               	incf	delay@i+1,f
-   772  074E  3000               	movlw	0
-   773  074F  07F4               	addwf	delay@i+1,f
-   774  0750  2F3B               	goto	l62
-   775  0751                     __end_of_delay:	
-   776                           
-   777                           	psect	text5
-   778  0715                     __ptext5:	
-   779 ;; *************** function _serial_read *****************
-   780 ;; Defined at:
-   781 ;;		line 41 in file "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processe
-      +s.h"
-   782 ;; Parameters:    Size  Location     Type
-   783 ;;		None
-   784 ;; Auto vars:     Size  Location     Type
-   785 ;;		None
-   786 ;; Return value:  Size  Location     Type
-   787 ;;                  1    wreg      unsigned char 
-   788 ;; Registers used:
-   789 ;;		wreg
-   790 ;; Tracked objects:
-   791 ;;		On entry : 0/0
-   792 ;;		On exit  : 0/0
-   793 ;;		Unchanged: 0/0
-   794 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   795 ;;      Params:         0       0       0       0       0
-   796 ;;      Locals:         0       0       0       0       0
-   797 ;;      Temps:          0       0       0       0       0
-   798 ;;      Totals:         0       0       0       0       0
-   799 ;;Total ram usage:        0 bytes
-   800 ;; Hardware stack levels used:    1
-   801 ;; This function calls:
-   802 ;;		Nothing
-   803 ;; This function is called by:
-   804 ;;		_serial_handshake
-   805 ;; This function uses a non-reentrant model
-   806 ;;
-   807                           
-   808                           
-   809                           ;psect for function _serial_read
-   810  0715                     _serial_read:	
-   811  0715                     l50:	
-   812                           ;usart-processes.h: 44: ;
-   813                           
-   814                           ;usart-processes.h: 43: while (!RCIF)
-   815                           
-   816                           ;incstack = 0
-   817                           ; Regs used in _serial_read: [wreg]
-   818                           
-   819  0715  1283               	bcf	3,5	;RP0=0, select bank0
-   820  0716  1303               	bcf	3,6	;RP1=0, select bank0
-   821  0717  1E8C               	btfss	12,5	;volatile
-   822  0718  2F15               	goto	l50
-   823                           
-   824                           ;usart-processes.h: 45: return RCREG;
-   825  0719  081A               	movf	26,w	;volatile
-   826  071A  0008               	return
-   827  071B                     __end_of_serial_read:	
-   828  007E                     btemp	set	126	;btemp
-   829  007E                     wtemp	set	126
-   830  007E                     wtemp0	set	126
-   831  0080                     wtemp1	set	128
-   832  0082                     wtemp2	set	130
-   833  0084                     wtemp3	set	132
-   834  0086                     wtemp4	set	134
-   835  0088                     wtemp5	set	136
-   836  007F                     wtemp6	set	127
-   837  007E                     ttemp	set	126
-   838  007E                     ttemp0	set	126
-   839  0081                     ttemp1	set	129
-   840  0084                     ttemp2	set	132
-   841  0087                     ttemp3	set	135
-   842  007F                     ttemp4	set	127
-   843  007E                     ltemp	set	126
-   844  007E                     ltemp0	set	126
-   845  0082                     ltemp1	set	130
-   846  0086                     ltemp2	set	134
-   847  0080                     ltemp3	set	128
+   596                           ;psect for function _serial_init
+   597  0760                     _serial_init:	
+   598                           
+   599                           ;usart-processes.h: 23: TXSTA = 0b00100100;
+   600                           
+   601                           ;incstack = 0
+   602                           ; Regs used in _serial_init: [wreg]
+   603  0760  3024               	movlw	36
+   604  0761  1683               	bsf	3,5	;RP0=1, select bank1
+   605  0762  1303               	bcf	3,6	;RP1=0, select bank1
+   606  0763  0098               	movwf	24	;volatile
+   607                           
+   608                           ;usart-processes.h: 24: TXIF = 0;
+   609  0764  1283               	bcf	3,5	;RP0=0, select bank0
+   610  0765  1303               	bcf	3,6	;RP1=0, select bank0
+   611  0766  120C               	bcf	12,4	;volatile
+   612                           
+   613                           ;usart-processes.h: 27: RCSTA = 0b10010000;
+   614  0767  3090               	movlw	144
+   615  0768  0098               	movwf	24	;volatile
+   616                           
+   617                           ;usart-processes.h: 28: RCIF = 0;
+   618  0769  128C               	bcf	12,5	;volatile
+   619                           
+   620                           ;usart-processes.h: 30: SPBRG = 25;
+   621  076A  3019               	movlw	25
+   622  076B  1683               	bsf	3,5	;RP0=1, select bank1
+   623  076C  1303               	bcf	3,6	;RP1=0, select bank1
+   624  076D  0099               	movwf	25	;volatile
+   625  076E  0008               	return
+   626  076F                     __end_of_serial_init:	
+   627  007E                     btemp	set	126	;btemp
+   628  007E                     wtemp	set	126
+   629  007E                     wtemp0	set	126
+   630  0080                     wtemp1	set	128
+   631  0082                     wtemp2	set	130
+   632  0084                     wtemp3	set	132
+   633  0086                     wtemp4	set	134
+   634  0088                     wtemp5	set	136
+   635  007F                     wtemp6	set	127
+   636  007E                     ttemp	set	126
+   637  007E                     ttemp0	set	126
+   638  0081                     ttemp1	set	129
+   639  0084                     ttemp2	set	132
+   640  0087                     ttemp3	set	135
+   641  007F                     ttemp4	set	127
+   642  007E                     ltemp	set	126
+   643  007E                     ltemp0	set	126
+   644  0082                     ltemp1	set	130
+   645  0086                     ltemp2	set	134
+   646  0080                     ltemp3	set	128
 
 
 Data Sizes:
@@ -868,7 +665,7 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14     14      14
+    COMMON           14     10      10
     BANK0            80      0       0
     BANK1            80      0       0
     BANK3            96      0       0
@@ -880,8 +677,7 @@ Pointer List with Targets:
 
 Critical Paths under _main in COMMON
 
-    _main->_serial_handshake
-    _serial_handshake->_serial_send
+    _main->_serial_send
     _serial_send->_delay
 
 Critical Paths under _main in BANK0
@@ -905,18 +701,9 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 5     5      0     726
-                                              9 COMMON     5     5      0
-                   _serial_handshake
+ (0) _main                                                 4     4      0     262
+                                              6 COMMON     4     4      0
                         _serial_init
-                        _serial_send
- ---------------------------------------------------------------------------------
- (1) _serial_init                                          0     0      0       0
- ---------------------------------------------------------------------------------
- (1) _serial_handshake                                     3     3      0     464
-                                              6 COMMON     3     3      0
-                              _delay
-                        _serial_read
                         _serial_send
  ---------------------------------------------------------------------------------
  (1) _serial_send                                          1     1      0     217
@@ -926,7 +713,7 @@ Call Graph Tables:
  (2) _delay                                                5     3      2     202
                                               0 COMMON     5     3      2
  ---------------------------------------------------------------------------------
- (2) _serial_read                                          0     0      0       0
+ (1) _serial_init                                          0     0      0       0
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 2
  ---------------------------------------------------------------------------------
@@ -934,11 +721,6 @@ Call Graph Tables:
  Call Graph Graphs:
 
  _main (ROOT)
-   _serial_handshake
-     _delay
-     _serial_read
-     _serial_send
-       _delay
    _serial_init
    _serial_send
      _delay
@@ -949,7 +731,7 @@ BITCOMMON            E      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      E       E       1      100.0%
+COMMON               E      A       A       1       71.4%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -972,45 +754,40 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                   Sun Apr 21 11:06:55 2024
+Symbol Table                                                                                   Sun Apr 21 11:44:22 2024
 
-                __CFG_CP$OFF 0000                           l50 0715                           l44 071C  
-                         l62 073B                           l71 07AF                           l64 0747  
-                         l74 07C0                           u25 0745                          l620 07CB  
-                        l612 07C3                          l622 07CD                          l614 07C5  
-                        l624 07CF                          l616 07C7                          l632 07D8  
-                        l570 0761                          l626 07D1                          l618 07C9  
-                        l634 07F5                          l580 077A                          l628 07D6  
-               __CFG_CPD$OFF 0000              serial_send@data 0075                 __CFG_FOSC$XT 0000  
-                main@dataOUT 007D                 __CFG_LVP$OFF 0000                         _T0IF 005A  
-                       _RCIF 0065                         _TMR0 0001                         _TXIF 0064  
-               __CFG_WRT$OFF 0000                         _main 0791                         btemp 007E  
-              __CFG_BOREN$ON 0000                         ltemp 007E                         start 0000  
-                       ttemp 007E                         wtemp 007E                        ?_main 0070  
-              __CFG_WDTE$OFF 0000                        _RCREG 001A                        _RCSTA 0018  
-                      _SPBRG 0099                        _PORTB 0006                        _PORTD 0008  
-                      _TRISB 0086                        _TRISD 0088                        _TXREG 0019  
-                      _TXSTA 0098                __CFG_PWRTE$ON 0000                        _delay 0739  
-                      ltemp0 007E                        ltemp1 0082                        ltemp2 0086  
-                      ltemp3 0080                        ttemp0 007E                        ttemp1 0081  
-                      ttemp2 0084                        ttemp3 0087                        ttemp4 007F  
-                      status 0003                        wtemp0 007E                        wtemp1 0080  
-                      wtemp2 0082                        wtemp3 0084                        wtemp4 0086  
-                      wtemp5 0088                        wtemp6 007F              __initialization 07FC  
-               __end_of_main 07FC     __end_of_serial_handshake 0791                       ??_main 0079  
-                     ?_delay 0070                       _TMR0IE 005D                       _TMR0IF 005A  
-                     _TRISC6 043E                       _TRISC7 043F  serial_handshake@serialCheck 0077  
-               ?_serial_init 0070                 ?_serial_read 0070                 ?_serial_send 0070  
-                     delay@i 0073      __end_of__initialization 07FC               __pcstackCOMMON 0070  
-              __end_of_delay 0751                      ??_delay 0072                   __pmaintext 0791  
-          ?_serial_handshake 0070         __size_of_serial_init 000F         __size_of_serial_read 0006  
-       __size_of_serial_send 000F           ??_serial_handshake 0076                      __ptext0 0000  
-                    __ptext1 072A                      __ptext2 0751                      __ptext3 071B  
-                    __ptext4 0739                      __ptext5 0715         end_of_initialization 07FC  
-                 main@dataIN 007B          start_initialization 07FC                    ___latbits 0002  
-  __size_of_serial_handshake 0040               __size_of_delay 0018                ??_serial_init 0070  
-              ??_serial_read 0070                ??_serial_send 0075                    main@DAVBL 007C  
-        __end_of_serial_init 0739          __end_of_serial_read 071B          __end_of_serial_send 072A  
-   serial_handshake@response 0078                __size_of_main 006B              main@serialCheck 007A  
-             delay@overflows 0070             _serial_handshake 0751                  _serial_init 072A  
-                _serial_read 0715                  _serial_send 071B                   _OPTION_REG 0081  
+            __CFG_CP$OFF 0000                       l46 0770                       l64 0780  
+                     l66 078C                       l76 07C0                       u25 078A  
+                    l620 07C5                      l612 07AF                      l630 07CF  
+                    l622 07C7                      l632 07D1                      l624 07C9  
+                    l640 07F5                      l634 07D6                      l626 07CB  
+                    l618 07C3                      l628 07CD                      l638 07D8  
+                    _GIE 005F             __CFG_CPD$OFF 0000          serial_send@data 0075  
+           __CFG_FOSC$XT 0000              main@dataOUT 0079             __CFG_LVP$OFF 0000  
+                   _T0IF 005A                     _RCIF 0065                     _TMR0 0001  
+                   _TXIF 0064             __CFG_WRT$OFF 0000                     _main 0796  
+                   btemp 007E            __CFG_BOREN$ON 0000                     ltemp 007E  
+                   start 0000                     ttemp 007E                     wtemp 007E  
+                  ?_main 0070            __CFG_WDTE$OFF 0000                    _RCREG 001A  
+                  _RCSTA 0018                    _SPBRG 0099                    _PORTB 0006  
+                  _PORTD 0008                    _TRISB 0086                    _TRISD 0088  
+                  _TXREG 0019                    _TXSTA 0098            __CFG_PWRTE$ON 0000  
+                  _delay 077E                    ltemp0 007E                    ltemp1 0082  
+                  ltemp2 0086                    ltemp3 0080                    ttemp0 007E  
+                  ttemp1 0081                    ttemp2 0084                    ttemp3 0087  
+                  ttemp4 007F                    status 0003                    wtemp0 007E  
+                  wtemp1 0080                    wtemp2 0082                    wtemp3 0084  
+                  wtemp4 0086                    wtemp5 0088                    wtemp6 007F  
+        __initialization 07FC             __end_of_main 07FC                   ??_main 0076  
+                 ?_delay 0070                   _TMR0IE 005D                   _TMR0IF 005A  
+                 _TRISC6 043E                   _TRISC7 043F             ?_serial_init 0070  
+           ?_serial_send 0070                   delay@i 0073  __end_of__initialization 07FC  
+         __pcstackCOMMON 0070            __end_of_delay 0796                  ??_delay 0072  
+             __pmaintext 0796     __size_of_serial_init 000F     __size_of_serial_send 000F  
+                __ptext0 0000                  __ptext1 076F                  __ptext2 077E  
+                __ptext3 0760     end_of_initialization 07FC               main@dataIN 0077  
+    start_initialization 07FC                ___latbits 0002           __size_of_delay 0018  
+          ??_serial_init 0070            ??_serial_send 0075                main@DAVBL 0078  
+    __end_of_serial_init 076F      __end_of_serial_send 077E            __size_of_main 0066  
+         delay@overflows 0070              _serial_init 0760              _serial_send 076F  
+             _OPTION_REG 0081  

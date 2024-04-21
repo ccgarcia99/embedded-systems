@@ -16,13 +16,11 @@ end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 $usart.obj
 cinit CODE 0 7FC 7FC 4 2
-text5 CODE 0 715 715 6 2
-text4 CODE 0 739 739 18 2
-text3 CODE 0 71B 71B F 2
-text2 CODE 0 751 751 40 2
-text1 CODE 0 72A 72A F 2
-maintext CODE 0 791 791 6B 2
-cstackCOMMON COMMON 1 70 70 E 1
+text3 CODE 0 760 760 F 2
+text2 CODE 0 77E 77E 18 2
+text1 CODE 0 76F 76F F 2
+maintext CODE 0 796 796 66 2
+cstackCOMMON COMMON 1 70 70 A 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -33,12 +31,13 @@ BANK0 0020-006F 1
 BANK1 00A0-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
-CODE 0003-0714 2
+CODE 0003-075F 2
 CODE 0800-1FFF 2
-CONST 0003-0714 2
+COMMON 007A-007D 1
+CONST 0003-075F 2
 CONST 0800-1FFF 2
 EEDATA 2100-21FF 2
-ENTRY 0003-0714 2
+ENTRY 0003-075F 2
 ENTRY 0800-1FFF 2
 IDLOC 2000-2003 2
 RAM 0020-006F 1
@@ -50,9 +49,9 @@ SFR1 0080-009F 1
 SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
-STRCODE 0003-0714 2
+STRCODE 0003-075F 2
 STRCODE 0800-1FFF 2
-STRING 0003-0714 2
+STRING 0003-075F 2
 STRING 0800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -79,84 +78,63 @@ $startup.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\startup.as":72 0 end_init CODE
 $usart.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":41 715 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":43 715 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":44 715 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":45 719 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":33 71B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":35 71C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":36 71C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":37 720 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":38 722 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":39 729 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":20 72A text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":23 72A text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":24 72E text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":27 731 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":28 733 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":30 734 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":31 738 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":71 739 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":74 739 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":76 747 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":77 747 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":78 749 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":74 74A text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":48 751 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":51 751 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":52 75A text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":55 760 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":58 761 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":59 769 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":61 76D text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":62 776 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":65 77A text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":66 782 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":67 786 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":68 78D text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":69 790 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":26 791 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":28 791 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":29 792 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":30 793 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":31 794 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":32 795 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":33 799 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":36 79A maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":37 79C maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":38 79F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":39 7A0 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":42 7A1 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":43 7A4 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":44 7A5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":47 7AA maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":20 760 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":23 760 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":24 764 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":27 767 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":28 769 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":30 76A text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":31 76E text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":33 76F text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":35 770 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":36 774 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":37 776 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":38 77D text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":70 77E text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":73 77E text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":75 78C text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":76 78E text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-processes.h":73 78F text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":24 796 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":26 796 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":27 797 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":28 798 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":29 799 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":30 79D maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":33 79E maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":34 7A0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":35 7A3 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":36 7A4 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":37 7A5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":40 7A6 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":41 7A9 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":42 7AA maintext CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":49 7AF maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":51 7AF maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":52 7B6 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":54 7BA maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":55 7BF maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":57 7C0 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":58 7C0 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":59 7C2 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":61 7C3 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":64 7C5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":67 7C7 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":70 7C9 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":73 7CB maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":76 7CD maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":79 7CF maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":82 7D1 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":83 7D5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":85 7D6 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":87 7D7 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":55 7D8 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":88 7F5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":49 7FB maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":232 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":235 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":241 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":242 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":243 7FD cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":50 7B6 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":52 7BA maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":53 7BF maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":55 7C0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":56 7C0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":57 7C2 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":59 7C3 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":62 7C5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":65 7C7 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":68 7C9 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":71 7CB maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":74 7CD maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":77 7CF maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":80 7D1 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":81 7D5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":83 7D6 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":85 7D7 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":53 7D8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":86 7F5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart-tx.c":47 7FB maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":230 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":233 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":239 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":240 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\serial-communications\transmit\usart.as":241 7FD cinit CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -171,9 +149,10 @@ $usart.obj
 %SYMTAB
 __CFG_WRT$OFF 0 0 ABS 0 - usart.obj
 __S0 2008 0 ABS 0 - -
-__S1 7E 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - usart.obj
 __Hintentry 0 0 CODE 0 intentry -
 __Lintentry 0 0 CODE 0 intentry -
 __CFG_BOREN$ON 0 0 ABS 0 - usart.obj
@@ -182,7 +161,7 @@ _TMR0 1 0 ABS 0 - usart.obj
 _T0IF 5A 0 ABS 0 - usart.obj
 _RCIF 65 0 ABS 0 - usart.obj
 _TXIF 64 0 ABS 0 - usart.obj
-_main F22 0 CODE 0 maintext usart.obj
+_main F2C 0 CODE 0 maintext usart.obj
 ___sp 0 0 STACK 2 stack startup.obj
 btemp 7E 0 ABS 0 - usart.obj
 ltemp 7E 0 ABS 0 - usart.obj
@@ -198,7 +177,6 @@ _TRISD 88 0 ABS 0 - usart.obj
 _PORTB 6 0 ABS 0 - usart.obj
 _SPBRG 99 0 ABS 0 - usart.obj
 _TXSTA 98 0 ABS 0 - usart.obj
-serial_handshake@serialCheck 77 0 COMMON 1 cstackCOMMON usart.obj
 _PORTD 8 0 ABS 0 - usart.obj
 ltemp0 7E 0 ABS 0 - usart.obj
 ttemp0 7E 0 ABS 0 - usart.obj
@@ -215,14 +193,14 @@ wtemp3 84 0 ABS 0 - usart.obj
 ttemp4 7F 0 ABS 0 - usart.obj
 wtemp4 86 0 ABS 0 - usart.obj
 wtemp5 88 0 ABS 0 - usart.obj
-__end_of_delay EA2 0 CODE 0 text4 usart.obj
+__end_of_delay F2C 0 CODE 0 text2 usart.obj
 wtemp6 7F 0 ABS 0 - usart.obj
 __Hconfig 4010 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
 serial_send@data 75 0 COMMON 1 cstackCOMMON usart.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_delay E72 0 CODE 0 text4 usart.obj
+_delay EFC 0 CODE 0 text2 usart.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
 _TRISC6 43E 0 ABS 0 - usart.obj
@@ -258,15 +236,13 @@ __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
 end_of_initialization FF8 0 CODE 0 cinit usart.obj
 __CFG_FOSC$XT 0 0 ABS 0 - usart.obj
-main@serialCheck 7A 0 COMMON 1 cstackCOMMON usart.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
-main@dataOUT 7D 0 COMMON 1 cstackCOMMON usart.obj
+main@dataOUT 79 0 COMMON 1 cstackCOMMON usart.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Lbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Lbank1 0 0 ABS 0 bank1 -
-serial_handshake@response 78 0 COMMON 1 cstackCOMMON usart.obj
 __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
@@ -275,42 +251,34 @@ ___latbits 2 0 ABS 0 - usart.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
 __ptext0 0 0 CODE 0 text0 usart.obj
-__ptext1 E54 0 CODE 0 text1 usart.obj
-__ptext2 EA2 0 CODE 0 text2 usart.obj
-__ptext3 E36 0 CODE 0 text3 usart.obj
-__ptext4 E72 0 CODE 0 text4 usart.obj
-__ptext5 E2A 0 CODE 0 text5 usart.obj
+__ptext1 EDE 0 CODE 0 text1 usart.obj
+__ptext2 EFC 0 CODE 0 text2 usart.obj
+__ptext3 EC0 0 CODE 0 text3 usart.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
 __end_of__initialization FF8 0 CODE 0 cinit usart.obj
-_serial_init E54 0 CODE 0 text1 usart.obj
-main@dataIN 7B 0 COMMON 1 cstackCOMMON usart.obj
-__size_of_serial_read 0 0 ABS 0 - usart.obj
+_serial_init EC0 0 CODE 0 text3 usart.obj
+main@dataIN 77 0 COMMON 1 cstackCOMMON usart.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
 __size_of_serial_send 0 0 ABS 0 - usart.obj
 __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
 __size_of_serial_init 0 0 ABS 0 - usart.obj
-_serial_handshake EA2 0 CODE 0 text2 usart.obj
 __Hspace_0 2008 0 ABS 0 - -
 __Lspace_0 0 0 ABS 0 - -
-__Hspace_1 7E 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Hcinit 1000 0 CODE 0 cinit -
 __Lcinit FF8 0 CODE 0 cinit -
-main@DAVBL 7C 0 COMMON 1 cstackCOMMON usart.obj
+main@DAVBL 78 0 COMMON 1 cstackCOMMON usart.obj
 __Hspace_3 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __size_of_main 0 0 ABS 0 - usart.obj
-_serial_read E2A 0 CODE 0 text5 usart.obj
-__end_of_serial_read E36 0 CODE 0 text5 usart.obj
-__end_of_serial_send E54 0 CODE 0 text3 usart.obj
-__end_of_serial_init E72 0 CODE 0 text1 usart.obj
-__size_of_serial_handshake 0 0 ABS 0 - usart.obj
-__end_of_serial_handshake F22 0 CODE 0 text2 usart.obj
+__end_of_serial_send EFC 0 CODE 0 text1 usart.obj
+__end_of_serial_init EDE 0 CODE 0 text3 usart.obj
 __Hend_init 6 0 CODE 0 end_init -
 __Lend_init 0 0 CODE 0 end_init -
 delay@overflows 70 0 COMMON 1 cstackCOMMON usart.obj
@@ -328,10 +296,10 @@ __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON usart.obj
 __CFG_CPD$OFF 0 0 ABS 0 - usart.obj
 start_initialization FF8 0 CODE 0 cinit usart.obj
-_serial_send E36 0 CODE 0 text3 usart.obj
+_serial_send EDE 0 CODE 0 text1 usart.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__pmaintext F22 0 CODE 0 maintext usart.obj
+__pmaintext F2C 0 CODE 0 maintext usart.obj
 __initialization FF8 0 CODE 0 cinit usart.obj
 __CFG_CP$OFF 0 0 ABS 0 - usart.obj
 __CFG_LVP$OFF 0 0 ABS 0 - usart.obj
@@ -363,10 +331,8 @@ __CFG_LVP$OFF 0 0 ABS 0 - usart.obj
 reset_vec 0 0 0 3 2
 cinit 0 7FC FF8 4 2
 config 0 2007 400E 1 2
-cstackCOMMON 1 70 70 E 1
-maintext 0 791 F22 6B 2
-text2 0 751 EA2 40 2
-text4 0 739 E72 18 2
-text1 0 72A E54 F 2
-text3 0 71B E36 F 2
-text5 0 715 E2A 6 2
+cstackCOMMON 1 70 70 A 1
+maintext 0 796 F2C 66 2
+text2 0 77E EFC 18 2
+text1 0 76F EDE F 2
+text3 0 760 EC0 F 2

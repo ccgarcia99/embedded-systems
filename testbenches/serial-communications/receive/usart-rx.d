@@ -1,0 +1,1 @@
+ usart-rx.d  usart-rx.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/serial-communications/receive/usart-rx.c D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/serial-communications/receive/usart-processes.h
