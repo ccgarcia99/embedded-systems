@@ -1,0 +1,8 @@
+_delay: CODE, 1849 0 24
+_main: CODE, 1937 0 107
+__initialization: CODE, 2044 0 0
+_serial_read: CODE, 1813 0 6
+_serial_send: CODE, 1819 0 15
+_serial_init: CODE, 1834 0 15
+_serial_handshake: CODE, 1873 0 64
+Total: 231

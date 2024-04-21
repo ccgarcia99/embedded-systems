@@ -1,0 +1,1 @@
+ usart-tx.d  usart-tx.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/serial-communications/transmit/usart-tx.c D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/serial-communications/transmit/usart-processes.h
