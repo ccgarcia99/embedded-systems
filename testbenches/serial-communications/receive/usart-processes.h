@@ -29,8 +29,7 @@ void serial_init(void)
 
     SPBRG = 25; // 9600 baud rate, assuming Fosc = 4MHz & BRGH = 1
 }
-// TODO: fix the handshake routine
-// ISSUE: The handshake routine is not working as expected, impedes the communication between devices
+
 void serial_send(unsigned char data)
 {
     while (!TXIF);         // wait for the previous transmission to finish
@@ -43,7 +42,8 @@ unsigned char serial_read(void)
     while (!RCIF);         // wait for the data to be received
     return RCREG; // return the received data
 }
-
+// TODO: fix the handshake routine
+// ISSUE: The handshake routine is not working as expected, impedes the communication between devices
 void serial_handshake()
 {
     // device handshake routine
