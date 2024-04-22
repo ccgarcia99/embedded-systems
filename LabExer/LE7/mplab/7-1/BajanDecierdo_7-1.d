@@ -1,0 +1,1 @@
+ BajanDecierdo_7-1.d  BajanDecierdo_7-1.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/LabExer/LE7/mplab/7-1/BajanDecierdo_7-1.c D:/uni_2023-2024/cpe3201/embedded-systems/LabExer/LE7/mplab/7-1/BajanDecierdo_IIC.h

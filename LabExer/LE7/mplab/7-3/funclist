@@ -1,0 +1,5 @@
+_POLYNOMIAL: STRING, 9 0 2
+__stringtab: STRING, 3 0 6
+_main: CODE, 2041 0 1
+__initialization: CODE, 2042 0 2
+Total: 11
