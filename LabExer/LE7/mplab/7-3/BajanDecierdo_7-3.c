@@ -133,8 +133,88 @@ u8t temp;                   // temperature
 
 void main(void)
 {
+    u8t temp;
+    float humidity, temperature;
+    char tempToString[] = "Temperature: ";
+    char humidityToString[] = "Humidity: ";
+    char errorToString[] = "Error: ";   
+    char buf1[], buf2[];
+    int index, status = 0; // status of SHT21 sensor
+
+    u8t error = 0; // error code
+    nt16 rawRH, rawTemp; // raw relative humidity and temperature
+    ft resultRH, resultTemp; // relative humidity and temperature
+
+    OPTION_REG = 0x44; // set Timer0 with prescaler 1:32
+    TRISB = 0x00; // set PORTB as output
+    PORTB = 0x00; // clear PORTB
+    GIE = 1; // enable global interrupt
+
+    init_I2C_Master(); // initialize I2C Master, PORTC directions set in function
+    initLCD(); // initialize LCD
+
+    instCTRL(0x80); // set cursor to first line
+    while (humidityToString[index] != '\0')
+    {
+        dataCTRL(humidityToString[index]);
+        index++;
+    }
+    index = 0;
+
+    instCTRL(0xC0); // set cursor to second line
+    while (tempToString[index] != '\0')
+    {
+        dataCTRL(tempToString[index]);
+        index++;
+    }
+    index = 0;
     while (1)
     {
+        // Reset sensor
+        SHT21_SoftReset();
+        // Set sensor resolution
+        SHT21_SetResolution();
+        // Measure humidity with "Hold Master Mode (HM)"
+        error != SHT21_Measure(HUMIDITY, &rawRH);
+        // Measure temperature with "Hold Master Mode (HM)"
+        error != SHT21_Measure(TEMPERATURE, &rawTemp);
+
+        // Calculate humidity and temperature
+        resultTemp = SHT21_CalcTemp(rawTemp.u16);
+        resultRH = SHT21_CalcRH(rawRH.u16);
+
+        // Display temperature and humidity
+        sprintf(buf2, "%.2f", resultRH);
+        instCTRL(0x8D);
+        while (buf2[index] != '\0')
+        {
+            dataCTRL(buf2[index]);
+            index++;
+        }
+        index = 0;
+        dataCTRL('%');
+
+        sprintf(buf1, "%.2f", resultTemp);
+        instCTRL(0xCD);
+        while (buf1[index] != '\0')
+        {
+            dataCTRL(buf1[index]);
+            index++;
+        }
+        index = 0;
+
+        // check if error occurred
+        if (error != 0)
+        {
+            initLCD();
+            while (errorToString[index] != '\0')
+            {
+                dataCTRL(errorToString[index]);
+                index++;
+            }
+            index = 0;
+        }
+        delay(384); // delay for 3 seconds
     }
 }
 

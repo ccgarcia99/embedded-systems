@@ -3,17 +3,17 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"253 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
+"178 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
 [e E1319 . `uc
 HUMIDITY 0
 TEMPERATURE 1
 ]
-"261
+"341
 [e E1323 . `uc
 I2C_ADDR_W 128
 I2C_ADDR_R 129
 ]
-"266
+"346
 [e E1303 . `uc
 SHT21_CMD_TM_HM 227
 SHT21_CMD_RH_HM 229
@@ -23,7 +23,7 @@ USR_REG_WR 230
 USR_REG_R 231
 SOFT_RESET 254
 ]
-"300
+"380
 [e E1312 . `uc
 SHT21_RES_RH12_TEMP14 0
 SHT21_RES_RH8_TEMP12 1
@@ -55,10 +55,20 @@ SHR21_RES_MASK 129
 [v ___awmod __awmod `(i  1 e 2 0 ]
 "32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
+"409 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+"425
+[v _scale scale `(d  1 s 3 scale ]
+"492
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"60 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"60 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
@@ -69,6 +79,8 @@ SHR21_RES_MASK 129
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
 "44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c
 [v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c
@@ -135,35 +147,35 @@ SHR21_RES_MASK 129
 [v _I2C_Wait I2C_Wait `(v  1 e 0 0 ]
 "134
 [v _main main `(v  1 e 0 0 ]
-"143
+"223
 [v _init_I2C_Master init_I2C_Master `(v  1 e 0 0 ]
-"152
+"232
 [v _I2C_Start I2C_Start `(v  1 e 0 0 ]
-"158
+"238
 [v _I2C_RepeatedStart I2C_RepeatedStart `(v  1 e 0 0 ]
-"164
+"244
 [v _I2C_Stop I2C_Stop `(v  1 e 0 0 ]
-"170
+"250
 [v _I2C_Send I2C_Send `(v  1 e 0 0 ]
-"176
+"256
 [v _I2C_Receive I2C_Receive `(uc  1 e 1 0 ]
-"191
+"271
 [v _delay delay `(v  1 e 0 0 ]
-"202
+"282
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
-"212
+"292
 [v _dataCTRL dataCTRL `(v  1 e 0 0 ]
-"222
+"302
 [v _initLCD initLCD `(v  1 e 0 0 ]
-"234
+"314
 [v _SHT21_CalcRH SHT21_CalcRH `(f  1 e 3 0 ]
-"243
+"323
 [v _SHT21_CalcTemp SHT21_CalcTemp `(f  1 e 3 0 ]
-"252
+"332
 [v _SHT21_Measure SHT21_Measure `(uc  1 e 1 0 ]
-"286
+"366
 [v _SHT21_SoftReset SHT21_SoftReset `(v  1 e 0 0 ]
-"295
+"375
 [v _SHT21_SetResolution SHT21_SetResolution `(v  1 e 0 0 ]
 "53 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -173,6 +185,10 @@ SHR21_RES_MASK 129
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "791
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"1217
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1335
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1396
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1707
@@ -217,6 +233,12 @@ SHR21_RES_MASK 129
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2761
 [v _WREN WREN `VEb  1 e 0 @3170 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _dpowers dpowers `DCC[10]ul  1 s 40 dpowers ]
+"7 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\powers.c
+[v __powers_ _powers_ `DCC[13]d  1 e 39 0 ]
+"39
+[v __npowers_ _npowers_ `DCC[13]d  1 e 39 0 ]
 "72 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
 [v _POLYNOMIAL POLYNOMIAL `DCCus  1 e 2 0 ]
 "131
@@ -226,5 +248,390 @@ SHR21_RES_MASK 129
 "134
 [v _main main `(v  1 e 0 0 ]
 {
+"138
+[v main@tempToString tempToString `[14]uc  1 a 14 0 ]
 "139
+[v main@humidityToString humidityToString `[11]uc  1 a 11 14 ]
+"140
+[v main@errorToString errorToString `[8]uc  1 a 8 25 ]
+"146
+[v main@resultTemp resultTemp `f  1 a 3 38 ]
+[v main@resultRH resultRH `f  1 a 3 35 ]
+"142
+[v main@index index `i  1 a 2 46 ]
+[s S21 . 2 `uc 1 u8L 1 0 `uc 1 u8H 1 1 ]
+"145
+[u S24 . 2 `us 1 u16 2 0 `s 1 i16 2 0 `S21 1 s16 2 0 ]
+[v main@rawTemp rawTemp `S24  1 a 2 44 ]
+[v main@rawRH rawRH `S24  1 a 2 42 ]
+"142
+[v main@status status `i  1 a 2 33 ]
+"144
+[v main@error error `uc  1 a 1 41 ]
+"141
+[v main@buf2 buf2 `[0]uc  1 a 0 0 ]
+[v main@buf1 buf1 `[0]uc  1 a 0 0 ]
+"137
+[v main@F1360 F1360 `[14]uc  1 s 14 F1360 ]
+"138
+[v main@F1362 F1362 `[11]uc  1 s 11 F1362 ]
+"139
+[v main@F1364 F1364 `[8]uc  1 s 8 F1364 ]
+"219
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+"1210
+[v sprintf@vd vd `ul  1 a 4 8 ]
+"1238
+[v sprintf@vd_254 vd `ul  1 a 4 12 ]
+[s S239 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+"525
+[u S242 . 4 `ul 1 _val 4 0 `S239 1 _str 4 0 ]
+[v sprintf@_val _val `S242  1 a 4 21 ]
+"516
+[v sprintf@fval fval `d  1 a 3 29 ]
+[v sprintf@integ integ `d  1 a 3 18 ]
+"504
+[v sprintf@prec prec `i  1 a 2 27 ]
+"516
+[v sprintf@exp exp `i  1 a 2 25 ]
+"508
+[v sprintf@flag flag `us  1 a 2 16 ]
+"499
+[v sprintf@c c `c  1 a 1 32 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 7 ]
+"492
+[v sprintf@sp sp `*.39uc  1 p 2 58 ]
+[v sprintf@f f `*.24DCCuc  1 p 1 60 ]
+"1550
+} 0
+"425
+[v _scale scale `(d  1 s 3 scale ]
+{
+[v scale@scl scl `c  1 a 1 wreg ]
+[v scale@scl scl `c  1 a 1 wreg ]
+"428
+[v scale@scl scl `c  1 a 1 31 ]
+"441
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"409 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+{
+[v fround@prec prec `uc  1 a 1 wreg ]
+[v fround@prec prec `uc  1 a 1 wreg ]
+"413
+[v fround@prec prec `uc  1 a 1 38 ]
+"418
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 5 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 4 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 6 ]
+"51
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"42
+} 0
+"60 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __tdiv_to_l_@quot quot `ul  1 a 4 0 ]
+"62
+[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 5 ]
+[v __tdiv_to_l_@cntr cntr `uc  1 a 1 4 ]
+"60
+[v __tdiv_to_l_@f1 f1 `f  1 p 3 0 ]
+[v __tdiv_to_l_@f2 f2 `f  1 p 3 3 ]
+"101
+} 0
+"60 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __div_to_l_@quot quot `ul  1 a 4 0 ]
+"62
+[v __div_to_l_@exp1 exp1 `uc  1 a 1 5 ]
+[v __div_to_l_@cntr cntr `uc  1 a 1 4 ]
+"60
+[v __div_to_l_@f1 f1 `d  1 p 3 0 ]
+[v __div_to_l_@f2 f2 `d  1 p 3 3 ]
+"101
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"35 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 13 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"6
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 41 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 45 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 40 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 32 ]
+"73
+} 0
+"18 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 52 ]
+[v ___ftsub@f1 f1 `f  1 p 3 55 ]
+"25
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"223 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
+[v _init_I2C_Master init_I2C_Master `(v  1 e 0 0 ]
+{
+"230
+} 0
+"302
+[v _initLCD initLCD `(v  1 e 0 0 ]
+{
+"310
+} 0
+"282
+[v _instCTRL instCTRL `(v  1 e 0 0 ]
+{
+[v instCTRL@LCD_CMD LCD_CMD `uc  1 a 1 wreg ]
+[v instCTRL@LCD_CMD LCD_CMD `uc  1 a 1 wreg ]
+"284
+[v instCTRL@LCD_CMD LCD_CMD `uc  1 a 1 5 ]
+"290
+} 0
+"292
+[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
+{
+[v dataCTRL@LCD_DAT LCD_DAT `uc  1 a 1 wreg ]
+[v dataCTRL@LCD_DAT LCD_DAT `uc  1 a 1 wreg ]
+"294
+[v dataCTRL@LCD_DAT LCD_DAT `uc  1 a 1 5 ]
+"300
+} 0
+"366
+[v _SHT21_SoftReset SHT21_SoftReset `(v  1 e 0 0 ]
+{
+"373
+} 0
+"375
+[v _SHT21_SetResolution SHT21_SetResolution `(v  1 e 0 0 ]
+{
+"382
+} 0
+"332
+[v _SHT21_Measure SHT21_Measure `(uc  1 e 1 0 ]
+{
+[v SHT21_Measure@measureType measureType `E1319  1 a 1 wreg ]
+"336
+[v SHT21_Measure@data data `[2]uc  1 a 2 9 ]
+"335
+[v SHT21_Measure@error error `uc  1 a 1 8 ]
+"334
+[v SHT21_Measure@checksum checksum `uc  1 a 1 7 ]
+"332
+[v SHT21_Measure@measureType measureType `E1319  1 a 1 wreg ]
+[s S21 . 2 `uc 1 u8L 1 0 `uc 1 u8H 1 1 ]
+[u S24 . 2 `us 1 u16 2 0 `s 1 i16 2 0 `S21 1 s16 2 0 ]
+[v SHT21_Measure@pMeasureand pMeasureand `*.5S24  1 p 1 5 ]
+"335
+[v SHT21_Measure@measureType measureType `E1319  1 a 1 11 ]
+"364
+} 0
+"271
+[v _delay delay `(v  1 e 0 0 ]
+{
+"273
+[v delay@i i `i  1 a 2 3 ]
+"271
+[v delay@overflow overflow `i  1 p 2 0 ]
+"280
+} 0
+"244
+[v _I2C_Stop I2C_Stop `(v  1 e 0 0 ]
+{
+"248
+} 0
+"232
+[v _I2C_Start I2C_Start `(v  1 e 0 0 ]
+{
+"236
+} 0
+"250
+[v _I2C_Send I2C_Send `(v  1 e 0 0 ]
+{
+[v I2C_Send@dataOUT dataOUT `uc  1 a 1 wreg ]
+[v I2C_Send@dataOUT dataOUT `uc  1 a 1 wreg ]
+"252
+[v I2C_Send@dataOUT dataOUT `uc  1 a 1 0 ]
+"254
+} 0
+"238
+[v _I2C_RepeatedStart I2C_RepeatedStart `(v  1 e 0 0 ]
+{
+"242
+} 0
+"256
+[v _I2C_Receive I2C_Receive `(uc  1 e 1 0 ]
+{
+[v I2C_Receive@ACK_NACK ACK_NACK `uc  1 a 1 wreg ]
+"258
+[v I2C_Receive@dataIN dataIN `uc  1 a 1 2 ]
+"256
+[v I2C_Receive@ACK_NACK ACK_NACK `uc  1 a 1 wreg ]
+"259
+[v I2C_Receive@ACK_NACK ACK_NACK `uc  1 a 1 1 ]
+"267
+} 0
+"113
+[v _I2C_Wait I2C_Wait `(v  1 e 0 0 ]
+{
+} 0
+"323
+[v _SHT21_CalcTemp SHT21_CalcTemp `(f  1 e 3 0 ]
+{
+"325
+[v SHT21_CalcTemp@resultTemp resultTemp `f  1 a 3 55 ]
+"323
+[v SHT21_CalcTemp@u16Temp u16Temp `us  1 p 2 52 ]
+"330
+} 0
+"314
+[v _SHT21_CalcRH SHT21_CalcRH `(f  1 e 3 0 ]
+{
+"316
+[v SHT21_CalcRH@resultRH resultRH `f  1 a 3 55 ]
+"314
+[v SHT21_CalcRH@u16RH u16RH `us  1 p 2 52 ]
+"321
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 18 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 22 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 21 ]
+[v ___ftmul@exp exp `uc  1 a 1 17 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 7 ]
+[v ___ftmul@f2 f2 `f  1 p 3 10 ]
+"157
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 51 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 50 ]
+[v ___ftadd@sign sign `uc  1 a 1 49 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 39 ]
+[v ___ftadd@f2 f2 `f  1 p 3 42 ]
+"148
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
 } 0

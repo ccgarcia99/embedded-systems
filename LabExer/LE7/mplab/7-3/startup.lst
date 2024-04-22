@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-                                                                                                           Mon Apr 22 17:41:50 2024
+                                                                                                           Mon Apr 22 18:28:04 2024
 
 
      1                           
@@ -76,7 +76,7 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
     70  0000                     	psect	end_init
     71                           	global start_initialization
     72                           	ljmp start_initialization	;jump to C runtime clear & initialization
-    73  0000  120A  118A  2FFA   
+    73  0000  120A  118A  2FEE   
     74                           ; Config register CONFIG @ 0x2007
     75                           ;	Watchdog Timer Enable bit
     76                           ;	WDTE = OFF, WDT disabled
@@ -104,9 +104,9 @@ Microchip Technology PIC Macro Assembler V1.33 build 59893
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                               Mon Apr 22 17:41:50 2024
+Symbol Table                                                                                               Mon Apr 22 18:28:04 2024
 
-               ___sp 0000                 _main 07F9                 start 0000               stackhi 0000  
-             stacklo 0000  start_initialization 07FA             ___int_sp 0000             intlevel0 0000  
+               ___sp 0000                 _main 0B34                 start 0000               stackhi 0000  
+             stacklo 0000  start_initialization 07EE             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

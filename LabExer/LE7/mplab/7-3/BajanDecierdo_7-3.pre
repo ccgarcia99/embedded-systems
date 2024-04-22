@@ -1686,8 +1686,88 @@ u8t temp;
 
 void main(void)
 {
+u8t temp;
+float humidity, temperature;
+char tempToString[] = "Temperature: ";
+char humidityToString[] = "Humidity: ";
+char errorToString[] = "Error: ";
+char buf1[], buf2[];
+int index, status = 0;
+
+u8t error = 0;
+nt16 rawRH, rawTemp;
+ft resultRH, resultTemp;
+
+OPTION_REG = 0x44;
+TRISB = 0x00;
+PORTB = 0x00;
+GIE = 1;
+
+init_I2C_Master();
+initLCD();
+
+instCTRL(0x80);
+while (humidityToString[index] != '\0')
+{
+dataCTRL(humidityToString[index]);
+index++;
+}
+index = 0;
+
+instCTRL(0xC0);
+while (tempToString[index] != '\0')
+{
+dataCTRL(tempToString[index]);
+index++;
+}
+index = 0;
 while (1)
 {
+
+SHT21_SoftReset();
+
+SHT21_SetResolution();
+
+error != SHT21_Measure(HUMIDITY, &rawRH);
+
+error != SHT21_Measure(TEMPERATURE, &rawTemp);
+
+
+resultTemp = SHT21_CalcTemp(rawTemp.u16);
+resultRH = SHT21_CalcRH(rawRH.u16);
+
+
+sprintf(buf2, "%.2f", resultRH);
+instCTRL(0x8D);
+while (buf2[index] != '\0')
+{
+dataCTRL(buf2[index]);
+index++;
+}
+index = 0;
+dataCTRL('%');
+
+sprintf(buf1, "%.2f", resultTemp);
+instCTRL(0xCD);
+while (buf1[index] != '\0')
+{
+dataCTRL(buf1[index]);
+index++;
+}
+index = 0;
+
+
+if (error != 0)
+{
+initLCD();
+while (errorToString[index] != '\0')
+{
+dataCTRL(errorToString[index]);
+index++;
+}
+index = 0;
+}
+delay(384);
 }
 }
 

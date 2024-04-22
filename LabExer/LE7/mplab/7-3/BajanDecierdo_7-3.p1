@@ -4,7 +4,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 "1780
 [v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
 [p mainexit ]
-"1396
+"43 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
+[s S102 `uc 1 `uc 1 ]
+[n S102 . u8L u8H ]
+"39
+[u S101 `us 1 `s 1 `S102 1 ]
+[n S101 . u16 i16 s16 ]
+"1217 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"1335
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"207
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"2441
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"112 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
+[v _init_I2C_Master `(v ~T0 @X0 0 ef ]
+"126
+[v _initLCD `(v ~T0 @X0 0 ef ]
+"127
+[v _instCTRL `(v ~T0 @X0 0 ef1`uc ]
+"128
+[v _dataCTRL `(v ~T0 @X0 0 ef1`uc ]
+"123
+[v _SHT21_SoftReset `(v ~T0 @X0 0 ef ]
+"124
+[v _SHT21_SetResolution `(v ~T0 @X0 0 ef ]
+"178
+[c E1319 0 1 .. ]
+[n E1319 . HUMIDITY TEMPERATURE  ]
+"122
+[v _SHT21_Measure `(uc ~T0 @X0 0 ef2`E1319`*S101 ]
+"121
+[v _SHT21_CalcTemp `(f ~T0 @X0 0 ef1`us ]
+"120
+[v _SHT21_CalcRH `(f ~T0 @X0 0 ef1`us ]
+"205 C:\Program Files (x86)\Microchip\xc8\v1.33\include\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"129 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
+[v _delay `(v ~T0 @X0 0 ef1`i ]
+"1396 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "791
 [v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
@@ -26,30 +65,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ACKEN `Vb ~T0 @X0 0 e@1164 ]
 "53
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"207
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "2531
 [v _RC0 `Vb ~T0 @X0 0 e@56 ]
 "2533
 [v _RC1 `Vb ~T0 @X0 0 e@57 ]
 "2535
 [v _RC2 `Vb ~T0 @X0 0 e@58 ]
-"253 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
-[c E1319 0 1 .. ]
-[n E1319 . HUMIDITY TEMPERATURE  ]
-"43
-[s S102 `uc 1 `uc 1 ]
-[n S102 . u8L u8H ]
-"39
-[u S101 `us 1 `s 1 `S102 1 ]
-[n S101 . u16 i16 s16 ]
-"261
+"341 D:\uni_2023-2024\cpe3201\embedded-systems\LabExer\LE7\mplab\7-3\BajanDecierdo_7-3.c
 [c E1323 128 129 .. ]
 [n E1323 . I2C_ADDR_W I2C_ADDR_R  ]
-"266
+"346
 [c E1303 227 229 243 245 230 231 254 .. ]
 [n E1303 . SHT21_CMD_TM_HM SHT21_CMD_RH_HM SHT21_CMD_TM_POLL SHT21_CMD_RH_POLL USR_REG_WR USR_REG_R SOFT_RESET  ]
-"300
+"380
 [c E1312 0 1 128 129 129 .. ]
 [n E1312 . SHT21_RES_RH12_TEMP14 SHT21_RES_RH8_TEMP12 SHT21_RES_RH10_TEMP13 SHT21_RES_RH11_TEMP11 SHR21_RES_MASK  ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
@@ -1272,513 +1300,791 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;BajanDecierdo_7-3.c: 135: {
 [e :U _main ]
 [f ]
-[; ;BajanDecierdo_7-3.c: 136: while (1)
-"136
-[e :U 111 ]
-[; ;BajanDecierdo_7-3.c: 137: {
+[v _temp `uc ~T0 @X0 1 a ]
 "137
-{
+[v _humidity `f ~T0 @X0 1 a ]
+[v _temperature `f ~T0 @X0 1 a ]
+[v F1360 `uc ~T0 @X0 -> 0 `x s ]
+[i F1360
+:U ..
+-> 84 `c
+-> 101 `c
+-> 109 `c
+-> 112 `c
+-> 101 `c
+-> 114 `c
+-> 97 `c
+-> 116 `c
+-> 117 `c
+-> 114 `c
+-> 101 `c
+-> 58 `c
+-> 32 `c
+-> 0 `c
+..
+]
 "138
+[v _tempToString `uc ~T0 @X0 14  a ]
+[; ;BajanDecierdo_7-3.c: 136: u8t temp;
+[; ;BajanDecierdo_7-3.c: 137: float humidity, temperature;
+[; ;BajanDecierdo_7-3.c: 138: char tempToString[] = "Temperature: ";
+[e = _tempToString F1360 ]
+[v F1362 `uc ~T0 @X0 -> 0 `x s ]
+[i F1362
+:U ..
+-> 72 `c
+-> 117 `c
+-> 109 `c
+-> 105 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 121 `c
+-> 58 `c
+-> 32 `c
+-> 0 `c
+..
+]
+"139
+[v _humidityToString `uc ~T0 @X0 11  a ]
+[; ;BajanDecierdo_7-3.c: 139: char humidityToString[] = "Humidity: ";
+[e = _humidityToString F1362 ]
+[v F1364 `uc ~T0 @X0 -> 0 `x s ]
+[i F1364
+:U ..
+-> 69 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 0 `c
+..
+]
+"140
+[v _errorToString `uc ~T0 @X0 8  a ]
+[; ;BajanDecierdo_7-3.c: 140: char errorToString[] = "Error: ";
+[e = _errorToString F1364 ]
+"141
+[v _buf1 `uc ~T0 @X0 -> 0 `x a ]
+[v _buf2 `uc ~T0 @X0 -> 0 `x a ]
+"142
+[v _index `i ~T0 @X0 1 a ]
+[v _status `i ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 141: char buf1[], buf2[];
+[; ;BajanDecierdo_7-3.c: 142: int index, status = 0;
+[e = _status -> 0 `i ]
+"144
+[v _error `uc ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 144: u8t error = 0;
+[e = _error -> -> 0 `i `uc ]
+"145
+[v _rawRH `S101 ~T0 @X0 1 a ]
+[v _rawTemp `S101 ~T0 @X0 1 a ]
+"146
+[v _resultRH `f ~T0 @X0 1 a ]
+[v _resultTemp `f ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 145: nt16 rawRH, rawTemp;
+[; ;BajanDecierdo_7-3.c: 146: ft resultRH, resultTemp;
+[; ;BajanDecierdo_7-3.c: 148: OPTION_REG = 0x44;
+"148
+[e = _OPTION_REG -> -> 68 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 149: TRISB = 0x00;
+"149
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 150: PORTB = 0x00;
+"150
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 151: GIE = 1;
+"151
+[e = _GIE -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 153: init_I2C_Master();
+"153
+[e ( _init_I2C_Master ..  ]
+[; ;BajanDecierdo_7-3.c: 154: initLCD();
+"154
+[e ( _initLCD ..  ]
+[; ;BajanDecierdo_7-3.c: 156: instCTRL(0x80);
+"156
+[e ( _instCTRL (1 -> -> 128 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 157: while (humidityToString[index] != '\0')
+"157
+[e $U 110  ]
+[e :U 111 ]
+[; ;BajanDecierdo_7-3.c: 158: {
+"158
+{
+[; ;BajanDecierdo_7-3.c: 159: dataCTRL(humidityToString[index]);
+"159
+[e ( _dataCTRL (1 *U + &U _humidityToString * -> -> _index `ui `ux -> -> # *U &U _humidityToString `ui `ux ]
+[; ;BajanDecierdo_7-3.c: 160: index++;
+"160
+[e ++ _index -> 1 `i ]
+"161
 }
 [e :U 110 ]
-"136
-[e $U 111  ]
+"157
+[e $ != -> *U + &U _humidityToString * -> -> _index `ui `ux -> -> # *U &U _humidityToString `ui `ux `ui -> 0 `ui 111  ]
 [e :U 112 ]
-[; ;BajanDecierdo_7-3.c: 138: }
-[; ;BajanDecierdo_7-3.c: 139: }
-"139
+[; ;BajanDecierdo_7-3.c: 161: }
+[; ;BajanDecierdo_7-3.c: 162: index = 0;
+"162
+[e = _index -> 0 `i ]
+[; ;BajanDecierdo_7-3.c: 164: instCTRL(0xC0);
+"164
+[e ( _instCTRL (1 -> -> 192 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 165: while (tempToString[index] != '\0')
+"165
+[e $U 113  ]
+[e :U 114 ]
+[; ;BajanDecierdo_7-3.c: 166: {
+"166
+{
+[; ;BajanDecierdo_7-3.c: 167: dataCTRL(tempToString[index]);
+"167
+[e ( _dataCTRL (1 *U + &U _tempToString * -> -> _index `ui `ux -> -> # *U &U _tempToString `ui `ux ]
+[; ;BajanDecierdo_7-3.c: 168: index++;
+"168
+[e ++ _index -> 1 `i ]
+"169
+}
+[e :U 113 ]
+"165
+[e $ != -> *U + &U _tempToString * -> -> _index `ui `ux -> -> # *U &U _tempToString `ui `ux `ui -> 0 `ui 114  ]
+[e :U 115 ]
+[; ;BajanDecierdo_7-3.c: 169: }
+[; ;BajanDecierdo_7-3.c: 170: index = 0;
+"170
+[e = _index -> 0 `i ]
+[; ;BajanDecierdo_7-3.c: 171: while (1)
+"171
+[e :U 117 ]
+[; ;BajanDecierdo_7-3.c: 172: {
+"172
+{
+[; ;BajanDecierdo_7-3.c: 174: SHT21_SoftReset();
+"174
+[e ( _SHT21_SoftReset ..  ]
+[; ;BajanDecierdo_7-3.c: 176: SHT21_SetResolution();
+"176
+[e ( _SHT21_SetResolution ..  ]
+[; ;BajanDecierdo_7-3.c: 178: error != SHT21_Measure(HUMIDITY, &rawRH);
+"178
+[e != -> _error `i -> ( _SHT21_Measure (2 , -> . `E1319 0 `E1319 &U _rawRH `i ]
+[; ;BajanDecierdo_7-3.c: 180: error != SHT21_Measure(TEMPERATURE, &rawTemp);
+"180
+[e != -> _error `i -> ( _SHT21_Measure (2 , -> . `E1319 1 `E1319 &U _rawTemp `i ]
+[; ;BajanDecierdo_7-3.c: 183: resultTemp = SHT21_CalcTemp(rawTemp.u16);
+"183
+[e = _resultTemp ( _SHT21_CalcTemp (1 . _rawTemp 0 ]
+[; ;BajanDecierdo_7-3.c: 184: resultRH = SHT21_CalcRH(rawRH.u16);
+"184
+[e = _resultRH ( _SHT21_CalcRH (1 . _rawRH 0 ]
+[; ;BajanDecierdo_7-3.c: 187: sprintf(buf2, "%.2f", resultRH);
+"187
+[e ( _sprintf (1 , (. , &U _buf2 :s 1C -> _resultRH `d ]
+[; ;BajanDecierdo_7-3.c: 188: instCTRL(0x8D);
+"188
+[e ( _instCTRL (1 -> -> 141 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 189: while (buf2[index] != '\0')
+"189
+[e $U 119  ]
+[e :U 120 ]
+[; ;BajanDecierdo_7-3.c: 190: {
+"190
+{
+[; ;BajanDecierdo_7-3.c: 191: dataCTRL(buf2[index]);
+"191
+[e ( _dataCTRL (1 *U + &U _buf2 * -> -> _index `ui `ux -> -> # *U &U _buf2 `ui `ux ]
+[; ;BajanDecierdo_7-3.c: 192: index++;
+"192
+[e ++ _index -> 1 `i ]
+"193
+}
+[e :U 119 ]
+"189
+[e $ != -> *U + &U _buf2 * -> -> _index `ui `ux -> -> # *U &U _buf2 `ui `ux `ui -> 0 `ui 120  ]
+[e :U 121 ]
+[; ;BajanDecierdo_7-3.c: 193: }
+[; ;BajanDecierdo_7-3.c: 194: index = 0;
+"194
+[e = _index -> 0 `i ]
+[; ;BajanDecierdo_7-3.c: 195: dataCTRL('%');
+"195
+[e ( _dataCTRL (1 -> -> 37 `ui `uc ]
+[; ;BajanDecierdo_7-3.c: 197: sprintf(buf1, "%.2f", resultTemp);
+"197
+[e ( _sprintf (1 , (. , &U _buf1 :s 2C -> _resultTemp `d ]
+[; ;BajanDecierdo_7-3.c: 198: instCTRL(0xCD);
+"198
+[e ( _instCTRL (1 -> -> 205 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 199: while (buf1[index] != '\0')
+"199
+[e $U 122  ]
+[e :U 123 ]
+[; ;BajanDecierdo_7-3.c: 200: {
+"200
+{
+[; ;BajanDecierdo_7-3.c: 201: dataCTRL(buf1[index]);
+"201
+[e ( _dataCTRL (1 *U + &U _buf1 * -> -> _index `ui `ux -> -> # *U &U _buf1 `ui `ux ]
+[; ;BajanDecierdo_7-3.c: 202: index++;
+"202
+[e ++ _index -> 1 `i ]
+"203
+}
+[e :U 122 ]
+"199
+[e $ != -> *U + &U _buf1 * -> -> _index `ui `ux -> -> # *U &U _buf1 `ui `ux `ui -> 0 `ui 123  ]
+[e :U 124 ]
+[; ;BajanDecierdo_7-3.c: 203: }
+[; ;BajanDecierdo_7-3.c: 204: index = 0;
+"204
+[e = _index -> 0 `i ]
+[; ;BajanDecierdo_7-3.c: 207: if (error != 0)
+"207
+[e $ ! != -> _error `i -> 0 `i 125  ]
+[; ;BajanDecierdo_7-3.c: 208: {
+"208
+{
+[; ;BajanDecierdo_7-3.c: 209: initLCD();
+"209
+[e ( _initLCD ..  ]
+[; ;BajanDecierdo_7-3.c: 210: while (errorToString[index] != '\0')
+"210
+[e $U 126  ]
+[e :U 127 ]
+[; ;BajanDecierdo_7-3.c: 211: {
+"211
+{
+[; ;BajanDecierdo_7-3.c: 212: dataCTRL(errorToString[index]);
+"212
+[e ( _dataCTRL (1 *U + &U _errorToString * -> -> _index `ui `ux -> -> # *U &U _errorToString `ui `ux ]
+[; ;BajanDecierdo_7-3.c: 213: index++;
+"213
+[e ++ _index -> 1 `i ]
+"214
+}
+[e :U 126 ]
+"210
+[e $ != -> *U + &U _errorToString * -> -> _index `ui `ux -> -> # *U &U _errorToString `ui `ux `ui -> 0 `ui 127  ]
+[e :U 128 ]
+[; ;BajanDecierdo_7-3.c: 214: }
+[; ;BajanDecierdo_7-3.c: 215: index = 0;
+"215
+[e = _index -> 0 `i ]
+"216
+}
+[e :U 125 ]
+[; ;BajanDecierdo_7-3.c: 216: }
+[; ;BajanDecierdo_7-3.c: 217: delay(384);
+"217
+[e ( _delay (1 -> 384 `i ]
+"218
+}
+[e :U 116 ]
+"171
+[e $U 117  ]
+[e :U 118 ]
+[; ;BajanDecierdo_7-3.c: 218: }
+[; ;BajanDecierdo_7-3.c: 219: }
+"219
 [e :UE 109 ]
 }
-"143
+"223
 [v _init_I2C_Master `(v ~T0 @X0 1 ef ]
-"144
+"224
 {
-[; ;BajanDecierdo_7-3.c: 143: void init_I2C_Master(void)
-[; ;BajanDecierdo_7-3.c: 144: {
+[; ;BajanDecierdo_7-3.c: 223: void init_I2C_Master(void)
+[; ;BajanDecierdo_7-3.c: 224: {
 [e :U _init_I2C_Master ]
 [f ]
-[; ;BajanDecierdo_7-3.c: 145: TRISC = 0b00011000;
-"145
-[e = _TRISC -> -> 24 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 146: SSPCON = 0x28;
-"146
-[e = _SSPCON -> -> 40 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 147: SSPCON2 = 0x00;
-"147
-[e = _SSPCON2 -> -> 0 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 148: SSPSTAT = 0x00;
-"148
-[e = _SSPSTAT -> -> 0 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 149: SSPADD = 0x09;
-"149
-[e = _SSPADD -> -> 9 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 150: }
-"150
-[e :UE 113 ]
-}
-"152
-[v _I2C_Start `(v ~T0 @X0 1 ef ]
-"153
-{
-[; ;BajanDecierdo_7-3.c: 152: void I2C_Start(void)
-[; ;BajanDecierdo_7-3.c: 153: {
-[e :U _I2C_Start ]
-[f ]
-[; ;BajanDecierdo_7-3.c: 154: I2C_Wait();
-"154
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 155: SEN = 1;
-"155
-[e = _SEN -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 156: }
-"156
-[e :UE 114 ]
-}
-"158
-[v _I2C_RepeatedStart `(v ~T0 @X0 1 ef ]
-"159
-{
-[; ;BajanDecierdo_7-3.c: 158: void I2C_RepeatedStart(void)
-[; ;BajanDecierdo_7-3.c: 159: {
-[e :U _I2C_RepeatedStart ]
-[f ]
-[; ;BajanDecierdo_7-3.c: 160: I2C_Wait();
-"160
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 161: RSEN = 1;
-"161
-[e = _RSEN -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 162: }
-"162
-[e :UE 115 ]
-}
-"164
-[v _I2C_Stop `(v ~T0 @X0 1 ef ]
-"165
-{
-[; ;BajanDecierdo_7-3.c: 164: void I2C_Stop(void)
-[; ;BajanDecierdo_7-3.c: 165: {
-[e :U _I2C_Stop ]
-[f ]
-[; ;BajanDecierdo_7-3.c: 166: I2C_Wait();
-"166
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 167: PEN = 1;
-"167
-[e = _PEN -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 168: }
-"168
-[e :UE 116 ]
-}
-"170
-[v _I2C_Send `(v ~T0 @X0 1 ef1`uc ]
-"171
-{
-[; ;BajanDecierdo_7-3.c: 170: void I2C_Send(u8t dataOUT)
-[; ;BajanDecierdo_7-3.c: 171: {
-[e :U _I2C_Send ]
-"170
-[v _dataOUT `uc ~T0 @X0 1 r1 ]
-"171
-[f ]
-[; ;BajanDecierdo_7-3.c: 172: I2C_Wait();
-"172
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 173: SSPBUF = dataOUT;
-"173
-[e = _SSPBUF _dataOUT ]
-[; ;BajanDecierdo_7-3.c: 174: }
-"174
-[e :UE 117 ]
-}
-"176
-[v _I2C_Receive `(uc ~T0 @X0 1 ef1`uc ]
-"177
-{
-[; ;BajanDecierdo_7-3.c: 176: u8t I2C_Receive(u8t ACK_NACK)
-[; ;BajanDecierdo_7-3.c: 177: {
-[e :U _I2C_Receive ]
-"176
-[v _ACK_NACK `uc ~T0 @X0 1 r1 ]
-"177
-[f ]
-"178
-[v _dataIN `uc ~T0 @X0 1 a ]
-[; ;BajanDecierdo_7-3.c: 178: u8t dataIN;
-[; ;BajanDecierdo_7-3.c: 179: I2C_Wait();
-"179
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 180: RCEN = 1;
-"180
-[e = _RCEN -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 181: I2C_Wait();
-"181
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 182: dataIN = SSPBUF;
-"182
-[e = _dataIN _SSPBUF ]
-[; ;BajanDecierdo_7-3.c: 183: I2C_Wait();
-"183
-[e ( _I2C_Wait ..  ]
-[; ;BajanDecierdo_7-3.c: 184: ACKDT = (ACK_NACK) ? 0 : 1;
-"184
-[e = _ACKDT -> ? != -> _ACK_NACK `i -> -> -> 0 `i `uc `i : -> 0 `i -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 185: ACKEN = 1;
-"185
-[e = _ACKEN -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 186: return dataIN;
-"186
-[e ) _dataIN ]
-[e $UE 118  ]
-[; ;BajanDecierdo_7-3.c: 187: }
-"187
-[e :UE 118 ]
-}
-"191
-[v _delay `(v ~T0 @X0 1 ef1`i ]
-"192
-{
-[; ;BajanDecierdo_7-3.c: 191: void delay(int overflow)
-[; ;BajanDecierdo_7-3.c: 192: {
-[e :U _delay ]
-"191
-[v _overflow `i ~T0 @X0 1 r1 ]
-"192
-[f ]
-"193
-[v _i `i ~T0 @X0 1 a ]
-[; ;BajanDecierdo_7-3.c: 193: int i;
-[; ;BajanDecierdo_7-3.c: 194: for (i = 0; i < overflow; i++)
-"194
-{
-[e = _i -> 0 `i ]
-[e $U 123  ]
-"195
-[e :U 120 ]
-[; ;BajanDecierdo_7-3.c: 195: {
-{
-[; ;BajanDecierdo_7-3.c: 196: TMR0 = 0x00;
-"196
-[e = _TMR0 -> -> 0 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 197: while (TMR0 < 0x64)
-"197
-[e $U 124  ]
-[e :U 125 ]
-[; ;BajanDecierdo_7-3.c: 198: ;
-"198
-[e :U 124 ]
-"197
-[e $ < -> _TMR0 `i -> 100 `i 125  ]
-[e :U 126 ]
-"199
-}
-"194
-[e ++ _i -> 1 `i ]
-[e :U 123 ]
-[e $ < _i _overflow 120  ]
-[e :U 121 ]
-"199
-}
-[; ;BajanDecierdo_7-3.c: 199: }
-[; ;BajanDecierdo_7-3.c: 200: }
-"200
-[e :UE 119 ]
-}
-"202
-[v _instCTRL `(v ~T0 @X0 1 ef1`uc ]
-"203
-{
-[; ;BajanDecierdo_7-3.c: 202: void instCTRL(u8t LCD_CMD)
-[; ;BajanDecierdo_7-3.c: 203: {
-[e :U _instCTRL ]
-"202
-[v _LCD_CMD `uc ~T0 @X0 1 r1 ]
-"203
-[f ]
-[; ;BajanDecierdo_7-3.c: 204: PORTB = LCD_CMD;
-"204
-[e = _PORTB _LCD_CMD ]
-[; ;BajanDecierdo_7-3.c: 205: RC0 = 0;
-"205
-[e = _RC0 -> -> 0 `i `b ]
-[; ;BajanDecierdo_7-3.c: 206: RC1 = 0;
-"206
-[e = _RC1 -> -> 0 `i `b ]
-[; ;BajanDecierdo_7-3.c: 207: RC2 = 1;
-"207
-[e = _RC2 -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 208: delay(20);
-"208
-[e ( _delay (1 -> 20 `i ]
-[; ;BajanDecierdo_7-3.c: 209: RC2 = 0;
-"209
-[e = _RC2 -> -> 0 `i `b ]
-[; ;BajanDecierdo_7-3.c: 210: }
-"210
-[e :UE 127 ]
-}
-"212
-[v _dataCTRL `(v ~T0 @X0 1 ef1`uc ]
-"213
-{
-[; ;BajanDecierdo_7-3.c: 212: void dataCTRL(u8t LCD_DAT)
-[; ;BajanDecierdo_7-3.c: 213: {
-[e :U _dataCTRL ]
-"212
-[v _LCD_DAT `uc ~T0 @X0 1 r1 ]
-"213
-[f ]
-[; ;BajanDecierdo_7-3.c: 214: PORTB = LCD_DAT;
-"214
-[e = _PORTB _LCD_DAT ]
-[; ;BajanDecierdo_7-3.c: 215: RC0 = 1;
-"215
-[e = _RC0 -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 216: RC1 = 0;
-"216
-[e = _RC1 -> -> 0 `i `b ]
-[; ;BajanDecierdo_7-3.c: 217: RC2 = 1;
-"217
-[e = _RC2 -> -> 1 `i `b ]
-[; ;BajanDecierdo_7-3.c: 218: delay(20);
-"218
-[e ( _delay (1 -> 20 `i ]
-[; ;BajanDecierdo_7-3.c: 219: RC2 = 0;
-"219
-[e = _RC2 -> -> 0 `i `b ]
-[; ;BajanDecierdo_7-3.c: 220: }
-"220
-[e :UE 128 ]
-}
-"222
-[v _initLCD `(v ~T0 @X0 1 ef ]
-"223
-{
-[; ;BajanDecierdo_7-3.c: 222: void initLCD()
-[; ;BajanDecierdo_7-3.c: 223: {
-[e :U _initLCD ]
-[f ]
-[; ;BajanDecierdo_7-3.c: 224: instCTRL(0x3C);
-"224
-[e ( _instCTRL (1 -> -> 60 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 225: delay(20);
+[; ;BajanDecierdo_7-3.c: 225: TRISC = 0b00011000;
 "225
-[e ( _delay (1 -> 20 `i ]
-[; ;BajanDecierdo_7-3.c: 226: instCTRL(0x0C);
+[e = _TRISC -> -> 24 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 226: SSPCON = 0x28;
 "226
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 227: instCTRL(0x01);
+[e = _SSPCON -> -> 40 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 227: SSPCON2 = 0x00;
 "227
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 228: instCTRL(0x06);
+[e = _SSPCON2 -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 228: SSPSTAT = 0x00;
 "228
-[e ( _instCTRL (1 -> -> 6 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 229: instCTRL(0x0F);
+[e = _SSPSTAT -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 229: SSPADD = 0x09;
 "229
-[e ( _instCTRL (1 -> -> 15 `i `uc ]
+[e = _SSPADD -> -> 9 `i `uc ]
 [; ;BajanDecierdo_7-3.c: 230: }
 "230
 [e :UE 129 ]
 }
-"234
-[v _SHT21_CalcRH `(f ~T0 @X0 1 ef1`us ]
-"235
+"232
+[v _I2C_Start `(v ~T0 @X0 1 ef ]
+"233
 {
-[; ;BajanDecierdo_7-3.c: 234: ft SHT21_CalcRH(u16t u16RH)
-[; ;BajanDecierdo_7-3.c: 235: {
-[e :U _SHT21_CalcRH ]
-"234
-[v _u16RH `us ~T0 @X0 1 r1 ]
-"235
+[; ;BajanDecierdo_7-3.c: 232: void I2C_Start(void)
+[; ;BajanDecierdo_7-3.c: 233: {
+[e :U _I2C_Start ]
 [f ]
+[; ;BajanDecierdo_7-3.c: 234: I2C_Wait();
+"234
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 235: SEN = 1;
+"235
+[e = _SEN -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 236: }
 "236
-[v _resultRH `f ~T0 @X0 1 a ]
-[; ;BajanDecierdo_7-3.c: 236: ft resultRH;
-[; ;BajanDecierdo_7-3.c: 237: u16RH &= ~0x003;
-"237
-[e =& _u16RH -> ~ -> 3 `i `us ]
-[; ;BajanDecierdo_7-3.c: 239: resultRH = -6.0 + 125.0 / 65536.0 * (ft)u16RH;
-"239
-[e = _resultRH -> + -U .6.0 * / .125.0 .65536.0 -> -> _u16RH `f `d `f ]
-[; ;BajanDecierdo_7-3.c: 240: return resultRH;
-"240
-[e ) _resultRH ]
-[e $UE 130  ]
-[; ;BajanDecierdo_7-3.c: 241: }
-"241
 [e :UE 130 ]
 }
-"243
-[v _SHT21_CalcTemp `(f ~T0 @X0 1 ef1`us ]
-"244
+"238
+[v _I2C_RepeatedStart `(v ~T0 @X0 1 ef ]
+"239
 {
-[; ;BajanDecierdo_7-3.c: 243: ft SHT21_CalcTemp(u16t u16Temp)
-[; ;BajanDecierdo_7-3.c: 244: {
-[e :U _SHT21_CalcTemp ]
-"243
-[v _u16Temp `us ~T0 @X0 1 r1 ]
-"244
+[; ;BajanDecierdo_7-3.c: 238: void I2C_RepeatedStart(void)
+[; ;BajanDecierdo_7-3.c: 239: {
+[e :U _I2C_RepeatedStart ]
 [f ]
-"245
-[v _resultTemp `f ~T0 @X0 1 a ]
-[; ;BajanDecierdo_7-3.c: 245: ft resultTemp;
-[; ;BajanDecierdo_7-3.c: 246: u16Temp &= ~0x0003;
-"246
-[e =& _u16Temp -> ~ -> 3 `i `us ]
-[; ;BajanDecierdo_7-3.c: 248: resultTemp = -46.85 + 175.72 / 65536.0 * (ft)u16Temp;
-"248
-[e = _resultTemp -> + -U .46.85 * / .175.72 .65536.0 -> -> _u16Temp `f `d `f ]
-[; ;BajanDecierdo_7-3.c: 249: return resultTemp;
-"249
-[e ) _resultTemp ]
-[e $UE 131  ]
-[; ;BajanDecierdo_7-3.c: 250: }
-"250
+[; ;BajanDecierdo_7-3.c: 240: I2C_Wait();
+"240
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 241: RSEN = 1;
+"241
+[e = _RSEN -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 242: }
+"242
 [e :UE 131 ]
 }
-"252
-[v _SHT21_Measure `(uc ~T0 @X0 1 ef2`E1319`*S101 ]
-"253
+"244
+[v _I2C_Stop `(v ~T0 @X0 1 ef ]
+"245
 {
-[; ;BajanDecierdo_7-3.c: 252: u8t SHT21_Measure(SHT21_MEASURE_TYPE measureType, nt16 *pMeasureand)
-[; ;BajanDecierdo_7-3.c: 253: {
-[e :U _SHT21_Measure ]
-"252
-[v _measureType `E1319 ~T0 @X0 1 r1 ]
-[v _pMeasureand `*S101 ~T0 @X0 1 r2 ]
-"253
+[; ;BajanDecierdo_7-3.c: 244: void I2C_Stop(void)
+[; ;BajanDecierdo_7-3.c: 245: {
+[e :U _I2C_Stop ]
 [f ]
-"254
-[v _checksum `uc ~T0 @X0 1 a ]
-"255
-[v _error `uc ~T0 @X0 1 a ]
-[; ;BajanDecierdo_7-3.c: 254: u8t checksum;
-[; ;BajanDecierdo_7-3.c: 255: u8t error = 0;
-[e = _error -> -> 0 `i `uc ]
-"256
-[v _data `uc ~T0 @X0 -> 2 `i a ]
-[; ;BajanDecierdo_7-3.c: 256: u8t data[2];
-[; ;BajanDecierdo_7-3.c: 259: I2C_Start();
-"259
-[e ( _I2C_Start ..  ]
-[; ;BajanDecierdo_7-3.c: 261: I2C_Send(I2C_ADDR_W);
-"261
-[e ( _I2C_Send (1 -> . `E1323 0 `uc ]
-[; ;BajanDecierdo_7-3.c: 263: switch (measureType)
-"263
-[e $U 134  ]
-[; ;BajanDecierdo_7-3.c: 264: {
-"264
-{
-[; ;BajanDecierdo_7-3.c: 265: case HUMIDITY:
-"265
-[e :U 135 ]
-[; ;BajanDecierdo_7-3.c: 266: I2C_Send(SHT21_CMD_RH_HM);
-"266
-[e ( _I2C_Send (1 -> . `E1303 1 `uc ]
-[; ;BajanDecierdo_7-3.c: 267: break;
-"267
-[e $U 133  ]
-[; ;BajanDecierdo_7-3.c: 268: case TEMPERATURE:
-"268
-[e :U 136 ]
-[; ;BajanDecierdo_7-3.c: 269: I2C_Send(SHT21_CMD_TM_HM);
-"269
-[e ( _I2C_Send (1 -> . `E1303 0 `uc ]
-[; ;BajanDecierdo_7-3.c: 270: break;
-"270
-[e $U 133  ]
-"271
-}
-[; ;BajanDecierdo_7-3.c: 271: }
-[e $U 133  ]
-"263
-[e :U 134 ]
-[e [\ _measureType , $ -> . `E1319 0 `E1319 135
- , $ -> . `E1319 1 `E1319 136
- 133 ]
-"271
-[e :U 133 ]
-[; ;BajanDecierdo_7-3.c: 273: I2C_RepeatedStart();
-"273
-[e ( _I2C_RepeatedStart ..  ]
-[; ;BajanDecierdo_7-3.c: 275: I2C_Send(I2C_ADDR_R);
-"275
-[e ( _I2C_Send (1 -> . `E1323 1 `uc ]
-[; ;BajanDecierdo_7-3.c: 276: delay(15);
-"276
-[e ( _delay (1 -> 15 `i ]
-[; ;BajanDecierdo_7-3.c: 278: pMeasureand->s16.u8H = data[0] = I2C_Receive(1);
-"278
-[e = . . *U _pMeasureand 2 1 = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Receive (1 -> -> 1 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 279: pMeasureand->s16.u8L = data[1] = I2C_Receive(1);
-"279
-[e = . . *U _pMeasureand 2 0 = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Receive (1 -> -> 1 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 280: checksum = I2C_Receive(0);
-"280
-[e = _checksum ( _I2C_Receive (1 -> -> 0 `i `uc ]
-[; ;BajanDecierdo_7-3.c: 282: I2C_Stop();
-"282
-[e ( _I2C_Stop ..  ]
-[; ;BajanDecierdo_7-3.c: 283: return error;
-"283
-[e ) _error ]
-[e $UE 132  ]
-[; ;BajanDecierdo_7-3.c: 284: }
-"284
+[; ;BajanDecierdo_7-3.c: 246: I2C_Wait();
+"246
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 247: PEN = 1;
+"247
+[e = _PEN -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 248: }
+"248
 [e :UE 132 ]
 }
-"286
-[v _SHT21_SoftReset `(v ~T0 @X0 1 ef ]
-"287
+"250
+[v _I2C_Send `(v ~T0 @X0 1 ef1`uc ]
+"251
 {
-[; ;BajanDecierdo_7-3.c: 286: void SHT21_SoftReset()
-[; ;BajanDecierdo_7-3.c: 287: {
+[; ;BajanDecierdo_7-3.c: 250: void I2C_Send(u8t dataOUT)
+[; ;BajanDecierdo_7-3.c: 251: {
+[e :U _I2C_Send ]
+"250
+[v _dataOUT `uc ~T0 @X0 1 r1 ]
+"251
+[f ]
+[; ;BajanDecierdo_7-3.c: 252: I2C_Wait();
+"252
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 253: SSPBUF = dataOUT;
+"253
+[e = _SSPBUF _dataOUT ]
+[; ;BajanDecierdo_7-3.c: 254: }
+"254
+[e :UE 133 ]
+}
+"256
+[v _I2C_Receive `(uc ~T0 @X0 1 ef1`uc ]
+"257
+{
+[; ;BajanDecierdo_7-3.c: 256: u8t I2C_Receive(u8t ACK_NACK)
+[; ;BajanDecierdo_7-3.c: 257: {
+[e :U _I2C_Receive ]
+"256
+[v _ACK_NACK `uc ~T0 @X0 1 r1 ]
+"257
+[f ]
+"258
+[v _dataIN `uc ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 258: u8t dataIN;
+[; ;BajanDecierdo_7-3.c: 259: I2C_Wait();
+"259
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 260: RCEN = 1;
+"260
+[e = _RCEN -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 261: I2C_Wait();
+"261
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 262: dataIN = SSPBUF;
+"262
+[e = _dataIN _SSPBUF ]
+[; ;BajanDecierdo_7-3.c: 263: I2C_Wait();
+"263
+[e ( _I2C_Wait ..  ]
+[; ;BajanDecierdo_7-3.c: 264: ACKDT = (ACK_NACK) ? 0 : 1;
+"264
+[e = _ACKDT -> ? != -> _ACK_NACK `i -> -> -> 0 `i `uc `i : -> 0 `i -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 265: ACKEN = 1;
+"265
+[e = _ACKEN -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 266: return dataIN;
+"266
+[e ) _dataIN ]
+[e $UE 134  ]
+[; ;BajanDecierdo_7-3.c: 267: }
+"267
+[e :UE 134 ]
+}
+"271
+[v _delay `(v ~T0 @X0 1 ef1`i ]
+"272
+{
+[; ;BajanDecierdo_7-3.c: 271: void delay(int overflow)
+[; ;BajanDecierdo_7-3.c: 272: {
+[e :U _delay ]
+"271
+[v _overflow `i ~T0 @X0 1 r1 ]
+"272
+[f ]
+"273
+[v _i `i ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 273: int i;
+[; ;BajanDecierdo_7-3.c: 274: for (i = 0; i < overflow; i++)
+"274
+{
+[e = _i -> 0 `i ]
+[e $U 139  ]
+"275
+[e :U 136 ]
+[; ;BajanDecierdo_7-3.c: 275: {
+{
+[; ;BajanDecierdo_7-3.c: 276: TMR0 = 0x00;
+"276
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 277: while (TMR0 < 0x64)
+"277
+[e $U 140  ]
+[e :U 141 ]
+[; ;BajanDecierdo_7-3.c: 278: ;
+"278
+[e :U 140 ]
+"277
+[e $ < -> _TMR0 `i -> 100 `i 141  ]
+[e :U 142 ]
+"279
+}
+"274
+[e ++ _i -> 1 `i ]
+[e :U 139 ]
+[e $ < _i _overflow 136  ]
+[e :U 137 ]
+"279
+}
+[; ;BajanDecierdo_7-3.c: 279: }
+[; ;BajanDecierdo_7-3.c: 280: }
+"280
+[e :UE 135 ]
+}
+"282
+[v _instCTRL `(v ~T0 @X0 1 ef1`uc ]
+"283
+{
+[; ;BajanDecierdo_7-3.c: 282: void instCTRL(u8t LCD_CMD)
+[; ;BajanDecierdo_7-3.c: 283: {
+[e :U _instCTRL ]
+"282
+[v _LCD_CMD `uc ~T0 @X0 1 r1 ]
+"283
+[f ]
+[; ;BajanDecierdo_7-3.c: 284: PORTB = LCD_CMD;
+"284
+[e = _PORTB _LCD_CMD ]
+[; ;BajanDecierdo_7-3.c: 285: RC0 = 0;
+"285
+[e = _RC0 -> -> 0 `i `b ]
+[; ;BajanDecierdo_7-3.c: 286: RC1 = 0;
+"286
+[e = _RC1 -> -> 0 `i `b ]
+[; ;BajanDecierdo_7-3.c: 287: RC2 = 1;
+"287
+[e = _RC2 -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 288: delay(20);
+"288
+[e ( _delay (1 -> 20 `i ]
+[; ;BajanDecierdo_7-3.c: 289: RC2 = 0;
+"289
+[e = _RC2 -> -> 0 `i `b ]
+[; ;BajanDecierdo_7-3.c: 290: }
+"290
+[e :UE 143 ]
+}
+"292
+[v _dataCTRL `(v ~T0 @X0 1 ef1`uc ]
+"293
+{
+[; ;BajanDecierdo_7-3.c: 292: void dataCTRL(u8t LCD_DAT)
+[; ;BajanDecierdo_7-3.c: 293: {
+[e :U _dataCTRL ]
+"292
+[v _LCD_DAT `uc ~T0 @X0 1 r1 ]
+"293
+[f ]
+[; ;BajanDecierdo_7-3.c: 294: PORTB = LCD_DAT;
+"294
+[e = _PORTB _LCD_DAT ]
+[; ;BajanDecierdo_7-3.c: 295: RC0 = 1;
+"295
+[e = _RC0 -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 296: RC1 = 0;
+"296
+[e = _RC1 -> -> 0 `i `b ]
+[; ;BajanDecierdo_7-3.c: 297: RC2 = 1;
+"297
+[e = _RC2 -> -> 1 `i `b ]
+[; ;BajanDecierdo_7-3.c: 298: delay(20);
+"298
+[e ( _delay (1 -> 20 `i ]
+[; ;BajanDecierdo_7-3.c: 299: RC2 = 0;
+"299
+[e = _RC2 -> -> 0 `i `b ]
+[; ;BajanDecierdo_7-3.c: 300: }
+"300
+[e :UE 144 ]
+}
+"302
+[v _initLCD `(v ~T0 @X0 1 ef ]
+"303
+{
+[; ;BajanDecierdo_7-3.c: 302: void initLCD()
+[; ;BajanDecierdo_7-3.c: 303: {
+[e :U _initLCD ]
+[f ]
+[; ;BajanDecierdo_7-3.c: 304: instCTRL(0x3C);
+"304
+[e ( _instCTRL (1 -> -> 60 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 305: delay(20);
+"305
+[e ( _delay (1 -> 20 `i ]
+[; ;BajanDecierdo_7-3.c: 306: instCTRL(0x0C);
+"306
+[e ( _instCTRL (1 -> -> 12 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 307: instCTRL(0x01);
+"307
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 308: instCTRL(0x06);
+"308
+[e ( _instCTRL (1 -> -> 6 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 309: instCTRL(0x0F);
+"309
+[e ( _instCTRL (1 -> -> 15 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 310: }
+"310
+[e :UE 145 ]
+}
+"314
+[v _SHT21_CalcRH `(f ~T0 @X0 1 ef1`us ]
+"315
+{
+[; ;BajanDecierdo_7-3.c: 314: ft SHT21_CalcRH(u16t u16RH)
+[; ;BajanDecierdo_7-3.c: 315: {
+[e :U _SHT21_CalcRH ]
+"314
+[v _u16RH `us ~T0 @X0 1 r1 ]
+"315
+[f ]
+"316
+[v _resultRH `f ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 316: ft resultRH;
+[; ;BajanDecierdo_7-3.c: 317: u16RH &= ~0x003;
+"317
+[e =& _u16RH -> ~ -> 3 `i `us ]
+[; ;BajanDecierdo_7-3.c: 319: resultRH = -6.0 + 125.0 / 65536.0 * (ft)u16RH;
+"319
+[e = _resultRH -> + -U .6.0 * / .125.0 .65536.0 -> -> _u16RH `f `d `f ]
+[; ;BajanDecierdo_7-3.c: 320: return resultRH;
+"320
+[e ) _resultRH ]
+[e $UE 146  ]
+[; ;BajanDecierdo_7-3.c: 321: }
+"321
+[e :UE 146 ]
+}
+"323
+[v _SHT21_CalcTemp `(f ~T0 @X0 1 ef1`us ]
+"324
+{
+[; ;BajanDecierdo_7-3.c: 323: ft SHT21_CalcTemp(u16t u16Temp)
+[; ;BajanDecierdo_7-3.c: 324: {
+[e :U _SHT21_CalcTemp ]
+"323
+[v _u16Temp `us ~T0 @X0 1 r1 ]
+"324
+[f ]
+"325
+[v _resultTemp `f ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 325: ft resultTemp;
+[; ;BajanDecierdo_7-3.c: 326: u16Temp &= ~0x0003;
+"326
+[e =& _u16Temp -> ~ -> 3 `i `us ]
+[; ;BajanDecierdo_7-3.c: 328: resultTemp = -46.85 + 175.72 / 65536.0 * (ft)u16Temp;
+"328
+[e = _resultTemp -> + -U .46.85 * / .175.72 .65536.0 -> -> _u16Temp `f `d `f ]
+[; ;BajanDecierdo_7-3.c: 329: return resultTemp;
+"329
+[e ) _resultTemp ]
+[e $UE 147  ]
+[; ;BajanDecierdo_7-3.c: 330: }
+"330
+[e :UE 147 ]
+}
+"332
+[v _SHT21_Measure `(uc ~T0 @X0 1 ef2`E1319`*S101 ]
+"333
+{
+[; ;BajanDecierdo_7-3.c: 332: u8t SHT21_Measure(SHT21_MEASURE_TYPE measureType, nt16 *pMeasureand)
+[; ;BajanDecierdo_7-3.c: 333: {
+[e :U _SHT21_Measure ]
+"332
+[v _measureType `E1319 ~T0 @X0 1 r1 ]
+[v _pMeasureand `*S101 ~T0 @X0 1 r2 ]
+"333
+[f ]
+"334
+[v _checksum `uc ~T0 @X0 1 a ]
+"335
+[v _error `uc ~T0 @X0 1 a ]
+[; ;BajanDecierdo_7-3.c: 334: u8t checksum;
+[; ;BajanDecierdo_7-3.c: 335: u8t error = 0;
+[e = _error -> -> 0 `i `uc ]
+"336
+[v _data `uc ~T0 @X0 -> 2 `i a ]
+[; ;BajanDecierdo_7-3.c: 336: u8t data[2];
+[; ;BajanDecierdo_7-3.c: 339: I2C_Start();
+"339
+[e ( _I2C_Start ..  ]
+[; ;BajanDecierdo_7-3.c: 341: I2C_Send(I2C_ADDR_W);
+"341
+[e ( _I2C_Send (1 -> . `E1323 0 `uc ]
+[; ;BajanDecierdo_7-3.c: 343: switch (measureType)
+"343
+[e $U 150  ]
+[; ;BajanDecierdo_7-3.c: 344: {
+"344
+{
+[; ;BajanDecierdo_7-3.c: 345: case HUMIDITY:
+"345
+[e :U 151 ]
+[; ;BajanDecierdo_7-3.c: 346: I2C_Send(SHT21_CMD_RH_HM);
+"346
+[e ( _I2C_Send (1 -> . `E1303 1 `uc ]
+[; ;BajanDecierdo_7-3.c: 347: break;
+"347
+[e $U 149  ]
+[; ;BajanDecierdo_7-3.c: 348: case TEMPERATURE:
+"348
+[e :U 152 ]
+[; ;BajanDecierdo_7-3.c: 349: I2C_Send(SHT21_CMD_TM_HM);
+"349
+[e ( _I2C_Send (1 -> . `E1303 0 `uc ]
+[; ;BajanDecierdo_7-3.c: 350: break;
+"350
+[e $U 149  ]
+"351
+}
+[; ;BajanDecierdo_7-3.c: 351: }
+[e $U 149  ]
+"343
+[e :U 150 ]
+[e [\ _measureType , $ -> . `E1319 0 `E1319 151
+ , $ -> . `E1319 1 `E1319 152
+ 149 ]
+"351
+[e :U 149 ]
+[; ;BajanDecierdo_7-3.c: 353: I2C_RepeatedStart();
+"353
+[e ( _I2C_RepeatedStart ..  ]
+[; ;BajanDecierdo_7-3.c: 355: I2C_Send(I2C_ADDR_R);
+"355
+[e ( _I2C_Send (1 -> . `E1323 1 `uc ]
+[; ;BajanDecierdo_7-3.c: 356: delay(15);
+"356
+[e ( _delay (1 -> 15 `i ]
+[; ;BajanDecierdo_7-3.c: 358: pMeasureand->s16.u8H = data[0] = I2C_Receive(1);
+"358
+[e = . . *U _pMeasureand 2 1 = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Receive (1 -> -> 1 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 359: pMeasureand->s16.u8L = data[1] = I2C_Receive(1);
+"359
+[e = . . *U _pMeasureand 2 0 = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux ( _I2C_Receive (1 -> -> 1 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 360: checksum = I2C_Receive(0);
+"360
+[e = _checksum ( _I2C_Receive (1 -> -> 0 `i `uc ]
+[; ;BajanDecierdo_7-3.c: 362: I2C_Stop();
+"362
+[e ( _I2C_Stop ..  ]
+[; ;BajanDecierdo_7-3.c: 363: return error;
+"363
+[e ) _error ]
+[e $UE 148  ]
+[; ;BajanDecierdo_7-3.c: 364: }
+"364
+[e :UE 148 ]
+}
+"366
+[v _SHT21_SoftReset `(v ~T0 @X0 1 ef ]
+"367
+{
+[; ;BajanDecierdo_7-3.c: 366: void SHT21_SoftReset()
+[; ;BajanDecierdo_7-3.c: 367: {
 [e :U _SHT21_SoftReset ]
 [f ]
-[; ;BajanDecierdo_7-3.c: 288: I2C_Start();
-"288
+[; ;BajanDecierdo_7-3.c: 368: I2C_Start();
+"368
 [e ( _I2C_Start ..  ]
-[; ;BajanDecierdo_7-3.c: 289: I2C_Send(I2C_ADDR_W);
-"289
+[; ;BajanDecierdo_7-3.c: 369: I2C_Send(I2C_ADDR_W);
+"369
 [e ( _I2C_Send (1 -> . `E1323 0 `uc ]
-[; ;BajanDecierdo_7-3.c: 290: I2C_Send(SOFT_RESET);
-"290
+[; ;BajanDecierdo_7-3.c: 370: I2C_Send(SOFT_RESET);
+"370
 [e ( _I2C_Send (1 -> . `E1303 6 `uc ]
-[; ;BajanDecierdo_7-3.c: 291: I2C_Stop();
-"291
+[; ;BajanDecierdo_7-3.c: 371: I2C_Stop();
+"371
 [e ( _I2C_Stop ..  ]
-[; ;BajanDecierdo_7-3.c: 292: delay(10);
-"292
+[; ;BajanDecierdo_7-3.c: 372: delay(10);
+"372
 [e ( _delay (1 -> 10 `i ]
-[; ;BajanDecierdo_7-3.c: 293: }
-"293
-[e :UE 137 ]
+[; ;BajanDecierdo_7-3.c: 373: }
+"373
+[e :UE 153 ]
 }
-"295
+"375
 [v _SHT21_SetResolution `(v ~T0 @X0 1 ef ]
-"296
+"376
 {
-[; ;BajanDecierdo_7-3.c: 295: void SHT21_SetResolution()
-[; ;BajanDecierdo_7-3.c: 296: {
+[; ;BajanDecierdo_7-3.c: 375: void SHT21_SetResolution()
+[; ;BajanDecierdo_7-3.c: 376: {
 [e :U _SHT21_SetResolution ]
 [f ]
-[; ;BajanDecierdo_7-3.c: 297: I2C_Start();
-"297
+[; ;BajanDecierdo_7-3.c: 377: I2C_Start();
+"377
 [e ( _I2C_Start ..  ]
-[; ;BajanDecierdo_7-3.c: 298: I2C_Send(I2C_ADDR_W);
-"298
+[; ;BajanDecierdo_7-3.c: 378: I2C_Send(I2C_ADDR_W);
+"378
 [e ( _I2C_Send (1 -> . `E1323 0 `uc ]
-[; ;BajanDecierdo_7-3.c: 299: I2C_Send(USR_REG_WR);
-"299
+[; ;BajanDecierdo_7-3.c: 379: I2C_Send(USR_REG_WR);
+"379
 [e ( _I2C_Send (1 -> . `E1303 4 `uc ]
-[; ;BajanDecierdo_7-3.c: 300: I2C_Send(SHT21_RES_RH12_TEMP14);
-"300
+[; ;BajanDecierdo_7-3.c: 380: I2C_Send(SHT21_RES_RH12_TEMP14);
+"380
 [e ( _I2C_Send (1 -> . `E1312 0 `uc ]
-[; ;BajanDecierdo_7-3.c: 301: I2C_Stop();
-"301
+[; ;BajanDecierdo_7-3.c: 381: I2C_Stop();
+"381
 [e ( _I2C_Stop ..  ]
-[; ;BajanDecierdo_7-3.c: 302: }
-"302
-[e :UE 138 ]
+[; ;BajanDecierdo_7-3.c: 382: }
+"382
+[e :UE 154 ]
 }
+[p f _sprintf 8462336 ]
+[a 1C 37 46 50 102 0 ]
+[a 2C 37 46 50 102 0 ]
