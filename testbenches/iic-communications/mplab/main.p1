@@ -1,11 +1,33 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"26 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h
-[v _I2CStart `(v ~T0 @X0 0 ef ]
-"30
-[v _I2CSend `(v ~T0 @X0 0 ef1`uc ]
-"28
-[v _I2CStop `(v ~T0 @X0 0 ef ]
+"1707 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _SSPCON2 `Vuc ~T0 @X0 0 e@145 ]
+"1780
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"791
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
+"1774
+[v _SSPADD `Vuc ~T0 @X0 0 e@147 ]
+"2599
+[v _SEN `Vb ~T0 @X0 0 e@1160 ]
+"2589
+[v _RSEN `Vb ~T0 @X0 0 e@1161 ]
+"2483
+[v _PEN `Vb ~T0 @X0 0 e@1162 ]
+"785
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"2553
+[v _RCEN `Vb ~T0 @X0 0 e@1163 ]
+"2311
+[v _ACKDT `Vb ~T0 @X0 0 e@1165 ]
+"2313
+[v _ACKEN `Vb ~T0 @X0 0 e@1164 ]
+"53
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"14 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
+[v _lcd_cmd `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
+"1396 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f877a.h: 47: extern volatile unsigned char INDF @ 0x000;
@@ -1019,226 +1041,413 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-[; ;iic.h: 6: typedef unsigned char uchr8;
-[; ;iic.h: 7: typedef char ichr8;
-[; ;iic.h: 8: typedef unsigned int uint16;
-[; ;iic.h: 9: typedef int int16;
-[; ;iic.h: 10: typedef unsigned long uint32;
-[; ;iic.h: 11: typedef long int32;
-[; ;iic.h: 12: typedef unsigned long long uint64;
-[; ;iic.h: 13: typedef long long int64;
-[; ;iic.h: 14: typedef float f32;
-[; ;iic.h: 15: typedef double f64;
-[; ;iic.h: 25: void init_I2CMaster(void);
-[; ;iic.h: 26: void I2CStart(void);
-[; ;iic.h: 27: void I2CReStart(void);
-[; ;iic.h: 28: void I2CStop(void);
-[; ;iic.h: 29: void I2CWait(void);
-[; ;iic.h: 30: void I2CSend(uchr8 dataOUT);
-[; ;iic.h: 31: uchr8 I2CRead(uchr8 ACK_NACK);
-[; ;iic_lcd.h: 10: void LCD_init(void);
-[; ;iic_lcd.h: 11: void LCD_cmd(uchr8 cmd);
-[; ;iic_lcd.h: 12: void LCD_data(uchr8 data);
-[; ;iic_lcd.h: 13: void LCD_clear(void);
-[; ;iic_lcd.h: 14: void LCD_home(void);
-[; ;iic_lcd.h: 15: void LCD_setCursor(uchr8 row, uchr8 col);
-[; ;iic_lcd.h: 16: void LCD_print(char *str);
-"19 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
-[v _LCD_init `(v ~T0 @X0 1 ef ]
-"20
+[; ;iic.h: 7: void iic_init(void);
+[; ;iic.h: 8: void IIC_Start(void);
+[; ;iic.h: 9: void IIC_Repeated_Start(void);
+[; ;iic.h: 10: void IIC_Stop(void);
+[; ;iic.h: 11: void IIC_Wait(void);
+[; ;iic.h: 12: void IIC_Send(unsigned char data);
+[; ;iic.h: 13: unsigned char IIC_Read(void);
+[; ;iic.h: 15: void delay(int overflow);
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h
+[v _IIC_Wait `(v ~T0 @X0 1 ef ]
 {
-[; ;iic_lcd.h: 19: void LCD_init(void)
-[; ;iic_lcd.h: 20: {
-[e :U _LCD_init ]
+[; ;iic.h: 17: void IIC_Wait(void) {
+[e :U _IIC_Wait ]
 [f ]
-[; ;iic_lcd.h: 21: I2CStart();
-"21
-[e ( _I2CStart ..  ]
-[; ;iic_lcd.h: 22: I2CSend(0x20);
-"22
-[e ( _I2CSend (1 -> -> 32 `i `uc ]
-[; ;iic_lcd.h: 23: I2CSend(0x38);
-"23
-[e ( _I2CSend (1 -> -> 56 `i `uc ]
-[; ;iic_lcd.h: 24: I2CSend(0x0C);
-"24
-[e ( _I2CSend (1 -> -> 12 `i `uc ]
-[; ;iic_lcd.h: 25: I2CSend(0x06);
-"25
-[e ( _I2CSend (1 -> -> 6 `i `uc ]
-[; ;iic_lcd.h: 26: I2CSend(0x01);
-"26
-[e ( _I2CSend (1 -> -> 1 `i `uc ]
-[; ;iic_lcd.h: 27: I2CStop();
-"27
-[e ( _I2CStop ..  ]
-[; ;iic_lcd.h: 28: }
-"28
+[; ;iic.h: 18: while ((SSPCON2 & 0x1F) || (SSPSTAT & 0x04));
+"18
+[e $U 97  ]
+[e :U 98 ]
+[e :U 97 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 98  ]
+[e :U 99 ]
+[; ;iic.h: 19: }
+"19
 [e :UE 96 ]
 }
-"30
-[v _LCD_cmd `(v ~T0 @X0 1 ef1`uc ]
-"31
+"21
+[v _iic_init `(v ~T0 @X0 1 ef ]
 {
-[; ;iic_lcd.h: 30: void LCD_cmd(uchr8 cmd)
-[; ;iic_lcd.h: 31: {
-[e :U _LCD_cmd ]
-"30
-[v _cmd `uc ~T0 @X0 1 r1 ]
-"31
+[; ;iic.h: 21: void iic_init(void) {
+[e :U _iic_init ]
 [f ]
-[; ;iic_lcd.h: 32: I2CStart();
-"32
-[e ( _I2CStart ..  ]
-[; ;iic_lcd.h: 33: I2CSend(0x20);
-"33
-[e ( _I2CSend (1 -> -> 32 `i `uc ]
-[; ;iic_lcd.h: 34: I2CSend(0x80);
-"34
-[e ( _I2CSend (1 -> -> 128 `i `uc ]
-[; ;iic_lcd.h: 35: I2CSend(cmd);
-"35
-[e ( _I2CSend (1 _cmd ]
-[; ;iic_lcd.h: 36: I2CStop();
-"36
-[e ( _I2CStop ..  ]
-[; ;iic_lcd.h: 37: }
-"37
-[e :UE 97 ]
-}
-"39
-[v _LCD_data `(v ~T0 @X0 1 ef1`uc ]
-"40
-{
-[; ;iic_lcd.h: 39: void LCD_data(uchr8 data)
-[; ;iic_lcd.h: 40: {
-[e :U _LCD_data ]
-"39
-[v _data `uc ~T0 @X0 1 r1 ]
-"40
-[f ]
-[; ;iic_lcd.h: 41: I2CStart();
-"41
-[e ( _I2CStart ..  ]
-[; ;iic_lcd.h: 42: I2CSend(0x20);
-"42
-[e ( _I2CSend (1 -> -> 32 `i `uc ]
-[; ;iic_lcd.h: 43: I2CSend(0x40);
-"43
-[e ( _I2CSend (1 -> -> 64 `i `uc ]
-[; ;iic_lcd.h: 44: I2CSend(data);
-"44
-[e ( _I2CSend (1 _data ]
-[; ;iic_lcd.h: 45: I2CStop();
-"45
-[e ( _I2CStop ..  ]
-[; ;iic_lcd.h: 46: }
-"46
-[e :UE 98 ]
-}
-"48
-[v _LCD_clear `(v ~T0 @X0 1 ef ]
-"49
-{
-[; ;iic_lcd.h: 48: void LCD_clear(void)
-[; ;iic_lcd.h: 49: {
-[e :U _LCD_clear ]
-[f ]
-[; ;iic_lcd.h: 50: LCD_cmd(0x01);
-"50
-[e ( _LCD_cmd (1 -> -> 1 `i `uc ]
-[; ;iic_lcd.h: 51: }
-"51
-[e :UE 99 ]
-}
-"53
-[v _LCD_home `(v ~T0 @X0 1 ef ]
-"54
-{
-[; ;iic_lcd.h: 53: void LCD_home(void)
-[; ;iic_lcd.h: 54: {
-[e :U _LCD_home ]
-[f ]
-[; ;iic_lcd.h: 55: LCD_cmd(0x02);
-"55
-[e ( _LCD_cmd (1 -> -> 2 `i `uc ]
-[; ;iic_lcd.h: 56: }
-"56
+[; ;iic.h: 22: SSPCON = 0x28;
+"22
+[e = _SSPCON -> -> 40 `i `uc ]
+[; ;iic.h: 23: SSPCON2 = 0x00;
+"23
+[e = _SSPCON2 -> -> 0 `i `uc ]
+[; ;iic.h: 24: SSPADD = 0x09;
+"24
+[e = _SSPADD -> -> 9 `i `uc ]
+[; ;iic.h: 25: SSPSTAT = 0x00;
+"25
+[e = _SSPSTAT -> -> 0 `i `uc ]
+[; ;iic.h: 26: }
+"26
 [e :UE 100 ]
 }
-"58
-[v _LCD_setCursor `(v ~T0 @X0 1 ef2`uc`uc ]
-"59
+"28
+[v _IIC_Start `(v ~T0 @X0 1 ef ]
 {
-[; ;iic_lcd.h: 58: void LCD_setCursor(uchr8 row, uchr8 col)
-[; ;iic_lcd.h: 59: {
-[e :U _LCD_setCursor ]
-"58
-[v _row `uc ~T0 @X0 1 r1 ]
-[v _col `uc ~T0 @X0 1 r2 ]
-"59
+[; ;iic.h: 28: void IIC_Start(void) {
+[e :U _IIC_Start ]
 [f ]
-[; ;iic_lcd.h: 60: if(row == 0)
-"60
-[e $ ! == -> _row `i -> 0 `i 102  ]
-[; ;iic_lcd.h: 61: {
-"61
-{
-[; ;iic_lcd.h: 62: LCD_cmd(0x80 + col);
-"62
-[e ( _LCD_cmd (1 -> + -> 128 `i -> _col `i `uc ]
-"63
-}
-[; ;iic_lcd.h: 63: }
-[e $U 103  ]
-"64
-[e :U 102 ]
-[; ;iic_lcd.h: 64: else
-[; ;iic_lcd.h: 65: {
-"65
-{
-[; ;iic_lcd.h: 66: LCD_cmd(0xC0 + col);
-"66
-[e ( _LCD_cmd (1 -> + -> 192 `i -> _col `i `uc ]
-"67
-}
-[e :U 103 ]
-[; ;iic_lcd.h: 67: }
-[; ;iic_lcd.h: 68: }
-"68
+[; ;iic.h: 29: IIC_Wait();
+"29
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 30: SEN = 1;
+"30
+[e = _SEN -> -> 1 `i `b ]
+[; ;iic.h: 31: }
+"31
 [e :UE 101 ]
 }
-"70
-[v _LCD_print `(v ~T0 @X0 1 ef1`*uc ]
-"71
+"33
+[v _IIC_Repeated_Start `(v ~T0 @X0 1 ef ]
 {
-[; ;iic_lcd.h: 70: void LCD_print(uchr8 *str)
-[; ;iic_lcd.h: 71: {
-[e :U _LCD_print ]
-"70
-[v _str `*uc ~T0 @X0 1 r1 ]
-"71
+[; ;iic.h: 33: void IIC_Repeated_Start(void) {
+[e :U _IIC_Repeated_Start ]
 [f ]
-[; ;iic_lcd.h: 72: while(*str)
-"72
-[e $U 105  ]
-[e :U 106 ]
-[; ;iic_lcd.h: 73: {
-"73
+[; ;iic.h: 34: IIC_Wait();
+"34
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 35: RSEN = 1;
+"35
+[e = _RSEN -> -> 1 `i `b ]
+[; ;iic.h: 36: }
+"36
+[e :UE 102 ]
+}
+"38
+[v _IIC_Stop `(v ~T0 @X0 1 ef ]
 {
-[; ;iic_lcd.h: 74: LCD_data(*str++);
+[; ;iic.h: 38: void IIC_Stop(void) {
+[e :U _IIC_Stop ]
+[f ]
+[; ;iic.h: 39: IIC_Wait();
+"39
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 40: PEN = 1;
+"40
+[e = _PEN -> -> 1 `i `b ]
+[; ;iic.h: 41: }
+"41
+[e :UE 103 ]
+}
+"43
+[v _IIC_Send `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;iic.h: 43: void IIC_Send(unsigned char data) {
+[e :U _IIC_Send ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;iic.h: 44: IIC_Wait();
+"44
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 45: SSPBUF = data;
+"45
+[e = _SSPBUF _data ]
+[; ;iic.h: 46: }
+"46
+[e :UE 104 ]
+}
+"48
+[v _IIC_Read `(uc ~T0 @X0 1 ef ]
+{
+[; ;iic.h: 48: unsigned char IIC_Read(void) {
+[e :U _IIC_Read ]
+[f ]
+"49
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;iic.h: 49: unsigned char temp;
+[; ;iic.h: 50: IIC_Wait();
+"50
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 51: RCEN = 1;
+"51
+[e = _RCEN -> -> 1 `i `b ]
+[; ;iic.h: 52: IIC_Wait();
+"52
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 53: temp = SSPBUF;
+"53
+[e = _temp _SSPBUF ]
+[; ;iic.h: 54: IIC_Wait();
+"54
+[e ( _IIC_Wait ..  ]
+[; ;iic.h: 55: ACKDT = 0;
+"55
+[e = _ACKDT -> -> 0 `i `b ]
+[; ;iic.h: 56: ACKEN = 1;
+"56
+[e = _ACKEN -> -> 1 `i `b ]
+[; ;iic.h: 57: return temp;
+"57
+[e ) _temp ]
+[e $UE 105  ]
+[; ;iic.h: 58: }
+"58
+[e :UE 105 ]
+}
+"60
+[v _delay `(v ~T0 @X0 1 ef1`i ]
+{
+[; ;iic.h: 60: void delay(int overflow) {
+[e :U _delay ]
+[v _overflow `i ~T0 @X0 1 r1 ]
+[f ]
+"61
+[v _i `i ~T0 @X0 1 a ]
+[; ;iic.h: 61: int i;
+[; ;iic.h: 62: for (i = 0; i < overflow; i++) {
+"62
+{
+[e = _i -> 0 `i ]
+[e $U 110  ]
+[e :U 107 ]
+{
+[; ;iic.h: 63: TMR0 = 0;
+"63
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;iic.h: 64: while (TMR0 < 250);
+"64
+[e $U 111  ]
+[e :U 112 ]
+[e :U 111 ]
+[e $ < -> _TMR0 `i -> 250 `i 112  ]
+[e :U 113 ]
+"65
+}
+"62
+[e ++ _i -> 1 `i ]
+[e :U 110 ]
+[e $ < _i _overflow 107  ]
+[e :U 108 ]
+"65
+}
+[; ;iic.h: 65: }
+[; ;iic.h: 66: }
+"66
+[e :UE 106 ]
+}
+[; ;iic_lcd.h: 13: void lcd_init(void);
+[; ;iic_lcd.h: 14: void lcd_cmd(unsigned char cmd);
+[; ;iic_lcd.h: 15: void lcd_data(unsigned char data);
+[; ;iic_lcd.h: 16: void lcd_str(const char *str);
+[; ;iic_lcd.h: 17: void lcd_str_xy(unsigned char x, unsigned char y, const char *str);
+[; ;iic_lcd.h: 18: void lcd_clear(void);
+[; ;iic_lcd.h: 19: void lcd_home(void);
+[; ;iic_lcd.h: 20: void lcd_set_cursor(unsigned char x, unsigned char y);
+"22 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
+[v _lcd_init `(v ~T0 @X0 1 ef ]
+{
+[; ;iic_lcd.h: 22: void lcd_init(void) {
+[e :U _lcd_init ]
+[f ]
+[; ;iic_lcd.h: 23: iic_init();
+"23
+[e ( _iic_init ..  ]
+[; ;iic_lcd.h: 24: lcd_cmd(0x38);
+"24
+[e ( _lcd_cmd (1 -> -> 56 `i `uc ]
+[; ;iic_lcd.h: 25: lcd_cmd(0x0C);
+"25
+[e ( _lcd_cmd (1 -> -> 12 `i `uc ]
+[; ;iic_lcd.h: 26: lcd_cmd(0x06);
+"26
+[e ( _lcd_cmd (1 -> -> 6 `i `uc ]
+[; ;iic_lcd.h: 27: lcd_cmd(0x01);
+"27
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+[; ;iic_lcd.h: 28: }
+"28
+[e :UE 114 ]
+}
+"30
+[v _lcd_cmd `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;iic_lcd.h: 30: void lcd_cmd(unsigned char cmd) {
+[e :U _lcd_cmd ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;iic_lcd.h: 31: IIC_Start();
+"31
+[e ( _IIC_Start ..  ]
+[; ;iic_lcd.h: 32: IIC_Send(0x20 << 1);
+"32
+[e ( _IIC_Send (1 -> << -> 32 `i -> 1 `i `uc ]
+[; ;iic_lcd.h: 33: IIC_Send(cmd & 0xF0);
+"33
+[e ( _IIC_Send (1 -> & -> _cmd `i -> 240 `i `uc ]
+[; ;iic_lcd.h: 34: IIC_Send((cmd << 4) & 0xF0);
+"34
+[e ( _IIC_Send (1 -> & << -> _cmd `i -> 4 `i -> 240 `i `uc ]
+[; ;iic_lcd.h: 35: IIC_Stop();
+"35
+[e ( _IIC_Stop ..  ]
+[; ;iic_lcd.h: 36: }
+"36
+[e :UE 115 ]
+}
+"38
+[v _lcd_data `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;iic_lcd.h: 38: void lcd_data(unsigned char data) {
+[e :U _lcd_data ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;iic_lcd.h: 39: IIC_Start();
+"39
+[e ( _IIC_Start ..  ]
+[; ;iic_lcd.h: 40: IIC_Send((0x20 << 1) | 0x01);
+"40
+[e ( _IIC_Send (1 -> | << -> 32 `i -> 1 `i -> 1 `i `uc ]
+[; ;iic_lcd.h: 41: IIC_Send(data & 0xF0);
+"41
+[e ( _IIC_Send (1 -> & -> _data `i -> 240 `i `uc ]
+[; ;iic_lcd.h: 42: IIC_Send((data << 4) & 0xF0);
+"42
+[e ( _IIC_Send (1 -> & << -> _data `i -> 4 `i -> 240 `i `uc ]
+[; ;iic_lcd.h: 43: IIC_Stop();
+"43
+[e ( _IIC_Stop ..  ]
+[; ;iic_lcd.h: 44: }
+"44
+[e :UE 116 ]
+}
+"46
+[v _lcd_str `(v ~T0 @X0 1 ef1`*Cuc ]
+{
+[; ;iic_lcd.h: 46: void lcd_str(const char *str) {
+[e :U _lcd_str ]
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+[f ]
+[; ;iic_lcd.h: 47: while (*str) {
+"47
+[e $U 118  ]
+[e :U 119 ]
+{
+[; ;iic_lcd.h: 48: lcd_data(*str++);
+"48
+[e ( _lcd_data (1 *U ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"49
+}
+[e :U 118 ]
+"47
+[e $ != -> *U _str `i -> -> -> 0 `i `Cuc `i 119  ]
+[e :U 120 ]
+[; ;iic_lcd.h: 49: }
+[; ;iic_lcd.h: 50: }
+"50
+[e :UE 117 ]
+}
+"52
+[v _lcd_str_xy `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
+{
+[; ;iic_lcd.h: 52: void lcd_str_xy(unsigned char x, unsigned char y, const char *str) {
+[e :U _lcd_str_xy ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[v _str `*Cuc ~T0 @X0 1 r3 ]
+[f ]
+"53
+[v _addr `uc ~T0 @X0 1 a ]
+[; ;iic_lcd.h: 53: unsigned char addr;
+[; ;iic_lcd.h: 54: if (y == 0) {
+"54
+[e $ ! == -> _y `i -> 0 `i 122  ]
+{
+[; ;iic_lcd.h: 55: addr = 0x80 + x;
+"55
+[e = _addr -> + -> 128 `i -> _x `i `uc ]
+"56
+}
+[; ;iic_lcd.h: 56: } else {
+[e $U 123  ]
+[e :U 122 ]
+{
+[; ;iic_lcd.h: 57: addr = 0xC0 + x;
+"57
+[e = _addr -> + -> 192 `i -> _x `i `uc ]
+"58
+}
+[e :U 123 ]
+[; ;iic_lcd.h: 58: }
+[; ;iic_lcd.h: 59: lcd_cmd(addr);
+"59
+[e ( _lcd_cmd (1 _addr ]
+[; ;iic_lcd.h: 60: lcd_str(str);
+"60
+[e ( _lcd_str (1 _str ]
+[; ;iic_lcd.h: 61: }
+"61
+[e :UE 121 ]
+}
+"63
+[v _lcd_clear `(v ~T0 @X0 1 ef ]
+{
+[; ;iic_lcd.h: 63: void lcd_clear(void) {
+[e :U _lcd_clear ]
+[f ]
+[; ;iic_lcd.h: 64: lcd_cmd(0x01);
+"64
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+[; ;iic_lcd.h: 65: }
+"65
+[e :UE 124 ]
+}
+"67
+[v _lcd_home `(v ~T0 @X0 1 ef ]
+{
+[; ;iic_lcd.h: 67: void lcd_home(void) {
+[e :U _lcd_home ]
+[f ]
+[; ;iic_lcd.h: 68: lcd_cmd(0x02);
+"68
+[e ( _lcd_cmd (1 -> -> 2 `i `uc ]
+[; ;iic_lcd.h: 69: }
+"69
+[e :UE 125 ]
+}
+"71
+[v _lcd_set_cursor `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;iic_lcd.h: 71: void lcd_set_cursor(unsigned char x, unsigned char y) {
+[e :U _lcd_set_cursor ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[f ]
+"72
+[v _addr `uc ~T0 @X0 1 a ]
+[; ;iic_lcd.h: 72: unsigned char addr;
+[; ;iic_lcd.h: 73: if (y == 0) {
+"73
+[e $ ! == -> _y `i -> 0 `i 127  ]
+{
+[; ;iic_lcd.h: 74: addr = 0x80 + x;
 "74
-[e ( _LCD_data (1 *U ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+[e = _addr -> + -> 128 `i -> _x `i `uc ]
 "75
 }
-[e :U 105 ]
-"72
-[e $ != -> *U _str `i -> -> -> 0 `i `uc `i 106  ]
-[e :U 107 ]
-[; ;iic_lcd.h: 75: }
-[; ;iic_lcd.h: 76: }
+[; ;iic_lcd.h: 75: } else {
+[e $U 128  ]
+[e :U 127 ]
+{
+[; ;iic_lcd.h: 76: addr = 0xC0 + x;
 "76
-[e :UE 104 ]
+[e = _addr -> + -> 192 `i -> _x `i `uc ]
+"77
+}
+[e :U 128 ]
+[; ;iic_lcd.h: 77: }
+[; ;iic_lcd.h: 78: lcd_cmd(addr);
+"78
+[e ( _lcd_cmd (1 _addr ]
+[; ;iic_lcd.h: 79: }
+"79
+[e :UE 126 ]
 }
 "5 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\main.c
 [p x FOSC=XT ]
@@ -1264,7 +1473,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 15: {
 [e :U _main ]
 [f ]
-[; ;main.c: 17: }
+[; ;main.c: 16: TRISC = 0b00011000;
+"16
+[e = _TRISC -> -> 24 `i `uc ]
+[; ;main.c: 17: lcd_init();
 "17
-[e :UE 108 ]
+[e ( _lcd_init ..  ]
+[; ;main.c: 18: lcd_str("Hello, World!");
+"18
+[e ( _lcd_str (1 :s 1C ]
+[; ;main.c: 19: while (1);
+"19
+[e :U 131 ]
+[e :U 130 ]
+[e $U 131  ]
+[e :U 132 ]
+[; ;main.c: 20: }
+"20
+[e :UE 129 ]
 }
+[a 1C 72 101 108 108 111 44 32 87 111 114 108 100 33 0 ]
+

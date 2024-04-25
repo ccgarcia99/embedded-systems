@@ -103,23 +103,55 @@
 [v ___fltoee __fltoee `(d  1 e 3 0 ]
 "49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"19 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
-[v _LCD_init LCD_init `(v  1 e 0 0 ]
-"30
-[v _LCD_cmd LCD_cmd `(v  1 e 0 0 ]
-"39
-[v _LCD_data LCD_data `(v  1 e 0 0 ]
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h
+[v _IIC_Wait IIC_Wait `(v  1 e 0 0 ]
+"21
+[v _iic_init iic_init `(v  1 e 0 0 ]
+"28
+[v _IIC_Start IIC_Start `(v  1 e 0 0 ]
+"33
+[v _IIC_Repeated_Start IIC_Repeated_Start `(v  1 e 0 0 ]
+"38
+[v _IIC_Stop IIC_Stop `(v  1 e 0 0 ]
+"43
+[v _IIC_Send IIC_Send `(v  1 e 0 0 ]
 "48
-[v _LCD_clear LCD_clear `(v  1 e 0 0 ]
-"53
-[v _LCD_home LCD_home `(v  1 e 0 0 ]
-"58
-[v _LCD_setCursor LCD_setCursor `(v  1 e 0 0 ]
-"70
-[v _LCD_print LCD_print `(v  1 e 0 0 ]
+[v _IIC_Read IIC_Read `(uc  1 e 1 0 ]
+"60
+[v _delay delay `(v  1 e 0 0 ]
+"22 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
+[v _lcd_init lcd_init `(v  1 e 0 0 ]
+"30
+[v _lcd_cmd lcd_cmd `(v  1 e 0 0 ]
+"38
+[v _lcd_data lcd_data `(v  1 e 0 0 ]
+"46
+[v _lcd_str lcd_str `(v  1 e 0 0 ]
+"52
+[v _lcd_str_xy lcd_str_xy `(v  1 e 0 0 ]
+"63
+[v _lcd_clear lcd_clear `(v  1 e 0 0 ]
+"67
+[v _lcd_home lcd_home `(v  1 e 0 0 ]
+"71
+[v _lcd_set_cursor lcd_set_cursor `(v  1 e 0 0 ]
 "14 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\main.c
 [v _main main `(v  1 e 0 0 ]
-"2231 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+"53 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"785
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"791
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"1396
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1707
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1774
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1780
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+"2231
 [v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
 "2237
 [v _EEADR EEADR `VEuc  1 e 1 @269 ]
@@ -127,12 +159,24 @@
 [v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
 "2299
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2311
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"2313
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
 "2349
 [v _CARRY CARRY `VEb  1 e 0 @24 ]
 "2441
 [v _GIE GIE `VEb  1 e 0 @95 ]
+"2483
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"2553
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
 "2559
 [v _RD RD `VEb  1 e 0 @3168 ]
+"2589
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"2599
+[v _SEN SEN `VEb  1 e 0 @1160 ]
 "2759
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2761
@@ -140,5 +184,62 @@
 "14 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\main.c
 [v _main main `(v  1 e 0 0 ]
 {
+"20
+} 0
+"46 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h
+[v _lcd_str lcd_str `(v  1 e 0 0 ]
+{
+[v lcd_str@str str `*.24DCCuc  1 a 1 wreg ]
+[v lcd_str@str str `*.24DCCuc  1 a 1 wreg ]
+[v lcd_str@str str `*.24DCCuc  1 a 1 4 ]
+"50
+} 0
+"38
+[v _lcd_data lcd_data `(v  1 e 0 0 ]
+{
+[v lcd_data@data data `uc  1 a 1 wreg ]
+[v lcd_data@data data `uc  1 a 1 wreg ]
+[v lcd_data@data data `uc  1 a 1 2 ]
+"44
+} 0
+"22
+[v _lcd_init lcd_init `(v  1 e 0 0 ]
+{
+"28
+} 0
+"30
+[v _lcd_cmd lcd_cmd `(v  1 e 0 0 ]
+{
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 a 1 2 ]
+"36
+} 0
+"38 D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h
+[v _IIC_Stop IIC_Stop `(v  1 e 0 0 ]
+{
+"41
+} 0
+"28
+[v _IIC_Start IIC_Start `(v  1 e 0 0 ]
+{
+"31
+} 0
+"43
+[v _IIC_Send IIC_Send `(v  1 e 0 0 ]
+{
+[v IIC_Send@data data `uc  1 a 1 wreg ]
+[v IIC_Send@data data `uc  1 a 1 wreg ]
+[v IIC_Send@data data `uc  1 a 1 0 ]
+"46
+} 0
 "17
+[v _IIC_Wait IIC_Wait `(v  1 e 0 0 ]
+{
+"19
+} 0
+"21
+[v _iic_init iic_init `(v  1 e 0 0 ]
+{
+"26
 } 0

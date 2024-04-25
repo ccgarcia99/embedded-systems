@@ -5,7 +5,7 @@
 #include <xc.h>
 #include "iic.h"
 
-#define ADDR 0x20 // I2C address of PCF8574T
+#define ADDR 0x27 // I2C address of PCF8574T
 #define RS 0x01 // Register select bit
 #define RW 0x02 // Read/write bit
 #define EN 0x04 // Enable bit

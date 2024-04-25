@@ -1425,94 +1425,135 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 6 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h"
-typedef unsigned char uchr8;
-typedef char ichr8;
-typedef unsigned int uint16;
-typedef int int16;
-typedef unsigned long uint32;
-typedef long int32;
-typedef unsigned long long uint64;
-typedef long long int64;
-typedef float f32;
-typedef double f64;
+# 7 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic.h"
+void iic_init(void);
+void IIC_Start(void);
+void IIC_Repeated_Start(void);
+void IIC_Stop(void);
+void IIC_Wait(void);
+void IIC_Send(unsigned char data);
+unsigned char IIC_Read(void);
 
-# 25
-void init_I2CMaster(void);
-void I2CStart(void);
-void I2CReStart(void);
-void I2CStop(void);
-void I2CWait(void);
-void I2CSend(uchr8 dataOUT);
-uchr8 I2CRead(uchr8 ACK_NACK);
+void delay(int overflow);
 
-# 10 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h"
-void LCD_init(void);
-void LCD_cmd(uchr8 cmd);
-void LCD_data(uchr8 data);
-void LCD_clear(void);
-void LCD_home(void);
-void LCD_setCursor(uchr8 row, uchr8 col);
-void LCD_print(char *str);
-
-
-void LCD_init(void)
-{
-I2CStart();
-I2CSend(0x20);
-I2CSend(0x38);
-I2CSend(0x0C);
-I2CSend(0x06);
-I2CSend(0x01);
-I2CStop();
+void IIC_Wait(void) {
+while ((SSPCON2 & 0x1F) || (SSPSTAT & 0x04));
 }
 
-void LCD_cmd(uchr8 cmd)
-{
-I2CStart();
-I2CSend(0x20);
-I2CSend(0x80);
-I2CSend(cmd);
-I2CStop();
+void iic_init(void) {
+SSPCON = 0x28;
+SSPCON2 = 0x00;
+SSPADD = 0x09;
+SSPSTAT = 0x00;
 }
 
-void LCD_data(uchr8 data)
-{
-I2CStart();
-I2CSend(0x20);
-I2CSend(0x40);
-I2CSend(data);
-I2CStop();
+void IIC_Start(void) {
+IIC_Wait();
+SEN = 1;
 }
 
-void LCD_clear(void)
-{
-LCD_cmd(0x01);
+void IIC_Repeated_Start(void) {
+IIC_Wait();
+RSEN = 1;
 }
 
-void LCD_home(void)
-{
-LCD_cmd(0x02);
+void IIC_Stop(void) {
+IIC_Wait();
+PEN = 1;
 }
 
-void LCD_setCursor(uchr8 row, uchr8 col)
-{
-if(row == 0)
-{
-LCD_cmd(0x80 + col);
+void IIC_Send(unsigned char data) {
+IIC_Wait();
+SSPBUF = data;
 }
-else
-{
-LCD_cmd(0xC0 + col);
+
+unsigned char IIC_Read(void) {
+unsigned char temp;
+IIC_Wait();
+RCEN = 1;
+IIC_Wait();
+temp = SSPBUF;
+IIC_Wait();
+ACKDT = 0;
+ACKEN = 1;
+return temp;
+}
+
+void delay(int overflow) {
+int i;
+for (i = 0; i < overflow; i++) {
+TMR0 = 0;
+while (TMR0 < 250);
 }
 }
 
-void LCD_print(uchr8 *str)
-{
-while(*str)
-{
-LCD_data(*str++);
+# 13 "D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\iic-communications\mplab\iic_lcd.h"
+void lcd_init(void);
+void lcd_cmd(unsigned char cmd);
+void lcd_data(unsigned char data);
+void lcd_str(const char *str);
+void lcd_str_xy(unsigned char x, unsigned char y, const char *str);
+void lcd_clear(void);
+void lcd_home(void);
+void lcd_set_cursor(unsigned char x, unsigned char y);
+
+void lcd_init(void) {
+iic_init();
+lcd_cmd(0x38);
+lcd_cmd(0x0C);
+lcd_cmd(0x06);
+lcd_cmd(0x01);
 }
+
+void lcd_cmd(unsigned char cmd) {
+IIC_Start();
+IIC_Send(0x20 << 1);
+IIC_Send(cmd & 0xF0);
+IIC_Send((cmd << 4) & 0xF0);
+IIC_Stop();
+}
+
+void lcd_data(unsigned char data) {
+IIC_Start();
+IIC_Send((0x20 << 1) | 0x01);
+IIC_Send(data & 0xF0);
+IIC_Send((data << 4) & 0xF0);
+IIC_Stop();
+}
+
+void lcd_str(const char *str) {
+while (*str) {
+lcd_data(*str++);
+}
+}
+
+void lcd_str_xy(unsigned char x, unsigned char y, const char *str) {
+unsigned char addr;
+if (y == 0) {
+addr = 0x80 + x;
+} else {
+addr = 0xC0 + x;
+}
+lcd_cmd(addr);
+lcd_str(str);
+}
+
+void lcd_clear(void) {
+lcd_cmd(0x01);
+}
+
+void lcd_home(void) {
+lcd_cmd(0x02);
+}
+
+void lcd_set_cursor(unsigned char x, unsigned char y) {
+unsigned char addr;
+if (y == 0) {
+addr = 0x80 + x;
+} else {
+addr = 0xC0 + x;
+}
+lcd_cmd(addr);
 }
 
 
@@ -1528,5 +1569,8 @@ LCD_data(*str++);
 
 void main()
 {
-
+TRISC = 0b00011000;
+lcd_init();
+lcd_str("Hello, World!");
+while (1);
 }
