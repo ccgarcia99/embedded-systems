@@ -13,5 +13,8 @@
 
 void main()
 {
-
+    TRISC = 0b00011000; // SDL and SDA as input
+    lcd_init();
+    lcd_str("Hello, World!");
+    while (1);
 }
