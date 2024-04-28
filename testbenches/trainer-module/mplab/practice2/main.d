@@ -1,0 +1,1 @@
+ main.d  main.p1:  C:/Users/ACER/Desktop/test/for-practice/mplab/practice2/main.c C:/Users/ACER/Desktop/test/for-practice/mplab/practice2/lcd_functions.h

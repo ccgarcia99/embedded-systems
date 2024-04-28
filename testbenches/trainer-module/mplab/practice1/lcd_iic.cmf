@@ -1,0 +1,377 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$lcd_iic.obj
+cinit CODE 0 7FC 7FC 4 2
+text8 CODE 0 70A 70A F 2
+text7 CODE 0 6F8 6F8 9 2
+text6 CODE 0 701 701 9 2
+text5 CODE 0 6EA 6EA 7 2
+text4 CODE 0 6F1 6F1 7 2
+text3 CODE 0 79C 79C 60 2
+text2 CODE 0 72A 72A 27 2
+text1 CODE 0 751 751 4B 2
+maintext CODE 0 719 719 11 2
+cstackCOMMON COMMON 1 70 70 7 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0020-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0003-06E9 2
+CODE 0800-1FFF 2
+COMMON 0077-007D 1
+CONST 0003-06E9 2
+CONST 0800-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0003-06E9 2
+ENTRY 0800-1FFF 2
+IDLOC 2000-2003 2
+RAM 0020-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 0003-06E9 2
+STRCODE 0800-1FFF 2
+STRING 0003-06E9 2
+STRING 0800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$lcd_iic.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":30 6EA text5 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":32 6EA text5 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":33 6ED text5 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":34 6F0 text5 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":42 6F1 text4 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":44 6F1 text4 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":45 6F4 text4 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":46 6F7 text4 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":25 6F8 text7 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":27 6F8 text7 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":28 6FF text7 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":27 700 text7 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":48 701 text6 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":50 702 text6 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":51 705 text6 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":52 709 text6 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":15 70A text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":17 70A text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":18 70D text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":19 70E text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":20 712 text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":21 715 text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":22 717 text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\i2c_func.h":23 718 text8 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\main.c":16 719 maintext CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\main.c":18 719 maintext CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\main.c":19 71E maintext CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\main.c":20 723 maintext CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\main.c":21 729 maintext CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":21 72A text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":23 72B text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":24 730 text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":25 736 text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":26 73C text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":27 742 text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":28 747 text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":29 750 text2 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":31 751 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":33 751 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":35 75A text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":36 760 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":37 768 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":38 76E text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":39 773 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":41 779 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":42 77F text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":43 785 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":44 78B text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":45 791 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":46 797 text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":47 79B text1 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":49 79C text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":53 79D text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":54 7A2 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":56 7B0 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":59 7B4 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":60 7B9 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":61 7BF text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":62 7C7 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":63 7CE text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":66 7D3 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":67 7D8 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":68 7DE text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":69 7E6 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":70 7ED text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":72 7F2 text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_i2c.h":73 7FB text3 CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_iic.as":228 7FC cinit CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_iic.as":231 7FC cinit CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_iic.as":237 7FC cinit CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_iic.as":238 7FC cinit CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\lcd_iic.as":239 7FD cinit CODE
+$startup.obj
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":39 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":40 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":41 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":42 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":43 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":44 0 functab CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":63 0 reset_vec CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":69 0 init CODE
+"C:\Users\ACER\Desktop\test\for-practice\mplab\practice1\startup.as":72 0 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__size_of_I2C_Send 0 0 ABS 0 - lcd_iic.obj
+__CFG_WRT$OFF 0 0 ABS 0 - lcd_iic.obj
+__S0 2008 0 ABS 0 - -
+__S1 77 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_PEN 48A 0 ABS 0 - lcd_iic.obj
+_SEN 488 0 ABS 0 - lcd_iic.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - lcd_iic.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - lcd_iic.obj
+_RCEN 48B 0 ABS 0 - lcd_iic.obj
+_RSEN 489 0 ABS 0 - lcd_iic.obj
+__end_of_LCD_Init F38 0 CODE 0 text1 lcd_iic.obj
+_main E32 0 CODE 0 maintext lcd_iic.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - lcd_iic.obj
+ltemp 7E 0 ABS 0 - lcd_iic.obj
+ttemp 7E 0 ABS 0 - lcd_iic.obj
+wtemp 7E 0 ABS 0 - lcd_iic.obj
+start 0 0 CODE 0 init startup.obj
+_I2C_Send E02 0 CODE 0 text6 lcd_iic.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_ACKEN 48C 0 ABS 0 - lcd_iic.obj
+_ACKDT 48D 0 ABS 0 - lcd_iic.obj
+ltemp0 7E 0 ABS 0 - lcd_iic.obj
+ttemp0 7E 0 ABS 0 - lcd_iic.obj
+wtemp0 7E 0 ABS 0 - lcd_iic.obj
+ltemp1 82 0 ABS 0 - lcd_iic.obj
+ttemp1 81 0 ABS 0 - lcd_iic.obj
+wtemp1 80 0 ABS 0 - lcd_iic.obj
+ltemp2 86 0 ABS 0 - lcd_iic.obj
+ttemp2 84 0 ABS 0 - lcd_iic.obj
+wtemp2 82 0 ABS 0 - lcd_iic.obj
+ltemp3 80 0 ABS 0 - lcd_iic.obj
+ttemp3 87 0 ABS 0 - lcd_iic.obj
+wtemp3 84 0 ABS 0 - lcd_iic.obj
+ttemp4 7F 0 ABS 0 - lcd_iic.obj
+wtemp4 86 0 ABS 0 - lcd_iic.obj
+wtemp5 88 0 ABS 0 - lcd_iic.obj
+wtemp6 7F 0 ABS 0 - lcd_iic.obj
+_LCD_Char F38 0 CODE 0 text3 lcd_iic.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of_LCD_Command EA2 0 CODE 0 text2 lcd_iic.obj
+_I2C_Wait DF0 0 CODE 0 text7 lcd_iic.obj
+_LCD_Init EA2 0 CODE 0 text1 lcd_iic.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_I2C_Stop DE2 0 CODE 0 text4 lcd_iic.obj
+_TRISC3 43B 0 ABS 0 - lcd_iic.obj
+_TRISC4 43C 0 ABS 0 - lcd_iic.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_SSPADD 93 0 ABS 0 - lcd_iic.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+_SSPBUF 13 0 ABS 0 - lcd_iic.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_SSPCON 14 0 ABS 0 - lcd_iic.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+LCD_Char@control_byte 76 0 COMMON 1 cstackCOMMON lcd_iic.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+LCD_Command@command 73 0 COMMON 1 cstackCOMMON lcd_iic.obj
+stackhi 0 0 ABS 0 - startup.obj
+stacklo 0 0 ABS 0 - startup.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+__end_of_main E54 0 CODE 0 maintext lcd_iic.obj
+__end_of_I2C_Master_init E32 0 CODE 0 text8 lcd_iic.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization FF8 0 CODE 0 cinit lcd_iic.obj
+__size_of_LCD_Command 0 0 ABS 0 - lcd_iic.obj
+__size_of_I2C_Stop 0 0 ABS 0 - lcd_iic.obj
+__size_of_I2C_Start 0 0 ABS 0 - lcd_iic.obj
+_SSPCON2 91 0 ABS 0 - lcd_iic.obj
+__CFG_FOSC$XT 0 0 ABS 0 - lcd_iic.obj
+__size_of_I2C_Master_init 0 0 ABS 0 - lcd_iic.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+LCD_Char@chLOWER 75 0 COMMON 1 cstackCOMMON lcd_iic.obj
+_I2C_Start DD4 0 CODE 0 text5 lcd_iic.obj
+LCD_Char@data 73 0 COMMON 1 cstackCOMMON lcd_iic.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - lcd_iic.obj
+__Hpowerup 0 0 CODE 0 powerup -
+_SSPSTAT 94 0 ABS 0 - lcd_iic.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 lcd_iic.obj
+__ptext1 EA2 0 CODE 0 text1 lcd_iic.obj
+__ptext2 E54 0 CODE 0 text2 lcd_iic.obj
+__ptext3 F38 0 CODE 0 text3 lcd_iic.obj
+__size_of_LCD_Char 0 0 ABS 0 - lcd_iic.obj
+__ptext4 DE2 0 CODE 0 text4 lcd_iic.obj
+__ptext5 DD4 0 CODE 0 text5 lcd_iic.obj
+__ptext6 E02 0 CODE 0 text6 lcd_iic.obj
+__end_of_LCD_Char FF8 0 CODE 0 text3 lcd_iic.obj
+__ptext7 DF0 0 CODE 0 text7 lcd_iic.obj
+__ptext8 E14 0 CODE 0 text8 lcd_iic.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization FF8 0 CODE 0 cinit lcd_iic.obj
+__end_of_I2C_Stop DF0 0 CODE 0 text4 lcd_iic.obj
+__end_of_I2C_Wait E02 0 CODE 0 text7 lcd_iic.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 77 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 1000 0 CODE 0 cinit -
+__Lcinit FF8 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - lcd_iic.obj
+__size_of_I2C_Wait 0 0 ABS 0 - lcd_iic.obj
+__size_of_LCD_Init 0 0 ABS 0 - lcd_iic.obj
+LCD_Char@chUPPER 74 0 COMMON 1 cstackCOMMON lcd_iic.obj
+_I2C_Master_init E14 0 CODE 0 text8 lcd_iic.obj
+__end_of_I2C_Send E14 0 CODE 0 text6 lcd_iic.obj
+__Hend_init 6 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - lcd_iic.obj
+_LCD_Command E54 0 CODE 0 text2 lcd_iic.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON lcd_iic.obj
+__end_of_I2C_Start DE2 0 CODE 0 text5 lcd_iic.obj
+__CFG_CPD$OFF 0 0 ABS 0 - lcd_iic.obj
+start_initialization FF8 0 CODE 0 cinit lcd_iic.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext E32 0 CODE 0 maintext lcd_iic.obj
+__initialization FF8 0 CODE 0 cinit lcd_iic.obj
+__CFG_CP$OFF 0 0 ABS 0 - lcd_iic.obj
+I2C_Send@dataOUT 70 0 COMMON 1 cstackCOMMON lcd_iic.obj
+__CFG_LVP$OFF 0 0 ABS 0 - lcd_iic.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 3 2
+cinit 0 7FC FF8 4 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 7 1
+text3 0 79C F38 60 2
+text1 0 751 EA2 4B 2
+text2 0 72A E54 27 2
+maintext 0 719 E32 11 2
+text8 0 70A E14 F 2
+text6 0 701 E02 9 2
+text7 0 6F8 DF0 9 2
+text4 0 6F1 DE2 7 2
+text5 0 6EA DD4 7 2

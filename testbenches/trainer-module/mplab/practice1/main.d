@@ -1,0 +1,1 @@
+ main.d  main.p1:  C:/Users/ACER/Desktop/test/for-practice/mplab/practice1/main.c C:/Users/ACER/Desktop/test/for-practice/mplab/practice1/i2c_func.h C:/Users/ACER/Desktop/test/for-practice/mplab/practice1/lcd_i2c.h

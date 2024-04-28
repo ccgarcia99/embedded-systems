@@ -1,0 +1,13 @@
+__stringtab: STRING, 3 0 6
+__stringdata: STRING, 19 0 4
+_dpowers: STRING, 9 0 10
+_main: CODE, 1671 0 156
+_instCTRL: CODE, 1468 0 17
+_dataCTRL: CODE, 1485 0 17
+__initialization: CODE, 2044 0 0
+___lwdiv: CODE, 1609 0 62
+_sprintf: CODE, 1827 0 217
+___lwmod: CODE, 1557 0 52
+_printToLCD: CODE, 1502 0 21
+_initLCD: CODE, 1523 0 34
+Total: 596
