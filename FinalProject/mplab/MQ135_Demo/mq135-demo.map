@@ -4,7 +4,7 @@ Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
   -h+mq135-demo.sym --cmf=mq135-demo.cmf -z -Q16F877A \
-  -oC:\Users\ACER\AppData\Local\Temp\shbo.6 -Mmq135-demo.map -E1 -ver=XC8 \
+  -oC:\Users\ACER\AppData\Local\Temp\sm68.6 -Mmq135-demo.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -44,7 +44,7 @@ mq135-demo.obj  cinit                               7F8      7F8        8      F
                 text22                             1D88     1D88       8E     3B10       0
                 text21                             1AC1     1AC1       40     3582       0
                 text20                             1E16     1E16       99     3C2C       0
-                text19                              803      803        8     1006       0
+                text19                             1972     1972        8     32E4       0
                 text18                             1EAF     1EAF       99     3D5E       0
                 text17                             167B     167B      185     2CF6       0
                 text16                             1145     1145       D0     228A       0
@@ -56,14 +56,14 @@ mq135-demo.obj  cinit                               7F8      7F8        8      F
                 text10                             1B43     1B43       4C     3686       0
                 text9                              1A3F     1A3F       23     347E       0
                 text8                              13F1     13F1      132     27E2       0
-                text7                               80B      80B       C3     1016       0
+                text7                               805      805       C3     100A       0
                 text6                              1BEC     1BEC       5D     37D8       0
                 text5                              10F8     10F8       4D     21F0       0
                 text4                                 4        4      19C        8       0
                 text3                              197A     197A        E     32F4       0
-                text2                               8CE      8CE      29F     119C       0
+                text2                               8C8      8C8      29F     1190       0
                 text1                               1A0      1A0      658      340       0
-                maintext                            B6D      B6D      493     16DA       0
+                maintext                            B67      B67      499     16CE       0
                 cstackBANK0                          20       20       4F       20       1
                 cstackCOMMON                         70       70        E       70       1
                 cstackBANK1                          A0       A0       22       A0       1
@@ -95,7 +95,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text22                             1D88     1D88       8E         0
                 text21                             1AC1     1AC1       40         0
                 text20                             1E16     1E16       99         0
-                text19                              803      803        8         0
+                text19                             1972     1972        8         0
                 text18                             1EAF     1EAF       99         0
                 text17                             167B     167B      185         0
                 text16                             1145     1145       D0         0
@@ -107,14 +107,14 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text10                             1B43     1B43       4C         0
                 text9                              1A3F     1A3F       23         0
                 text8                              13F1     13F1      132         0
-                text7                               80B      80B       C3         0
+                text7                               805      805       C3         0
                 text6                              1BEC     1BEC       5D         0
                 text5                              10F8     10F8       4D         0
                 text4                                 4        4      19C         0
                 text3                              197A     197A        E         0
-                text2                               8CE      8CE      29F         0
+                text2                               8C8      8C8      29F         0
                 text1                               1A0      1A0      658         0
-                maintext                            B6D      B6D      493         0
+                maintext                            B67      B67      499         0
 
         CLASS   STRCODE        
 
@@ -170,10 +170,9 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK3                    000190  00003F  0001CF       190       1  BANK3       1
                 text1                          0001A0  000658  0007F8       340       0  CODE        2
                 cinit                          0007F8  000008  000800       FF0       0  CODE        2
-                text19                         000803  000008  00080B      1006       0  CODE        2
-                text7                          00080B  0000C3  0008CE      1016       0  CODE        2
-                text2                          0008CE  00029F  000B6D      119C       0  CODE        2
-                maintext                       000B6D  000493  001000      16DA       0  CODE        2
+                text7                          000805  0000C3  0008C8      100A       0  CODE        2
+                text2                          0008C8  00029F  000B67      1190       0  CODE        2
+                maintext                       000B67  000499  001000      16CE       0  CODE        2
                 strings                        001000  0000F3  0010F3      2000       0  STRING      2
                 text5                          0010F8  00004D  001145      21F0       0  CODE        2
                 text16                         001145  0000D0  001215      228A       0  CODE        2
@@ -182,6 +181,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text8                          0013F1  000132  001523      27E2       0  CODE        2
                 text15                         001523  000158  00167B      2A46       0  CODE        2
                 text17                         00167B  000185  001800      2CF6       0  CODE        2
+                text19                         001972  000008  00197A      32E4       0  CODE        2
                 text3                          00197A  00000E  001988      32F4       0  CODE        2
                 text35                         001988  000011  001999      3310       0  CODE        2
                 text14                         001999  000011  0019AA      3332       0  CODE        2
@@ -216,18 +216,18 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            01CF-01EF             21           1
         CODE             0003-0003              1           2
-                         0800-0802              3
+                         0800-0804              5
                          10F3-10F7              5
-                         1800-1979            17A
+                         1800-1971            172
         CONST            0003-0003              1           2
-                         0800-0802              3
+                         0800-0804              5
                          10F3-10F7              5
-                         1800-1979            100
+                         1800-1971            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         0800-0802              3
+                         0800-0804              5
                          10F3-10F7              5
-                         1800-1979            100
+                         1800-1971            100
         IDLOC            2000-2003              4           2
         RAM              006F-006F              1           1
                          00C4-00EF             2C
@@ -239,13 +239,13 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         0800-0802              3
+                         0800-0804              5
                          10F3-10F7              5
-                         1800-1979            17A
+                         1800-1971            172
         STRING           0003-0003              1           2
-                         0800-0802              3
+                         0800-0804              5
                          10F3-10F7              5
-                         1800-1979            100
+                         1800-1971            100
 
                                   Symbol Table
 
@@ -289,14 +289,14 @@ _INTEDG                  (abs)        040E
 _INTF                    (abs)        0059
 _OPTION_REG              (abs)        0081
 _PEIE                    (abs)        005E
+_PORTB                   (abs)        0006
 _PORTD                   (abs)        0008
 _RB5                     (abs)        0035
 _RB6                     (abs)        0036
 _RB7                     (abs)        0037
-_TMR0IE                  (abs)        005D
-_TMR0IF                  (abs)        005A
 _TRISA                   (abs)        0085
 _TRISB                   (abs)        0086
+_TRISC                   (abs)        0087
 _TRISD                   (abs)        0088
 __CFG_BOREN$ON           (abs)        0000
 __CFG_CP$OFF             (abs)        0000
@@ -427,7 +427,7 @@ ___ftmul@f1              cstackBANK0  0027
 ___ftmul@f2              cstackBANK0  002A
 ___ftmul@f3_as_product   cstackBANK0  0032
 ___ftmul@sign            cstackBANK0  0036
-___ftneg                 text19       0803
+___ftneg                 text19       1972
 ___ftneg@f1              cstackCOMMON 0070
 ___ftpack                text33       1CA7
 ___ftpack@arg            cstackCOMMON 0070
@@ -475,7 +475,7 @@ __end_of___ftadd         text29       13F1
 __end_of___ftdiv         text30       2000
 __end_of___ftge          text23       1BEC
 __end_of___ftmul         text26       12E8
-__end_of___ftneg         text19       080B
+__end_of___ftneg         text19       197A
 __end_of___ftpack        text33       1D0F
 __end_of___ftsub         text28       19D9
 __end_of___fttol         text22       1E16
@@ -489,7 +489,7 @@ __end_of__npowers_       strings      105F
 __end_of__powers_        strings      1086
 __end_of__stringdata     strings      10F3
 __end_of__stringtab      strings      1010
-__end_of__tdiv_to_l_     text7        08CE
+__end_of__tdiv_to_l_     text7        08C8
 __end_of_dataCTRL        text14       19AA
 __end_of_dpowers         strings      1038
 __end_of_eval_poly       text25       1D88
@@ -506,7 +506,7 @@ __end_of_main            maintext     1000
 __end_of_pow             text15       167B
 __end_of_printToLCD      text13       1A3F
 __end_of_readADC         text12       1AC1
-__end_of_scale           text2        0B6D
+__end_of_scale           text2        0B67
 __end_of_sprintf         text1        07F8
 __end_ofexp@coeff        strings      10A4
 __end_oflog@coeff        strings      10BF
@@ -517,7 +517,7 @@ __pcstackBANK0           cstackBANK0  0020
 __pcstackBANK1           cstackBANK1  00A0
 __pcstackBANK3           cstackBANK3  0190
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     0B6D
+__pmaintext              maintext     0B67
 __powers_                strings      105F
 __pstrings               strings      1000
 __ptext1                 text1        01A0
@@ -530,8 +530,8 @@ __ptext15                text15       1523
 __ptext16                text16       1145
 __ptext17                text17       167B
 __ptext18                text18       1EAF
-__ptext19                text19       0803
-__ptext2                 text2        08CE
+__ptext19                text19       1972
+__ptext2                 text2        08C8
 __ptext20                text20       1E16
 __ptext21                text21       1AC1
 __ptext22                text22       1D88
@@ -552,7 +552,7 @@ __ptext35                text35       1988
 __ptext4                 text4        0004
 __ptext5                 text5        10F8
 __ptext6                 text6        1BEC
-__ptext7                 text7        080B
+__ptext7                 text7        0805
 __ptext8                 text8        13F1
 __ptext9                 text9        1A3F
 __size_of___altoft       (abs)        0000
@@ -594,7 +594,7 @@ __size_of_sprintf        (abs)        0000
 __stringbase             strings      100F
 __stringdata             strings      10BF
 __stringtab              strings      1000
-__tdiv_to_l_             text7        080B
+__tdiv_to_l_             text7        0805
 __tdiv_to_l_@cntr        cstackBANK0  0024
 __tdiv_to_l_@exp1        cstackBANK0  0025
 __tdiv_to_l_@f1          cstackCOMMON 0070
@@ -619,7 +619,7 @@ _isdigit$344             cstackCOMMON 0070
 _ldexp                   text18       1EAF
 _ldexp$475               cstackBANK0  0065
 _log                     text16       1145
-_main                    maintext     0B6D
+_main                    maintext     0B67
 _main$652                cstackBANK3  01A3
 _main$653                cstackBANK3  01C6
 _main$654                cstackBANK3  01A6
@@ -636,7 +636,7 @@ _pow$667                 cstackBANK1  00AF
 _pow$668                 cstackBANK1  00B2
 _printToLCD              text13       1A1C
 _readADC                 text12       1A8D
-_scale                   text2        08CE
+_scale                   text2        08C8
 _scale$665               cstackBANK0  003C
 _sprintf                 text1        01A0
 _sprintf$144             cstackBANK1  00A3
@@ -726,7 +726,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 35 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
+		line 36 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1149,7 +1149,7 @@ Total ram usage:       14 bytes
 
  *************** function _readADC *****************
  Defined at:
-		line 80 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
+		line 81 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1968,7 +1968,7 @@ D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\lcd_func
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\lcd_functions.h estimated size: 103
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
-		___ftneg       		CODE           	0803	0000	8
+		___ftneg       		CODE           	1972	0000	8
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c estimated size: 8
 
@@ -1978,7 +1978,7 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c estimated size: 93
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
-		_scale         		CODE           	08CE	0000	671
+		_scale         		CODE           	08C8	0000	671
 		_sprintf       		CODE           	01A0	0000	1624
 		_fround        		CODE           	0004	0000	412
 
@@ -2000,7 +2000,7 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\evalpoly.c
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\evalpoly.c estimated size: 121
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c
-		__tdiv_to_l_   		CODE           	080B	0000	195
+		__tdiv_to_l_   		CODE           	0805	0000	195
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c estimated size: 195
 
@@ -2103,10 +2103,10 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c estimated size: 184
 
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c
-		_main          		CODE           	0B6D	0000	1171
+		_main          		CODE           	0B67	0000	1177
 		_readADC       		CODE           	1A8D	0000	52
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c estimated size: 1223
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c estimated size: 1229
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c
 		___lltoft      		CODE           	1A62	0000	43

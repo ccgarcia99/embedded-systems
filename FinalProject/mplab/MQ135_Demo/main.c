@@ -31,18 +31,19 @@
 // Function prototypes
 void InitADC();
 int readADC();
+void interrupt ISR(void);
 
 void main()
 {
-    TRISB = 0x00;  // Set PORTB as output
+    TRISB = 0b00011111;  // Set PORTB as output & input
+    PORTB = 0x00;  // Clear PORTB
+    TRISC = 0b00111000;  // Set PORTC as output & input
     TRISA = 0xFF;  // Set PORTA as input
     TRISD = 0x00;  // Set PORTD as output
     ADCON1 = 0x80; // Set PORTA as analog input
     ADCON0 = 0x01; // Select channel 0
 
     OPTION_REG = 0x44; // Set prescaler to 1:32
-    TMR0IE = 1;        // Enable Timer0 interrupt
-    TMR0IF = 0;        // Clear Timer0 interrupt flag
     INTE = 1;          // Enable external interrupt
     INTF = 0;          // Clear interrupt flag
     INTEDG = 1;        // Set interrupt on rising edge
@@ -89,3 +90,4 @@ int readADC()
     temp = temp | ADRESL; // append the rest of the bits to temp
     return temp;
 }
+

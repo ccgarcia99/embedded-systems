@@ -1,4 +1,4 @@
-___ftneg: CODE, 2051 0 8
+___ftneg: CODE, 6514 0 8
 ___awdiv: CODE, 7148 0 93
 _log: CODE, 4421 0 208
 exp@coeff: STRING, 4230 0 30
@@ -7,9 +7,9 @@ __stringdata: STRING, 4287 0 52
 __powers_: STRING, 4191 0 39
 ___ftpack: CODE, 7335 0 104
 _dpowers: STRING, 4112 0 40
-_scale: CODE, 2254 0 671
+_scale: CODE, 2248 0 671
 ___awmod: CODE, 4344 0 77
-_main: CODE, 2925 0 1171
+_main: CODE, 2919 0 1177
 _ldexp: CODE, 7855 0 153
 _instCTRL: CODE, 6536 0 17
 ___ftadd: CODE, 4840 0 265
@@ -25,7 +25,7 @@ _exp: CODE, 5755 0 389
 ___lldiv: CODE, 7241 0 94
 _isdigit: CODE, 6522 0 14
 _sprintf: CODE, 416 0 1624
-__tdiv_to_l_: CODE, 2059 0 195
+__tdiv_to_l_: CODE, 2053 0 195
 _fround: CODE, 4 0 412
 _pow: CODE, 5411 0 344
 ___ftmul: CODE, 4629 0 211
@@ -42,4 +42,4 @@ ___ftge: CODE, 7055 0 93
 _initLCD: CODE, 6650 0 34
 ___bmul: CODE, 6570 0 19
 ___ftdiv: CODE, 8008 0 184
-Total: 7798
+Total: 7804

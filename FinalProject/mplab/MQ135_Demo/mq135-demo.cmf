@@ -32,7 +32,7 @@ text23 CODE 0 1B8F 1B8F 5D 2
 text22 CODE 0 1D88 1D88 8E 2
 text21 CODE 0 1AC1 1AC1 40 2
 text20 CODE 0 1E16 1E16 99 2
-text19 CODE 0 803 803 8 2
+text19 CODE 0 1972 1972 8 2
 text18 CODE 0 1EAF 1EAF 99 2
 text17 CODE 0 167B 167B 185 2
 text16 CODE 0 1145 1145 D0 2
@@ -44,14 +44,14 @@ text11 CODE 0 1C49 1C49 5E 2
 text10 CODE 0 1B43 1B43 4C 2
 text9 CODE 0 1A3F 1A3F 23 2
 text8 CODE 0 13F1 13F1 132 2
-text7 CODE 0 80B 80B C3 2
+text7 CODE 0 805 805 C3 2
 text6 CODE 0 1BEC 1BEC 5D 2
 text5 CODE 0 10F8 10F8 4D 2
 text4 CODE 0 4 4 19C 2
 text3 CODE 0 197A 197A E 2
-text2 CODE 0 8CE 8CE 29F 2
+text2 CODE 0 8C8 8C8 29F 2
 text1 CODE 0 1A0 1A0 658 2
-maintext CODE 0 B6D B6D 493 2
+maintext CODE 0 B67 B67 499 2
 cstackBANK0 BANK0 1 20 20 4F 1
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK1 BANK1 1 A0 A0 22 1
@@ -69,18 +69,18 @@ BANK1 00C4-00EF 1
 BANK2 0110-016F 1
 BANK3 01CF-01EF 1
 CODE 0003-0003 2
-CODE 0800-0802 2
+CODE 0800-0804 2
 CODE 10F3-10F7 2
-CODE 1800-1979 2
+CODE 1800-1971 2
 CONST 0003-0003 2
-CONST 0800-0802 2
+CONST 0800-0804 2
 CONST 10F3-10F7 2
-CONST 1800-1979 2
+CONST 1800-1971 2
 EEDATA 2100-21FF 2
 ENTRY 0003-0003 2
-ENTRY 0800-0802 2
+ENTRY 0800-0804 2
 ENTRY 10F3-10F7 2
-ENTRY 1800-1979 2
+ENTRY 1800-1971 2
 IDLOC 2000-2003 2
 RAM 006F-006F 1
 RAM 00C4-00EF 1
@@ -92,13 +92,13 @@ SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
 STRCODE 0003-0003 2
-STRCODE 0800-0802 2
+STRCODE 0800-0804 2
 STRCODE 10F3-10F7 2
-STRCODE 1800-1979 2
+STRCODE 1800-1971 2
 STRING 0003-0003 2
-STRING 0800-0802 2
+STRING 0800-0804 2
 STRING 10F3-10F7 2
-STRING 1800-1979 2
+STRING 1800-1971 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -224,84 +224,80 @@ $mq135-demo.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\mq135-demo.as":689 7FC cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\mq135-demo.as":690 7FC cinit CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\mq135-demo.as":691 7FD cinit CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 803 text19 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 803 text19 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 808 text19 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 80A text19 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":60 80B text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":66 80B text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":67 81C text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":68 825 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":69 834 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":70 83D text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":71 83E text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":72 844 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":73 845 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":74 84B text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":75 853 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":76 855 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":77 85A text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":79 85E text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":80 867 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":81 873 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":82 87D text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":84 87E text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":85 886 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":86 88A text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":87 88C text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":88 891 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":90 89A text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":91 8A3 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":93 8AA text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":94 8AE text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":96 8B7 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":97 8C0 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":95 8C2 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":100 8C5 text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":425 8CE text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":428 8D1 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":429 8D3 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":430 8D5 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":431 8DA text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":432 994 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":433 999 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":434 A02 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":436 A21 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":437 A26 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":438 AE0 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":439 AE5 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":440 B4E text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":35 B6D maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":37 B6D maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":38 B70 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":39 B72 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":40 B73 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":41 B75 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":43 B79 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":44 B7D maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":45 B7E maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":46 B7F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":47 B80 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":48 B81 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":49 B82 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":50 B83 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":52 B84 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":56 B89 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":57 B8F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":58 B9C maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":59 BE3 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":60 C76 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":61 CA7 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":62 F70 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":64 FA1 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":65 FBF maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":66 FC8 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":68 FDD maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":69 FE3 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":73 FE5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":74 FEB maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":76 FF4 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":77 FFF maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":60 805 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":66 805 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":67 816 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":68 81F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":69 82E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":70 837 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":71 838 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":72 83E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":73 83F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":74 845 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":75 84D text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":76 84F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":77 854 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":79 858 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":80 861 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":81 86D text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":82 877 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":84 878 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":85 880 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":86 884 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":87 886 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":88 88B text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":90 894 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":91 89D text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":93 8A4 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":94 8A8 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":96 8B1 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":97 8BA text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":95 8BC text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":100 8BF text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":425 8C8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":428 8CB text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":429 8CD text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":430 8CF text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":431 8D4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":432 98E text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":433 993 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":434 9FC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":436 A1B text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":437 A20 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":438 ADA text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":439 ADF text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":440 B48 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":36 B67 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":38 B67 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":39 B6B maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":40 B6E maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":41 B72 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":42 B74 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":43 B75 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":44 B77 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":46 B7B maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":47 B7F maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":48 B80 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":49 B81 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":50 B82 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":51 B83 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":53 B84 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":57 B89 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":58 B8F maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":59 B9C maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":60 BE3 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":61 C76 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":62 CA7 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":63 F70 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":65 FA1 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":66 FBF maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":67 FC8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":69 FDD maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":70 FE3 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":74 FE5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":75 FEB maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":77 FF4 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":78 FFF maintext CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 10F8 text5 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 10F8 text5 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 10F9 text5 CODE
@@ -473,6 +469,10 @@ $mq135-demo.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\exp.c":53 17DE text17 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\exp.c":54 17E7 text17 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\exp.c":57 17FF text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 1972 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 1972 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 1977 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 1979 text19 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":8 197A text3 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":14 197B text3 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\lcd_functions.h":17 1988 text35 CODE
@@ -536,16 +536,16 @@ $mq135-demo.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":43 1A73 text32 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":41 1A77 text32 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":45 1A78 text32 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":80 1A8D text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":82 1A8D text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":83 1A8F text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":84 1A98 text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":85 1A9B text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":81 1A8D text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":83 1A8D text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":84 1A8F text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":85 1A98 text12 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":86 1A9B text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":87 1A9D text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":88 1AA4 text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":89 1AAF text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":90 1ABA text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":87 1A9B text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":88 1A9D text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":89 1AA4 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":90 1AAF text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c":91 1ABA text12 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\frexp.c":254 1AC1 text21 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\frexp.c":256 1AC1 text21 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\frexp.c":257 1AC6 text21 CODE
@@ -754,7 +754,7 @@ ___altoft@c 4E 0 BANK0 1 cstackBANK0 mq135-demo.obj
 ___lltoft@c 78 0 COMMON 1 cstackCOMMON mq135-demo.obj
 ___awtoft@c 78 0 COMMON 1 cstackCOMMON mq135-demo.obj
 _GO FA 0 ABS 0 - mq135-demo.obj
-__end_of___ftneg 1016 0 CODE 0 text19 mq135-demo.obj
+__end_of___ftneg 32F4 0 CODE 0 text19 mq135-demo.obj
 __CFG_WRT$OFF 0 0 ABS 0 - mq135-demo.obj
 _RB5 35 0 ABS 0 - mq135-demo.obj
 _RB6 36 0 ABS 0 - mq135-demo.obj
@@ -788,7 +788,7 @@ exp@x 68 0 BANK0 1 cstackBANK0 mq135-demo.obj
 pow@x A9 0 BANK1 1 cstackBANK1 mq135-demo.obj
 eval_poly@d 57 0 BANK0 1 cstackBANK0 mq135-demo.obj
 pow@y AC 0 BANK1 1 cstackBANK1 mq135-demo.obj
-_main 16DA 0 CODE 0 maintext mq135-demo.obj
+_main 16CE 0 CODE 0 maintext mq135-demo.obj
 ___sp 0 0 STACK 2 stack startup.obj
 btemp 7E 0 ABS 0 - mq135-demo.obj
 __end_ofexp@coeff 2148 0 STRING 0 strings mq135-demo.obj
@@ -812,8 +812,10 @@ log@coeff 2148 0 STRING 0 strings mq135-demo.obj
 exp@coeff 210C 0 STRING 0 strings mq135-demo.obj
 _TRISA 85 0 ABS 0 - mq135-demo.obj
 _TRISB 86 0 ABS 0 - mq135-demo.obj
+_TRISC 87 0 ABS 0 - mq135-demo.obj
 reset_vec 0 0 CODE 0 reset_vec startup.obj
 _TRISD 88 0 ABS 0 - mq135-demo.obj
+_PORTB 6 0 ABS 0 - mq135-demo.obj
 _PORTD 8 0 ABS 0 - mq135-demo.obj
 __size_of_exp 0 0 ABS 0 - mq135-demo.obj
 ltemp0 7E 0 ABS 0 - mq135-demo.obj
@@ -845,7 +847,7 @@ ___ftpack 394E 0 CODE 0 text33 mq135-demo.obj
 ?___awmod 70 0 COMMON 1 cstackCOMMON mq135-demo.obj
 __end_of__stringtab 2020 0 STRING 0 strings mq135-demo.obj
 ___ftdiv@f3 42 0 BANK0 1 cstackBANK0 mq135-demo.obj
-_scale 119C 0 CODE 0 text2 mq135-demo.obj
+_scale 1190 0 CODE 0 text2 mq135-demo.obj
 __Hram 0 0 ABS 0 ram -
 ?___ftsub 54 0 BANK0 1 cstackBANK0 mq135-demo.obj
 __Lram 0 0 ABS 0 ram -
@@ -876,8 +878,6 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 ?___ftmul 27 0 BANK0 1 cstackBANK0 mq135-demo.obj
 sprintf@ap A7 0 BANK1 1 cstackBANK1 mq135-demo.obj
-_TMR0IE 5D 0 ABS 0 - mq135-demo.obj
-_TMR0IF 5A 0 ABS 0 - mq135-demo.obj
 ___int_sp 0 0 STACK 2 stack startup.obj
 ?___lldiv 70 0 COMMON 1 cstackCOMMON mq135-demo.obj
 _scale$665 3C 0 BANK0 1 cstackBANK0 mq135-demo.obj
@@ -911,7 +911,7 @@ __div_to_l_@f1 70 0 COMMON 1 cstackCOMMON mq135-demo.obj
 __size_of___ftpack 0 0 ABS 0 - mq135-demo.obj
 floor@i 5A 0 BANK0 1 cstackBANK0 mq135-demo.obj
 __end_of_dpowers 2070 0 STRING 0 strings mq135-demo.obj
-__end_of_scale 16DA 0 CODE 0 text2 mq135-demo.obj
+__end_of_scale 16CE 0 CODE 0 text2 mq135-demo.obj
 __size_of___fttol 0 0 ABS 0 - mq135-demo.obj
 __end_of___awmod 228A 0 CODE 0 text5 mq135-demo.obj
 ___ftadd@sign 51 0 BANK0 1 cstackBANK0 mq135-demo.obj
@@ -995,12 +995,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
 __div_to_l_@f2 73 0 COMMON 1 cstackCOMMON mq135-demo.obj
 __ptext1 340 0 CODE 0 text1 mq135-demo.obj
-__ptext2 119C 0 CODE 0 text2 mq135-demo.obj
+__ptext2 1190 0 CODE 0 text2 mq135-demo.obj
 __ptext3 32F4 0 CODE 0 text3 mq135-demo.obj
 __ptext4 8 0 CODE 0 text4 mq135-demo.obj
 __ptext5 21F0 0 CODE 0 text5 mq135-demo.obj
 __ptext6 37D8 0 CODE 0 text6 mq135-demo.obj
-__ptext7 1016 0 CODE 0 text7 mq135-demo.obj
+__ptext7 100A 0 CODE 0 text7 mq135-demo.obj
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __ptext8 27E2 0 CODE 0 text8 mq135-demo.obj
@@ -1028,7 +1028,7 @@ __Lidloc 0 0 IDLOC 0 idloc -
 __size_of_pow 0 0 ABS 0 - mq135-demo.obj
 __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
-___ftneg 1006 0 CODE 0 text19 mq135-demo.obj
+___ftneg 32E4 0 CODE 0 text19 mq135-demo.obj
 ___llmod 3686 0 CODE 0 text10 mq135-demo.obj
 __end_of___lldiv 394E 0 CODE 0 text11 mq135-demo.obj
 ___awmod 21F0 0 CODE 0 text5 mq135-demo.obj
@@ -1072,7 +1072,7 @@ _main$657 1AF 0 BANK3 1 cstackBANK3 mq135-demo.obj
 _dpowers 2020 0 STRING 0 strings mq135-demo.obj
 ?__div_to_l_ 70 0 COMMON 1 cstackCOMMON mq135-demo.obj
 _main$658 1B2 0 BANK3 1 cstackBANK3 mq135-demo.obj
-__tdiv_to_l_ 1016 0 CODE 0 text7 mq135-demo.obj
+__tdiv_to_l_ 100A 0 CODE 0 text7 mq135-demo.obj
 __size_of_ldexp 0 0 ABS 0 - mq135-demo.obj
 _main$659 1B5 0 BANK3 1 cstackBANK3 mq135-demo.obj
 __size_of_readADC 0 0 ABS 0 - mq135-demo.obj
@@ -1113,7 +1113,7 @@ __size_of___awdiv 0 0 ABS 0 - mq135-demo.obj
 __ptext14 3332 0 CODE 0 text14 mq135-demo.obj
 __ptext33 394E 0 CODE 0 text33 mq135-demo.obj
 __ptext24 3602 0 CODE 0 text24 mq135-demo.obj
-__end_of__tdiv_to_l_ 119C 0 CODE 0 text7 mq135-demo.obj
+__end_of__tdiv_to_l_ 1190 0 CODE 0 text7 mq135-demo.obj
 __ptext15 2A46 0 CODE 0 text15 mq135-demo.obj
 __ptext34 33F4 0 CODE 0 text34 mq135-demo.obj
 __ptext25 3A1E 0 CODE 0 text25 mq135-demo.obj
@@ -1129,7 +1129,7 @@ __ptext18 3D5E 0 CODE 0 text18 mq135-demo.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - mq135-demo.obj
 __ptext28 337A 0 CODE 0 text28 mq135-demo.obj
 ___fttol@sign1 48 0 BANK0 1 cstackBANK0 mq135-demo.obj
-__ptext19 1006 0 CODE 0 text19 mq135-demo.obj
+__ptext19 32E4 0 CODE 0 text19 mq135-demo.obj
 __ptext29 25D0 0 CODE 0 text29 mq135-demo.obj
 __Hend_init 6 0 CODE 0 end_init -
 __Lend_init 0 0 CODE 0 end_init -
@@ -1188,7 +1188,7 @@ __size_of___ftge 0 0 ABS 0 - mq135-demo.obj
 __end_of_printToLCD 347E 0 CODE 0 text13 mq135-demo.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__pmaintext 16DA 0 CODE 0 maintext mq135-demo.obj
+__pmaintext 16CE 0 CODE 0 maintext mq135-demo.obj
 ?_eval_poly 54 0 BANK0 1 cstackBANK0 mq135-demo.obj
 __end_of___fttol 3C2C 0 CODE 0 text22 mq135-demo.obj
 __size_of_sprintf 0 0 ABS 0 - mq135-demo.obj
@@ -1250,8 +1250,8 @@ cstackBANK0 1 20 20 4F 1
 cstackBANK1 1 A0 A0 24 1
 cstackBANK3 1 190 190 3F 1
 text1 0 1A0 340 658 2
-maintext 0 B6D 16DA 493 2
-text2 0 8CE 119C 29F 2
+maintext 0 B67 16CE 499 2
+text2 0 8C8 1190 29F 2
 text4 0 4 8 19C 2
 text17 0 167B 2CF6 185 2
 text15 0 1523 2A46 158 2
@@ -1260,7 +1260,7 @@ text29 0 12E8 25D0 109 2
 strings 0 1000 2000 F3 2
 text26 0 1215 242A D3 2
 text16 0 1145 228A D0 2
-text7 0 80B 1016 C3 2
+text7 0 805 100A C3 2
 text30 0 1F48 3E90 B8 2
 text18 0 1EAF 3D5E 99 2
 text20 0 1E16 3C2C 99 2
@@ -1285,4 +1285,4 @@ text27 0 19AA 3354 13 2
 text14 0 1999 3332 11 2
 text35 0 1988 3310 11 2
 text3 0 197A 32F4 E 2
-text19 0 803 1006 8 2
+text19 0 1972 32E4 8 2

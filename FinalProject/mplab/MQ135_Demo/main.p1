@@ -14,6 +14,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "1335 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"207
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1396
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1286
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "1457
@@ -24,10 +28,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
 "1217
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
-"2647
-[v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
-"2649
-[v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "2461
 [v _INTE `Vb ~T0 @X0 0 e@92 ]
 "2465
@@ -1305,186 +1305,187 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x CP=OFF ]
 [; ;main.c: 32: void InitADC();
 [; ;main.c: 33: int readADC();
-"35
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;main.c: 34: void interrupt ISR(void);
 "36
+[v _main `(v ~T0 @X0 1 ef ]
+"37
 {
-[; ;main.c: 35: void main()
-[; ;main.c: 36: {
+[; ;main.c: 36: void main()
+[; ;main.c: 37: {
 [e :U _main ]
 [f ]
-[; ;main.c: 37: TRISB = 0x00;
-"37
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 38: TRISA = 0xFF;
+[; ;main.c: 38: TRISB = 0b00011111;
 "38
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 39: TRISD = 0x00;
+[e = _TRISB -> -> 31 `i `uc ]
+[; ;main.c: 39: PORTB = 0x00;
 "39
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 40: ADCON1 = 0x80;
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 40: TRISC = 0b00111000;
 "40
-[e = _ADCON1 -> -> 128 `i `uc ]
-[; ;main.c: 41: ADCON0 = 0x01;
+[e = _TRISC -> -> 56 `i `uc ]
+[; ;main.c: 41: TRISA = 0xFF;
 "41
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;main.c: 43: OPTION_REG = 0x44;
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;main.c: 42: TRISD = 0x00;
+"42
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 43: ADCON1 = 0x80;
 "43
-[e = _OPTION_REG -> -> 68 `i `uc ]
-[; ;main.c: 44: TMR0IE = 1;
+[e = _ADCON1 -> -> 128 `i `uc ]
+[; ;main.c: 44: ADCON0 = 0x01;
 "44
-[e = _TMR0IE -> -> 1 `i `b ]
-[; ;main.c: 45: TMR0IF = 0;
-"45
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;main.c: 46: INTE = 1;
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;main.c: 46: OPTION_REG = 0x44;
 "46
-[e = _INTE -> -> 1 `i `b ]
-[; ;main.c: 47: INTF = 0;
+[e = _OPTION_REG -> -> 68 `i `uc ]
+[; ;main.c: 47: INTE = 1;
 "47
-[e = _INTF -> -> 0 `i `b ]
-[; ;main.c: 48: INTEDG = 1;
+[e = _INTE -> -> 1 `i `b ]
+[; ;main.c: 48: INTF = 0;
 "48
-[e = _INTEDG -> -> 1 `i `b ]
-[; ;main.c: 49: PEIE = 1;
+[e = _INTF -> -> 0 `i `b ]
+[; ;main.c: 49: INTEDG = 1;
 "49
-[e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 50: GIE = 1;
+[e = _INTEDG -> -> 1 `i `b ]
+[; ;main.c: 50: PEIE = 1;
 "50
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 51: GIE = 1;
+"51
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 52: initLCD();
-"52
+[; ;main.c: 53: initLCD();
+"53
 [e ( _initLCD ..  ]
-[; ;main.c: 54: for (;;)
-"54
-{
+[; ;main.c: 55: for (;;)
 "55
-[e :U 105 ]
-[; ;main.c: 55: {
 {
-[; ;main.c: 56: instCTRL(0x80);
 "56
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
+[e :U 105 ]
+[; ;main.c: 56: {
+{
+[; ;main.c: 57: instCTRL(0x80);
 "57
-[v _adcValue `i ~T0 @X0 1 a ]
-[; ;main.c: 57: int adcValue = readADC();
-[e = _adcValue ( _readADC ..  ]
+[e ( _instCTRL (1 -> -> 128 `i `uc ]
 "58
-[v _voltage `f ~T0 @X0 1 a ]
-[; ;main.c: 58: float voltage = (adcValue * 5.0) / 1023.0;
-[e = _voltage -> / * -> _adcValue `d .5.0 .1023.0 `f ]
+[v _adcValue `i ~T0 @X0 1 a ]
+[; ;main.c: 58: int adcValue = readADC();
+[e = _adcValue ( _readADC ..  ]
 "59
-[v _ppm `f ~T0 @X0 1 a ]
-[; ;main.c: 59: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
-[e = _ppm -> * .116.6020682 ( _pow (2 , / -> _voltage `d .2.0 -U .2.769034857 `f ]
+[v _voltage `f ~T0 @X0 1 a ]
+[; ;main.c: 59: float voltage = (adcValue * 5.0) / 1023.0;
+[e = _voltage -> / * -> _adcValue `d .5.0 .1023.0 `f ]
 "60
-[v _ratio `f ~T0 @X0 1 a ]
-[; ;main.c: 60: float ratio = voltage / 5.0;
-[e = _ratio -> / -> _voltage `d .5.0 `f ]
+[v _ppm `f ~T0 @X0 1 a ]
+[; ;main.c: 60: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
+[e = _ppm -> * .116.6020682 ( _pow (2 , / -> _voltage `d .2.0 -U .2.769034857 `f ]
 "61
-[v _co2 `f ~T0 @X0 1 a ]
-[; ;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
-[e = _co2 -> + + + + + + .0.00035 * .0.02718 -> _ratio `d * .1.39538 ( _pow (2 , -> _ratio `d -> -> 2 `i `d * .0.0018 ( _pow (2 , -> _ratio `d -> -> 3 `i `d * -U .0.003333333 ( _pow (2 , -> _ratio `d -> -> 4 `i `d * -U .0.001923077 ( _pow (2 , -> _ratio `d -> -> 5 `i `d * .1.130128205 ( _pow (2 , -> _ratio `d -> -> 6 `i `d `f ]
-[; ;main.c: 62: co2 = co2 * 415.58;
+[v _ratio `f ~T0 @X0 1 a ]
+[; ;main.c: 61: float ratio = voltage / 5.0;
+[e = _ratio -> / -> _voltage `d .5.0 `f ]
 "62
-[e = _co2 -> * -> _co2 `d .415.58 `f ]
+[v _co2 `f ~T0 @X0 1 a ]
+[; ;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+[e = _co2 -> + + + + + + .0.00035 * .0.02718 -> _ratio `d * .1.39538 ( _pow (2 , -> _ratio `d -> -> 2 `i `d * .0.0018 ( _pow (2 , -> _ratio `d -> -> 3 `i `d * -U .0.003333333 ( _pow (2 , -> _ratio `d -> -> 4 `i `d * -U .0.001923077 ( _pow (2 , -> _ratio `d -> -> 5 `i `d * .1.130128205 ( _pow (2 , -> _ratio `d -> -> 6 `i `d `f ]
+[; ;main.c: 63: co2 = co2 * 415.58;
 "63
-[v _buffer `uc ~T0 @X0 -> 16 `i a ]
-[; ;main.c: 63: char buffer[16];
-[; ;main.c: 64: sprintf(buffer, "CO2: %.2f ppm  ", co2);
+[e = _co2 -> * -> _co2 `d .415.58 `f ]
 "64
-[e ( _sprintf (1 , (. , &U _buffer :s 1C -> _co2 `d ]
-[; ;main.c: 65: printToLCD(buffer);
+[v _buffer `uc ~T0 @X0 -> 16 `i a ]
+[; ;main.c: 64: char buffer[16];
+[; ;main.c: 65: sprintf(buffer, "CO2: %.2f ppm  ", co2);
 "65
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;main.c: 66: if(co2 > 9)
+[e ( _sprintf (1 , (. , &U _buffer :s 1C -> _co2 `d ]
+[; ;main.c: 66: printToLCD(buffer);
 "66
-[e $ ! > _co2 -> -> 9 `i `f 108  ]
-[; ;main.c: 67: {
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 67: if(co2 > 9)
 "67
-{
-[; ;main.c: 68: instCTRL(0xC0);
+[e $ ! > _co2 -> -> 9 `i `f 108  ]
+[; ;main.c: 68: {
 "68
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 69: printToLCD("CO2 levels high! ");
-"69
-[e ( _printToLCD (1 :s 2C ]
-"70
-}
-[; ;main.c: 70: }
-[e $U 109  ]
-"71
-[e :U 108 ]
-[; ;main.c: 71: else
-[; ;main.c: 72: {
-"72
 {
-[; ;main.c: 73: instCTRL(0xC0);
-"73
+[; ;main.c: 69: instCTRL(0xC0);
+"69
 [e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 74: printToLCD("CO2 levels are OK");
+[; ;main.c: 70: printToLCD("CO2 levels high! ");
+"70
+[e ( _printToLCD (1 :s 2C ]
+"71
+}
+[; ;main.c: 71: }
+[e $U 109  ]
+"72
+[e :U 108 ]
+[; ;main.c: 72: else
+[; ;main.c: 73: {
+"73
+{
+[; ;main.c: 74: instCTRL(0xC0);
 "74
-[e ( _printToLCD (1 :s 3C ]
+[e ( _instCTRL (1 -> -> 192 `i `uc ]
+[; ;main.c: 75: printToLCD("CO2 levels are OK");
 "75
+[e ( _printToLCD (1 :s 3C ]
+"76
 }
 [e :U 109 ]
-[; ;main.c: 75: }
-[; ;main.c: 76: _delay((unsigned long)((50)*(4000000/4000.0)));
-"76
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 76: }
+[; ;main.c: 77: _delay((unsigned long)((50)*(4000000/4000.0)));
 "77
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"78
 }
-[; ;main.c: 77: }
+[; ;main.c: 78: }
 [e $U 105  ]
 [e :U 106 ]
 }
-[; ;main.c: 78: }
-"78
+[; ;main.c: 79: }
+"79
 [e :UE 104 ]
 }
-"80
-[v _readADC `(i ~T0 @X0 1 ef ]
 "81
+[v _readADC `(i ~T0 @X0 1 ef ]
+"82
 {
-[; ;main.c: 80: int readADC()
-[; ;main.c: 81: {
+[; ;main.c: 81: int readADC()
+[; ;main.c: 82: {
 [e :U _readADC ]
 [f ]
-"82
-[v _temp `i ~T0 @X0 1 a ]
-[; ;main.c: 82: int temp = 0;
-[e = _temp -> 0 `i ]
-[; ;main.c: 83: _delay((unsigned long)((20)*(4000000/4000.0)));
 "83
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 84: GO = 1;
+[v _temp `i ~T0 @X0 1 a ]
+[; ;main.c: 83: int temp = 0;
+[e = _temp -> 0 `i ]
+[; ;main.c: 84: _delay((unsigned long)((20)*(4000000/4000.0)));
 "84
-[e = _GO -> -> 1 `i `b ]
-[; ;main.c: 85: while (GO_DONE == 1)
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 85: GO = 1;
 "85
+[e = _GO -> -> 1 `i `b ]
+[; ;main.c: 86: while (GO_DONE == 1)
+"86
 [e $U 111  ]
 [e :U 112 ]
-[; ;main.c: 86: ;
-"86
+[; ;main.c: 87: ;
+"87
 [e :U 111 ]
-"85
+"86
 [e $ == -> _GO_DONE `i -> 1 `i 112  ]
 [e :U 113 ]
-[; ;main.c: 87: temp = ADRESH;
-"87
-[e = _temp -> _ADRESH `i ]
-[; ;main.c: 88: temp = temp << 8;
+[; ;main.c: 88: temp = ADRESH;
 "88
-[e = _temp << _temp -> 8 `i ]
-[; ;main.c: 89: temp = temp | ADRESL;
+[e = _temp -> _ADRESH `i ]
+[; ;main.c: 89: temp = temp << 8;
 "89
-[e = _temp | _temp -> _ADRESL `i ]
-[; ;main.c: 90: return temp;
+[e = _temp << _temp -> 8 `i ]
+[; ;main.c: 90: temp = temp | ADRESL;
 "90
+[e = _temp | _temp -> _ADRESL `i ]
+[; ;main.c: 91: return temp;
+"91
 [e ) _temp ]
 [e $UE 110  ]
-[; ;main.c: 91: }
-"91
+[; ;main.c: 92: }
+"92
 [e :UE 110 ]
 }
 [p f _sprintf 8462336 ]

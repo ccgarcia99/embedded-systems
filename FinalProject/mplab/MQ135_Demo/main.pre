@@ -1670,18 +1670,19 @@ STR++;
 # 32
 void InitADC();
 int readADC();
+void interrupt ISR(void);
 
 void main()
 {
-TRISB = 0x00;
+TRISB = 0b00011111;
+PORTB = 0x00;
+TRISC = 0b00111000;
 TRISA = 0xFF;
 TRISD = 0x00;
 ADCON1 = 0x80;
 ADCON0 = 0x01;
 
 OPTION_REG = 0x44;
-TMR0IE = 1;
-TMR0IF = 0;
 INTE = 1;
 INTF = 0;
 INTEDG = 1;
@@ -1728,3 +1729,4 @@ temp = temp << 8;
 temp = temp | ADRESL;
 return temp;
 }
+

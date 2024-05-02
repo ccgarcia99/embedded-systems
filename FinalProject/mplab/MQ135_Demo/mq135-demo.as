@@ -540,6 +540,8 @@ __end_oflog@coeff:
 _ADCON0	set	0x1F
 	global	_ADRESH
 _ADRESH	set	0x1E
+	global	_PORTB
+_PORTB	set	0x6
 	global	_PORTD
 _PORTD	set	0x8
 	global	_GIE
@@ -560,10 +562,6 @@ _RB5	set	0x35
 _RB6	set	0x36
 	global	_RB7
 _RB7	set	0x37
-	global	_TMR0IE
-_TMR0IE	set	0x5D
-	global	_TMR0IF
-_TMR0IF	set	0x5A
 	global	_ADCON1
 _ADCON1	set	0x9F
 	global	_ADRESL
@@ -574,6 +572,8 @@ _OPTION_REG	set	0x81
 _TRISA	set	0x85
 	global	_TRISB
 _TRISB	set	0x86
+	global	_TRISC
+_TRISC	set	0x87
 	global	_TRISD
 _TRISD	set	0x88
 	global	_INTEDG
@@ -2422,7 +2422,7 @@ exp@x:	; 3 bytes @ 0x48
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 35 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
+;;		line 36 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -2465,12 +2465,12 @@ exp@x:	; 3 bytes @ 0x48
 ;;
 psect	maintext,global,class=CODE,delta=2,split=1
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
-	line	35
+	line	36
 global __pmaintext
 __pmaintext:	;psect for function _main
 psect	maintext
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
-	line	35
+	line	36
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
 	
@@ -2478,96 +2478,102 @@ _main:
 ;incstack = 0
 	opt	stack 3
 ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-	line	37
-	
-l3102:	
-;main.c: 37: TRISB = 0x00;
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	status, 6	;RP1=0, select bank1
-	clrf	(134)^080h	;volatile
 	line	38
 	
-l3104:	
-;main.c: 38: TRISA = 0xFF;
-	movlw	(0FFh)
-	movwf	(133)^080h	;volatile
+l3102:	
+;main.c: 38: TRISB = 0b00011111;
+	movlw	(01Fh)
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	status, 6	;RP1=0, select bank1
+	movwf	(134)^080h	;volatile
 	line	39
 	
-l3106:	
-;main.c: 39: TRISD = 0x00;
-	clrf	(136)^080h	;volatile
+l3104:	
+;main.c: 39: PORTB = 0x00;
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	status, 6	;RP1=0, select bank0
+	clrf	(6)	;volatile
 	line	40
-;main.c: 40: ADCON1 = 0x80;
+	
+l3106:	
+;main.c: 40: TRISC = 0b00111000;
+	movlw	(038h)
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	status, 6	;RP1=0, select bank1
+	movwf	(135)^080h	;volatile
+	line	41
+	
+l3108:	
+;main.c: 41: TRISA = 0xFF;
+	movlw	(0FFh)
+	movwf	(133)^080h	;volatile
+	line	42
+	
+l3110:	
+;main.c: 42: TRISD = 0x00;
+	clrf	(136)^080h	;volatile
+	line	43
+;main.c: 43: ADCON1 = 0x80;
 	movlw	(080h)
 	movwf	(159)^080h	;volatile
-	line	41
-;main.c: 41: ADCON0 = 0x01;
+	line	44
+;main.c: 44: ADCON0 = 0x01;
 	movlw	(01h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(31)	;volatile
-	line	43
-;main.c: 43: OPTION_REG = 0x44;
+	line	46
+;main.c: 46: OPTION_REG = 0x44;
 	movlw	(044h)
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
 	movwf	(129)^080h	;volatile
-	line	44
-	
-l3108:	
-;main.c: 44: TMR0IE = 1;
-	bsf	(93/8),(93)&7	;volatile
-	line	45
-	
-l3110:	
-;main.c: 45: TMR0IF = 0;
-	bcf	(90/8),(90)&7	;volatile
-	line	46
-	
-l3112:	
-;main.c: 46: INTE = 1;
-	bsf	(92/8),(92)&7	;volatile
 	line	47
 	
-l3114:	
-;main.c: 47: INTF = 0;
-	bcf	(89/8),(89)&7	;volatile
+l3112:	
+;main.c: 47: INTE = 1;
+	bsf	(92/8),(92)&7	;volatile
 	line	48
 	
-l3116:	
-;main.c: 48: INTEDG = 1;
-	bsf	(1038/8)^080h,(1038)&7	;volatile
+l3114:	
+;main.c: 48: INTF = 0;
+	bcf	(89/8),(89)&7	;volatile
 	line	49
 	
-l3118:	
-;main.c: 49: PEIE = 1;
-	bsf	(94/8),(94)&7	;volatile
+l3116:	
+;main.c: 49: INTEDG = 1;
+	bsf	(1038/8)^080h,(1038)&7	;volatile
 	line	50
 	
+l3118:	
+;main.c: 50: PEIE = 1;
+	bsf	(94/8),(94)&7	;volatile
+	line	51
+	
 l3120:	
-;main.c: 50: GIE = 1;
+;main.c: 51: GIE = 1;
 	bsf	(95/8),(95)&7	;volatile
-	line	52
+	line	53
 	
 l3122:	
-;main.c: 52: initLCD();
+;main.c: 53: initLCD();
 	fcall	_initLCD
 	goto	l3124
-	line	55
-;main.c: 54: for (;;)
+	line	56
+;main.c: 55: for (;;)
 	
 l68:	
-	line	56
-	
-l3124:	
-;main.c: 55: {
-;main.c: 56: instCTRL(0x80);
-	movlw	(080h)
-	fcall	_instCTRL
 	line	57
 	
+l3124:	
+;main.c: 56: {
+;main.c: 57: instCTRL(0x80);
+	movlw	(080h)
+	fcall	_instCTRL
+	line	58
+	
 l3126:	
-;main.c: 57: int adcValue = readADC();
+;main.c: 58: int adcValue = readADC();
 	fcall	_readADC
 	movf	(1+(?_readADC)),w
 	bsf	status, 5	;RP0=1, select bank3
@@ -2578,10 +2584,10 @@ l3126:
 	clrf	(main@adcValue)^0180h
 	addwf	(main@adcValue)^0180h
 
-	line	58
+	line	59
 	
 l3128:	
-;main.c: 58: float voltage = (adcValue * 5.0) / 1023.0;
+;main.c: 59: float voltage = (adcValue * 5.0) / 1023.0;
 	movlw	0xc0
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -2642,10 +2648,10 @@ l3128:
 	bsf	status, 5	;RP0=1, select bank3
 	bsf	status, 6	;RP1=1, select bank3
 	movwf	(main@voltage+2)^0180h
-	line	59
+	line	60
 	
 l3130:	
-;main.c: 59: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
+;main.c: 60: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
 	movlw	0x0
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -2693,7 +2699,7 @@ l3130:
 	movwf	(_main$652+2)^0180h
 	
 l3132:	
-;main.c: 59: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
+;main.c: 60: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
 	movlw	0x38
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -2741,7 +2747,7 @@ l3132:
 	movwf	(_main$653+2)^0180h
 	
 l3134:	
-;main.c: 59: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
+;main.c: 60: float ppm = 116.6020682 * pow((voltage / 2.0), -2.769034857);
 	movlw	0x34
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -2787,10 +2793,10 @@ l3134:
 	bsf	status, 5	;RP0=1, select bank3
 	bsf	status, 6	;RP1=1, select bank3
 	movwf	(main@ppm+2)^0180h
-	line	60
+	line	61
 	
 l3136:	
-;main.c: 60: float ratio = voltage / 5.0;
+;main.c: 61: float ratio = voltage / 5.0;
 	movlw	0x0
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -2836,10 +2842,10 @@ l3136:
 	bsf	status, 5	;RP0=1, select bank3
 	bsf	status, 6	;RP1=1, select bank3
 	movwf	(main@ratio+2)^0180h
-	line	61
+	line	62
 	
 l3138:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x0
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -2887,7 +2893,7 @@ l3138:
 	movwf	(_main$654+2)^0180h
 	
 l3140:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x0
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -2935,7 +2941,7 @@ l3140:
 	movwf	(_main$653+2)^0180h
 	
 l3142:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x0
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -2983,7 +2989,7 @@ l3142:
 	movwf	(_main$655+2)^0180h
 	
 l3144:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x0
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -3031,7 +3037,7 @@ l3144:
 	movwf	(_main$656+2)^0180h
 	
 l3146:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x0
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -3079,7 +3085,7 @@ l3146:
 	movwf	(_main$657+2)^0180h
 	
 l3148:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x9c
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3169,7 +3175,7 @@ l3148:
 	movwf	(_main$658+2)^0180h
 	
 l3150:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0xee
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3244,7 +3250,7 @@ l3150:
 	movwf	(_main$659+2)^0180h
 	
 l3152:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x74
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3319,7 +3325,7 @@ l3152:
 	movwf	(_main$660+2)^0180h
 	
 l3154:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x10
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3394,7 +3400,7 @@ l3154:
 	movwf	(_main$661+2)^0180h
 	
 l3156:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0xa8
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3469,7 +3475,7 @@ l3156:
 	movwf	(_main$662+2)^0180h
 	
 l3158:	
-;main.c: 61: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
+;main.c: 62: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * pow(ratio, 2)) + (0.0018 * pow(ratio, 3)) + (-0.003333333 * pow(ratio, 4)) + (-0.001923077 * pow(ratio, 5)) + (1.130128205 * pow(ratio, 6));
 	movlw	0x80
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3515,10 +3521,10 @@ l3158:
 	bsf	status, 5	;RP0=1, select bank3
 	bsf	status, 6	;RP1=1, select bank3
 	movwf	(main@co2+2)^0180h
-	line	62
+	line	63
 	
 l3160:	
-;main.c: 62: co2 = co2 * 415.58;
+;main.c: 63: co2 = co2 * 415.58;
 	movlw	0xca
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3564,11 +3570,11 @@ l3160:
 	bsf	status, 5	;RP0=1, select bank3
 	bsf	status, 6	;RP1=1, select bank3
 	movwf	(main@co2+2)^0180h
-	line	64
+	line	65
 	
 l3162:	
-;main.c: 63: char buffer[16];
-;main.c: 64: sprintf(buffer, "CO2: %.2f ppm  ", co2);
+;main.c: 64: char buffer[16];
+;main.c: 65: sprintf(buffer, "CO2: %.2f ppm  ", co2);
 	movlw	((STR_1)-__stringbase)&0ffh
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -3595,19 +3601,19 @@ l3162:
 	movwf	2+(?_sprintf)+01h
 	movlw	(main@buffer)&0ffh
 	fcall	_sprintf
-	line	65
+	line	66
 	
 l3164:	
-;main.c: 65: printToLCD(buffer);
+;main.c: 66: printToLCD(buffer);
 	movlw	(main@buffer&0ffh)
 	movwf	(printToLCD@STR)
 	movlw	(0x1)
 	movwf	(printToLCD@STR+1)
 	fcall	_printToLCD
-	line	66
+	line	67
 	
 l3166:	
-;main.c: 66: if(co2 > 9)
+;main.c: 67: if(co2 > 9)
 	movlw	0x0
 	movwf	(___ftge@ff1)
 	movlw	0x10
@@ -3629,54 +3635,54 @@ l3166:
 u4301:
 	goto	l3172
 u4300:
-	line	68
-	
-l3168:	
-;main.c: 67: {
-;main.c: 68: instCTRL(0xC0);
-	movlw	(0C0h)
-	fcall	_instCTRL
 	line	69
 	
+l3168:	
+;main.c: 68: {
+;main.c: 69: instCTRL(0xC0);
+	movlw	(0C0h)
+	fcall	_instCTRL
+	line	70
+	
 l3170:	
-;main.c: 69: printToLCD("CO2 levels high! ");
+;main.c: 70: printToLCD("CO2 levels high! ");
 	movlw	low((STR_2)-__stringbase)
 	movwf	(printToLCD@STR)
 	movlw	80h
 	movwf	(printToLCD@STR+1)
 	fcall	_printToLCD
-	line	70
-;main.c: 70: }
-	goto	l3176
 	line	71
+;main.c: 71: }
+	goto	l3176
+	line	72
 	
 l69:	
-	line	73
-	
-l3172:	
-;main.c: 71: else
-;main.c: 72: {
-;main.c: 73: instCTRL(0xC0);
-	movlw	(0C0h)
-	fcall	_instCTRL
 	line	74
 	
+l3172:	
+;main.c: 72: else
+;main.c: 73: {
+;main.c: 74: instCTRL(0xC0);
+	movlw	(0C0h)
+	fcall	_instCTRL
+	line	75
+	
 l3174:	
-;main.c: 74: printToLCD("CO2 levels are OK");
+;main.c: 75: printToLCD("CO2 levels are OK");
 	movlw	low((STR_3)-__stringbase)
 	movwf	(printToLCD@STR)
 	movlw	80h
 	movwf	(printToLCD@STR+1)
 	fcall	_printToLCD
 	goto	l3176
-	line	75
-	
-l70:	
 	line	76
 	
+l70:	
+	line	77
+	
 l3176:	
-;main.c: 75: }
-;main.c: 76: _delay((unsigned long)((50)*(4000000/4000.0)));
+;main.c: 76: }
+;main.c: 77: _delay((unsigned long)((50)*(4000000/4000.0)));
 	opt asmopt_off
 movlw	65
 	bcf	status, 5	;RP0=0, select bank0
@@ -3692,12 +3698,12 @@ u4317:
 	nop
 opt asmopt_on
 
-	line	77
-;main.c: 77: }
+	line	78
+;main.c: 78: }
 	goto	l3124
 	
 l71:	
-	line	78
+	line	79
 	
 l72:	
 	global	start
@@ -9237,7 +9243,7 @@ GLOBAL	__end_of___lldiv
 
 ;; *************** function _readADC *****************
 ;; Defined at:
-;;		line 80 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
+;;		line 81 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -9265,12 +9271,12 @@ GLOBAL	__end_of___lldiv
 ;;
 psect	text12,local,class=CODE,delta=2,merge=1
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
-	line	80
+	line	81
 global __ptext12
 __ptext12:	;psect for function _readADC
 psect	text12
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\mplab\MQ135_Demo\main.c"
-	line	80
+	line	81
 	global	__size_of_readADC
 	__size_of_readADC	equ	__end_of_readADC-_readADC
 	
@@ -9278,16 +9284,16 @@ _readADC:
 ;incstack = 0
 	opt	stack 7
 ; Regs used in _readADC: [wreg+status,2+status,0+btemp+1]
-	line	82
-	
-l2848:	
-;main.c: 82: int temp = 0;
-	clrf	(readADC@temp)
-	clrf	(readADC@temp+1)
 	line	83
 	
+l2848:	
+;main.c: 83: int temp = 0;
+	clrf	(readADC@temp)
+	clrf	(readADC@temp+1)
+	line	84
+	
 l2850:	
-;main.c: 83: _delay((unsigned long)((20)*(4000000/4000.0)));
+;main.c: 84: _delay((unsigned long)((20)*(4000000/4000.0)));
 	opt asmopt_off
 movlw	26
 movwf	((??_readADC+0)+0+1),f
@@ -9301,23 +9307,23 @@ u4327:
 	nop
 opt asmopt_on
 
-	line	84
+	line	85
 	
 l2852:	
-;main.c: 84: GO = 1;
+;main.c: 85: GO = 1;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	bsf	(250/8),(250)&7	;volatile
-	line	85
-;main.c: 85: while (GO_DONE == 1)
+	line	86
+;main.c: 86: while (GO_DONE == 1)
 	goto	l75
 	
 l76:	
-	line	86
-;main.c: 86: ;
+	line	87
+;main.c: 87: ;
 	
 l75:	
-	line	85
+	line	86
 	btfsc	(250/8),(250)&7	;volatile
 	goto	u3861
 	goto	u3860
@@ -9327,10 +9333,10 @@ u3860:
 	goto	l2854
 	
 l77:	
-	line	87
+	line	88
 	
 l2854:	
-;main.c: 87: temp = ADRESH;
+;main.c: 88: temp = ADRESH;
 	movf	(30),w	;volatile
 	movwf	(??_readADC+0)+0
 	clrf	(??_readADC+0)+0+1
@@ -9338,10 +9344,10 @@ l2854:
 	movwf	(readADC@temp)
 	movf	1+(??_readADC+0)+0,w
 	movwf	(readADC@temp+1)
-	line	88
+	line	89
 	
 l2856:	
-;main.c: 88: temp = temp << 8;
+;main.c: 89: temp = temp << 8;
 	movf	(readADC@temp+1),w
 	movwf	(??_readADC+0)+0+1
 	movf	(readADC@temp),w
@@ -9353,10 +9359,10 @@ l2856:
 	movwf	(readADC@temp)
 	movf	1+(??_readADC+0)+0,w
 	movwf	(readADC@temp+1)
-	line	89
+	line	90
 	
 l2858:	
-;main.c: 89: temp = temp | ADRESL;
+;main.c: 90: temp = temp | ADRESL;
 	movf	(readADC@temp),w
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -9368,10 +9374,10 @@ l2858:
 	movwf	(readADC@temp)
 	movf	1+(??_readADC+0)+0,w
 	movwf	(readADC@temp+1)
-	line	90
+	line	91
 	
 l2860:	
-;main.c: 90: return temp;
+;main.c: 91: return temp;
 	movf	(readADC@temp+1),w
 	clrf	(?_readADC+1)
 	addwf	(?_readADC+1)
@@ -9382,7 +9388,7 @@ l2860:
 	goto	l78
 	
 l2862:	
-	line	91
+	line	92
 	
 l78:	
 	return
