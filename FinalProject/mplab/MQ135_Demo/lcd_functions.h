@@ -1,44 +1,42 @@
 #ifndef LCD_FUNCTIONS_H
 #define LCD_FUNCTIONS_H
 
-#include <xc.h>
-#include <stdlib.h>
-#include <stdio.h>
-
+#define RS RB5
+#define RW RB6
+#define EN RB7
 #define _XTAL_FREQ 4000000
-#define RS RC0
-#define RW RC1
-#define EN RC2
-#define LCD_OUT PORTD
+#define LCD_PORT PORTD
+
+#include <xc.h>
 
 void instCTRL(unsigned char CMD);
 void dataCTRL(unsigned char DAT);
 void initLCD(void);
-void printToLCD(unsigned char *STR);
+void printToLCD(const unsigned char* STR);
 
 void instCTRL(unsigned char CMD)
 {
-    LCD_OUT = CMD;
+    LCD_PORT = CMD;
     RS = 0;
     RW = 0;
     EN = 1;
-    __delay_ms(50);
+    __delay_us(50);
     EN = 0;
 }
 
 void dataCTRL(unsigned char DAT)
 {
-    LCD_OUT = DAT;
+    LCD_PORT = DAT;
     RS = 1;
     RW = 0;
     EN = 1;
-    __delay_ms(50);
+    __delay_us(50);
     EN = 0;
 }
 
 void initLCD(void)
 {
-    instCTRL(0x38);
+    instCTRL(0x3C);
     __delay_us(50);
     instCTRL(0x0C);
     instCTRL(0x01);
@@ -46,12 +44,13 @@ void initLCD(void)
     instCTRL(0x0F);
 }
 
-void printToLCD(unsigned char* STR)
+void printToLCD(const unsigned char* STR)
 {
-    while(*STR != '\0')
+    while (*STR != '\0')
     {
         dataCTRL(*STR);
         STR++;
     }
 }
-#endif
+
+#endif //LCD_FUNCTIONS_H

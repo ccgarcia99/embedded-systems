@@ -22,7 +22,7 @@ void instCTRL(unsigned char CMD)
     RS = 0;
     RW = 0;
     EN = 1;
-    __delay_us(20);
+    __delay_ms(50);
     EN = 0;
 }
 
@@ -32,14 +32,14 @@ void dataCTRL(unsigned char DAT)
     RS = 1;
     RW = 0;
     EN = 1;
-    __delay_us(20);
+    __delay_ms(50);
     EN = 0;
 }
 
 void initLCD(void)
 {
-    instCTRL(0x3C);
-    __delay_us(25);
+    instCTRL(0x38);
+    __delay_us(50);
     instCTRL(0x0C);
     instCTRL(0x01);
     instCTRL(0x06);
@@ -48,7 +48,7 @@ void initLCD(void)
 
 void printToLCD(unsigned char* STR)
 {
-    while(STR != '\0')
+    while(*STR != '\0')
     {
         dataCTRL(*STR);
         STR++;

@@ -1,0 +1,1 @@
+ main.d  main.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/FinalProject/mplab/MQ135_Demo/main.c D:/uni_2023-2024/cpe3201/embedded-systems/FinalProject/mplab/MQ135_Demo/lcd_functions.h

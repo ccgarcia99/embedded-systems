@@ -1,0 +1,1 @@
+ main.d  main.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/trainer-module/mplab/practice3/transmit/main.c D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/trainer-module/mplab/practice3/transmit/lcd_functions.h D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/trainer-module/mplab/practice3/transmit/usart_functions.h

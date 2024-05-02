@@ -1,0 +1,624 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 12 12 3 2
+reset_vec CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$transmit.obj
+cinit CODE 0 15 15 17 2
+intentry CODE 0 4 4 E 2
+text15 CODE 0 25C 25C 76 2
+text14 CODE 0 4A8 4A8 15 2
+text13 CODE 0 3CF 3CF 2A 2
+text12 CODE 0 493 493 15 2
+text11 CODE 0 445 445 24 2
+text10 CODE 0 47E 47E 15 2
+text9 CODE 0 3F9 3F9 27 2
+text8 CODE 0 469 469 15 2
+text7 CODE 0 328 328 40 2
+text6 CODE 0 368 368 36 2
+text5 CODE 0 420 420 25 2
+text4 CODE 0 4BD 4BD 10 2
+text3 CODE 0 2C 2C 1B7 2
+text2 CODE 0 1E3 1E3 79 2
+text1 CODE 0 4CD 4CD F 2
+maintext CODE 0 2D2 2D2 56 2
+cstackBANK0 BANK0 1 20 20 26 1
+cstackCOMMON COMMON 1 70 70 9 1
+bssBANK0 BANK0 1 46 46 F 1
+dataCOMMON COMMON 1 79 79 1 1
+strings STRING 0 39E 39E 31 2
+idataCOMMON CODE 0 4DC 4DC 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0055-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0003-0003 2
+CODE 04DD-1FFF 2
+COMMON 007A-007D 1
+CONST 0003-0003 2
+CONST 04DD-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0003-0003 2
+ENTRY 04DD-1FFF 2
+IDLOC 2000-2003 2
+RAM 0055-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 0003-0003 2
+STRCODE 04DD-1FFF 2
+STRING 0003-0003 2
+STRING 04DD-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$startup.obj
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":39 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":40 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":41 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":42 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":43 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":44 0 functab CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":63 0 reset_vec CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":68 0 reset_vec CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":73 12 init CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\startup.as":76 12 end_init CODE
+$transmit.obj
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":122 4 intentry CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":346 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":349 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":377 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":378 16 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":379 17 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":380 18 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":381 19 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":382 1A cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":383 1B cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":384 1C cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":385 1D cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":386 1E cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":387 1F cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":388 20 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":389 21 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":390 22 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":391 23 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":396 24 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":397 27 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":403 28 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":404 28 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\transmit.as":405 29 cinit CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":492 2C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":542 2F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 33 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":547 45 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":550 49 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":551 54 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":555 55 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":557 57 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 58 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":588 59 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":589 59 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":590 5A text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 5E text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":606 69 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":607 77 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":609 7B text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":610 94 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":611 AB text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 B9 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1268 D0 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1270 DE text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1271 E0 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1272 E4 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 E9 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1315 EF text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 108 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1354 110 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1355 118 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1390 11E text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1391 12F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1393 13D text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1396 141 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1401 143 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1402 147 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1424 152 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1426 156 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1427 161 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1437 168 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1439 16C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1440 177 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1447 181 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1448 185 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1481 190 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 194 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1498 19C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1533 1D0 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 1DB text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1547 1DC text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":138 1E3 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":140 1E3 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":146 1E4 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":147 1EA text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":148 202 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":149 20D text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":143 218 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":152 22D text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":153 235 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":155 240 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":140 244 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":158 257 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":159 25B text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":56 25C text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":58 25C text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":59 25D text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":61 25E text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":63 262 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":64 26B text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":65 27A text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":68 27B text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":71 27D text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":74 27F text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":77 281 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":80 283 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":83 285 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":86 287 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":89 289 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":92 28B text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":95 28D text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":98 28F text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":101 291 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":104 293 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":107 295 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":110 297 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":113 299 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":117 29D text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":65 29E text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":119 2D0 text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":29 2D2 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":31 2D2 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":32 2D5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":33 2D7 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":34 2D9 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":36 2DA maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":37 2DC maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":38 2DD maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":40 2DE maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":42 2DF maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":43 2E4 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":44 2E9 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":45 2F8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":46 2FE maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":49 309 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":50 30E maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":51 314 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":52 31F maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 328 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 328 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 32C text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 330 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 332 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 334 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 33B text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 33F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 340 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 347 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 34F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 355 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 356 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 35D text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 361 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":6 368 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 368 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 36E text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 370 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 372 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 379 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 37D text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 37E text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 386 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 38C text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 393 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 397 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":122 3CF text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":124 3CF text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":125 3D0 text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":127 3D2 text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":128 3DC text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":130 3E0 text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":131 3E6 text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":133 3EC text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":135 3ED text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\main.c":136 3EE text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":49 3F9 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":51 3F9 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":53 407 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":54 417 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":51 41F text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 420 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 420 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 424 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 426 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 42C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 433 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 43A text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 43E text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":39 445 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":41 445 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":42 44B text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":43 452 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":44 458 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":45 45E text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":46 464 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":47 468 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":29 469 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":31 46C text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":32 46C text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":33 46E text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":34 470 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":35 47D text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":29 47E text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":31 481 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":32 483 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":33 484 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":34 485 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":35 486 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":36 48F text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":37 492 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":19 493 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":21 496 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":22 498 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":23 499 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":24 49A text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":25 49B text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":26 4A4 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\lcd_functions.h":27 4A7 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":29 4A8 text14 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":31 4A9 text14 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":32 4A9 text14 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":33 4AD text14 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":34 4AF text14 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":35 4BC text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":8 4BD text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":14 4C0 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":18 4CD text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":20 4CD text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":21 4D1 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":23 4D4 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":24 4D6 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":26 4D7 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\testbenches\trainer-module\mplab\practice3\transmit\usart_functions.h":27 4DB text1 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 transmit.obj
+sprintf@f 2E 0 BANK0 1 cstackBANK0 transmit.obj
+___lwdiv@counter 27 0 BANK0 1 cstackBANK0 transmit.obj
+__CFG_WRT$OFF 0 0 ABS 0 - transmit.obj
+_RC0 38 0 ABS 0 - transmit.obj
+_RB1 31 0 ABS 0 - transmit.obj
+_RC1 39 0 ABS 0 - transmit.obj
+_RC2 3A 0 ABS 0 - transmit.obj
+__S0 2008 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - transmit.obj
+_ISR 79E 0 CODE 0 text13 transmit.obj
+__Hintentry 24 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - transmit.obj
+__pintentry 8 0 CODE 0 intentry transmit.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - transmit.obj
+_RCIF 65 0 ABS 0 - transmit.obj
+_TXIF 64 0 ABS 0 - transmit.obj
+_INTE 5C 0 ABS 0 - transmit.obj
+_INTF 59 0 ABS 0 - transmit.obj
+_main 5A4 0 CODE 0 maintext transmit.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - transmit.obj
+ltemp 7E 0 ABS 0 - transmit.obj
+ttemp 7E 0 ABS 0 - transmit.obj
+wtemp 7E 0 ABS 0 - transmit.obj
+_mins 48 0 BANK0 1 bssBANK0 transmit.obj
+instCTRL@CMD 22 0 BANK0 1 cstackBANK0 transmit.obj
+start 24 0 CODE 0 init startup.obj
+_RCREG 1A 0 ABS 0 - transmit.obj
+_RCSTA 18 0 ABS 0 - transmit.obj
+_TRISB 86 0 ABS 0 - transmit.obj
+_TRISC 87 0 ABS 0 - transmit.obj
+_TXREG 19 0 ABS 0 - transmit.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_TRISD 88 0 ABS 0 - transmit.obj
+_PORTB 6 0 ABS 0 - transmit.obj
+_SPBRG 99 0 ABS 0 - transmit.obj
+_TXSTA 98 0 ABS 0 - transmit.obj
+_PORTD 8 0 ABS 0 - transmit.obj
+__end_of_keypadData 5A4 0 CODE 0 text15 transmit.obj
+ltemp0 7E 0 ABS 0 - transmit.obj
+ttemp0 7E 0 ABS 0 - transmit.obj
+wtemp0 7E 0 ABS 0 - transmit.obj
+ltemp1 82 0 ABS 0 - transmit.obj
+ttemp1 81 0 ABS 0 - transmit.obj
+wtemp1 80 0 ABS 0 - transmit.obj
+ltemp2 86 0 ABS 0 - transmit.obj
+ttemp2 84 0 ABS 0 - transmit.obj
+wtemp2 82 0 ABS 0 - transmit.obj
+__size_of_printTime 0 0 ABS 0 - transmit.obj
+ltemp3 80 0 ABS 0 - transmit.obj
+ttemp3 87 0 ABS 0 - transmit.obj
+wtemp3 84 0 ABS 0 - transmit.obj
+ttemp4 7F 0 ABS 0 - transmit.obj
+wtemp4 86 0 ABS 0 - transmit.obj
+wtemp5 88 0 ABS 0 - transmit.obj
+wtemp6 7F 0 ABS 0 - transmit.obj
+interrupt_function 8 0 CODE 0 intentry transmit.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__size_of_printToLCD 0 0 ABS 0 - transmit.obj
+__end_of__stringtab 75C 0 STRING 0 strings transmit.obj
+?___lwmod 28 0 BANK0 1 cstackBANK0 transmit.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of__stringdata 79E 0 STRING 0 strings transmit.obj
+?_sprintf 2E 0 BANK0 1 cstackBANK0 transmit.obj
+_printToLCD 7F2 0 CODE 0 text9 transmit.obj
+_hours 46 0 BANK0 1 bssBANK0 transmit.obj
+__end_of_ISR 7F2 0 CODE 0 text13 transmit.obj
+_TRISA0 428 0 ABS 0 - transmit.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_OPTION_REG 81 0 ABS 0 - transmit.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 36 0 BANK0 1 cstackBANK0 transmit.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+?___lwdiv 20 0 BANK0 1 cstackBANK0 transmit.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_printTime 3C6 0 CODE 0 text2 transmit.obj
+__size_ofi1_serialSend 0 0 ABS 0 - transmit.obj
+__end_of_dpowers 770 0 STRING 0 strings transmit.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+sprintf@sp 3F 0 BANK0 1 cstackBANK0 transmit.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 transmit.obj
+_buffer 4B 0 BANK0 1 bssBANK0 transmit.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - transmit.obj
+__Hinit 24 0 CODE 0 init -
+__Linit 24 0 CODE 0 init -
+___wmul 840 0 CODE 0 text5 transmit.obj
+__end_of_main 650 0 CODE 0 maintext transmit.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+sprintf@width 3D 0 BANK0 1 cstackBANK0 transmit.obj
+_keypadData 4B8 0 CODE 0 text15 transmit.obj
+___wmul@multiplier 20 0 BANK0 1 cstackBANK0 transmit.obj
+__end_of_instCTRL 950 0 CODE 0 text12 transmit.obj
+end_of_initialization 50 0 CODE 0 cinit transmit.obj
+__size_of_ISR 0 0 ABS 0 - transmit.obj
+___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 transmit.obj
+__stringtab 73C 0 STRING 0 strings transmit.obj
+__size_of_initLCD 0 0 ABS 0 - transmit.obj
+__end_of_serialSend 8FC 0 CODE 0 text8 transmit.obj
+__CFG_FOSC$XT 0 0 ABS 0 - transmit.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__pstrings 73C 0 STRING 0 strings transmit.obj
+_serialSend 8D2 0 CODE 0 text8 transmit.obj
+__end_of_dataCTRL 926 0 CODE 0 text10 transmit.obj
+_initLCD 88A 0 CODE 0 text11 transmit.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - transmit.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext1 99A 0 CODE 0 text1 transmit.obj
+__ptext2 3C6 0 CODE 0 text2 transmit.obj
+__ptext3 58 0 CODE 0 text3 transmit.obj
+__ptext4 97A 0 CODE 0 text4 transmit.obj
+__ptext5 840 0 CODE 0 text5 transmit.obj
+__ptext6 6D0 0 CODE 0 text6 transmit.obj
+__ptext7 650 0 CODE 0 text7 transmit.obj
+__ptext8 8D2 0 CODE 0 text8 transmit.obj
+__ptext9 7F2 0 CODE 0 text9 transmit.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+__pdataCOMMON 79 0 COMMON 1 dataCOMMON transmit.obj
+__end_of_serialInit 9B8 0 CODE 0 text1 transmit.obj
+__end_of__initialization 50 0 CODE 0 cinit transmit.obj
+__end_of___lwdiv 6D0 0 CODE 0 text7 transmit.obj
+dataCTRL@DAT 22 0 BANK0 1 cstackBANK0 transmit.obj
+i1_serialSend 950 0 CODE 0 text14 transmit.obj
+__size_of_serialSend 0 0 ABS 0 - transmit.obj
+__size_of_serialInit 0 0 ABS 0 - transmit.obj
+_keyData 4A 0 BANK0 1 bssBANK0 transmit.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+___lwmod 6D0 0 CODE 0 text6 transmit.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+_sprintf 58 0 CODE 0 text3 transmit.obj
+__Hspace_1 7A 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+?___wmul 20 0 BANK0 1 cstackBANK0 transmit.obj
+_isdigit 97A 0 CODE 0 text4 transmit.obj
+__Hcinit 58 0 CODE 0 cinit -
+__Lcinit 2A 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+___lwdiv 650 0 CODE 0 text7 transmit.obj
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - transmit.obj
+_dpowers 75C 0 STRING 0 strings transmit.obj
+__end_of_isdigit 99A 0 CODE 0 text4 transmit.obj
+__end_of_sprintf 3C6 0 CODE 0 text3 transmit.obj
+__size_of_keypadData 0 0 ABS 0 - transmit.obj
+_lastKeyData 79 0 COMMON 1 dataCOMMON transmit.obj
+__size_of___lwdiv 0 0 ABS 0 - transmit.obj
+i1serialSend@dataOUT 73 0 COMMON 1 cstackCOMMON transmit.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 46 0 BANK0 1 bssBANK0 transmit.obj
+__size_of_isdigit 0 0 ABS 0 - transmit.obj
+sprintf@flag 3C 0 BANK0 1 cstackBANK0 transmit.obj
+_serialInit 99A 0 CODE 0 text1 transmit.obj
+__ptext10 8FC 0 CODE 0 text10 transmit.obj
+__ptext11 88A 0 CODE 0 text11 transmit.obj
+__ptext12 926 0 CODE 0 text12 transmit.obj
+__ptext13 79E 0 CODE 0 text13 transmit.obj
+sprintf@prec 37 0 BANK0 1 cstackBANK0 transmit.obj
+keypadData@dataIN 72 0 COMMON 1 cstackCOMMON transmit.obj
+__ptext14 950 0 CODE 0 text14 transmit.obj
+__ptext15 4B8 0 CODE 0 text15 transmit.obj
+__end_of___lwmod 73C 0 CODE 0 text6 transmit.obj
+___lwmod@divisor 28 0 BANK0 1 cstackBANK0 transmit.obj
+__Hend_init 2A 0 CODE 0 end_init -
+__Lend_init 24 0 CODE 0 end_init -
+___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 transmit.obj
+__end_of_printTime 4B8 0 CODE 0 text2 transmit.obj
+__size_of___wmul 0 0 ABS 0 - transmit.obj
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__size_of_instCTRL 0 0 ABS 0 - transmit.obj
+__stringdata 770 0 STRING 0 strings transmit.obj
+_isdigit$309 20 0 BANK0 1 cstackBANK0 transmit.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - transmit.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+__end_ofi1_serialSend 97A 0 CODE 0 text14 transmit.obj
+printToLCD@STR 23 0 BANK0 1 cstackBANK0 transmit.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+_dataCTRL 8FC 0 CODE 0 text10 transmit.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+_instCTRL 926 0 CODE 0 text12 transmit.obj
+serialSend@dataOUT 23 0 BANK0 1 cstackBANK0 transmit.obj
+__size_of___lwmod 0 0 ABS 0 - transmit.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON transmit.obj
+__end_of___wmul 88A 0 CODE 0 text5 transmit.obj
+__CFG_CPD$OFF 0 0 ABS 0 - transmit.obj
+start_initialization 2A 0 CODE 0 cinit transmit.obj
+___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 transmit.obj
+__end_of_printToLCD 840 0 CODE 0 text9 transmit.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 5A4 0 CODE 0 maintext transmit.obj
+keypadData@buffer 73 0 COMMON 1 cstackCOMMON transmit.obj
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+__pidataCOMMON 9B8 0 CODE 0 idataCOMMON transmit.obj
+__size_of_sprintf 0 0 ABS 0 - transmit.obj
+__initialization 2A 0 CODE 0 cinit transmit.obj
+__end_of_initLCD 8D2 0 CODE 0 text11 transmit.obj
+__stringbase 75A 0 STRING 0 strings transmit.obj
+__size_of_dataCTRL 0 0 ABS 0 - transmit.obj
+___lwmod@dividend 2A 0 BANK0 1 cstackBANK0 transmit.obj
+sprintf@_val 38 0 BANK0 1 cstackBANK0 transmit.obj
+___wmul@product 24 0 BANK0 1 cstackBANK0 transmit.obj
+___lwmod@counter 2D 0 BANK0 1 cstackBANK0 transmit.obj
+__CFG_CP$OFF 0 0 ABS 0 - transmit.obj
+__CFG_LVP$OFF 0 0 ABS 0 - transmit.obj
+sprintf@c 40 0 BANK0 1 cstackBANK0 transmit.obj
+isdigit@c 21 0 BANK0 1 cstackBANK0 transmit.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 3 2
+intentry 0 4 8 39A 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 35 1
+strings 0 39E 73C 31 2
+text13 0 3CF 79E 10E 2
