@@ -1,0 +1,1 @@
+ main.d  main.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/FinalProject/switching-program/mplab/main.c D:/uni_2023-2024/cpe3201/embedded-systems/FinalProject/switching-program/mplab/lcd_functions.h

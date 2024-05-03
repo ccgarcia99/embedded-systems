@@ -1,0 +1,22 @@
+i1_printToLCD: CODE, 1206 0 41
+__stringtab: STRING, 804 0 16
+__stringdata: STRING, 830 0 70
+_ISR: CODE, 900 0 73
+_displayTime: CODE, 707 0 97
+_dpowers: STRING, 820 0 10
+_main: CODE, 598 0 109
+_instCTRL: CODE, 1320 0 19
+_dataCTRL: CODE, 1339 0 19
+i1_instCTRL: CODE, 1358 0 19
+__initialization: CODE, 21 0 13
+___lwdiv: CODE, 1045 0 64
+_isdigit: CODE, 1396 0 16
+_sprintf: CODE, 38 0 439
+_setTimer: CODE, 477 0 121
+___lwmod: CODE, 1109 0 54
+i1_dataCTRL: CODE, 1377 0 19
+_checkTime: CODE, 973 0 72
+___wmul: CODE, 1247 0 37
+_printToLCD: CODE, 1163 0 43
+_initLCD: CODE, 1284 0 36
+Total: 1387
