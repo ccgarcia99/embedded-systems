@@ -1494,7 +1494,7 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
 
-# 15 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\definitions.h"
+# 16 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\definitions.h"
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -1504,13 +1504,15 @@ extern int printf(const char *, ...);
 #pragma config WRT = OFF
 #pragma config CP = OFF
 
-# 40
+# 42
 void initADC(void);
 void initInterrupt(void);
 void interrupt ISR(void);
 void updateDisplay(void);
 void checkMode(void);
 void displayRawADC(void);
+void checkSensors(void);
+void checkSelButton(void);
 
 void displayPPM(void);
 inline int Read_ADC_MQ135();
@@ -1532,28 +1534,50 @@ typedef enum
 DISP_CMN = 0,
 SET_ACTV = 1
 } MODE;
+
+typedef enum
+{
+PG1 = 0,
+PG2 = 1
+} SEL;
+
+SEL checkSel(void);
+
 volatile MODE mode = DISP_CMN;
 volatile MODE lastMode = -1;
-int ACTV_HOURS = 0, DEF_HOURS = 8;
+volatile SEL sel = PG1;
+volatile SEL lastSel = -1;
+unsigned char lastSelButtonState = 1;
+int ACTV_HOURS = 8, DEF_HOURS = 8;
 int ACTV_MINS = 0, DEF_MINUTES = 0;
+volatile float PPM = 0.0;
 
 void main(void)
 {
 TRISA = 0xFF;
-TRISB = 0x03;
+TRISB = 0xFB;
 TRISC = 0x00;
 TRISD = 0x00;
 OPTION_REG = 0b11000000;
+PORTA = 0x00;
+PORTB = 0x00;
+PORTC = 0x00;
+PORTD = 0x00;
 
 initADC();
 initLCD();
 initInterrupt();
+printToLCD("INITIALIZING...");
 _delay((unsigned long)((250)*(4000000/4000.0)));
+instCTRL(0x01);
+_delay((unsigned long)((50)*(4000000/4000.0)));
 while (1)
 {
 checkMode();
+checkSelButton();
 runTime();
-updateDisplay();
+
+# 56
 }
 }
 
@@ -1578,7 +1602,7 @@ GIE = 0;
 if (INTF == 1)
 {
 INTF = 0;
-mode = (mode + 1) % 3;
+mode = (mode + 1) % 2;
 }
 GIE = 1;
 }
@@ -1588,22 +1612,38 @@ void updateDisplay(void)
 _delay((unsigned long)((50)*(4000000/4000.0)));
 instCTRL(0x80);
 instCTRL(0x0C);
-if (mode == DISP_CMN)
+switch (mode)
 {
-printToLCD("MODE: DISP STATS");
+case DISP_CMN:
+switch (sel)
+{
+case PG1:
+printToLCD("MODE: DISPLAY STAT");
 instCTRL(0xC0);
-
 displayPPM();
 instCTRL(0x94);
 displayTime();
+break;
+case PG2:
+printToLCD("MODE: ADDITIONAL INFO");
+instCTRL(0xC0);
+
+
+break;
 }
-else if (mode == SET_ACTV)
-{
+break;
+case SET_ACTV:
 printToLCD("MODE: SET ACTIVE HRS");
 instCTRL(0xC0);
-displayPPM();
+displayTime();
+
+break;
+default:
+printToLCD("ERROR!");
+break;
 }
-_delay((unsigned long)((500)*(4000000/4000.0)));
+
+checkSensors();
 }
 
 void checkMode(void)
@@ -1624,6 +1664,48 @@ int rawADC = Read_ADC_MQ135();
 char buffer[30];
 sprintf(buffer, "ADC: %d   ", rawADC);
 printToLCD(buffer);
+}
+
+void checkSensors(void)
+{
+
+if (PPM > 9)
+{
+RB2 = 1;
+instCTRL(0xD4);
+printToLCD("PPM HIGH! ");
+}
+else
+{
+RB2 = 0;
+instCTRL(0xD4);
+printToLCD("ENV STABLE");
+}
+}
+
+SEL checkSel(void)
+{
+if (sel != lastSel)
+{
+instCTRL(0x01);
+_delay((unsigned long)((50)*(4000000/4000.0)));
+instCTRL(0x80);
+lastSel = sel;
+}
+}
+
+void checkSelButton(void)
+{
+if (RB1 == 0 && lastSelButtonState == 1)
+{
+_delay((unsigned long)((20)*(4000000/4000.0)));
+if (RB1 == 0)
+{
+sel = (sel + 1) % 2;
+updateDisplay();
+}
+}
+lastSelButtonState = RB1;
 }
 
 
@@ -1675,7 +1757,8 @@ inline int Read_ADC_MQ135()
 {
 _delay((unsigned long)((100)*(4000000/4000.0)));
 GO_DONE = 1;
-while (GO_DONE);
+while (GO_DONE)
+;
 return ((ADRESH << 8) + ADRESL);
 }
 
@@ -1702,7 +1785,7 @@ return co2;
 void displayPPM()
 {
 char strBuffer[50];
-float PPM = CalcMQ135(Read_ADC_MQ135());
+PPM = CalcMQ135(Read_ADC_MQ135());
 int ppmWhole = (int)PPM;
 int ppmFraction = (int)((PPM - ppmWhole) * 100);
 
@@ -1720,21 +1803,12 @@ printToLCD(strBuffer);
 
 
 
-
 void setDefaultHours()
 {
-if (ACTV_HOURS == 0)
-{
-ACTV_HOURS = DEF_HOURS;
-}
 }
 
 void setDefaultMinutes()
 {
-if (ACTV_MINS == 0)
-{
-ACTV_MINS = DEF_MINUTES;
-}
 }
 
 

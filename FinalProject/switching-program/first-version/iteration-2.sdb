@@ -1,0 +1,577 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"12 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[e E1222 . `uc
+DISP_CMN 0
+SET_ACTV 1
+]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
+"72
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
+[v _instCTRL instCTRL `(v  1 e 0 0 ]
+[v i1_instCTRL instCTRL `(v  1 e 0 0 ]
+"27
+[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
+"37
+[v _initLCD initLCD `(v  1 e 0 0 ]
+"47
+[v _printToLCD printToLCD `(v  1 e 0 0 ]
+"37 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _main main `(v  1 e 0 0 ]
+"64
+[v _setPortDirections setPortDirections `(v  1 e 0 0 ]
+"76
+[v _initADC initADC `(v  1 e 0 0 ]
+"82
+[v _startUpLCD startUpLCD `(v  1 e 0 0 ]
+"89
+[v _initInterrupt initInterrupt `(v  1 e 0 0 ]
+"97
+[v _ISR ISR `II(v  1 e 0 0 ]
+"110
+[v _updateState updateState `(v  1 e 0 0 ]
+"157
+[v _checkMode checkMode `(v  1 e 0 0 ]
+"168
+[v _checkSelect checkSelect `(v  1 e 0 0 ]
+"181
+[v _runClock runClock `(v  1 e 0 0 ]
+"196
+[v _displayTime displayTime `(v  1 e 0 0 ]
+"203
+[v _setHours setHours `(v  1 e 0 0 ]
+"245
+[v _setMinutes setMinutes `(v  1 e 0 0 ]
+"28 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+[v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
+"37
+[v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
+"57
+[v _displayPPM displayPPM `(v  1 e 0 0 ]
+"86
+[v _handlePPM handlePPM `(i  1 e 2 0 ]
+"158 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"207
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"268
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"329
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1116
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1122
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1286
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1335
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1396
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1457
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2167
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2173
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2231
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2237
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2255
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"2299
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2349
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"2441
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2445
+[v _GO_DONE GO_DONE `VEb  1 e 0 @250 ]
+"2461
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"2463
+[v _INTEDG INTEDG `VEb  1 e 0 @1038 ]
+"2465
+[v _INTF INTF `VEb  1 e 0 @89 ]
+"2513
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2531
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2533
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2535
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2537
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2539
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2559
+[v _RD RD `VEb  1 e 0 @3168 ]
+"2759
+[v _WR WR `VEb  1 e 0 @3169 ]
+"2761
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
+"12 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _mode mode `E1222  1 e 1 0 ]
+"13
+[v _lastMode lastMode `E1222  1 e 1 0 ]
+"14
+[v _select select `VEuc  1 e 1 0 ]
+"15
+[v _hours hours `VEuc  1 e 1 0 ]
+"16
+[v _minutes minutes `VEuc  1 e 1 0 ]
+"17
+[v _savedHoursStart savedHoursStart `VEuc  1 e 1 0 ]
+"18
+[v _savedMinutesStart savedMinutesStart `VEuc  1 e 1 0 ]
+"19
+[v _savedHoursEnd savedHoursEnd `VEuc  1 e 1 0 ]
+"20
+[v _savedMinutesEnd savedMinutesEnd `VEuc  1 e 1 0 ]
+"21
+[v _ppmHandler ppmHandler `i  1 e 2 0 ]
+"21 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+[v _PPM PPM `VEf  1 e 3 0 ]
+"37 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"61
+} 0
+"110
+[v _updateState updateState `(v  1 e 0 0 ]
+{
+"155
+} 0
+"245
+[v _setMinutes setMinutes `(v  1 e 0 0 ]
+{
+"251
+[v setMinutes@key key `uc  1 a 1 39 ]
+"250
+[v setMinutes@keyValid keyValid `uc  1 a 1 38 ]
+"247
+[v setMinutes@debugInfo debugInfo `[10]uc  1 s 10 debugInfo ]
+"248
+[v setMinutes@lastKeyState lastKeyState `uc  1 s 1 lastKeyState ]
+"284
+} 0
+"203
+[v _setHours setHours `(v  1 e 0 0 ]
+{
+"209
+[v setHours@key key `uc  1 a 1 39 ]
+"208
+[v setHours@keyValid keyValid `uc  1 a 1 38 ]
+"205
+[v setHours@debugInfo debugInfo `[10]uc  1 s 10 debugInfo ]
+"206
+[v setHours@lastKeyState lastKeyState `uc  1 s 1 lastKeyState ]
+"243
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"196 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _displayTime displayTime `(v  1 e 0 0 ]
+{
+"198
+[v displayTime@timeFormat timeFormat `[10]uc  1 a 10 40 ]
+"201
+} 0
+"57 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+[v _displayPPM displayPPM `(v  1 e 0 0 ]
+{
+"59
+[v displayPPM@strBuffer strBuffer `[50]uc  1 a 50 0 ]
+"62
+[v displayPPM@ppmFraction ppmFraction `i  1 a 2 52 ]
+"61
+[v displayPPM@ppmWhole ppmWhole `i  1 a 2 50 ]
+"65
+[v displayPPM@bufPtr bufPtr `*.4uc  1 a 1 54 ]
+"57
+[v displayPPM@ppmHandler ppmHandler `i  1 p 2 60 ]
+"84
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[s S215 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+"533
+[u S218 . 4 `ui 1 _val 2 0 `S215 1 _str 4 0 ]
+[v sprintf@_val _val `S218  1 a 4 26 ]
+"501
+[v sprintf@width width `i  1 a 2 31 ]
+"510
+[v sprintf@ccnt ccnt `i  1 a 2 24 ]
+"499
+[v sprintf@c c `c  1 a 1 33 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 30 ]
+"506
+[v sprintf@prec prec `c  1 a 1 23 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 22 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCCuc  1 p 1 14 ]
+"510
+[v sprintf@sp sp `*.4uc  1 a 1 34 ]
+"1550
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 55 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 59 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 54 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 46 ]
+"73
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 14 ]
+"20
+} 0
+"82 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _startUpLCD startUpLCD `(v  1 e 0 0 ]
+{
+"87
+} 0
+"47 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
+[v _printToLCD printToLCD `(v  1 e 0 0 ]
+{
+[v printToLCD@str str `*.26DCCuc  1 p 2 2 ]
+"55
+} 0
+"27
+[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
+{
+[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
+[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
+"29
+[v dataCTRL@DAT DAT `uc  1 a 1 1 ]
+"35
+} 0
+"37
+[v _initLCD initLCD `(v  1 e 0 0 ]
+{
+"45
+} 0
+"64 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _setPortDirections setPortDirections `(v  1 e 0 0 ]
+{
+"74
+} 0
+"181
+[v _runClock runClock `(v  1 e 0 0 ]
+{
+"194
+} 0
+"89
+[v _initInterrupt initInterrupt `(v  1 e 0 0 ]
+{
+"95
+} 0
+"76
+[v _initADC initADC `(v  1 e 0 0 ]
+{
+"80
+} 0
+"86 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+[v _handlePPM handlePPM `(i  1 e 2 0 ]
+{
+"98
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"168 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _checkSelect checkSelect `(v  1 e 0 0 ]
+{
+"171
+[v checkSelect@currentRB1State currentRB1State `i  1 a 2 4 ]
+"170
+[v checkSelect@lastRB1State lastRB1State `i  1 s 2 lastRB1State ]
+"179
+} 0
+"157
+[v _checkMode checkMode `(v  1 e 0 0 ]
+{
+"166
+} 0
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
+[v _instCTRL instCTRL `(v  1 e 0 0 ]
+{
+[v instCTRL@CMD CMD `uc  1 a 1 wreg ]
+[v instCTRL@CMD CMD `uc  1 a 1 wreg ]
+"19
+[v instCTRL@CMD CMD `uc  1 a 1 1 ]
+"25
+} 0
+"28 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+[v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
+{
+"35
+} 0
+"37
+[v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
+{
+"40
+[v CalcMQ135@ratio ratio `f  1 a 3 36 ]
+"50
+[v CalcMQ135@co2 co2 `f  1 a 3 33 ]
+"46
+[v CalcMQ135@ratio5 ratio5 `f  1 a 3 30 ]
+"45
+[v CalcMQ135@ratio4 ratio4 `f  1 a 3 27 ]
+"44
+[v CalcMQ135@ratio3 ratio3 `f  1 a 3 24 ]
+"43
+[v CalcMQ135@ratio2 ratio2 `f  1 a 3 21 ]
+"47
+[v CalcMQ135@ratio6 ratio6 `f  1 a 3 3 ]
+"39
+[v CalcMQ135@voltage voltage `f  1 a 3 0 ]
+"37
+[v CalcMQ135@RAW_ADC RAW_ADC `i  1 p 2 62 ]
+"55
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 41 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 45 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 44 ]
+[v ___ftmul@exp exp `uc  1 a 1 40 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 30 ]
+[v ___ftmul@f2 f2 `f  1 p 3 33 ]
+"157
+} 0
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"52
+[v ___ftdiv@f3 f3 `f  1 a 3 57 ]
+"51
+[v ___ftdiv@sign sign `uc  1 a 1 61 ]
+[v ___ftdiv@exp exp `uc  1 a 1 60 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 56 ]
+"49
+[v ___ftdiv@f2 f2 `f  1 p 3 46 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 49 ]
+"78
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 29 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 28 ]
+[v ___ftadd@sign sign `uc  1 a 1 27 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 17 ]
+[v ___ftadd@f2 f2 `f  1 p 3 20 ]
+"148
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"97 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _ISR ISR `II(v  1 e 0 0 ]
+{
+"107
+} 0
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
+[v i1_instCTRL instCTRL `(v  1 e 0 0 ]
+{
+[v i1instCTRL@CMD CMD `uc  1 a 1 wreg ]
+[v i1instCTRL@CMD CMD `uc  1 a 1 wreg ]
+"19
+[v i1instCTRL@CMD CMD `uc  1 a 1 1 ]
+"25
+} 0

@@ -2,31 +2,57 @@
 // Global variables
 typedef enum
 {
-    DISP_CMN = 0,
-    SET_ACTV = 1
+    DISP_CMN = 0, // Show status (PPM, T, H, Time, etc.)
+    SET_ACTV = 1  // Set active hours of operation for peripherals
 } MODE;
+
+typedef enum
+{
+    PG1 = 0, // Page 1
+    PG2 = 1  // Page 2
+} SEL;
+
+SEL checkSel(void); // Check selection
+
 volatile MODE mode = DISP_CMN;
-volatile MODE lastMode = -1;                 // To track mode changes
-int ACTV_HOURS = 0, DEF_HOURS = 8;  // Active hours, default hours
-int ACTV_MINS = 0, DEF_MINUTES = 0; // Active mins, default minutes
+volatile MODE lastMode = -1;          // To track mode changes
+volatile SEL sel = PG1;               // To track page changes
+volatile SEL lastSel = -1;            // To track page changes
+unsigned char lastSelButtonState = 1; // To track page changes
+int ACTV_HOURS = 8, DEF_HOURS = 8;    // Active hours, default hours
+int ACTV_MINS = 0, DEF_MINUTES = 0;   // Active mins, default minutes
+volatile float PPM = 0.0;             // PPM value
 
 void main(void)
 {
-    TRISA = 0xFF;            // Set PORTA as input
-    TRISB = 0x03;            // Set RB0, RB1 as input
-    TRISC = 0x00;            // Set PORTC as output
-    TRISD = 0x00;            // Set PORTD as output
-    OPTION_REG = 0b11000000; // Configure OPTION_REG settings if needed
+    TRISA = 0xFF; // Set PORTA as input
+    TRISB = 0xFB; // Set RB0, RB1 as input (RB0 - MODE; RB1 - SELECT, RB3 - DAVBL)
+    TRISC = 0x00; // Set PORTC as output
+    TRISD = 0x00; // Set PORTD as output
+    OPTION_REG = 0b11000000;
+    PORTA = 0x00; // Clear PORTA initially
+    PORTB = 0x00; // Clear PORTB initially
+    PORTC = 0x00; // Clear PORTC initially
+    PORTD = 0x00; // Clear PORTD initially
 
     initADC();
     initLCD();
     initInterrupt();
+    printToLCD("INITIALIZING...");
     __delay_ms(250);
+    instCTRL(0x01); // Clear display
+    __delay_ms(50);
     while (1)
-    {   
+    {
         checkMode();
+        checkSelButton();
         runTime();
-        updateDisplay();
+        // updateDisplay();
+        /*
+            LOGIC TO TURN ON PERIPHERALS
+            // A: Active Hours Logic
+            // B: Sensor Parameters Logic
+        */
     }
 }
 
@@ -49,9 +75,9 @@ void interrupt ISR(void)
 {
     GIE = 0; // Disable global interrupt
     if (INTF == 1)
-    {    
-        INTF = 0; // Clear interrupt flag
-        mode = (mode + 1) % 3; // Change mode
+    {
+        INTF = 0;              // Clear interrupt flag
+        mode = (mode + 1) % 2; // Change mode
     }
     GIE = 1; // Enable global interrupt
 }
@@ -61,22 +87,38 @@ void updateDisplay(void)
     __delay_ms(50);
     instCTRL(0x80);
     instCTRL(0x0C);
-    if (mode == DISP_CMN)
+    switch (mode)
     {
-        printToLCD("MODE: DISP STATS");
-        instCTRL(0xC0);
-        //displayRawADC();
-        displayPPM();
-        instCTRL(0x94);
-        displayTime();
-    }
-    else if (mode == SET_ACTV)
-    {
+    case DISP_CMN:
+        switch (sel)
+        {
+        case PG1:
+            printToLCD("MODE: DISPLAY STAT");
+            instCTRL(0xC0);
+            displayPPM();
+            instCTRL(0x94);
+            displayTime();
+            break; // Added missing break
+        case PG2:
+            printToLCD("MODE: ADDITIONAL INFO");
+            instCTRL(0xC0);
+            // Example additional info display function calls
+            // You can add more specific display functions here
+            break; // Added missing break
+        }
+        break; // Ensure this break is present to avoid falling into SET_ACTV
+    case SET_ACTV:
         printToLCD("MODE: SET ACTIVE HRS");
         instCTRL(0xC0);
-        displayPPM();
+        displayTime();
+        // Additional active hours set up code can go here
+        break;
+    default:
+        printToLCD("ERROR!");
+        break;
     }
-    __delay_ms(500);
+    // PPM handling should ideally be separate if it is to be updated continuously
+    checkSensors();
 }
 
 void checkMode(void)
@@ -91,12 +133,54 @@ void checkMode(void)
 }
 
 // Debug function to display raw ADC reading
-void displayRawADC()
+void displayRawADC() // debugging function
 {
     int rawADC = Read_ADC_MQ135();
     char buffer[30];
     sprintf(buffer, "ADC: %d   ", rawADC);
     printToLCD(buffer);
+}
+
+void checkSensors(void)
+{
+    // Check PPM value
+    if (PPM > 9)
+    {
+        RB2 = 1; // TURN ON 12V device, clear if relay is active low
+        instCTRL(0xD4);
+        printToLCD("PPM HIGH! ");
+    }
+    else
+    {
+        RB2 = 0; // // TURN ON 12V device, set if relay is active low
+        instCTRL(0xD4);
+        printToLCD("ENV STABLE");
+    }
+}
+
+SEL checkSel(void)
+{
+    if (sel != lastSel)
+    {
+        instCTRL(0x01); // Clear display only on page change
+        __delay_ms(50);
+        instCTRL(0x80);
+        lastSel = sel;
+    }
+}
+
+void checkSelButton(void)
+{
+    if (SEL_BUTTON == 0 && lastSelButtonState == 1)
+    {
+        __delay_ms(20); // Debounce delay
+        if (SEL_BUTTON == 0)
+        {
+            sel = (sel + 1) % 2; // Toggle selection state
+            updateDisplay();     // Ensure display is updated right after the change
+        }
+    }
+    lastSelButtonState = SEL_BUTTON; // Update the last known state
 }
 
 // PIC16F877A specific functions END
@@ -148,7 +232,8 @@ inline int Read_ADC_MQ135()
 {
     __delay_ms(100);
     GO_DONE = 1;
-    while (GO_DONE);
+    while (GO_DONE)
+        ;
     return ((ADRESH << 8) + ADRESL);
 }
 
@@ -175,11 +260,11 @@ float CalcMQ135(int RAW_ADC)
 void displayPPM()
 {
     char strBuffer[50];
-    float PPM = CalcMQ135(Read_ADC_MQ135());
+    PPM = CalcMQ135(Read_ADC_MQ135());
     int ppmWhole = (int)PPM;                         // Extract the whole part of the PPM value
     int ppmFraction = (int)((PPM - ppmWhole) * 100); // Extract fractional part
 
-    // Build the string manually
+    // Build the string manually to reduce program space allocation
     char *bufPtr = strBuffer;
     bufPtr += sprintf(bufPtr, "CO2: ");        // Use sprintf to start the string for simplicity
     bufPtr += sprintf(bufPtr, "%d", ppmWhole); // Add the whole part
@@ -190,24 +275,15 @@ void displayPPM()
 
     printToLCD(strBuffer);
 }
-
 // MQ135 sensor functions END
 
 // Scheduler functions START
-void setDefaultHours()
+void setDefaultHours() // TODO: Revise this function
 {
-    if (ACTV_HOURS == 0)
-    {
-        ACTV_HOURS = DEF_HOURS;
-    }
 }
 
-void setDefaultMinutes()
+void setDefaultMinutes() // TODO: Revise this function
 {
-    if (ACTV_MINS == 0)
-    {
-        ACTV_MINS = DEF_MINUTES;
-    }
 }
 // Scheduler functions END
 

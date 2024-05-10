@@ -1,11 +1,12 @@
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
+
 #include <xc.h>
 #include <stdio.h>
 //#include <math.h>
 //ISSUE: math.h library causes stack overflow problems(calls on the pow() function), do not use.
 
-// LCD Definitions
+// LCD Definitions. Change when necessary
 #define RS RC0
 #define RW RC1
 #define EN RC2
@@ -35,30 +36,31 @@
 
 // Oscillator frequency
 #define _XTAL_FREQ 4000000 // 4 MHz
+#define SEL_BUTTON RB1
 
 // Function prototypes specific for PIC16F877A
-void initADC(void);
-void initInterrupt(void);
-void interrupt ISR(void);
-void updateDisplay(void);
-void checkMode(void);
-void displayRawADC(void);
+void initADC(void);         // Initialize ADC
+void initInterrupt(void);   // Initialize Interrupt
+void interrupt ISR(void);   // Interrupt Service Routine
+void updateDisplay(void);   // Update display
+void checkMode(void);       // Check mode
+void displayRawADC(void);   // Display raw ADC reading
+void checkSensors(void);
+void checkSelButton(void);
 // Function prototypes for MQ135 sensor
-void displayPPM(void);
-inline int Read_ADC_MQ135();
-float CalcMQ135(int RAW_ADC);
+void displayPPM(void);          // Display PPM
+inline int Read_ADC_MQ135();    // Read ADC
+float CalcMQ135(int RAW_ADC);   // Calculate MQ135
 // Function prototypes for LCD
-void instCTRL(unsigned char CMD);
-void dataCTRL(unsigned char DAT);
-void initLCD();
-void printToLCD(const unsigned char *str);
+void instCTRL(unsigned char CMD);   // Instruction Control
+void dataCTRL(unsigned char DAT);   // Data Control
+void initLCD();                     // Initialize LCD
+void printToLCD(const unsigned char *str);  // Print to LCD
 // Function prototypes for TIME
 void setDefaultHours();
 void setDefaultMinutes();
 void displayTime();
 void runTime();
-
-// Precomputed values for MQ135 sensor
-// Adjusted constants with scaling factor of 1024
+// Funtion prototypes for DHT11
 
 #endif

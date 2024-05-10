@@ -3,10 +3,15 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"8 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
-[e E1184 . `uc
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+[e E1188 . `uc
 DISP_CMN 0
 SET_ACTV 1
+]
+"19
+[e E1192 . `uc
+PG1 0
+PG2 1
 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
@@ -112,43 +117,55 @@ SET_ACTV 1
 [v ___fltoee __fltoee `(d  1 e 3 0 ]
 "49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"13 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+"26 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
 [v _main main `(v  1 e 0 0 ]
-"34
+"60
 [v _initADC initADC `(v  1 e 0 0 ]
-"40
+"66
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]
-"48
+"74
 [v _ISR ISR `II(v  1 e 0 0 ]
-"59
+"85
 [v _updateDisplay updateDisplay `(v  1 e 0 0 ]
-"82
+"124
 [v _checkMode checkMode `(v  1 e 0 0 ]
-"94
+"136
 [v _displayRawADC displayRawADC `(v  1 e 0 0 ]
-"105
+"144
+[v _checkSensors checkSensors `(v  1 e 0 0 ]
+"161
+[v _checkSel checkSel `(E1192  1 e 1 0 ]
+"172
+[v _checkSelButton checkSelButton `(v  1 e 0 0 ]
+"189
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
-"115
+"199
 [v _dataCTRL dataCTRL `(v  1 e 0 0 ]
-"125
+"209
 [v _initLCD initLCD `(v  1 e 0 0 ]
-"135
+"219
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
-"147
+"231
 [v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
-"155
+"240
 [v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
-"175
+"260
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
-"197
+"281
 [v _setDefaultHours setDefaultHours `(v  1 e 0 0 ]
-"205
+"285
 [v _setDefaultMinutes setDefaultMinutes `(v  1 e 0 0 ]
-"215
+"291
 [v _displayTime displayTime `(v  1 e 0 0 ]
-"222
+"298
 [v _runTime runTime `(v  1 e 0 0 ]
-"329 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+"158 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"207
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"268
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"329
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "1116
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
@@ -188,6 +205,10 @@ SET_ACTV 1
 [v _INTEDG INTEDG `VEb  1 e 0 @1038 ]
 "2465
 [v _INTF INTF `VEb  1 e 0 @89 ]
+"2513
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2515
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
 "2531
 [v _RC0 RC0 `VEb  1 e 0 @56 ]
 "2533
@@ -202,55 +223,86 @@ SET_ACTV 1
 [v _WREN WREN `VEb  1 e 0 @3170 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
-"8 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
-[v _mode mode `VEE1184  1 e 1 0 ]
-"9
-[v _lastMode lastMode `VEE1184  1 e 1 0 ]
-"10
+"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+[v _mode mode `VEE1188  1 e 1 0 ]
+"18
+[v _lastMode lastMode `VEE1188  1 e 1 0 ]
+"19
+[v _sel sel `VEE1192  1 e 1 0 ]
+"20
+[v _lastSel lastSel `VEE1192  1 e 1 0 ]
+"21
+[v _lastSelButtonState lastSelButtonState `uc  1 e 1 0 ]
+"22
 [v _ACTV_HOURS ACTV_HOURS `i  1 e 2 0 ]
 [v _DEF_HOURS DEF_HOURS `i  1 e 2 0 ]
-"11
+"23
 [v _ACTV_MINS ACTV_MINS `i  1 e 2 0 ]
 [v _DEF_MINUTES DEF_MINUTES `i  1 e 2 0 ]
-"13
+"24
+[v _PPM PPM `VEf  1 e 3 0 ]
+"26
 [v _main main `(v  1 e 0 0 ]
 {
-"31
+"57
 } 0
-"59
-[v _updateDisplay updateDisplay `(v  1 e 0 0 ]
+"298
+[v _runTime runTime `(v  1 e 0 0 ]
 {
-"80
+"311
 } 0
-"215
-[v _displayTime displayTime `(v  1 e 0 0 ]
+"209
+[v _initLCD initLCD `(v  1 e 0 0 ]
 {
 "217
-[v displayTime@time time `[20]uc  1 a 20 37 ]
-"220
 } 0
-"175
+"66
+[v _initInterrupt initInterrupt `(v  1 e 0 0 ]
+{
+"72
+} 0
+"60
+[v _initADC initADC `(v  1 e 0 0 ]
+{
+"64
+} 0
+"172
+[v _checkSelButton checkSelButton `(v  1 e 0 0 ]
+{
+"184
+} 0
+"85
+[v _updateDisplay updateDisplay `(v  1 e 0 0 ]
+{
+"122
+} 0
+"291
+[v _displayTime displayTime `(v  1 e 0 0 ]
+{
+"293
+[v displayTime@time time `[20]uc  1 a 20 37 ]
+"296
+} 0
+"260
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
 {
-"177
+"262
 [v displayPPM@strBuffer strBuffer `[50]uc  1 a 50 0 ]
-"178
-[v displayPPM@PPM PPM `f  1 a 3 50 ]
-"180
-[v displayPPM@ppmFraction ppmFraction `i  1 a 2 55 ]
-"179
-[v displayPPM@ppmWhole ppmWhole `i  1 a 2 53 ]
-"183
-[v displayPPM@bufPtr bufPtr `*.5uc  1 a 1 57 ]
-"192
+"265
+[v displayPPM@ppmFraction ppmFraction `i  1 a 2 52 ]
+"264
+[v displayPPM@ppmWhole ppmWhole `i  1 a 2 50 ]
+"268
+[v displayPPM@bufPtr bufPtr `*.5uc  1 a 1 54 ]
+"277
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S177 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+[s S201 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
 "533
-[u S180 . 4 `ui 1 _val 2 0 `S177 1 _str 4 0 ]
-[v sprintf@_val _val `S180  1 a 4 28 ]
+[u S204 . 4 `ui 1 _val 2 0 `S201 1 _str 4 0 ]
+[v sprintf@_val _val `S204  1 a 4 28 ]
 "501
 [v sprintf@width width `i  1 a 2 33 ]
 "510
@@ -301,28 +353,13 @@ SET_ACTV 1
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
 "12
-[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+[v ___lwdiv@counter counter `uc  1 a 1 5 ]
 "6
 [v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "31
-} 0
-"135 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
-[v _printToLCD printToLCD `(v  1 e 0 0 ]
-{
-[v printToLCD@str str `*.26DCCuc  1 p 2 2 ]
-"143
-} 0
-"115
-[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
-{
-[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
-[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
-"117
-[v dataCTRL@DAT DAT `uc  1 a 1 1 ]
-"123
 } 0
 "44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -342,33 +379,33 @@ SET_ACTV 1
 [v ___ftneg@f1 f1 `f  1 p 3 14 ]
 "20
 } 0
-"147 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+"231 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
 [v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
 {
-"153
+"238
 } 0
-"155
+"240
 [v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
 {
-"158
+"243
 [v CalcMQ135@ratio ratio `f  1 a 3 36 ]
-"168
+"253
 [v CalcMQ135@co2 co2 `f  1 a 3 33 ]
-"164
+"249
 [v CalcMQ135@ratio5 ratio5 `f  1 a 3 30 ]
-"163
+"248
 [v CalcMQ135@ratio4 ratio4 `f  1 a 3 27 ]
-"162
+"247
 [v CalcMQ135@ratio3 ratio3 `f  1 a 3 24 ]
-"161
+"246
 [v CalcMQ135@ratio2 ratio2 `f  1 a 3 21 ]
-"165
+"250
 [v CalcMQ135@ratio6 ratio6 `f  1 a 3 3 ]
-"157
+"242
 [v CalcMQ135@voltage voltage `f  1 a 3 0 ]
-"155
+"240
 [v CalcMQ135@RAW_ADC RAW_ADC `i  1 p 2 62 ]
-"173
+"258
 } 0
 "62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
@@ -427,53 +464,49 @@ SET_ACTV 1
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"222 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
-[v _runTime runTime `(v  1 e 0 0 ]
+"144 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+[v _checkSensors checkSensors `(v  1 e 0 0 ]
 {
-"235
+"159
 } 0
-"125
-[v _initLCD initLCD `(v  1 e 0 0 ]
+"219
+[v _printToLCD printToLCD `(v  1 e 0 0 ]
+{
+[v printToLCD@str str `*.26DCCuc  1 p 2 2 ]
+"227
+} 0
+"199
+[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
+{
+[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
+[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
+"201
+[v dataCTRL@DAT DAT `uc  1 a 1 1 ]
+"207
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"124 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\mq135-scheduling\main.c
+[v _checkMode checkMode `(v  1 e 0 0 ]
 {
 "133
 } 0
-"40
-[v _initInterrupt initInterrupt `(v  1 e 0 0 ]
-{
-"46
-} 0
-"34
-[v _initADC initADC `(v  1 e 0 0 ]
-{
-"38
-} 0
-"82
-[v _checkMode checkMode `(v  1 e 0 0 ]
-{
-"91
-} 0
-"105
+"189
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
 {
 [v instCTRL@CMD CMD `uc  1 a 1 wreg ]
 [v instCTRL@CMD CMD `uc  1 a 1 wreg ]
-"107
+"191
 [v instCTRL@CMD CMD `uc  1 a 1 1 ]
-"113
+"197
 } 0
-"48
+"74
 [v _ISR ISR `II(v  1 e 0 0 ]
 {
-"57
-} 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"11
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
-"6
-[v ___awmod@divisor divisor `i  1 p 2 0 ]
-[v ___awmod@dividend dividend `i  1 p 2 2 ]
-"35
+"83
 } 0
