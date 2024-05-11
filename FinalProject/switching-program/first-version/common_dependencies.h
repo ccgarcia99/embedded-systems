@@ -3,6 +3,7 @@
 
 #include <xc.h>
 #include <stdio.h>
+#include <stdint.h>
 #pragma config FOSC = HS   // High Speed Oscillator
 #pragma config WDTE = OFF  // Watchdog Timer Disabled
 #pragma config PWRTE = OFF // Power-up Timer Disabled
