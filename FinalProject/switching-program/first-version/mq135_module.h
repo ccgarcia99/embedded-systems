@@ -20,10 +20,60 @@
 
 volatile float PPM = 0.0;
 
-void displayPPM(int ppmHandler);        // Display PPM
-int handlePPM(void);         // Handle PPM
-inline int Read_ADC_MQ135();  // Read ADC
-float CalcMQ135(int RAW_ADC); // Calculate MQ135
+void displayPPM();                 // Display PPM
+bool handlePPM();                  // Handle PPM
+void printStatusPPM(bool handler); // Print status of PPM
+void runMQ135();                   // Run MQ135
+inline int Read_ADC_MQ135();       // Read ADC
+float CalcMQ135(int RAW_ADC);      // Calculate MQ135
+
+void runMQ135()
+{
+    PPM = CalcMQ135(Read_ADC_MQ135());
+}
+
+void displayPPM()
+{
+    char strBuffer[50];
+    int ppmWhole = (int)PPM;                         // Extract the whole part of the PPM value
+    int ppmFraction = (int)((PPM - ppmWhole) * 100); // Extract fractional part
+
+    // Build the string manually to reduce program space allocation
+    char *bufPtr = strBuffer;
+    bufPtr += sprintf(bufPtr, "CO2: ");        // Use sprintf to start the string for simplicity
+    bufPtr += sprintf(bufPtr, "%d", ppmWhole); // Add the whole part
+    *bufPtr++ = '.';                           // Manually place decimal point
+    if (ppmFraction < 10)
+        *bufPtr++ = '0';                      // Add leading zero if necessary
+    sprintf(bufPtr, "%d ppm  ", ppmFraction); // Add the fractional part and units
+    printToLCD(strBuffer);
+}
+
+bool handlePPM()
+{
+    if (PPM > PPM_THRESHOLD)
+    {
+        AIRPURIFIER_EN = 1;
+        return true;
+    }
+    else
+    {
+        AIRPURIFIER_EN = 0;
+        return false;
+    }
+}
+
+void printStatusPPM(bool handler)
+{
+    if (handler == true)
+    {
+        printToLCD("PURF HI"); // Status: Purifier ON
+    }
+    else if (handler == false)
+    {
+        printToLCD("PURF LO"); // Status: Purifier OFF
+    }
+}
 
 inline int Read_ADC_MQ135()
 {
@@ -52,49 +102,6 @@ float CalcMQ135(int RAW_ADC)
 
     co2 *= ATMOCO2; // Adjust based on atmospheric CO2 level
     return co2;
-}
-
-void displayPPM(int ppmHandler)
-{
-    char strBuffer[50];
-    //PPM = CalcMQ135(Read_ADC_MQ135());
-    int ppmWhole = (int)PPM;                         // Extract the whole part of the PPM value
-    int ppmFraction = (int)((PPM - ppmWhole) * 100); // Extract fractional part
-
-    // Build the string manually to reduce program space allocation
-    char *bufPtr = strBuffer;
-    bufPtr += sprintf(bufPtr, "CO2: ");        // Use sprintf to start the string for simplicity
-    bufPtr += sprintf(bufPtr, "%d", ppmWhole); // Add the whole part
-    *bufPtr++ = '.';                           // Manually place decimal point
-    if (ppmFraction < 10)
-        *bufPtr++ = '0';                      // Add leading zero if necessary
-    sprintf(bufPtr, "%d ppm  ", ppmFraction); // Add the fractional part and units
-    printToLCD(strBuffer);
-    switch (ppmHandler)
-    {
-    case 0:
-        instCTRL(0x94);
-        printToLCD("Air Purifier OFF");
-        break;
-    case 1:
-        instCTRL(0x94);
-        printToLCD("Air Purifier ON ");
-        break;
-    }
-}
-
-int handlePPM()
-{
-    if(PPM > PPM_THRESHOLD)
-    {
-        AIRPURIFIER_EN = 1;
-        return 1;
-    }
-    else
-    {
-        AIRPURIFIER_EN = 0;
-        return 0;
-    }
 }
 
 #endif // MQ135_MODULE_H

@@ -3,13 +3,23 @@
 
 #include "common_dependencies.h"
 
+// KEY MASKS
+#define INCREMENT 0b00001100
+#define DECREMENT 0b00001110
+#define SET 0b00001101
+
 // Global variables
-volatile uint8_t hours = 8;
+volatile uint8_t hours = 4;
 volatile uint8_t minutes = 0;
 volatile uint8_t savedHoursStart = 9;
 volatile uint8_t savedMinutesStart = 30;
 volatile uint8_t savedHoursEnd = 10;
 volatile uint8_t savedMinutesEnd = 30;
+
+static char debugInfo[10];
+static unsigned char lastKeyState = 0xFF;
+unsigned char keyValid;
+unsigned char key;
 
 // function prototypes
 void runClock(void);        // Run clock
@@ -44,30 +54,65 @@ void displayTime(void)
 
 void setHoursStart(void)
 {
-    static char debugInfo[10];
-    static unsigned char lastKeyState = 0xFF;
-
-    unsigned char keyValid = (PORTB & 0x08) >> 3;
-    unsigned char key = (PORTB & 0xF0) >> 4;
+    keyValid = (PORTB & 0x08) >> 3;
+    key = (PORTB & 0xF0) >> 4;
 
     __delay_ms(50); // Debounce delay.
 
     if (keyValid && key != lastKeyState)
     {
-        if (key == 0b00001100) // Increment
+        if (key == INCREMENT) // Increment
         {
             savedHoursStart = (savedHoursStart + 1) % 24;
             sprintf(debugInfo, "INC: %02d", savedHoursStart);
         }
-        else if (key == 0b00001110) // Decrement
+        else if (key == DECREMENT) // Decrement
         {
             savedHoursStart = (savedHoursStart - 1 + 24) % 24;
             sprintf(debugInfo, "DEC: %02d", savedHoursStart);
         }
-        else if (key == 0b00001101) // Set/Save
+        else if (key == SET) // Set/Save
         {
             sprintf(debugInfo, "SET: %02d", savedHoursStart);
-            savedHoursEnd = savedHoursStart + 2;
+            //savedHoursEnd = savedHoursStart + 2;
+        }
+
+        printToLCD(debugInfo);
+        lastKeyState = key;
+
+        while ((PORTB & 0x08) != 0)
+        {
+            __delay_ms(10);
+        }
+    }
+    else if (!keyValid)
+    {
+        lastKeyState = 0xFF;
+    }
+}
+
+void setHoursEnd(void)
+{
+    keyValid = (PORTB & 0x08) >> 3;
+    key = (PORTB & 0xF0) >> 4;
+
+    __delay_ms(50); // Debounce delay.
+
+    if (keyValid && key != lastKeyState)
+    {
+        if (key == INCREMENT) // Increment
+        {
+            savedHoursEnd = (savedHoursEnd + 1) % 24;
+            sprintf(debugInfo, "INC: %02d", savedHoursEnd);
+        }
+        else if (key == DECREMENT) // Decrement
+        {
+            savedHoursEnd = (savedHoursEnd - 1 + 24) % 24;
+            sprintf(debugInfo, "DEC: %02d", savedHoursEnd);
+        }
+        else if (key == SET) // Set/Save
+        {
+            sprintf(debugInfo, "SET: %02d", savedHoursEnd);
         }
 
         printToLCD(debugInfo);
@@ -86,29 +131,64 @@ void setHoursStart(void)
 
 void setMinutesStart(void)
 {
-    static char debugInfo[10];
-    static unsigned char lastKeyState = 0xFF;
-
-    unsigned char keyValid = (PORTB & 0x08) >> 3;
-    unsigned char key = (PORTB & 0xF0) >> 4;
+    keyValid = (PORTB & 0x08) >> 3;
+    key = (PORTB & 0xF0) >> 4;
 
     __delay_ms(50); // Debounce delay.
 
     if (keyValid && key != lastKeyState)
     {
-        if (key == 0b00001100) // Increment by 5
+        if (key == INCREMENT) // Increment by 5
         {
             savedMinutesStart = (savedMinutesStart + 5) % 60;
             sprintf(debugInfo, "INC: %02d", savedMinutesStart);
         }
-        else if (key == 0b00001110) // Decrement by 5
+        else if (key == DECREMENT) // Decrement by 5
         {
             savedMinutesStart = (savedMinutesStart - 5 + 60) % 60;
             sprintf(debugInfo, "DEC: %02d", savedMinutesStart);
         }
-        else if (key == 0b00001101) // Set/Save
+        else if (key == SET) // Set/Save
         {
             sprintf(debugInfo, "SET: %02d", savedMinutesStart);
+        }
+
+        printToLCD(debugInfo);
+        lastKeyState = key;
+
+        while ((PORTB & 0x08) != 0)
+        {
+            __delay_ms(10);
+        }
+    }
+    else if (!keyValid)
+    {
+        lastKeyState = 0xFF;
+    }
+}
+
+void setMinutesEnd(void)
+{
+    keyValid = (PORTB & 0x08) >> 3;
+    key = (PORTB & 0xF0) >> 4;
+
+    __delay_ms(50); // Debounce delay.
+
+    if (keyValid && key != lastKeyState)
+    {
+        if (key == INCREMENT) // Increment by 5
+        {
+            savedMinutesEnd = (savedMinutesEnd + 5) % 60;
+            sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
+        }
+        else if (key == DECREMENT) // Decrement by 5
+        {
+            savedMinutesEnd = (savedMinutesEnd - 5 + 60) % 60;
+            sprintf(debugInfo, "DEC: %02d", savedMinutesEnd);
+        }
+        else if (key == SET) // Set/Save
+        {
+            sprintf(debugInfo, "SET: %02d", savedMinutesEnd);
         }
 
         printToLCD(debugInfo);

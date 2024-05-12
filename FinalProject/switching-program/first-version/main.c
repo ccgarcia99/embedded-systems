@@ -5,15 +5,17 @@
 
 typedef enum
 {
-    DISP_CMN = 0, // Show status(PPM, T, H, Time)
-    SET_ACTV_START = 1,  // Set active hours for the device peripherals
-    SET_ACTV_END = 2    // Set active hours for the device peripherals
+    DISP_CMN = 0,       // Show status(PPM, T, H, Time)
+    SET_ACTV_START = 1, // Set active hours for the device peripherals
+    SET_ACTV_END = 2,   // Set active hours for the device peripherals
+    CHCK_IO = 3         // Check IO status
 } MODE;
 
 MODE mode = DISP_CMN;
 MODE lastMode = -1;
 volatile unsigned char select = 0;
-int ppmHandler = 0;
+bool ppmFlag = 0;
+
 
 // Function prototypes
 void startUpLCD(void);        // Start up sequence for LCD
@@ -34,13 +36,13 @@ void main(void)
     __delay_ms(250);
     while (1)
     {
-        runClock();                        // Run clock
-        checkTime();                       // Check time
-        PPM = CalcMQ135(Read_ADC_MQ135()); // Calculate PPM
-        ppmHandler = handlePPM();          // Handle PPM
-        checkSelect();                     // Check select
-        checkMode();                       // Check mode
-        updateState();                     // Update state
+        runClock();            // Run clock
+        checkTime();           // Check time
+        runMQ135();            // Run MQ135
+        ppmFlag = handlePPM(); // Handle PPM
+        checkSelect();         // Check select
+        checkMode();           // Check mode
+        updateState();         // Update state
     }
 }
 
@@ -65,9 +67,9 @@ void initADC(void)
 
 void startUpLCD(void)
 {
-    initLCD();          // Initialize LCD
-    instCTRL(0x80);     // Set cursor to first line
-    printToLCD("TEST"); // Print to LCD
+    initLCD();            // Initialize LCD
+    instCTRL(0x80);       // Set cursor to first line
+    printToLCD("PWR ON"); // Print to LCD
 }
 
 void initInterrupt(void)
@@ -84,7 +86,7 @@ void interrupt ISR(void)
     if (INTF == 1)
     {
         INTF = 0;              // Clear interrupt flag
-        mode = (mode + 1) % 3; // Change mode - change the value of the operand to the number of modes
+        mode = (mode + 1) % 4; // Change mode - change the value of the operand to the number of modes
     }
     instCTRL(0x01); // Clear display only on mode change
     GIE = 1;        // Enable global interrupt
@@ -104,19 +106,24 @@ void updateState(void)
         case 0:
             printToLCD("DISP CMMON PG1");
             instCTRL(0xC0);
-            displayPPM(ppmHandler);
-            // displayTime();
+            displayTime();
+            instCTRL(0x94);
+            sprintf(buffer, "STRT: %2d:%2d", savedHoursStart, savedMinutesStart);
+            printToLCD(buffer);
+            instCTRL(0xD4);
+            sprintf(buffer, "END: %2d:%2d", savedHoursEnd, savedMinutesEnd);
+            printToLCD(buffer);
             break;
         case 1:
             printToLCD("DISP CMMON PG2");
             instCTRL(0xC0);
-            displayTime();
+            displayPPM();
             break;
         }
         break;
     case SET_ACTV_START: // Set START active hours for the device peripherals
         instCTRL(0x80);
-        printToLCD("MODE: SET ACTV HRS");
+        printToLCD("SET HRS - START");
         switch (select)
         {
         case 0:
@@ -132,6 +139,31 @@ void updateState(void)
             setMinutesStart();
             break;
         }
+        break;
+    case SET_ACTV_END: // Set END active hours for the device peripherals
+        instCTRL(0x80);
+        printToLCD("SET HRS - END");
+        switch (select)
+        {
+        case 0:
+            instCTRL(0xC0);
+            printToLCD("SET HOURS");
+            instCTRL(0x94);
+            setHoursEnd();
+            break;
+        case 1:
+            instCTRL(0xC0);
+            printToLCD("SET MINUTES");
+            instCTRL(0x94);
+            setMinutesEnd();
+            break;
+        }
+        break;
+    case CHCK_IO: // Check IO status
+        instCTRL(0x80);
+        printToLCD("CHCK IO");
+        instCTRL(0xC0);
+        printStatusPPM(ppmFlag);
         break;
     default:
         break;
