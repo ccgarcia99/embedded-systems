@@ -1,11 +1,34 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1122 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
-[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+[p mainexit ]
+"1396 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"1457
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"268
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"30 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
+[v _initADC `(v ~T0 @X0 0 ef ]
+"26
+[v _initLCD `(v ~T0 @X0 0 ef ]
+"24
+[v _instCTRL `(v ~T0 @X0 0 ef1`uc ]
+"27
+[v _printToLCD `(v ~T0 @X0 0 ef1`*Cuc ]
+"31
+[v _readADC `(ui ~T0 @X0 0 ef1`uc ]
+"205 C:\Program Files (x86)\Microchip\xc8\v1.33\include\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 [v F1089 `(v ~T0 @X0 1 tf1`ul ]
 "154 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic.h
 [v __delay `JF1089 ~T0 @X0 0 e ]
 [p i __delay ]
-"2445 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+"1286 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"2173
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"1122
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"2445
 [v _GO_DONE `Vb ~T0 @X0 0 e@250 ]
 "1116
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
@@ -19,60 +42,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RC1 `Vb ~T0 @X0 0 e@57 ]
 "2535
 [v _RC2 `Vb ~T0 @X0 0 e@58 ]
-"28 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
-[v _CalcMQ135 `(f ~T0 @X0 0 ef1`i ]
-"205 C:\Program Files (x86)\Microchip\xc8\v1.33\include\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"2537 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
-[v _RC3 `Vb ~T0 @X0 0 e@59 ]
-"207
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"2539
-[v _RC4 `Vb ~T0 @X0 0 e@60 ]
-"2541
-[v _RC5 `Vb ~T0 @X0 0 e@61 ]
-"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
-[c E1279 0 1 2 3 .. ]
-[n E1279 . DISP_CMN SET_ACTV_START SET_ACTV_END CHCK_IO  ]
-[p mainexit ]
-"21
-[v _setPortDirections `(v ~T0 @X0 0 ef ]
-"22
-[v _initADC `(v ~T0 @X0 0 ef ]
-"23
-[v _initInterrupt `(v ~T0 @X0 0 ef ]
-"20
-[v _startUpLCD `(v ~T0 @X0 0 ef ]
-"26
-[v _checkSelect `(v ~T0 @X0 0 ef ]
-"25
-[v _checkMode `(v ~T0 @X0 0 ef ]
-"27
-[v _updateState `(v ~T0 @X0 0 ef ]
-"1286 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
-[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-"1335
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"1396
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"1457
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"158
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"268
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"2173
-[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
-"2441
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
-"2461
-[v _INTE `Vb ~T0 @X0 0 e@92 ]
-"2465
-[v _INTF `Vb ~T0 @X0 0 e@89 ]
-"2463
-[v _INTEDG `Vb ~T0 @X0 0 e@1038 ]
-"2513
-[v _RB1 `Vb ~T0 @X0 0 e@49 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f877a.h: 47: extern volatile unsigned char INDF @ 0x000;
@@ -1148,1940 +1117,317 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-"9 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h
+"6 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
 [p x FOSC=HS ]
-"10
+"7
 [p x WDTE=OFF ]
-"11
+"8
 [p x PWRTE=OFF ]
-"12
+"9
 [p x BOREN=ON ]
-"13
+"10
 [p x LVP=OFF ]
-"14
+"11
 [p x CPD=OFF ]
-"15
+"12
 [p x WRT=OFF ]
-"16
-[p x CP=OFF ]
-[; ;common_dependencies.h: 21: inline int readADC(char channel);
-[v F1185 `(i ~T0 @X0 1 tf1`uc ]
-"23
-[v _readADC `TF1185 ~T0 @X0 1 e ]
-"24
-{
-[; ;common_dependencies.h: 23: inline int readADC(char channel)
-[; ;common_dependencies.h: 24: {
-[e :U _readADC ]
-"23
-[v _channel `uc ~T0 @X0 1 r1 ]
-"24
-[f ]
-[; ;common_dependencies.h: 25: ADCON0 &= 0xC3;
-"25
-[e =& _ADCON0 -> -> 195 `i `uc ]
-[; ;common_dependencies.h: 26: ADCON0 |= (channel << 3);
-"26
-[e =| _ADCON0 -> << -> _channel `i -> 3 `i `uc ]
-[; ;common_dependencies.h: 27: _delay((unsigned long)((20)*(4000000/4000000.0)));
-"27
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;common_dependencies.h: 28: GO_DONE = 1;
-"28
-[e = _GO_DONE -> -> 1 `i `b ]
-[; ;common_dependencies.h: 29: while (GO_DONE)
-"29
-[e $U 98  ]
-[e :U 99 ]
-[; ;common_dependencies.h: 30: ;
-"30
-[e :U 98 ]
-"29
-[e $ _GO_DONE 99  ]
-[e :U 100 ]
-[; ;common_dependencies.h: 31: return ((ADRESH << 8) + ADRESL);
-"31
-[e ) + << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
-[e $UE 97  ]
-[; ;common_dependencies.h: 32: }
-"32
-[e :UE 97 ]
-}
-[; ;lcd_functions.h: 11: void instCTRL(unsigned char CMD);
-[; ;lcd_functions.h: 12: void dataCTRL(unsigned char DAT);
-[; ;lcd_functions.h: 13: void initLCD();
-[; ;lcd_functions.h: 14: void printToLCD(const unsigned char *str);
-"17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
-[v _instCTRL `(v ~T0 @X0 1 ef1`uc ]
-"18
-{
-[; ;lcd_functions.h: 17: void instCTRL(unsigned char CMD)
-[; ;lcd_functions.h: 18: {
-[e :U _instCTRL ]
-"17
-[v _CMD `uc ~T0 @X0 1 r1 ]
-"18
-[f ]
-[; ;lcd_functions.h: 19: PORTD = CMD;
-"19
-[e = _PORTD _CMD ]
-[; ;lcd_functions.h: 20: RC0 = 0;
-"20
-[e = _RC0 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 21: RC1 = 0;
-"21
-[e = _RC1 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 22: RC2 = 1;
-"22
-[e = _RC2 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 23: _delay((unsigned long)((1)*(4000000/4000.0)));
-"23
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;lcd_functions.h: 24: RC2 = 0;
-"24
-[e = _RC2 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 25: }
-"25
-[e :UE 101 ]
-}
-"27
-[v _dataCTRL `(v ~T0 @X0 1 ef1`uc ]
-"28
-{
-[; ;lcd_functions.h: 27: void dataCTRL(unsigned char DAT)
-[; ;lcd_functions.h: 28: {
-[e :U _dataCTRL ]
-"27
-[v _DAT `uc ~T0 @X0 1 r1 ]
-"28
-[f ]
-[; ;lcd_functions.h: 29: PORTD = DAT;
-"29
-[e = _PORTD _DAT ]
-[; ;lcd_functions.h: 30: RC0 = 1;
-"30
-[e = _RC0 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 31: RC1 = 0;
-"31
-[e = _RC1 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 32: RC2 = 1;
-"32
-[e = _RC2 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 33: _delay((unsigned long)((1)*(4000000/4000.0)));
-"33
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;lcd_functions.h: 34: RC2 = 0;
-"34
-[e = _RC2 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 35: }
-"35
-[e :UE 102 ]
-}
-"37
-[v _initLCD `(v ~T0 @X0 1 ef ]
-"38
-{
-[; ;lcd_functions.h: 37: void initLCD()
-[; ;lcd_functions.h: 38: {
-[e :U _initLCD ]
-[f ]
-[; ;lcd_functions.h: 39: instCTRL(0x38);
-"39
-[e ( _instCTRL (1 -> -> 56 `i `uc ]
-[; ;lcd_functions.h: 40: _delay((unsigned long)((50)*(4000000/4000000.0)));
-"40
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;lcd_functions.h: 41: instCTRL(0x0C);
-"41
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;lcd_functions.h: 42: instCTRL(0x01);
-"42
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;lcd_functions.h: 43: instCTRL(0x06);
-"43
-[e ( _instCTRL (1 -> -> 6 `i `uc ]
-[; ;lcd_functions.h: 44: instCTRL(0x0F);
-"44
-[e ( _instCTRL (1 -> -> 15 `i `uc ]
-[; ;lcd_functions.h: 45: }
-"45
-[e :UE 103 ]
-}
-"47
-[v _printToLCD `(v ~T0 @X0 1 ef1`*Cuc ]
-"48
-{
-[; ;lcd_functions.h: 47: void printToLCD(const unsigned char *str)
-[; ;lcd_functions.h: 48: {
-[e :U _printToLCD ]
-"47
-[v _str `*Cuc ~T0 @X0 1 r1 ]
-"48
-[f ]
-[; ;lcd_functions.h: 49: instCTRL(0x0C);
-"49
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;lcd_functions.h: 50: while (*str)
-"50
-[e $U 105  ]
-[e :U 106 ]
-[; ;lcd_functions.h: 51: {
-"51
-{
-[; ;lcd_functions.h: 52: dataCTRL(*str);
-"52
-[e ( _dataCTRL (1 *U _str ]
-[; ;lcd_functions.h: 53: str++;
-"53
-[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
-"54
-}
-[e :U 105 ]
-"50
-[e $ != -> *U _str `i -> -> -> 0 `i `Cuc `i 106  ]
-[e :U 107 ]
-[; ;lcd_functions.h: 54: }
-[; ;lcd_functions.h: 55: }
-"55
-[e :UE 104 ]
-}
-"21 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
-[v _PPM `Vf ~T0 @X0 1 e ]
-[i _PPM
--> .0.0 `f
-]
-[; ;mq135_module.h: 21: volatile float PPM = 0.0;
-[; ;mq135_module.h: 23: void displayPPM();
-[; ;mq135_module.h: 24: bool handlePPM();
-[; ;mq135_module.h: 25: void printStatusPPM(bool handler);
-[; ;mq135_module.h: 26: void runMQ135();
-[; ;mq135_module.h: 28: float CalcMQ135(int RAW_ADC);
-"30
-[v _ppmFlag `uc ~T0 @X0 1 e ]
-[i _ppmFlag
--> -> 0 `i `uc
-]
-[; ;mq135_module.h: 30: bool ppmFlag = 0;
-"32
-[v _runMQ135 `(v ~T0 @X0 1 ef ]
-"33
-{
-[; ;mq135_module.h: 32: void runMQ135()
-[; ;mq135_module.h: 33: {
-[e :U _runMQ135 ]
-[f ]
-[; ;mq135_module.h: 34: PPM = CalcMQ135(readADC(0));
-"34
-[e = _PPM ( _CalcMQ135 (1 ( _readADC (1 -> -> 0 `i `uc ]
-[; ;mq135_module.h: 35: }
-"35
-[e :UE 108 ]
-}
-"37
-[v _displayPPM `(v ~T0 @X0 1 ef ]
-"38
-{
-[; ;mq135_module.h: 37: void displayPPM()
-[; ;mq135_module.h: 38: {
-[e :U _displayPPM ]
-[f ]
-"39
-[v _strBuffer `uc ~T0 @X0 -> 50 `i a ]
-"40
-[v _ppmWhole `i ~T0 @X0 1 a ]
-[; ;mq135_module.h: 39: char strBuffer[50];
-[; ;mq135_module.h: 40: int ppmWhole = (int)PPM;
-[e = _ppmWhole -> _PPM `i ]
-"41
-[v _ppmFraction `i ~T0 @X0 1 a ]
-[; ;mq135_module.h: 41: int ppmFraction = (int)((PPM - ppmWhole) * 100);
-[e = _ppmFraction -> * - _PPM -> _ppmWhole `f -> -> 100 `i `f `i ]
-"44
-[v _bufPtr `*uc ~T0 @X0 1 a ]
-[; ;mq135_module.h: 44: char *bufPtr = strBuffer;
-[e = _bufPtr &U _strBuffer ]
-[; ;mq135_module.h: 45: bufPtr += sprintf(bufPtr, "CO2: ");
-"45
-[e =+ _bufPtr * -> ( _sprintf (1 , _bufPtr :s 1C `x -> -> # *U _bufPtr `i `x ]
-[; ;mq135_module.h: 46: bufPtr += sprintf(bufPtr, "%d", ppmWhole);
-"46
-[e =+ _bufPtr * -> ( _sprintf (1 , (. , _bufPtr :s 2C _ppmWhole `x -> -> # *U _bufPtr `i `x ]
-[; ;mq135_module.h: 47: *bufPtr++ = '.';
-"47
-[e = *U ++ _bufPtr * -> -> 1 `i `x -> -> # *U _bufPtr `i `x -> -> 46 `ui `uc ]
-[; ;mq135_module.h: 48: if (ppmFraction < 10)
-"48
-[e $ ! < _ppmFraction -> 10 `i 110  ]
-[; ;mq135_module.h: 49: *bufPtr++ = '0';
-"49
-[e = *U ++ _bufPtr * -> -> 1 `i `x -> -> # *U _bufPtr `i `x -> -> 48 `ui `uc ]
-[e :U 110 ]
-[; ;mq135_module.h: 50: sprintf(bufPtr, "%d ppm  ", ppmFraction);
-"50
-[e ( _sprintf (1 , (. , _bufPtr :s 3C _ppmFraction ]
-[; ;mq135_module.h: 51: printToLCD(strBuffer);
-"51
-[e ( _printToLCD (1 -> &U _strBuffer `*Cuc ]
-[; ;mq135_module.h: 52: }
-"52
-[e :UE 109 ]
-}
-"54
-[v _handlePPM `(uc ~T0 @X0 1 ef ]
-"55
-{
-[; ;mq135_module.h: 54: bool handlePPM()
-[; ;mq135_module.h: 55: {
-[e :U _handlePPM ]
-[f ]
-[; ;mq135_module.h: 56: if (PPM > 9)
-"56
-[e $ ! > _PPM -> -> 9 `i `f 112  ]
-[; ;mq135_module.h: 57: {
-"57
-{
-[; ;mq135_module.h: 58: RC3 = 1;
-"58
-[e = _RC3 -> -> 1 `i `b ]
-[; ;mq135_module.h: 59: ppmFlag = 1;
-"59
-[e = _ppmFlag -> -> 1 `i `uc ]
-[; ;mq135_module.h: 60: return 1;
-"60
-[e ) -> -> 1 `i `uc ]
-[e $UE 111  ]
-"61
-}
-[; ;mq135_module.h: 61: }
-[e $U 113  ]
-"62
-[e :U 112 ]
-[; ;mq135_module.h: 62: else
-[; ;mq135_module.h: 63: {
-"63
-{
-[; ;mq135_module.h: 64: RC3 = 0;
-"64
-[e = _RC3 -> -> 0 `i `b ]
-[; ;mq135_module.h: 65: ppmFlag = 0;
-"65
-[e = _ppmFlag -> -> 0 `i `uc ]
-[; ;mq135_module.h: 66: return 0;
-"66
-[e ) -> -> 0 `i `uc ]
-[e $UE 111  ]
-"67
-}
-[e :U 113 ]
-[; ;mq135_module.h: 67: }
-[; ;mq135_module.h: 68: }
-"68
-[e :UE 111 ]
-}
-"70
-[v _printStatusPPM `(v ~T0 @X0 1 ef1`uc ]
-"71
-{
-[; ;mq135_module.h: 70: void printStatusPPM(bool handler)
-[; ;mq135_module.h: 71: {
-[e :U _printStatusPPM ]
-"70
-[v _handler `uc ~T0 @X0 1 r1 ]
-"71
-[f ]
-[; ;mq135_module.h: 72: if (handler == 1)
-"72
-[e $ ! == -> _handler `i -> 1 `i 115  ]
-[; ;mq135_module.h: 73: {
-"73
-{
-[; ;mq135_module.h: 74: printToLCD("PURF HI");
-"74
-[e ( _printToLCD (1 :s 4C ]
-"75
-}
-[; ;mq135_module.h: 75: }
-[e $U 116  ]
-"76
-[e :U 115 ]
-[; ;mq135_module.h: 76: else if (handler == 0)
-[e $ ! == -> _handler `i -> 0 `i 117  ]
-[; ;mq135_module.h: 77: {
-"77
-{
-[; ;mq135_module.h: 78: printToLCD("PURF LO");
-"78
-[e ( _printToLCD (1 :s 5C ]
-"79
-}
-[e :U 117 ]
-"80
-[e :U 116 ]
-[; ;mq135_module.h: 79: }
-[; ;mq135_module.h: 80: }
-[e :UE 114 ]
-}
-"93
-[v _CalcMQ135 `(f ~T0 @X0 1 ef1`i ]
-"94
-{
-[; ;mq135_module.h: 93: float CalcMQ135(int RAW_ADC)
-[; ;mq135_module.h: 94: {
-[e :U _CalcMQ135 ]
-"93
-[v _RAW_ADC `i ~T0 @X0 1 r1 ]
-"94
-[f ]
-"95
-[v _voltage `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 95: float voltage = (RAW_ADC * 5.0) / 1023.0;
-[e = _voltage -> / * -> _RAW_ADC `d .5.0 .1023.0 `f ]
-"96
-[v _ratio `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 96: float ratio = voltage / 5.0;
-[e = _ratio -> / -> _voltage `d .5.0 `f ]
-"99
-[v _ratio2 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 99: float ratio2 = ratio * ratio;
-[e = _ratio2 * _ratio _ratio ]
-"100
-[v _ratio3 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 100: float ratio3 = ratio2 * ratio;
-[e = _ratio3 * _ratio2 _ratio ]
-"101
-[v _ratio4 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 101: float ratio4 = ratio3 * ratio;
-[e = _ratio4 * _ratio3 _ratio ]
-"102
-[v _ratio5 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 102: float ratio5 = ratio4 * ratio;
-[e = _ratio5 * _ratio4 _ratio ]
-"103
-[v _ratio6 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 103: float ratio6 = ratio5 * ratio;
-[e = _ratio6 * _ratio5 _ratio ]
-"106
-[v _co2 `f ~T0 @X0 1 a ]
-[; ;mq135_module.h: 106: float co2 = 0.00035 + (0.02718 * ratio) + (1.39538 * ratio2) + (0.0018 * ratio3) +
-[; ;mq135_module.h: 107: (-0.003333333 * ratio4) + (-0.001923077 * ratio5) + (1.130128205 * ratio6);
-"107
-[e = _co2 -> + + + + + + .0.00035 * .0.02718 -> _ratio `d * .1.39538 -> _ratio2 `d * .0.0018 -> _ratio3 `d * -U .0.003333333 -> _ratio4 `d * -U .0.001923077 -> _ratio5 `d * .1.130128205 -> _ratio6 `d `f ]
-[; ;mq135_module.h: 109: co2 *= 415.58;
-"109
-[e =* _co2 -> .415.58 `f ]
-[; ;mq135_module.h: 110: return co2;
-"110
-[e ) _co2 ]
-[e $UE 118  ]
-[; ;mq135_module.h: 111: }
-"111
-[e :UE 118 ]
-}
-"12 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
-[v _hours `Vuc ~T0 @X0 1 e ]
-[i _hours
--> -> 4 `i `uc
-]
-[; ;time_scheduler.h: 12: volatile uint8_t hours = 4;
 "13
-[v _minutes `Vuc ~T0 @X0 1 e ]
-[i _minutes
--> -> 0 `i `uc
-]
-[; ;time_scheduler.h: 13: volatile uint8_t minutes = 0;
-"14
-[v _savedHoursStart `Vuc ~T0 @X0 1 e ]
-[i _savedHoursStart
--> -> 9 `i `uc
-]
-[; ;time_scheduler.h: 14: volatile uint8_t savedHoursStart = 9;
-"15
-[v _savedMinutesStart `Vuc ~T0 @X0 1 e ]
-[i _savedMinutesStart
--> -> 30 `i `uc
-]
-[; ;time_scheduler.h: 15: volatile uint8_t savedMinutesStart = 30;
-"16
-[v _savedHoursEnd `Vuc ~T0 @X0 1 e ]
-[i _savedHoursEnd
--> -> 10 `i `uc
-]
-[; ;time_scheduler.h: 16: volatile uint8_t savedHoursEnd = 10;
-"17
-[v _savedMinutesEnd `Vuc ~T0 @X0 1 e ]
-[i _savedMinutesEnd
--> -> 30 `i `uc
-]
-[; ;time_scheduler.h: 17: volatile uint8_t savedMinutesEnd = 30;
-"19
-[v _debugInfo `uc ~T0 @X0 -> 10 `i s ]
-[; ;time_scheduler.h: 19: static char debugInfo[10];
-"20
-[v _lastKeyState `uc ~T0 @X0 1 s ]
-[i _lastKeyState
--> -> 255 `i `uc
-]
-[; ;time_scheduler.h: 20: static unsigned char lastKeyState = 0xFF;
-"21
-[v _keyValid `uc ~T0 @X0 1 e ]
-[; ;time_scheduler.h: 21: unsigned char keyValid;
-"22
-[v _key `uc ~T0 @X0 1 e ]
-[; ;time_scheduler.h: 22: unsigned char key;
-[; ;time_scheduler.h: 25: void runClock(void);
-[; ;time_scheduler.h: 26: void displayTime(void);
-[; ;time_scheduler.h: 27: void setHoursStart(void);
-[; ;time_scheduler.h: 28: void setHoursEnd(void);
-[; ;time_scheduler.h: 29: void setMinutesStart(void);
-[; ;time_scheduler.h: 30: void setMinutesEnd(void);
-[; ;time_scheduler.h: 31: void checkTime(void);
-"33
-[v _runClock `(v ~T0 @X0 1 ef ]
+[p x CP=OFF ]
+[; ;main.c: 24: void instCTRL(unsigned char CMD);
+[; ;main.c: 25: void dataCTRL(unsigned char DAT);
+[; ;main.c: 26: void initLCD();
+[; ;main.c: 27: void printToLCD(const unsigned char *str);
+[; ;main.c: 30: void initADC();
+[; ;main.c: 31: uint16_t readADC(char channel);
 "34
-{
-[; ;time_scheduler.h: 33: void runClock(void)
-[; ;time_scheduler.h: 34: {
-[e :U _runClock ]
-[f ]
-[; ;time_scheduler.h: 35: minutes++;
-"35
-[e ++ _minutes -> -> 1 `i `uc ]
-[; ;time_scheduler.h: 36: if (minutes >= 60)
+[v _adcValue `ui ~T0 @X0 1 e ]
+[i _adcValue
+-> -> 0 `i `ui
+]
+[; ;main.c: 34: uint16_t adcValue = 0;
 "36
-[e $ ! >= -> _minutes `i -> 60 `i 120  ]
-[; ;time_scheduler.h: 37: {
-"37
-{
-[; ;time_scheduler.h: 38: minutes = 0;
-"38
-[e = _minutes -> -> 0 `i `uc ]
-[; ;time_scheduler.h: 39: hours++;
-"39
-[e ++ _hours -> -> 1 `i `uc ]
-[; ;time_scheduler.h: 40: if (hours >= 24)
-"40
-[e $ ! >= -> _hours `i -> 24 `i 121  ]
-[; ;time_scheduler.h: 41: {
-"41
-{
-[; ;time_scheduler.h: 42: hours = 0;
-"42
-[e = _hours -> -> 0 `i `uc ]
-"43
-}
-[e :U 121 ]
-"44
-}
-[e :U 120 ]
-[; ;time_scheduler.h: 43: }
-[; ;time_scheduler.h: 44: }
-[; ;time_scheduler.h: 45: _delay((unsigned long)((50)*(4000000/4000.0)));
-"45
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 46: }
-"46
-[e :UE 119 ]
-}
-"48
-[v _displayTime `(v ~T0 @X0 1 ef ]
-"49
-{
-[; ;time_scheduler.h: 48: void displayTime(void)
-[; ;time_scheduler.h: 49: {
-[e :U _displayTime ]
-[f ]
-"50
-[v _timeFormat `uc ~T0 @X0 -> 10 `i a ]
-[; ;time_scheduler.h: 50: char timeFormat[10];
-[; ;time_scheduler.h: 51: sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
-"51
-[e ( _sprintf (1 , , (. , &U _timeFormat :s 6C -> _hours `i -> _minutes `i ]
-[; ;time_scheduler.h: 52: printToLCD(timeFormat);
-"52
-[e ( _printToLCD (1 -> &U _timeFormat `*Cuc ]
-[; ;time_scheduler.h: 53: }
-"53
-[e :UE 122 ]
-}
-"55
-[v _setHoursStart `(v ~T0 @X0 1 ef ]
-"56
-{
-[; ;time_scheduler.h: 55: void setHoursStart(void)
-[; ;time_scheduler.h: 56: {
-[e :U _setHoursStart ]
-[f ]
-[; ;time_scheduler.h: 57: keyValid = (PORTB & 0x08) >> 3;
-"57
-[e = _keyValid -> >> & -> _PORTB `i -> 8 `i -> 3 `i `uc ]
-[; ;time_scheduler.h: 58: key = (PORTB & 0xF0) >> 4;
-"58
-[e = _key -> >> & -> _PORTB `i -> 240 `i -> 4 `i `uc ]
-[; ;time_scheduler.h: 60: _delay((unsigned long)((50)*(4000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 62: if (keyValid && key != lastKeyState)
-"62
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 124  ]
-[; ;time_scheduler.h: 63: {
-"63
-{
-[; ;time_scheduler.h: 64: if (key == 0b00001100)
-"64
-[e $ ! == -> _key `i -> 12 `i 125  ]
-[; ;time_scheduler.h: 65: {
-"65
-{
-[; ;time_scheduler.h: 66: savedHoursStart = (savedHoursStart + 1) % 24;
-"66
-[e = _savedHoursStart -> % + -> _savedHoursStart `i -> 1 `i -> 24 `i `uc ]
-[; ;time_scheduler.h: 67: sprintf(debugInfo, "INC: %02d", savedHoursStart);
-"67
-[e ( _sprintf (1 , (. , &U _debugInfo :s 7C -> _savedHoursStart `i ]
-"68
-}
-[; ;time_scheduler.h: 68: }
-[e $U 126  ]
-"69
-[e :U 125 ]
-[; ;time_scheduler.h: 69: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 127  ]
-[; ;time_scheduler.h: 70: {
-"70
-{
-[; ;time_scheduler.h: 71: savedHoursStart = (savedHoursStart - 1 + 24) % 24;
-"71
-[e = _savedHoursStart -> % + - -> _savedHoursStart `i -> 1 `i -> 24 `i -> 24 `i `uc ]
-[; ;time_scheduler.h: 72: sprintf(debugInfo, "DEC: %02d", savedHoursStart);
-"72
-[e ( _sprintf (1 , (. , &U _debugInfo :s 8C -> _savedHoursStart `i ]
-"73
-}
-[; ;time_scheduler.h: 73: }
-[e $U 128  ]
-"74
-[e :U 127 ]
-[; ;time_scheduler.h: 74: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 129  ]
-[; ;time_scheduler.h: 75: {
-"75
-{
-[; ;time_scheduler.h: 76: sprintf(debugInfo, "SET: %02d", savedHoursStart);
-"76
-[e ( _sprintf (1 , (. , &U _debugInfo :s 9C -> _savedHoursStart `i ]
-"78
-}
-[e :U 129 ]
-"80
-[e :U 128 ]
-[e :U 126 ]
-[; ;time_scheduler.h: 78: }
-[; ;time_scheduler.h: 80: printToLCD(debugInfo);
-[e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
-[; ;time_scheduler.h: 81: lastKeyState = key;
-"81
-[e = _lastKeyState _key ]
-[; ;time_scheduler.h: 83: while ((PORTB & 0x08) != 0)
-"83
-[e $U 130  ]
-[e :U 131 ]
-[; ;time_scheduler.h: 84: {
-"84
-{
-[; ;time_scheduler.h: 85: _delay((unsigned long)((10)*(4000000/4000.0)));
-"85
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"86
-}
-[e :U 130 ]
-"83
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 131  ]
-[e :U 132 ]
-"87
-}
-[; ;time_scheduler.h: 86: }
-[; ;time_scheduler.h: 87: }
-[e $U 133  ]
-"88
-[e :U 124 ]
-[; ;time_scheduler.h: 88: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 134  ]
-[; ;time_scheduler.h: 89: {
-"89
-{
-[; ;time_scheduler.h: 90: lastKeyState = 0xFF;
-"90
-[e = _lastKeyState -> -> 255 `i `uc ]
-"91
-}
-[e :U 134 ]
-"92
-[e :U 133 ]
-[; ;time_scheduler.h: 91: }
-[; ;time_scheduler.h: 92: }
-[e :UE 123 ]
-}
-"94
-[v _setHoursEnd `(v ~T0 @X0 1 ef ]
-"95
-{
-[; ;time_scheduler.h: 94: void setHoursEnd(void)
-[; ;time_scheduler.h: 95: {
-[e :U _setHoursEnd ]
-[f ]
-[; ;time_scheduler.h: 96: keyValid = (PORTB & 0x08) >> 3;
-"96
-[e = _keyValid -> >> & -> _PORTB `i -> 8 `i -> 3 `i `uc ]
-[; ;time_scheduler.h: 97: key = (PORTB & 0xF0) >> 4;
-"97
-[e = _key -> >> & -> _PORTB `i -> 240 `i -> 4 `i `uc ]
-[; ;time_scheduler.h: 99: _delay((unsigned long)((50)*(4000000/4000.0)));
-"99
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 101: if (keyValid && key != lastKeyState)
-"101
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 136  ]
-[; ;time_scheduler.h: 102: {
-"102
-{
-[; ;time_scheduler.h: 103: if (key == 0b00001100)
-"103
-[e $ ! == -> _key `i -> 12 `i 137  ]
-[; ;time_scheduler.h: 104: {
-"104
-{
-[; ;time_scheduler.h: 105: savedHoursEnd = (savedHoursEnd + 1) % 24;
-"105
-[e = _savedHoursEnd -> % + -> _savedHoursEnd `i -> 1 `i -> 24 `i `uc ]
-[; ;time_scheduler.h: 106: sprintf(debugInfo, "INC: %02d", savedHoursEnd);
-"106
-[e ( _sprintf (1 , (. , &U _debugInfo :s 10C -> _savedHoursEnd `i ]
-"107
-}
-[; ;time_scheduler.h: 107: }
-[e $U 138  ]
-"108
-[e :U 137 ]
-[; ;time_scheduler.h: 108: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 139  ]
-[; ;time_scheduler.h: 109: {
-"109
-{
-[; ;time_scheduler.h: 110: savedHoursEnd = (savedHoursEnd - 1 + 24) % 24;
-"110
-[e = _savedHoursEnd -> % + - -> _savedHoursEnd `i -> 1 `i -> 24 `i -> 24 `i `uc ]
-[; ;time_scheduler.h: 111: sprintf(debugInfo, "DEC: %02d", savedHoursEnd);
-"111
-[e ( _sprintf (1 , (. , &U _debugInfo :s 11C -> _savedHoursEnd `i ]
-"112
-}
-[; ;time_scheduler.h: 112: }
-[e $U 140  ]
-"113
-[e :U 139 ]
-[; ;time_scheduler.h: 113: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 141  ]
-[; ;time_scheduler.h: 114: {
-"114
-{
-[; ;time_scheduler.h: 115: sprintf(debugInfo, "SET: %02d", savedHoursEnd);
-"115
-[e ( _sprintf (1 , (. , &U _debugInfo :s 12C -> _savedHoursEnd `i ]
-"116
-}
-[e :U 141 ]
-"118
-[e :U 140 ]
-[e :U 138 ]
-[; ;time_scheduler.h: 116: }
-[; ;time_scheduler.h: 118: printToLCD(debugInfo);
-[e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
-[; ;time_scheduler.h: 119: lastKeyState = key;
-"119
-[e = _lastKeyState _key ]
-[; ;time_scheduler.h: 121: while ((PORTB & 0x08) != 0)
-"121
-[e $U 142  ]
-[e :U 143 ]
-[; ;time_scheduler.h: 122: {
-"122
-{
-[; ;time_scheduler.h: 123: _delay((unsigned long)((10)*(4000000/4000.0)));
-"123
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"124
-}
-[e :U 142 ]
-"121
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 143  ]
-[e :U 144 ]
-"125
-}
-[; ;time_scheduler.h: 124: }
-[; ;time_scheduler.h: 125: }
-[e $U 145  ]
-"126
-[e :U 136 ]
-[; ;time_scheduler.h: 126: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 146  ]
-[; ;time_scheduler.h: 127: {
-"127
-{
-[; ;time_scheduler.h: 128: lastKeyState = 0xFF;
-"128
-[e = _lastKeyState -> -> 255 `i `uc ]
-"129
-}
-[e :U 146 ]
-"130
-[e :U 145 ]
-[; ;time_scheduler.h: 129: }
-[; ;time_scheduler.h: 130: }
-[e :UE 135 ]
-}
-"132
-[v _setMinutesStart `(v ~T0 @X0 1 ef ]
-"133
-{
-[; ;time_scheduler.h: 132: void setMinutesStart(void)
-[; ;time_scheduler.h: 133: {
-[e :U _setMinutesStart ]
-[f ]
-[; ;time_scheduler.h: 134: keyValid = (PORTB & 0x08) >> 3;
-"134
-[e = _keyValid -> >> & -> _PORTB `i -> 8 `i -> 3 `i `uc ]
-[; ;time_scheduler.h: 135: key = (PORTB & 0xF0) >> 4;
-"135
-[e = _key -> >> & -> _PORTB `i -> 240 `i -> 4 `i `uc ]
-[; ;time_scheduler.h: 137: _delay((unsigned long)((50)*(4000000/4000.0)));
-"137
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 139: if (keyValid && key != lastKeyState)
-"139
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 148  ]
-[; ;time_scheduler.h: 140: {
-"140
-{
-[; ;time_scheduler.h: 141: if (key == 0b00001100)
-"141
-[e $ ! == -> _key `i -> 12 `i 149  ]
-[; ;time_scheduler.h: 142: {
-"142
-{
-[; ;time_scheduler.h: 143: savedMinutesStart = (savedMinutesStart + 5) % 60;
-"143
-[e = _savedMinutesStart -> % + -> _savedMinutesStart `i -> 5 `i -> 60 `i `uc ]
-[; ;time_scheduler.h: 144: sprintf(debugInfo, "INC: %02d", savedMinutesStart);
-"144
-[e ( _sprintf (1 , (. , &U _debugInfo :s 13C -> _savedMinutesStart `i ]
-"145
-}
-[; ;time_scheduler.h: 145: }
-[e $U 150  ]
-"146
-[e :U 149 ]
-[; ;time_scheduler.h: 146: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 151  ]
-[; ;time_scheduler.h: 147: {
-"147
-{
-[; ;time_scheduler.h: 148: savedMinutesStart = (savedMinutesStart - 5 + 60) % 60;
-"148
-[e = _savedMinutesStart -> % + - -> _savedMinutesStart `i -> 5 `i -> 60 `i -> 60 `i `uc ]
-[; ;time_scheduler.h: 149: sprintf(debugInfo, "DEC: %02d", savedMinutesStart);
-"149
-[e ( _sprintf (1 , (. , &U _debugInfo :s 14C -> _savedMinutesStart `i ]
-"150
-}
-[; ;time_scheduler.h: 150: }
-[e $U 152  ]
-"151
-[e :U 151 ]
-[; ;time_scheduler.h: 151: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 153  ]
-[; ;time_scheduler.h: 152: {
-"152
-{
-[; ;time_scheduler.h: 153: sprintf(debugInfo, "SET: %02d", savedMinutesStart);
-"153
-[e ( _sprintf (1 , (. , &U _debugInfo :s 15C -> _savedMinutesStart `i ]
-"154
-}
-[e :U 153 ]
-"156
-[e :U 152 ]
-[e :U 150 ]
-[; ;time_scheduler.h: 154: }
-[; ;time_scheduler.h: 156: printToLCD(debugInfo);
-[e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
-[; ;time_scheduler.h: 157: lastKeyState = key;
-"157
-[e = _lastKeyState _key ]
-[; ;time_scheduler.h: 159: while ((PORTB & 0x08) != 0)
-"159
-[e $U 154  ]
-[e :U 155 ]
-[; ;time_scheduler.h: 160: {
-"160
-{
-[; ;time_scheduler.h: 161: _delay((unsigned long)((10)*(4000000/4000.0)));
-"161
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"162
-}
-[e :U 154 ]
-"159
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 155  ]
-[e :U 156 ]
-"163
-}
-[; ;time_scheduler.h: 162: }
-[; ;time_scheduler.h: 163: }
-[e $U 157  ]
-"164
-[e :U 148 ]
-[; ;time_scheduler.h: 164: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 158  ]
-[; ;time_scheduler.h: 165: {
-"165
-{
-[; ;time_scheduler.h: 166: lastKeyState = 0xFF;
-"166
-[e = _lastKeyState -> -> 255 `i `uc ]
-"167
-}
-[e :U 158 ]
-"168
-[e :U 157 ]
-[; ;time_scheduler.h: 167: }
-[; ;time_scheduler.h: 168: }
-[e :UE 147 ]
-}
-"170
-[v _setMinutesEnd `(v ~T0 @X0 1 ef ]
-"171
-{
-[; ;time_scheduler.h: 170: void setMinutesEnd(void)
-[; ;time_scheduler.h: 171: {
-[e :U _setMinutesEnd ]
-[f ]
-[; ;time_scheduler.h: 172: keyValid = (PORTB & 0x08) >> 3;
-"172
-[e = _keyValid -> >> & -> _PORTB `i -> 8 `i -> 3 `i `uc ]
-[; ;time_scheduler.h: 173: key = (PORTB & 0xF0) >> 4;
-"173
-[e = _key -> >> & -> _PORTB `i -> 240 `i -> 4 `i `uc ]
-[; ;time_scheduler.h: 175: _delay((unsigned long)((50)*(4000000/4000.0)));
-"175
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 177: if (keyValid && key != lastKeyState)
-"177
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 160  ]
-[; ;time_scheduler.h: 178: {
-"178
-{
-[; ;time_scheduler.h: 179: if (key == 0b00001100)
-"179
-[e $ ! == -> _key `i -> 12 `i 161  ]
-[; ;time_scheduler.h: 180: {
-"180
-{
-[; ;time_scheduler.h: 181: savedMinutesEnd = (savedMinutesEnd + 5) % 60;
-"181
-[e = _savedMinutesEnd -> % + -> _savedMinutesEnd `i -> 5 `i -> 60 `i `uc ]
-[; ;time_scheduler.h: 182: sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
-"182
-[e ( _sprintf (1 , (. , &U _debugInfo :s 16C -> _savedMinutesEnd `i ]
-"183
-}
-[; ;time_scheduler.h: 183: }
-[e $U 162  ]
-"184
-[e :U 161 ]
-[; ;time_scheduler.h: 184: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 163  ]
-[; ;time_scheduler.h: 185: {
-"185
-{
-[; ;time_scheduler.h: 186: savedMinutesEnd = (savedMinutesEnd - 5 + 60) % 60;
-"186
-[e = _savedMinutesEnd -> % + - -> _savedMinutesEnd `i -> 5 `i -> 60 `i -> 60 `i `uc ]
-[; ;time_scheduler.h: 187: sprintf(debugInfo, "DEC: %02d", savedMinutesEnd);
-"187
-[e ( _sprintf (1 , (. , &U _debugInfo :s 17C -> _savedMinutesEnd `i ]
-"188
-}
-[; ;time_scheduler.h: 188: }
-[e $U 164  ]
-"189
-[e :U 163 ]
-[; ;time_scheduler.h: 189: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 165  ]
-[; ;time_scheduler.h: 190: {
-"190
-{
-[; ;time_scheduler.h: 191: sprintf(debugInfo, "SET: %02d", savedMinutesEnd);
-"191
-[e ( _sprintf (1 , (. , &U _debugInfo :s 18C -> _savedMinutesEnd `i ]
-"192
-}
-[e :U 165 ]
-"194
-[e :U 164 ]
-[e :U 162 ]
-[; ;time_scheduler.h: 192: }
-[; ;time_scheduler.h: 194: printToLCD(debugInfo);
-[e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
-[; ;time_scheduler.h: 195: lastKeyState = key;
-"195
-[e = _lastKeyState _key ]
-[; ;time_scheduler.h: 197: while ((PORTB & 0x08) != 0)
-"197
-[e $U 166  ]
-[e :U 167 ]
-[; ;time_scheduler.h: 198: {
-"198
-{
-[; ;time_scheduler.h: 199: _delay((unsigned long)((10)*(4000000/4000.0)));
-"199
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"200
-}
-[e :U 166 ]
-"197
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 167  ]
-[e :U 168 ]
-"201
-}
-[; ;time_scheduler.h: 200: }
-[; ;time_scheduler.h: 201: }
-[e $U 169  ]
-"202
-[e :U 160 ]
-[; ;time_scheduler.h: 202: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 170  ]
-[; ;time_scheduler.h: 203: {
-"203
-{
-[; ;time_scheduler.h: 204: lastKeyState = 0xFF;
-"204
-[e = _lastKeyState -> -> 255 `i `uc ]
-"205
-}
-[e :U 170 ]
-"206
-[e :U 169 ]
-[; ;time_scheduler.h: 205: }
-[; ;time_scheduler.h: 206: }
-[e :UE 159 ]
-}
-"208
-[v _checkTime `(v ~T0 @X0 1 ef ]
-"209
-{
-[; ;time_scheduler.h: 208: void checkTime(void)
-[; ;time_scheduler.h: 209: {
-[e :U _checkTime ]
-[f ]
-[; ;time_scheduler.h: 210: if (hours == savedHoursEnd && minutes == savedMinutesEnd)
-"210
-[e $ ! && == -> _hours `i -> _savedHoursEnd `i == -> _minutes `i -> _savedMinutesEnd `i 172  ]
-[; ;time_scheduler.h: 211: {
-"211
-{
-[; ;time_scheduler.h: 212: RC4 = 1;
-"212
-[e = _RC4 -> -> 1 `i `b ]
-"213
-}
-[; ;time_scheduler.h: 213: }
-[e $U 173  ]
-"214
-[e :U 172 ]
-[; ;time_scheduler.h: 214: else if (savedHoursEnd > savedHoursStart)
-[e $ ! > -> _savedHoursEnd `i -> _savedHoursStart `i 174  ]
-[; ;time_scheduler.h: 215: {
-"215
-{
-[; ;time_scheduler.h: 217: if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) &&
-[; ;time_scheduler.h: 218: (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
-"218
-[e $ ! && || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 175  ]
-[; ;time_scheduler.h: 219: {
-"219
-{
-[; ;time_scheduler.h: 220: RC4 = 1;
-"220
-[e = _RC4 -> -> 1 `i `b ]
-"221
-}
-[; ;time_scheduler.h: 221: }
-[e $U 176  ]
-"222
-[e :U 175 ]
-[; ;time_scheduler.h: 222: else
-[; ;time_scheduler.h: 223: {
-"223
-{
-[; ;time_scheduler.h: 224: RC4 = 0;
-"224
-[e = _RC4 -> -> 0 `i `b ]
-"225
-}
-[e :U 176 ]
-"226
-}
-[; ;time_scheduler.h: 225: }
-[; ;time_scheduler.h: 226: }
-[e $U 177  ]
-"227
-[e :U 174 ]
-[; ;time_scheduler.h: 227: else if (savedHoursEnd < savedHoursStart)
-[e $ ! < -> _savedHoursEnd `i -> _savedHoursStart `i 178  ]
-[; ;time_scheduler.h: 228: {
-"228
-{
-[; ;time_scheduler.h: 230: if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) ||
-[; ;time_scheduler.h: 231: (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
-"231
-[e $ ! || || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 179  ]
-[; ;time_scheduler.h: 232: {
-"232
-{
-[; ;time_scheduler.h: 233: RC4 = 1;
-"233
-[e = _RC4 -> -> 1 `i `b ]
-"234
-}
-[; ;time_scheduler.h: 234: }
-[e $U 180  ]
-"235
-[e :U 179 ]
-[; ;time_scheduler.h: 235: else
-[; ;time_scheduler.h: 236: {
-"236
-{
-[; ;time_scheduler.h: 237: RC4 = 0;
-"237
-[e = _RC4 -> -> 0 `i `b ]
-"238
-}
-[e :U 180 ]
-"239
-}
-[; ;time_scheduler.h: 238: }
-[; ;time_scheduler.h: 239: }
-[e $U 181  ]
-"240
-[e :U 178 ]
-[; ;time_scheduler.h: 240: else
-[; ;time_scheduler.h: 241: {
-"241
-{
-[; ;time_scheduler.h: 242: if (minutes >= savedMinutesStart && minutes < savedMinutesEnd)
-"242
-[e $ ! && >= -> _minutes `i -> _savedMinutesStart `i < -> _minutes `i -> _savedMinutesEnd `i 182  ]
-[; ;time_scheduler.h: 243: {
-"243
-{
-[; ;time_scheduler.h: 244: RC4 = 1;
-"244
-[e = _RC4 -> -> 1 `i `b ]
-"245
-}
-[; ;time_scheduler.h: 245: }
-[e $U 183  ]
-"246
-[e :U 182 ]
-[; ;time_scheduler.h: 246: else
-[; ;time_scheduler.h: 247: {
-"247
-{
-[; ;time_scheduler.h: 248: RC4 = 0;
-"248
-[e = _RC4 -> -> 0 `i `b ]
-"249
-}
-[e :U 183 ]
-"250
-}
-[e :U 181 ]
-[e :U 177 ]
-[e :U 173 ]
-[; ;time_scheduler.h: 249: }
-[; ;time_scheduler.h: 250: }
-[; ;time_scheduler.h: 251: }
-"251
-[e :UE 171 ]
-}
-[; ;temp_module.h: 10: void calculateTemp(uint16_t adcValue);
-[; ;temp_module.h: 11: void displayTemp();
-[; ;temp_module.h: 12: bool handleTemp();
-[; ;temp_module.h: 13: void printStatusTMP(bool handler);
-"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
-[v _tempFlag `uc ~T0 @X0 1 e ]
-[i _tempFlag
--> -> 0 `i `uc
-]
-[; ;temp_module.h: 15: bool tempFlag = 0;
-"17
-[v _tempBuffer `i ~T0 @X0 1 e ]
-[i _tempBuffer
--> 0 `i
-]
-[; ;temp_module.h: 17: int tempBuffer = 0;
-"19
-[v _calculateTemp `(v ~T0 @X0 1 ef1`ui ]
-"20
-{
-[; ;temp_module.h: 19: void calculateTemp(uint16_t adcValue)
-[; ;temp_module.h: 20: {
-[e :U _calculateTemp ]
-"19
-[v _adcValue `ui ~T0 @X0 1 r1 ]
-"20
-[f ]
-[; ;temp_module.h: 21: tempBuffer = (adcValue * 500) / 1023;
-"21
-[e = _tempBuffer -> / * _adcValue -> -> 500 `i `ui -> -> 1023 `i `ui `i ]
-[; ;temp_module.h: 22: }
-"22
-[e :UE 184 ]
-}
-"24
-[v _displayTemp `(v ~T0 @X0 1 ef ]
-"25
-{
-[; ;temp_module.h: 24: void displayTemp()
-[; ;temp_module.h: 25: {
-[e :U _displayTemp ]
-[f ]
-"26
-[v _buffer `uc ~T0 @X0 -> 20 `i a ]
-[; ;temp_module.h: 26: char buffer[20];
-[; ;temp_module.h: 27: sprintf(buffer, "Temp: %d C", tempBuffer);
-"27
-[e ( _sprintf (1 , (. , &U _buffer :s 19C _tempBuffer ]
-[; ;temp_module.h: 28: printToLCD(buffer);
-"28
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;temp_module.h: 29: }
-"29
-[e :UE 185 ]
-}
-"31
-[v _handleTemp `(uc ~T0 @X0 1 ef ]
-"32
-{
-[; ;temp_module.h: 31: bool handleTemp()
-[; ;temp_module.h: 32: {
-[e :U _handleTemp ]
-[f ]
-[; ;temp_module.h: 33: if (tempBuffer > 32)
-"33
-[e $ ! > _tempBuffer -> 32 `i 187  ]
-[; ;temp_module.h: 34: {
-"34
-{
-[; ;temp_module.h: 35: RC5 = 1;
-"35
-[e = _RC5 -> -> 1 `i `b ]
-[; ;temp_module.h: 36: tempFlag = 1;
-"36
-[e = _tempFlag -> -> 1 `i `uc ]
-[; ;temp_module.h: 37: return 1;
-"37
-[e ) -> -> 1 `i `uc ]
-[e $UE 186  ]
-"38
-}
-[; ;temp_module.h: 38: }
-[e $U 188  ]
-"39
-[e :U 187 ]
-[; ;temp_module.h: 39: else
-[; ;temp_module.h: 40: {
-"40
-{
-[; ;temp_module.h: 41: RC5 = 0;
-"41
-[e = _RC5 -> -> 0 `i `b ]
-[; ;temp_module.h: 42: tempFlag = 0;
-"42
-[e = _tempFlag -> -> 0 `i `uc ]
-[; ;temp_module.h: 43: return 0;
-"43
-[e ) -> -> 0 `i `uc ]
-[e $UE 186  ]
-"44
-}
-[e :U 188 ]
-[; ;temp_module.h: 44: }
-[; ;temp_module.h: 45: }
-"45
-[e :UE 186 ]
-}
-"47
-[v _printStatusTMP `(v ~T0 @X0 1 ef1`uc ]
-"48
-{
-[; ;temp_module.h: 47: void printStatusTMP(bool handler)
-[; ;temp_module.h: 48: {
-[e :U _printStatusTMP ]
-"47
-[v _handler `uc ~T0 @X0 1 r1 ]
-"48
-[f ]
-[; ;temp_module.h: 49: if (handler == 1)
-"49
-[e $ ! == -> _handler `i -> 1 `i 190  ]
-[; ;temp_module.h: 50: {
-"50
-{
-[; ;temp_module.h: 51: printToLCD("VENT ON ");
-"51
-[e ( _printToLCD (1 :s 20C ]
-"52
-}
-[; ;temp_module.h: 52: }
-[e $U 191  ]
-"53
-[e :U 190 ]
-[; ;temp_module.h: 53: else if (handler == 0)
-[e $ ! == -> _handler `i -> 0 `i 192  ]
-[; ;temp_module.h: 54: {
-"54
-{
-[; ;temp_module.h: 55: printToLCD("FAN OFF");
-"55
-[e ( _printToLCD (1 :s 21C ]
-"56
-}
-[e :U 192 ]
-"57
-[e :U 191 ]
-[; ;temp_module.h: 56: }
-[; ;temp_module.h: 57: }
-[e :UE 189 ]
-}
-[; ;main.c: 7: typedef enum
-[; ;main.c: 8: {
-[; ;main.c: 9: DISP_CMN = 0,
-[; ;main.c: 10: SET_ACTV_START = 1,
-[; ;main.c: 11: SET_ACTV_END = 2,
-[; ;main.c: 12: CHCK_IO = 3
-[; ;main.c: 13: } MODE;
-"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
-[v _mode `E1279 ~T0 @X0 1 e ]
-[i _mode
--> . `E1279 0 `E1279
-]
-[; ;main.c: 15: MODE mode = DISP_CMN;
-"16
-[v _lastMode `E1279 ~T0 @X0 1 e ]
-[i _lastMode
--> -U -> 1 `i `E1279
-]
-[; ;main.c: 16: MODE lastMode = -1;
-"17
-[v _select `Vuc ~T0 @X0 1 e ]
-[i _select
--> -> 0 `i `uc
-]
-[; ;main.c: 17: volatile unsigned char select = 0;
-[; ;main.c: 20: void startUpLCD(void);
-[; ;main.c: 21: void setPortDirections(void);
-[; ;main.c: 22: void initADC(void);
-[; ;main.c: 23: void initInterrupt(void);
-[; ;main.c: 24: void interrupt ISR(void);
-[; ;main.c: 25: void checkMode(void);
-[; ;main.c: 26: void checkSelect(void);
-[; ;main.c: 27: void updateState(void);
-"29
 [v _main `(v ~T0 @X0 1 ef ]
-"30
+"37
 {
-[; ;main.c: 29: void main(void)
-[; ;main.c: 30: {
+[; ;main.c: 36: void main()
+[; ;main.c: 37: {
 [e :U _main ]
 [f ]
-[; ;main.c: 31: setPortDirections();
-"31
-[e ( _setPortDirections ..  ]
-[; ;main.c: 32: initADC();
-"32
-[e ( _initADC ..  ]
-[; ;main.c: 33: initInterrupt();
-"33
-[e ( _initInterrupt ..  ]
-[; ;main.c: 34: startUpLCD();
-"34
-[e ( _startUpLCD ..  ]
-[; ;main.c: 35: _delay((unsigned long)((250)*(4000000/4000.0)));
-"35
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 36: while (1)
-"36
-[e :U 195 ]
-[; ;main.c: 37: {
-"37
-{
-[; ;main.c: 38: runClock();
 "38
-[e ( _runClock ..  ]
-[; ;main.c: 39: checkTime();
+[v _buffer `uc ~T0 @X0 -> 20 `i a ]
+[; ;main.c: 38: char buffer[20];
+[; ;main.c: 39: TRISC = 0x00;
 "39
-[e ( _checkTime ..  ]
-[; ;main.c: 40: runMQ135();
-"40
-[e ( _runMQ135 ..  ]
-[; ;main.c: 41: handlePPM();
-"41
-[e ( _handlePPM ..  ]
-[; ;main.c: 42: calculateTemp(readADC(1));
-"42
-[e ( _calculateTemp (1 -> ( _readADC (1 -> -> 1 `i `uc `ui ]
-[; ;main.c: 43: handleTemp();
-"43
-[e ( _handleTemp ..  ]
-[; ;main.c: 44: checkSelect();
-"44
-[e ( _checkSelect ..  ]
-[; ;main.c: 45: checkMode();
-"45
-[e ( _checkMode ..  ]
-[; ;main.c: 46: updateState();
-"46
-[e ( _updateState ..  ]
-"47
-}
-[e :U 194 ]
-"36
-[e $U 195  ]
-[e :U 196 ]
-[; ;main.c: 47: }
-[; ;main.c: 48: }
-"48
-[e :UE 193 ]
-}
-"51
-[v _setPortDirections `(v ~T0 @X0 1 ef ]
-"52
-{
-[; ;main.c: 51: void setPortDirections(void)
-[; ;main.c: 52: {
-[e :U _setPortDirections ]
-[f ]
-[; ;main.c: 53: TRISA = 0xFF;
-"53
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 54: TRISB = 0xFF;
-"54
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 55: TRISC = 0x00;
-"55
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 56: TRISD = 0x00;
-"56
+[; ;main.c: 40: TRISD = 0x00;
+"40
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 57: PORTA = 0x00;
-"57
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 58: PORTB = 0x00;
-"58
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 59: PORTC = 0x00;
-"59
+[; ;main.c: 41: PORTC = 0x00;
+"41
 [e = _PORTC -> -> 0 `i `uc ]
-[; ;main.c: 60: PORTD = 0x00;
-"60
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;main.c: 61: }
-"61
-[e :UE 197 ]
-}
-"63
-[v _initADC `(v ~T0 @X0 1 ef ]
-"64
+[; ;main.c: 42: initADC();
+"42
+[e ( _initADC ..  ]
+[; ;main.c: 43: initLCD();
+"43
+[e ( _initLCD ..  ]
+[; ;main.c: 44: instCTRL(0x80);
+"44
+[e ( _instCTRL (1 -> -> 128 `i `uc ]
+[; ;main.c: 45: printToLCD("ADC Test");
+"45
+[e ( _printToLCD (1 :s 1C ]
+[; ;main.c: 47: while (1)
+"47
+[e :U 99 ]
+[; ;main.c: 48: {
+"48
 {
-[; ;main.c: 63: void initADC(void)
-[; ;main.c: 64: {
+[v _adcValue `ui ~T0 @X0 1 a ]
+[; ;main.c: 49: uint16_t adcValue = readADC(0);
+"49
+[e = _adcValue ( _readADC (1 -> -> 0 `i `uc ]
+[; ;main.c: 50: sprintf(buffer, "ADC0: %d        ", adcValue);
+"50
+[e ( _sprintf (1 , (. , &U _buffer :s 2C _adcValue ]
+[; ;main.c: 51: instCTRL(0xC0);
+"51
+[e ( _instCTRL (1 -> -> 192 `i `uc ]
+[; ;main.c: 52: printToLCD(buffer);
+"52
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 53: _delay((unsigned long)((50)*(4000000/4000.0)));
+"53
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 55: adcValue = readADC(1);
+"55
+[e = _adcValue ( _readADC (1 -> -> 1 `i `uc ]
+[; ;main.c: 56: adcValue = (adcValue * 500) / 1023;
+"56
+[e = _adcValue / * _adcValue -> -> 500 `i `ui -> -> 1023 `i `ui ]
+[; ;main.c: 57: sprintf(buffer, "ADC1: %d        ", adcValue);
+"57
+[e ( _sprintf (1 , (. , &U _buffer :s 3C _adcValue ]
+[; ;main.c: 58: instCTRL(0x94);
+"58
+[e ( _instCTRL (1 -> -> 148 `i `uc ]
+[; ;main.c: 59: printToLCD(buffer);
+"59
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 60: _delay((unsigned long)((50)*(4000000/4000.0)));
+"60
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"61
+}
+[e :U 98 ]
+"47
+[e $U 99  ]
+[e :U 100 ]
+[; ;main.c: 61: }
+[; ;main.c: 62: }
+"62
+[e :UE 97 ]
+}
+"64
+[v _initADC `(v ~T0 @X0 1 ef ]
+"65
+{
+[; ;main.c: 64: void initADC()
+[; ;main.c: 65: {
 [e :U _initADC ]
 [f ]
-[; ;main.c: 65: ADCON1 = 0x80;
-"65
-[e = _ADCON1 -> -> 128 `i `uc ]
-[; ;main.c: 66: ADCON0 = 0x01;
+[; ;main.c: 66: TRISA = 0xFF;
 "66
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;main.c: 67: }
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;main.c: 67: ADCON1 = 0x80;
 "67
-[e :UE 198 ]
-}
+[e = _ADCON1 -> -> 128 `i `uc ]
+[; ;main.c: 68: ADCON0 = 0x01;
+"68
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;main.c: 69: }
 "69
-[v _startUpLCD `(v ~T0 @X0 1 ef ]
-"70
-{
-[; ;main.c: 69: void startUpLCD(void)
-[; ;main.c: 70: {
-[e :U _startUpLCD ]
-[f ]
-[; ;main.c: 71: initLCD();
+[e :UE 101 ]
+}
 "71
-[e ( _initLCD ..  ]
-[; ;main.c: 72: instCTRL(0x80);
+[v _readADC `(ui ~T0 @X0 1 ef1`uc ]
 "72
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 73: printToLCD("PWR ON");
+{
+[; ;main.c: 71: uint16_t readADC(char channel)
+[; ;main.c: 72: {
+[e :U _readADC ]
+"71
+[v _channel `uc ~T0 @X0 1 r1 ]
+"72
+[f ]
+[; ;main.c: 73: ADCON0 &= 0xC3;
 "73
-[e ( _printToLCD (1 :s 22C ]
-[; ;main.c: 74: }
+[e =& _ADCON0 -> -> 195 `i `uc ]
+[; ;main.c: 74: ADCON0 |= (channel << 3);
 "74
-[e :UE 199 ]
-}
+[e =| _ADCON0 -> << -> _channel `i -> 3 `i `uc ]
+[; ;main.c: 75: ADCON0 |= 0x01;
+"75
+[e =| _ADCON0 -> -> 1 `i `uc ]
+[; ;main.c: 76: _delay((unsigned long)((20)*(4000000/4000000.0)));
 "76
-[v _initInterrupt `(v ~T0 @X0 1 ef ]
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 77: GO_DONE = 1;
 "77
-{
-[; ;main.c: 76: void initInterrupt(void)
-[; ;main.c: 77: {
-[e :U _initInterrupt ]
-[f ]
-[; ;main.c: 78: GIE = 1;
+[e = _GO_DONE -> -> 1 `i `b ]
+[; ;main.c: 78: while (GO_DONE)
 "78
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 79: INTE = 1;
+[e $U 103  ]
+[e :U 104 ]
+[; ;main.c: 79: ;
 "79
-[e = _INTE -> -> 1 `i `b ]
-[; ;main.c: 80: INTF = 0;
+[e :U 103 ]
+"78
+[e $ _GO_DONE 104  ]
+[e :U 105 ]
+[; ;main.c: 80: return ((uint16_t)ADRESH << 8) | ADRESL;
 "80
-[e = _INTF -> -> 0 `i `b ]
-[; ;main.c: 81: INTEDG = 0;
+[e ) | << -> _ADRESH `ui -> 8 `i -> _ADRESL `ui ]
+[e $UE 102  ]
+[; ;main.c: 81: }
 "81
-[e = _INTEDG -> -> 0 `i `b ]
-[; ;main.c: 82: }
-"82
-[e :UE 200 ]
+[e :UE 102 ]
 }
-[v F1298 `(v ~T0 @X0 1 tf ]
+"83
+[v _instCTRL `(v ~T0 @X0 1 ef1`uc ]
 "84
-[v _ISR `IF1298 ~T0 @X0 1 e ]
+{
+[; ;main.c: 83: void instCTRL(unsigned char CMD)
+[; ;main.c: 84: {
+[e :U _instCTRL ]
+"83
+[v _CMD `uc ~T0 @X0 1 r1 ]
+"84
+[f ]
+[; ;main.c: 85: PORTD = CMD;
 "85
-{
-[; ;main.c: 84: void interrupt ISR(void)
-[; ;main.c: 85: {
-[e :U _ISR ]
-[f ]
-[; ;main.c: 86: GIE = 0;
+[e = _PORTD _CMD ]
+[; ;main.c: 86: RC0 = 0;
 "86
-[e = _GIE -> -> 0 `i `b ]
-[; ;main.c: 87: if (INTF == 1)
+[e = _RC0 -> -> 0 `i `b ]
+[; ;main.c: 87: RC1 = 0;
 "87
-[e $ ! == -> _INTF `i -> 1 `i 202  ]
-[; ;main.c: 88: {
+[e = _RC1 -> -> 0 `i `b ]
+[; ;main.c: 88: RC2 = 1;
 "88
-{
-[; ;main.c: 89: INTF = 0;
+[e = _RC2 -> -> 1 `i `b ]
+[; ;main.c: 89: _delay((unsigned long)((1)*(4000000/4000.0)));
 "89
-[e = _INTF -> -> 0 `i `b ]
-[; ;main.c: 90: mode = (mode + 1) % 4;
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 90: RC2 = 0;
 "90
-[e = _mode -> % + -> _mode `i -> 1 `i -> 4 `i `E1279 ]
-"91
-}
-[e :U 202 ]
+[e = _RC2 -> -> 0 `i `b ]
 [; ;main.c: 91: }
-[; ;main.c: 92: instCTRL(0x01);
-"92
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;main.c: 93: GIE = 1;
+"91
+[e :UE 106 ]
+}
 "93
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 94: }
+[v _dataCTRL `(v ~T0 @X0 1 ef1`uc ]
 "94
-[e :UE 201 ]
-}
+{
+[; ;main.c: 93: void dataCTRL(unsigned char DAT)
+[; ;main.c: 94: {
+[e :U _dataCTRL ]
+"93
+[v _DAT `uc ~T0 @X0 1 r1 ]
+"94
+[f ]
+[; ;main.c: 95: PORTD = DAT;
+"95
+[e = _PORTD _DAT ]
+[; ;main.c: 96: RC0 = 1;
+"96
+[e = _RC0 -> -> 1 `i `b ]
+[; ;main.c: 97: RC1 = 0;
 "97
-[v _updateState `(v ~T0 @X0 1 ef ]
+[e = _RC1 -> -> 0 `i `b ]
+[; ;main.c: 98: RC2 = 1;
 "98
-{
-[; ;main.c: 97: void updateState(void)
-[; ;main.c: 98: {
-[e :U _updateState ]
-[f ]
+[e = _RC2 -> -> 1 `i `b ]
+[; ;main.c: 99: _delay((unsigned long)((1)*(4000000/4000.0)));
 "99
-[v _buffer `uc ~T0 @X0 -> 10 `i a ]
-[; ;main.c: 99: char buffer[10];
-[; ;main.c: 100: switch (mode)
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 100: RC2 = 0;
 "100
-[e $U 205  ]
-[; ;main.c: 101: {
+[e = _RC2 -> -> 0 `i `b ]
+[; ;main.c: 101: }
 "101
-{
-[; ;main.c: 102: case DISP_CMN:
-"102
-[e :U 206 ]
-[; ;main.c: 103: instCTRL(0x80);
+[e :UE 107 ]
+}
 "103
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 104: printToLCD("MODE: ");
+[v _initLCD `(v ~T0 @X0 1 ef ]
 "104
-[e ( _printToLCD (1 :s 23C ]
-[; ;main.c: 105: switch (select)
+{
+[; ;main.c: 103: void initLCD()
+[; ;main.c: 104: {
+[e :U _initLCD ]
+[f ]
+[; ;main.c: 105: instCTRL(0x38);
 "105
-[e $U 208  ]
-[; ;main.c: 106: {
+[e ( _instCTRL (1 -> -> 56 `i `uc ]
+[; ;main.c: 106: _delay((unsigned long)((50)*(4000000/4000000.0)));
 "106
-{
-[; ;main.c: 107: case 0:
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 107: instCTRL(0x0C);
 "107
-[e :U 209 ]
-[; ;main.c: 108: printToLCD("DISP CMMON PG1");
+[e ( _instCTRL (1 -> -> 12 `i `uc ]
+[; ;main.c: 108: instCTRL(0x01);
 "108
-[e ( _printToLCD (1 :s 24C ]
-[; ;main.c: 109: instCTRL(0xC0);
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+[; ;main.c: 109: instCTRL(0x06);
 "109
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 110: displayTime();
+[e ( _instCTRL (1 -> -> 6 `i `uc ]
+[; ;main.c: 110: instCTRL(0x0F);
 "110
-[e ( _displayTime ..  ]
-[; ;main.c: 111: instCTRL(0x94);
+[e ( _instCTRL (1 -> -> 15 `i `uc ]
+[; ;main.c: 111: }
 "111
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 112: sprintf(buffer, "STRT: %2d:%2d", savedHoursStart, savedMinutesStart);
-"112
-[e ( _sprintf (1 , , (. , &U _buffer :s 25C -> _savedHoursStart `i -> _savedMinutesStart `i ]
-[; ;main.c: 113: printToLCD(buffer);
+[e :UE 108 ]
+}
 "113
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;main.c: 114: instCTRL(0xD4);
+[v _printToLCD `(v ~T0 @X0 1 ef1`*Cuc ]
 "114
-[e ( _instCTRL (1 -> -> 212 `i `uc ]
-[; ;main.c: 115: sprintf(buffer, "END: %2d:%2d", savedHoursEnd, savedMinutesEnd);
+{
+[; ;main.c: 113: void printToLCD(const unsigned char *str)
+[; ;main.c: 114: {
+[e :U _printToLCD ]
+"113
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+"114
+[f ]
+[; ;main.c: 115: instCTRL(0x0C);
 "115
-[e ( _sprintf (1 , , (. , &U _buffer :s 26C -> _savedHoursEnd `i -> _savedMinutesEnd `i ]
-[; ;main.c: 116: printToLCD(buffer);
+[e ( _instCTRL (1 -> -> 12 `i `uc ]
+[; ;main.c: 116: while (*str)
 "116
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;main.c: 117: break;
+[e $U 110  ]
+[e :U 111 ]
+[; ;main.c: 117: {
 "117
-[e $U 207  ]
-[; ;main.c: 118: case 1:
+{
+[; ;main.c: 118: dataCTRL(*str);
 "118
-[e :U 210 ]
-[; ;main.c: 119: printToLCD("DISP CMMON PG2");
+[e ( _dataCTRL (1 *U _str ]
+[; ;main.c: 119: str++;
 "119
-[e ( _printToLCD (1 :s 27C ]
-[; ;main.c: 120: instCTRL(0xC0);
+[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "120
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 121: displayPPM();
+}
+[e :U 110 ]
+"116
+[e $ != -> *U _str `i -> -> -> 0 `i `Cuc `i 111  ]
+[e :U 112 ]
+[; ;main.c: 120: }
+[; ;main.c: 121: }
 "121
-[e ( _displayPPM ..  ]
-[; ;main.c: 122: instCTRL(0x94);
-"122
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 123: displayTemp();
-"123
-[e ( _displayTemp ..  ]
-[; ;main.c: 125: break;
-"125
-[e $U 207  ]
-"126
+[e :UE 109 ]
 }
-[; ;main.c: 126: }
-[e $U 207  ]
-"105
-[e :U 208 ]
-[e [\ _select , $ -> -> 0 `i `uc 209
- , $ -> -> 1 `i `uc 210
- 207 ]
-"126
-[e :U 207 ]
-[; ;main.c: 127: break;
-"127
-[e $U 204  ]
-[; ;main.c: 128: case SET_ACTV_START:
-"128
-[e :U 211 ]
-[; ;main.c: 129: instCTRL(0x80);
-"129
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 130: printToLCD("SET HRS - START");
-"130
-[e ( _printToLCD (1 :s 28C ]
-[; ;main.c: 131: switch (select)
-"131
-[e $U 213  ]
-[; ;main.c: 132: {
-"132
-{
-[; ;main.c: 133: case 0:
-"133
-[e :U 214 ]
-[; ;main.c: 134: instCTRL(0xC0);
-"134
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 135: printToLCD("SET HOURS");
-"135
-[e ( _printToLCD (1 :s 29C ]
-[; ;main.c: 136: instCTRL(0x94);
-"136
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 137: setHoursStart();
-"137
-[e ( _setHoursStart ..  ]
-[; ;main.c: 138: break;
-"138
-[e $U 212  ]
-[; ;main.c: 139: case 1:
-"139
-[e :U 215 ]
-[; ;main.c: 140: instCTRL(0xC0);
-"140
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 141: printToLCD("SET MINUTES");
-"141
-[e ( _printToLCD (1 :s 30C ]
-[; ;main.c: 142: instCTRL(0x94);
-"142
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 143: setMinutesStart();
-"143
-[e ( _setMinutesStart ..  ]
-[; ;main.c: 144: break;
-"144
-[e $U 212  ]
-"145
-}
-[; ;main.c: 145: }
-[e $U 212  ]
-"131
-[e :U 213 ]
-[e [\ _select , $ -> -> 0 `i `uc 214
- , $ -> -> 1 `i `uc 215
- 212 ]
-"145
-[e :U 212 ]
-[; ;main.c: 146: break;
-"146
-[e $U 204  ]
-[; ;main.c: 147: case SET_ACTV_END:
-"147
-[e :U 216 ]
-[; ;main.c: 148: instCTRL(0x80);
-"148
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 149: printToLCD("SET HRS - END");
-"149
-[e ( _printToLCD (1 :s 31C ]
-[; ;main.c: 150: switch (select)
-"150
-[e $U 218  ]
-[; ;main.c: 151: {
-"151
-{
-[; ;main.c: 152: case 0:
-"152
-[e :U 219 ]
-[; ;main.c: 153: instCTRL(0xC0);
-"153
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 154: printToLCD("SET HOURS");
-"154
-[e ( _printToLCD (1 :s 32C ]
-[; ;main.c: 155: instCTRL(0x94);
-"155
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 156: setHoursEnd();
-"156
-[e ( _setHoursEnd ..  ]
-[; ;main.c: 157: break;
-"157
-[e $U 217  ]
-[; ;main.c: 158: case 1:
-"158
-[e :U 220 ]
-[; ;main.c: 159: instCTRL(0xC0);
-"159
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 160: printToLCD("SET MINUTES");
-"160
-[e ( _printToLCD (1 :s 33C ]
-[; ;main.c: 161: instCTRL(0x94);
-"161
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 162: setMinutesEnd();
-"162
-[e ( _setMinutesEnd ..  ]
-[; ;main.c: 163: break;
-"163
-[e $U 217  ]
-"164
-}
-[; ;main.c: 164: }
-[e $U 217  ]
-"150
-[e :U 218 ]
-[e [\ _select , $ -> -> 0 `i `uc 219
- , $ -> -> 1 `i `uc 220
- 217 ]
-"164
-[e :U 217 ]
-[; ;main.c: 165: break;
-"165
-[e $U 204  ]
-[; ;main.c: 166: case CHCK_IO:
-"166
-[e :U 221 ]
-[; ;main.c: 167: instCTRL(0x80);
-"167
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 168: printToLCD("IO STATUS:");
-"168
-[e ( _printToLCD (1 :s 34C ]
-[; ;main.c: 169: instCTRL(0xC0);
-"169
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 170: printStatusTMP(tempFlag);
-"170
-[e ( _printStatusTMP (1 _tempFlag ]
-[; ;main.c: 171: instCTRL(0x94);
-"171
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 172: printStatusPPM(ppmFlag);
-"172
-[e ( _printStatusPPM (1 _ppmFlag ]
-[; ;main.c: 173: break;
-"173
-[e $U 204  ]
-[; ;main.c: 174: default:
-"174
-[e :U 222 ]
-[; ;main.c: 175: break;
-"175
-[e $U 204  ]
-"176
-}
-[; ;main.c: 176: }
-[e $U 204  ]
-"100
-[e :U 205 ]
-[e [\ _mode , $ -> . `E1279 0 `E1279 206
- , $ -> . `E1279 1 `E1279 211
- , $ -> . `E1279 2 `E1279 216
- , $ -> . `E1279 3 `E1279 221
- 222 ]
-"176
-[e :U 204 ]
-[; ;main.c: 177: }
-"177
-[e :UE 203 ]
-}
-"179
-[v _checkMode `(v ~T0 @X0 1 ef ]
-"180
-{
-[; ;main.c: 179: void checkMode(void)
-[; ;main.c: 180: {
-[e :U _checkMode ]
-[f ]
-[; ;main.c: 181: if (lastMode != mode)
-"181
-[e $ ! != -> _lastMode `i -> _mode `i 224  ]
-[; ;main.c: 182: {
-"182
-{
-[; ;main.c: 184: instCTRL(0x01);
-"184
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;main.c: 185: _delay((unsigned long)((50)*(4000000/4000.0)));
-"185
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 186: lastMode = mode;
-"186
-[e = _lastMode _mode ]
-"187
-}
-[e :U 224 ]
-[; ;main.c: 187: }
-[; ;main.c: 188: }
-"188
-[e :UE 223 ]
-}
-"190
-[v _checkSelect `(v ~T0 @X0 1 ef ]
-"191
-{
-[; ;main.c: 190: void checkSelect(void)
-[; ;main.c: 191: {
-[e :U _checkSelect ]
-[f ]
-"192
-[v F1319 `i ~T0 @X0 1 s lastRB1State ]
-[i F1319
--> 0 `i
-]
-"193
-[v _currentRB1State `i ~T0 @X0 1 a ]
-[; ;main.c: 192: static int lastRB1State = 0;
-[; ;main.c: 193: int currentRB1State = RB1;
-[e = _currentRB1State -> _RB1 `i ]
-[; ;main.c: 194: if (currentRB1State == 1 && lastRB1State == 0)
-"194
-[e $ ! && == _currentRB1State -> 1 `i == F1319 -> 0 `i 226  ]
-[; ;main.c: 195: {
-"195
-{
-[; ;main.c: 196: select ^= 1;
-"196
-[e =^ _select -> -> 1 `i `uc ]
-[; ;main.c: 198: instCTRL(0x01);
-"198
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-"199
-}
-[e :U 226 ]
-[; ;main.c: 199: }
-[; ;main.c: 200: lastRB1State = currentRB1State;
-"200
-[e = F1319 _currentRB1State ]
-[; ;main.c: 201: }
-"201
-[e :UE 225 ]
-}
-[p f _sprintf 8421508 ]
-[a 6C 84 105 109 101 58 32 37 48 50 100 58 37 48 50 100 0 ]
-[a 9C 83 69 84 58 32 37 48 50 100 0 ]
-[a 12C 83 69 84 58 32 37 48 50 100 0 ]
-[a 15C 83 69 84 58 32 37 48 50 100 0 ]
-[a 18C 83 69 84 58 32 37 48 50 100 0 ]
-[a 7C 73 78 67 58 32 37 48 50 100 0 ]
-[a 10C 73 78 67 58 32 37 48 50 100 0 ]
-[a 13C 73 78 67 58 32 37 48 50 100 0 ]
-[a 16C 73 78 67 58 32 37 48 50 100 0 ]
-[a 8C 68 69 67 58 32 37 48 50 100 0 ]
-[a 11C 68 69 67 58 32 37 48 50 100 0 ]
-[a 14C 68 69 67 58 32 37 48 50 100 0 ]
-[a 17C 68 69 67 58 32 37 48 50 100 0 ]
-[a 25C 83 84 82 84 58 32 37 50 100 58 37 50 100 0 ]
-[a 26C 69 78 68 58 32 37 50 100 58 37 50 100 0 ]
-[a 2C 37 100 0 ]
-[a 28C 83 69 84 32 72 82 83 32 45 32 83 84 65 82 84 0 ]
-[a 29C 83 69 84 32 72 79 85 82 83 0 ]
-[a 32C 83 69 84 32 72 79 85 82 83 0 ]
-[a 30C 83 69 84 32 77 73 78 85 84 69 83 0 ]
-[a 33C 83 69 84 32 77 73 78 85 84 69 83 0 ]
-[a 5C 80 85 82 70 32 76 79 0 ]
-[a 22C 80 87 82 32 79 78 0 ]
-[a 4C 80 85 82 70 32 72 73 0 ]
-[a 21C 70 65 78 32 79 70 70 0 ]
-[a 31C 83 69 84 32 72 82 83 32 45 32 69 78 68 0 ]
-[a 19C 84 101 109 112 58 32 37 100 32 67 0 ]
-[a 34C 73 79 32 83 84 65 84 85 83 58 0 ]
-[a 27C 68 73 83 80 32 67 77 77 79 78 32 80 71 50 0 ]
-[a 24C 68 73 83 80 32 67 77 77 79 78 32 80 71 49 0 ]
-[a 20C 86 69 78 84 32 79 78 32 0 ]
-[a 23C 77 79 68 69 58 32 0 ]
-[a 1C 67 79 50 58 32 0 ]
-[a 3C 37 100 32 112 112 109 32 32 0 ]
+[p f _sprintf 8388736 ]
+[a 1C 65 68 67 32 84 101 115 116 0 ]
+[a 3C 65 68 67 49 58 32 37 100 32 32 32 32 32 32 32 32 0 ]
+[a 2C 65 68 67 48 58 32 37 100 32 32 32 32 32 32 32 32 0 ]

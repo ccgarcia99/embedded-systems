@@ -17,4 +17,18 @@
 // Oscillator frequency
 #define _XTAL_FREQ 4000000 // 4 MHz
 
+// shared functions
+inline int readADC(char channel);
+
+inline int readADC(char channel)
+{
+    ADCON0 &= 0xC3;
+    ADCON0 |= (channel << 3);
+    __delay_us(20);
+    GO_DONE = 1;
+    while (GO_DONE)
+        ;
+    return ((ADRESH << 8) + ADRESL);
+}
+
 #endif // COMMON_DEPENDENCIES_H

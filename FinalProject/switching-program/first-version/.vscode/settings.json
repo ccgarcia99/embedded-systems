@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "common_dependencies.h": "c"
+        "common_dependencies.h": "c",
+        "temp_module.h": "c",
+        "mq135_module.h": "c"
     }
 }

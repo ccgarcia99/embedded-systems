@@ -1,7 +1,7 @@
 #ifndef MQ135_MODULE_H
 #define MQ135_MODULE_H
 
-#include "common_dependencies.h"
+#include "common_dependencies.h" // use ADC functions
 #include "lcd_functions.h"
 
 #define PARA 116.6020682
@@ -24,12 +24,14 @@ void displayPPM();                 // Display PPM
 bool handlePPM();                  // Handle PPM
 void printStatusPPM(bool handler); // Print status of PPM
 void runMQ135();                   // Run MQ135
-inline int Read_ADC_MQ135();       // Read ADC
-float CalcMQ135(int RAW_ADC);      // Calculate MQ135
+// inline int Read_ADC_MQ135(char channel); // Read ADC
+float CalcMQ135(int RAW_ADC); // Calculate MQ135
+
+bool ppmFlag = 0;
 
 void runMQ135()
 {
-    PPM = CalcMQ135(Read_ADC_MQ135());
+    PPM = CalcMQ135(readADC(0)); // Read ADC value from MQ135
 }
 
 void displayPPM()
@@ -54,11 +56,13 @@ bool handlePPM()
     if (PPM > PPM_THRESHOLD)
     {
         AIRPURIFIER_EN = 1;
+        ppmFlag = true;
         return true;
     }
     else
     {
         AIRPURIFIER_EN = 0;
+        ppmFlag = false;
         return false;
     }
 }
@@ -75,14 +79,16 @@ void printStatusPPM(bool handler)
     }
 }
 
-inline int Read_ADC_MQ135()
+/*inline int Read_ADC_MQ135(char channel)
 {
-    __delay_ms(100);
+    ADCON0 &= 0xC3;
+    ADCON0 |= (channel << 3);
+    __delay_us(20);
     GO_DONE = 1;
     while (GO_DONE)
         ;
     return ((ADRESH << 8) + ADRESL);
-}
+}*/
 
 float CalcMQ135(int RAW_ADC)
 {

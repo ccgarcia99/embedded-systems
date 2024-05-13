@@ -74,7 +74,7 @@ void setHoursStart(void)
         else if (key == SET) // Set/Save
         {
             sprintf(debugInfo, "SET: %02d", savedHoursStart);
-            //savedHoursEnd = savedHoursStart + 2;
+            // savedHoursEnd = savedHoursStart + 2;
         }
 
         printToLCD(debugInfo);

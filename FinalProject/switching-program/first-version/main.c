@@ -2,6 +2,7 @@
 #include "mq135_module.h"
 #include "lcd_functions.h"
 #include "time_scheduler.h"
+#include "temp_module.h"
 
 typedef enum
 {
@@ -14,8 +15,6 @@ typedef enum
 MODE mode = DISP_CMN;
 MODE lastMode = -1;
 volatile unsigned char select = 0;
-bool ppmFlag = 0;
-
 
 // Function prototypes
 void startUpLCD(void);        // Start up sequence for LCD
@@ -36,13 +35,15 @@ void main(void)
     __delay_ms(250);
     while (1)
     {
-        runClock();            // Run clock
-        checkTime();           // Check time
-        runMQ135();            // Run MQ135
-        ppmFlag = handlePPM(); // Handle PPM
-        checkSelect();         // Check select
-        checkMode();           // Check mode
-        updateState();         // Update state
+        runClock();                // Run clock
+        checkTime();               // Check time
+        runMQ135();                // Run MQ135
+        handlePPM();               // Handle PPM
+        calculateTemp(readADC(1)); // Calculate temperature
+        handleTemp();              // Handle temperature
+        checkSelect();             // Check select
+        checkMode();               // Check mode
+        updateState();             // Update state
     }
 }
 
@@ -118,6 +119,9 @@ void updateState(void)
             printToLCD("DISP CMMON PG2");
             instCTRL(0xC0);
             displayPPM();
+            instCTRL(0x94);
+            displayTemp();
+            // displayHumidity();
             break;
         }
         break;
@@ -161,8 +165,10 @@ void updateState(void)
         break;
     case CHCK_IO: // Check IO status
         instCTRL(0x80);
-        printToLCD("CHCK IO");
+        printToLCD("IO STATUS:");
         instCTRL(0xC0);
+        printStatusTMP(tempFlag);
+        instCTRL(0x94);
         printStatusPPM(ppmFlag);
         break;
     default:

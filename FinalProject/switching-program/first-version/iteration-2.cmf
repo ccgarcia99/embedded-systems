@@ -16,85 +16,85 @@ end_init CODE 0 12 12 3 2
 reset_vec CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 $iteration-2.obj
-cinit CODE 0 15 15 3A 2
+cinit CODE 0 15 15 3C 2
 intentry CODE 0 4 4 E 2
-text40 CODE 0 1418 1418 13 2
-text39 CODE 0 14A5 14A5 20 2
-text38 CODE 0 142B 142B 13 2
-text37 CODE 0 14C5 14C5 20 2
-text36 CODE 0 15F0 15F0 34 2
-text35 CODE 0 8F7 8F7 6C 2
-text34 CODE 0 1737 1737 5F 2
-text33 CODE 0 159A 159A 2B 2
-text32 CODE 0 13F0 13F0 9 2
-text31 CODE 0 13E1 13E1 7 2
-text30 CODE 0 1488 1488 1D 2
-text29 CODE 0 1796 1796 6A 2
-text28 CODE 0 1550 1550 25 2
+text44 CODE 0 140C 140C 13 2
+text43 CODE 0 14CB 14CB 20 2
+text42 CODE 0 1702 1702 40 2
+text41 CODE 0 159B 159B 25 2
+text40 CODE 0 1639 1639 2F 2
+text39 CODE 0 141F 141F 13 2
+text38 CODE 0 14EB 14EB 20 2
+text37 CODE 0 1698 1698 34 2
+text36 CODE 0 852 852 77 2
+text35 CODE 0 1742 1742 5F 2
+text34 CODE 0 1668 1668 30 2
+text33 CODE 0 145A 145A 1C 2
+text32 CODE 0 13DA 13DA 9 2
+text31 CODE 0 7F9 7F9 7 2
+text30 CODE 0 14AE 14AE 1D 2
+text29 CODE 0 78F 78F 6A 2
+text28 CODE 0 15C0 15C0 25 2
 text27 CODE 0 DCE DCE 109 2
-text26 CODE 0 963 963 B8 2
+text26 CODE 0 A03 A03 B8 2
 text25 CODE 0 CFB CFB D3 2
-text24 CODE 0 4F 4F 3A7 2
-text23 CODE 0 1451 1451 1B 2
-text22 CODE 0 14E5 14E5 23 2
-text21 CODE 0 13F9 13F9 F 2
-text20 CODE 0 1508 1508 24 2
-text19 CODE 0 143E 143E 13 2
-text18 CODE 0 15C5 15C5 2B 2
-text17 CODE 0 7EA 7EA 15 2
-text16 CODE 0 8ED 8ED A 2
-text15 CODE 0 75C 75C 8E 2
-text14 CODE 0 165A 165A 40 2
-text13 CODE 0 1624 1624 36 2
-text12 CODE 0 1575 1575 25 2
-text11 CODE 0 1408 1408 10 2
-text10 CODE 0 3F6 3F6 1E3 2
-text9 CODE 0 ED7 ED7 129 2
-text8 CODE 0 152C 152C 24 2
-text7 CODE 0 146C 146C 1C 2
-text6 CODE 0 16E8 16E8 4F 2
-text5 CODE 0 A1B A1B B8 2
-text4 CODE 0 AD3 AD3 B8 2
-text3 CODE 0 B8B B8B B8 2
-text2 CODE 0 C43 C43 B8 2
-text1 CODE 0 5D9 5D9 183 2
-maintext CODE 0 169A 169A 4E 2
-cstackBANK0 BANK0 1 20 20 50 1
+text24 CODE 0 51 51 3A7 2
+text23 CODE 0 15E5 15E5 29 2
+text22 CODE 0 150B 150B 24 2
+text21 CODE 0 13ED 13ED F 2
+text20 CODE 0 152F 152F 24 2
+text19 CODE 0 1432 1432 13 2
+text18 CODE 0 160E 160E 2B 2
+text17 CODE 0 1445 1445 15 2
+text16 CODE 0 13E3 13E3 A 2
+text15 CODE 0 8C9 8C9 8E 2
+text14 CODE 0 16CC 16CC 36 2
+text13 CODE 0 13FC 13FC 10 2
+text12 CODE 0 3F8 3F8 1FF 2
+text11 CODE 0 ED7 ED7 129 2
+text10 CODE 0 1553 1553 24 2
+text9 CODE 0 1577 1577 24 2
+text8 CODE 0 1476 1476 1C 2
+text7 CODE 0 1492 1492 1C 2
+text6 CODE 0 803 803 4F 2
+text5 CODE 0 957 957 AC 2
+text4 CODE 0 ABB ABB C0 2
+text3 CODE 0 B7B B7B C0 2
+text2 CODE 0 C3B C3B C0 2
+text1 CODE 0 5F7 5F7 198 2
+maintext CODE 0 17A1 17A1 5F 2
+cstackBANK0 BANK0 1 20 20 4F 1
 cstackCOMMON COMMON 1 70 70 7 1
 cstackBANK1 BANK1 1 A0 A0 37 1
-clrtext CODE 0 13E8 13E8 8 2
-dataBANK1 BANK1 1 E9 E9 4 1
-bssBANK1 BANK1 1 D7 D7 12 1
+clrtext CODE 0 13D2 13D2 8 2
+dataBANK1 BANK1 1 EC EC 3 1
+bssBANK1 BANK1 1 D7 D7 15 1
+dataBANK0 BANK0 1 6F 6F 1 1
 dataCOMMON COMMON 1 7A 7A 3 1
 bssCOMMON COMMON 1 77 77 3 1
-strings STRING 0 800 800 ED 2
-idataBANK1 CODE 0 13DD 13DD 4 2
-idataCOMMON CODE 0 13DA 13DA 3 2
+stringtext STRCODE 0 1000 1000 10E 2
+idataBANK1 CODE 0 13CF 13CF 3 2
+idataBANK0 CODE 0 3 3 1 2
+idataCOMMON CODE 0 800 800 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK1 00ED-00EF 1
+BANK1 00EF-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
-CODE 0003-0003 2
-CODE 07FF-07FF 2
-CODE 1000-13D9 2
+CODE 110E-13CE 2
 CODE 1800-1FFF 2
 COMMON 007D-007D 1
-CONST 0003-0003 2
-CONST 07FF-07FF 2
-CONST 1000-13D9 2
+CONST 110E-13CE 2
 CONST 1800-1FFF 2
 EEDATA 2100-21FF 2
-ENTRY 0003-0003 2
-ENTRY 07FF-07FF 2
-ENTRY 1000-13D9 2
+ENTRY 110E-13CE 2
 ENTRY 1800-1FFF 2
 IDLOC 2000-2003 2
-RAM 00ED-00EF 1
+RAM 00EF-00EF 1
 RAM 0110-016F 1
 RAM 0190-01EF 1
 SFR0 0000-001F 1
@@ -102,13 +102,9 @@ SFR1 0080-009F 1
 SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
-STRCODE 0003-0003 2
-STRCODE 07FF-07FF 2
-STRCODE 1000-13D9 2
+STRCODE 110E-13CE 2
 STRCODE 1800-1FFF 2
-STRING 0003-0003 2
-STRING 07FF-07FF 2
-STRING 1000-13D9 2
+STRING 110E-13CE 2
 STRING 1800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -124,305 +120,349 @@ STRING 1800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $iteration-2.obj
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":83 4 intentry CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":690 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":693 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":792 15 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":793 16 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":794 17 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":797 18 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":798 19 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":799 1A cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":800 1B cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":801 1C cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":806 21 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":807 22 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":808 23 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":809 28 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":810 29 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":811 2E cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":812 2F cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":813 34 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":814 35 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":815 3A cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":819 3B cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":820 40 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":821 41 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":822 46 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":823 47 cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":824 4A cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":830 4B cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":831 4B cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":832 4C cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":87 4F text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":89 4F text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":90 94 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":93 C5 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":94 FE text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":95 137 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":96 170 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":97 1A9 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":101 1E2 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":103 3B6 text24 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":104 3E5 text24 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":492 3F6 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":510 3F9 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":542 3FB text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 3FF text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":547 411 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":550 415 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":551 426 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":555 427 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":557 429 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 42A text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":588 42B text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":589 42B text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":590 42C text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 430 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":606 43B text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":607 449 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":609 44D text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":610 466 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":611 47D text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 48B text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1268 4A2 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1270 4B0 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1271 4B2 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1272 4B6 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 4BB text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1315 4C1 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 4DA text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1354 4E2 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1355 4EA text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1390 4F0 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1391 501 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1393 50F text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1396 513 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1401 515 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1402 519 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1424 52A text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1426 52E text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1427 53F text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1437 546 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1439 54A text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1440 55B text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1447 565 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1448 569 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1481 57A text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 57E text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1498 586 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1533 5BA text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 5CB text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1547 5CC text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1549 5D2 text10 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":96 5D9 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":99 5D9 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":102 5DA text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":103 5E0 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":104 5EB text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":107 5EC text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":108 5F7 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":109 5FD text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":110 602 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":111 608 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":112 62A text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":113 635 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":114 63B text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":115 65D text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":116 666 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":118 667 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":119 672 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":120 678 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":122 67B text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":104 67C text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":123 686 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":125 687 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":126 68D text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":127 698 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":130 699 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":131 69F text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":132 6AA text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":133 6B0 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":134 6B3 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":136 6B4 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":137 6BA text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":138 6C5 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":139 6CB text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":141 6CE text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":127 6CF text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":142 6D9 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":144 6DA text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":145 6E0 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":146 6EB text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":149 6EC text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":150 6F2 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":151 6FD text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":152 703 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":153 706 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":155 707 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":156 70D text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":157 718 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":158 71E text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":160 721 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":146 722 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":161 72C text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":163 72D text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":164 733 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":165 73E text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":166 744 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":170 74A text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":99 74B text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":171 75B text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":44 75C text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":49 75C text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":50 76D text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":51 776 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":52 788 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":53 789 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":54 78F text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":55 796 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":56 798 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":57 79A text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":58 79F text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":60 7A8 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":61 7B1 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":63 7B8 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":64 7BC text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":66 7C5 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":67 7CE text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":65 7D0 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":70 7D3 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":71 7D6 text15 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":72 7E1 text15 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":68 7EA text17 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":70 7EA text17 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":71 7EF text17 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":72 7F5 text17 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":73 7FE text17 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 8ED text16 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 8ED text16 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 8F4 text16 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 8F6 text16 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":208 8F7 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":210 8F7 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":212 901 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":213 904 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":214 905 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":218 90B text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":220 923 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":221 926 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":222 927 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":224 927 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":226 92A text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":227 92B text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":231 931 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":233 949 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":234 94C text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":235 94D text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":237 94D text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":239 950 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":242 951 text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":244 95B text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":245 95E text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":246 95F text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":248 95F text35 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":250 962 text35 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":49 963 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":55 963 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":56 974 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":57 97B text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":58 98A text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":59 991 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":60 997 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":61 99C text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":62 9AE text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":63 9C0 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":64 9C4 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":65 9C5 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":66 9CB text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":67 9CC text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":68 9D2 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":70 9D6 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":71 9DE text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":72 9EA text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":73 9F4 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":75 9F5 text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":76 9FD text26 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":77 A01 text26 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":94 A1B text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":96 A1B text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":97 A2A text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":99 A37 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":101 A40 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":103 A47 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":105 A4B text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":106 A69 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":108 A6B text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":110 A6F text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":111 A8D text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":113 A8F text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":115 A93 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":118 AAA text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":119 AB5 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":121 ABB text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":123 ABF text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":121 AC8 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":126 AC9 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":128 ACC text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":129 AD2 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":55 AD3 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":57 AD3 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":58 AE2 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":60 AEF text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":62 AF8 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":64 AFF text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":66 B03 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":67 B21 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":69 B23 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":71 B27 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":72 B45 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":74 B47 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":76 B4B text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":80 B62 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":81 B6D text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":83 B73 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":85 B77 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":83 B80 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":88 B81 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":90 B84 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":91 B8A text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":170 B8B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":172 B8B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":173 B9A text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":175 BA7 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":177 BB0 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":179 BB7 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":181 BBB text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":182 BD9 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":184 BDB text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":186 BDF text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":187 BFD text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":189 BFF text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":191 C03 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":194 C1A text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":195 C25 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":197 C2B text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":199 C2F text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":197 C38 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":202 C39 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":204 C3C text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":205 C42 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":132 C43 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":134 C43 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":135 C52 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":137 C5F text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":139 C68 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":141 C6F text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":143 C73 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":144 C91 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":146 C93 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":148 C97 text2 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":149 CB5 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":84 4 intentry CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":748 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":751 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":858 15 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":859 16 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":860 17 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":863 18 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":864 19 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":865 1A cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":866 1B cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":867 1C cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":872 21 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":873 22 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":874 23 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":875 28 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":876 29 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":877 2E cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":878 2F cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":879 34 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":883 35 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":884 36 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":885 37 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":886 3C cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":890 3D cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":891 42 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":892 43 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":893 48 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":894 49 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":895 4C cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":901 4D cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":902 4D cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":903 4E cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":93 51 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":95 51 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":96 96 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":99 C7 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":100 100 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":101 139 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":102 172 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":103 1AB text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":107 1E4 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":109 3B8 text24 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":110 3E7 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":492 3F8 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":510 3FB text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":542 3FD text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 401 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":547 419 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":550 41D text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":551 42E text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":555 42F text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":557 431 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 432 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":588 433 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":589 433 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":590 434 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":560 438 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":606 445 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":607 455 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":609 459 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":610 472 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":611 48B text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 49B text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1268 4B8 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1270 4C6 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1271 4C8 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1272 4CC text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 4D1 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1315 4D7 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 4F4 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1354 4FC text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1355 504 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1390 50A text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1391 51B text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1393 529 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1396 52D text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1401 52F text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1402 533 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1424 544 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1426 548 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1427 559 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1437 560 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1439 564 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1440 575 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1447 57F text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1448 583 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1481 594 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 598 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1498 5A0 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1533 5D8 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 5E9 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1547 5EA text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1549 5F0 text12 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":97 5F7 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":100 5F7 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":103 5F8 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":104 5FE text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":105 609 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":108 60A text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":109 615 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":110 61B text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":111 620 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":112 626 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":113 648 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":114 653 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":115 659 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":116 677 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":117 680 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":119 681 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":120 68C text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":121 692 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":122 697 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":123 69D text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":126 6A0 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":105 6A1 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":127 6AB text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":129 6AC text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":130 6B2 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":131 6BD text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":134 6BE text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":135 6C4 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":136 6CF text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":137 6D5 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":138 6D8 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":140 6D9 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":141 6DF text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":142 6EA text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":143 6F0 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":145 6F3 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":131 6F4 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":146 6FE text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":148 6FF text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":149 705 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":150 710 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":153 711 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":154 717 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":155 722 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":156 728 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":157 72B text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":159 72C text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":160 732 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":161 73D text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":162 743 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":164 746 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":150 747 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":165 751 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":167 752 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":168 758 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":169 763 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":170 769 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":171 771 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":172 777 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":176 77D text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":100 77E text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":177 78E text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":62 78F text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":64 78F text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":65 799 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":67 7A0 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":68 7A4 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":66 7AC text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":71 7B1 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":72 7B5 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":73 7BF text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":70 7C7 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":74 7C7 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":76 7CC text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":77 7CE text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":75 7D6 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":79 7D8 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":80 7DA text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":81 7E0 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":82 7E2 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":83 7F4 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":84 7F7 text29 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":86 7F8 text29 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":76 7F9 text31 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":78 7F9 text31 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":79 7FA text31 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":80 7FB text31 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":81 7FC text31 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":82 7FF text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 803 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 803 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 806 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 808 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 80D text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 80F text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 811 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 816 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 81A text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 81C text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 81E text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 825 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 829 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 82A text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 832 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 838 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 83F text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 843 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 846 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 84B text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":208 852 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":210 852 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":212 85E text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":213 861 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":214 862 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":218 869 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":220 885 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":221 887 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":222 888 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":224 888 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":226 88A text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":227 88B text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":231 893 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":233 8B1 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":234 8B3 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":235 8B4 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":237 8B4 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":239 8B6 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":242 8B7 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":244 8C1 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":245 8C4 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":246 8C5 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":248 8C5 text36 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":250 8C8 text36 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":44 8C9 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":49 8C9 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":50 8DA text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":51 8E3 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":52 8F5 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":53 8F6 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":54 8FC text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":55 903 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":56 905 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":57 907 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":58 90C text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":60 915 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":61 91E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":63 925 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":64 929 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":66 932 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":67 93B text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":65 93D text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":70 940 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":71 943 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":72 94E text15 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":94 957 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":96 957 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":97 966 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":99 973 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":101 97C text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":103 983 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":105 987 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":106 99F text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":108 9A3 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":110 9A7 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":111 9BF text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":113 9C3 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":115 9C7 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":118 9DA text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":119 9E5 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":121 9EB text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":123 9EF text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":121 9F8 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":126 9F9 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":128 9FC text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":129 A02 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":49 A03 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":55 A03 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":56 A14 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":57 A1B text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":58 A2A text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":59 A31 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":60 A37 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":61 A3C text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":62 A4E text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":63 A60 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":64 A64 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":65 A65 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":66 A6B text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":67 A6C text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":68 A72 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":70 A76 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":71 A7E text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":72 A8A text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":73 A94 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":75 A95 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":76 A9D text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":77 AA1 text26 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":55 ABB text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":57 ABB text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":58 ACA text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":60 AD7 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":62 AE0 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":64 AE7 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":66 AEB text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":67 B09 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":69 B0F text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":71 B13 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":72 B31 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":74 B37 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":76 B3B text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":80 B52 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":81 B5D text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":83 B63 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":85 B67 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":83 B70 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":88 B71 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":90 B74 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":91 B7A text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":170 B7B text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":172 B7B text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":173 B8A text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":175 B97 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":177 BA0 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":179 BA7 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":181 BAB text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":182 BC9 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":184 BCF text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":186 BD3 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":187 BF1 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":189 BF7 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":191 BFB text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":194 C12 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":195 C1D text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":197 C23 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":199 C27 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":197 C30 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":202 C31 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":204 C34 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":205 C3A text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":132 C3B text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":134 C3B text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":135 C4A text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":137 C57 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":139 C60 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":141 C67 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":143 C6B text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":144 C89 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":146 C8F text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":148 C93 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":149 CB1 text2 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":151 CB7 text2 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":153 CBB text2 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":156 CD2 text2 CODE
@@ -501,249 +541,239 @@ $iteration-2.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":143 EB1 text27 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":144 EBB text27 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":146 EBD text27 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":35 ED7 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":38 ED7 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":39 EFC text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":42 F67 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":43 F6F text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":44 F85 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":45 FA9 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":46 FBC text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":47 FC7 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":48 FDA text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":49 FF6 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":50 FFF text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":75 13E1 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":77 13E1 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":78 13E2 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":79 13E3 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":80 13E4 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":81 13E7 text31 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":779 13E8 clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":780 13E8 clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":781 13E9 clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":782 13E9 clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":783 13EA clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":784 13EB clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":785 13EC clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":786 13ED clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":787 13EE clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":788 13EF clrtext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":62 13F0 text32 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":64 13F0 text32 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":65 13F4 text32 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":66 13F8 text32 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":50 13F9 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":52 13F9 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":53 13FD text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":54 13FF text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":55 1400 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":56 1401 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":57 1404 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":58 1405 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":59 1406 text21 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":60 1407 text21 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":8 1408 text11 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":14 140B text11 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":17 1418 text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":19 1419 text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":20 141D text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":21 141E text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":22 141F text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":23 1420 text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":24 1427 text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":25 142A text40 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":17 142B text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":19 142E text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":20 1430 text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":21 1431 text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":22 1432 text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":23 1433 text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":24 143A text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":25 143D text38 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":27 143E text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":29 1441 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":30 1443 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":31 1444 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":32 1445 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":33 1446 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":34 144D text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":35 1450 text19 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":78 1451 text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":80 1451 text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":81 145C text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":82 145F text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":83 145F text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":84 1461 text23 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":66 146C text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":68 146F text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":70 1473 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":71 147A text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":72 147B text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":74 1480 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":75 1487 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":33 1488 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":35 1488 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":36 148E text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":38 1492 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":39 1493 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":40 1497 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":42 149A text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":45 149B text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":46 14A4 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":83 14A5 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":85 14A5 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":86 14A6 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":88 14A8 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":89 14A9 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":91 14B1 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":92 14B7 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":93 14B8 text39 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":173 14C5 text37 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":175 14C5 text37 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":178 14CB text37 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":179 14D1 text37 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":180 14DC text37 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":30 14E5 text22 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":32 14E5 text22 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":33 1507 text22 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":37 1508 text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":39 1508 text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":40 150E text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":41 1515 text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":42 151B text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":43 1521 text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":44 1527 text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":45 152B text20 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":48 152C text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":51 152C text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":52 1546 text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":53 154F text8 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":32 1550 text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":36 1550 text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":37 1553 text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":38 1555 text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":39 155A text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":41 155C text28 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 1575 text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 1575 text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 1579 text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 157B text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 1581 text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 1588 text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 158F text12 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 1593 text12 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":52 159A text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":54 159A text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":56 15BB text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":57 15BE text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":58 15BF text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":59 15C0 text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":61 15C0 text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":62 15C3 text33 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":47 15C5 text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":49 15C5 text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":50 15CB text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":52 15D9 text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":53 15E9 text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":50 15EF text18 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":184 15F0 text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":187 15F0 text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":188 15FE text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":190 1609 text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":192 1611 text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":194 1615 text36 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":195 1623 text36 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":6 1624 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 1624 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 162A text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 162C text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 162E text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 1635 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 1639 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 163A text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 1642 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 1648 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 164F text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 1653 text13 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 165A text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 165A text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 165E text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 1662 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 1664 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 1666 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 166D text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 1671 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 1672 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 1679 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 1681 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 1687 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 1688 text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 168F text14 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 1693 text14 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":30 169A maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":32 169A maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":33 169F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":34 16A4 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":35 16A9 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":36 16AE maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":39 16BD maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":40 16C2 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":41 16C7 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":42 16CC maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":43 16D8 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":44 16DD maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":45 16E2 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":37 16E7 maintext CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 16E8 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 16E8 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 16EB text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 16ED text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 16F2 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 16F4 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 16F6 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 16FB text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 16FF text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 1701 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 1703 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 170A text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 170E text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 170F text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 1717 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 171D text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 1724 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 1728 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 172B text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 1730 text6 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":4 1737 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":6 1737 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":7 173B text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":8 1760 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":9 1762 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":10 1787 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":11 1789 text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":12 178B text34 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":62 1796 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":64 1796 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":65 17A0 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":67 17A7 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":68 17AB text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":66 17B3 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":71 17B8 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":72 17BC text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":73 17C6 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":70 17CE text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":74 17CE text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":76 17D3 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":77 17D5 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":75 17DD text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":79 17DF text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":80 17E1 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":81 17E7 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":82 17E9 text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":83 17FB text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":84 17FE text29 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":86 17FF text29 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":37 ED7 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":40 ED7 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":41 EFC text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":44 F67 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":45 F6F text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":46 F85 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":47 FA9 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":48 FBC text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":49 FC7 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":50 FDA text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":51 FF6 text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":52 FFF text11 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":845 13D2 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":846 13D2 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":847 13D3 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":848 13D3 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":849 13D4 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":850 13D5 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":851 13D6 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":852 13D7 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":853 13D8 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.as":854 13D9 clrtext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":63 13DA text32 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":65 13DA text32 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":66 13DE text32 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":67 13E2 text32 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 13E3 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 13E3 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 13EA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 13EC text16 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":51 13ED text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":53 13ED text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":54 13F1 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":55 13F3 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":56 13F4 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":57 13F5 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":58 13F8 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":59 13F9 text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":60 13FA text21 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":61 13FB text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":8 13FC text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c":14 13FF text13 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":17 140C text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":19 140D text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":20 1411 text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":21 1412 text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":22 1413 text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":23 1414 text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":24 141B text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":25 141E text44 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":17 141F text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":19 1422 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":20 1424 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":21 1425 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":22 1426 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":23 1427 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":24 142E text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":25 1431 text39 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":27 1432 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":29 1435 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":30 1437 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":31 1438 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":32 1439 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":33 143A text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":34 1441 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":35 1444 text19 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":69 1445 text17 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":71 1445 text17 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":72 144A text17 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":73 1450 text17 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":74 1459 text17 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":31 145A text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":33 145A text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":35 1467 text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":36 146A text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":38 146E text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":39 146F text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":41 146F text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":42 1472 text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":43 1475 text33 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":70 1476 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":72 1479 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":74 147D text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":75 1484 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":76 1485 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":78 148A text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":79 1491 text8 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":47 1492 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":49 1495 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":51 1499 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":52 14A0 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":53 14A1 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":55 14A6 text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":56 14AD text7 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":33 14AE text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":35 14AE text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":36 14B4 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":38 14B8 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":39 14B9 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":40 14BD text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":42 14C0 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":45 14C1 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":46 14CA text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":84 14CB text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":86 14CB text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":87 14CC text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":89 14CE text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":90 14CF text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":92 14D7 text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":93 14DD text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":94 14DE text43 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":179 14EB text38 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":181 14EB text38 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":184 14F1 text38 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":185 14F7 text38 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":186 1502 text38 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":32 150B text22 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":34 150B text22 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":35 152E text22 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":37 152F text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":39 152F text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":40 1535 text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":41 153C text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":42 1542 text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":43 1548 text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":44 154E text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":45 1552 text20 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":24 1553 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":27 1553 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":28 156D text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":29 1576 text10 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":48 1577 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":51 1577 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":52 1591 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":53 159A text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 159B text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 159B text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 159F text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 15A1 text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 15A7 text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 15AE text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 15B5 text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 15B9 text41 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":32 15C0 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":36 15C0 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":37 15C3 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":38 15C5 text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":39 15CA text28 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c":41 15CC text28 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":23 15E5 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":25 15E8 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":26 15EC text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":27 15F9 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":28 15FE text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":29 1601 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":30 1601 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h":31 1603 text23 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":47 160E text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":49 160E text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":50 1614 text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":52 1622 text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":53 1632 text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h":50 1638 text18 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":19 1639 text40 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":21 1639 text40 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":22 1667 text40 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":54 1668 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":56 1668 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":58 1689 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":59 168C text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":61 1690 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":62 1691 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":64 1691 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":65 1694 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h":66 1697 text34 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":190 1698 text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":193 1698 text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":194 16A6 text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":196 16B1 text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":198 16B9 text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":200 16BD text37 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":201 16CB text37 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":6 16CC text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 16CC text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 16D2 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 16D4 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 16D6 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 16DD text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 16E1 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 16E2 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 16EA text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 16F0 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 16F7 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 16FB text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 1702 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 1702 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 1706 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 170A text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 170C text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 170E text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 1715 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 1719 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 171A text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 1721 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 1729 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 172F text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 1730 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 1737 text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 173B text42 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":4 1742 text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":6 1742 text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":7 1746 text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":8 176B text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":9 176D text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":10 1792 text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":11 1794 text35 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":12 1796 text35 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":29 17A1 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":31 17A1 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":32 17A6 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":33 17AB maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":34 17B0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":35 17B5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":38 17C4 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":39 17C9 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":40 17CE maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":41 17D3 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":42 17D8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":43 17EB maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":44 17F0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":45 17F5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":46 17FA maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":36 17FF maintext CODE
 $startup.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\startup.as":40 0 functab CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\startup.as":41 0 functab CODE
@@ -767,55 +797,59 @@ $startup.obj
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 iteration-2.obj
-_updateState BB2 0 CODE 0 text1 iteration-2.obj
-sprintf@f 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
-___lwdiv@counter 27 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwdiv@dividend 28 0 BANK0 1 cstackBANK0 iteration-2.obj
+_updateState BEE 0 CODE 0 text1 iteration-2.obj
+sprintf@f 34 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwdiv@counter 2D 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___awtoft@c 28 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of___ftneg 11EE 0 CODE 0 text16 iteration-2.obj
+__end_of___ftneg 27DA 0 CODE 0 text16 iteration-2.obj
 __CFG_WRT$OFF 0 0 ABS 0 - iteration-2.obj
-_savedMinutesStart EC 0 BANK1 1 dataBANK1 iteration-2.obj
+_savedMinutesStart EE 0 BANK1 1 dataBANK1 iteration-2.obj
 _RC0 38 0 ABS 0 - iteration-2.obj
 _RB1 31 0 ABS 0 - iteration-2.obj
 _RC1 39 0 ABS 0 - iteration-2.obj
 _RC2 3A 0 ABS 0 - iteration-2.obj
 _RC3 3B 0 ABS 0 - iteration-2.obj
 _RC4 3C 0 ABS 0 - iteration-2.obj
+_RC5 3D 0 ABS 0 - iteration-2.obj
 __S0 2008 0 ABS 0 - -
-__S1 ED 0 ABS 0 - -
+__S1 EF 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _GIE 5F 0 ABS 0 - iteration-2.obj
-__end_of_startUpLCD FFE 0 CODE 0 text17 iteration-2.obj
-_setMinutesStart 1886 0 CODE 0 text2 iteration-2.obj
+__end_of_startUpLCD 28B4 0 CODE 0 text17 iteration-2.obj
+_setMinutesStart 1876 0 CODE 0 text2 iteration-2.obj
 _PPM D7 0 BANK1 1 bssBANK1 iteration-2.obj
-_ISR 294A 0 CODE 0 text39 iteration-2.obj
+_ISR 2996 0 CODE 0 text43 iteration-2.obj
 __Hintentry 24 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
 __CFG_BOREN$ON 0 0 ABS 0 - iteration-2.obj
 __pintentry 8 0 CODE 0 intentry iteration-2.obj
 ___ftadd@f1 31 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_runMQ135 2A10 0 CODE 0 text22 iteration-2.obj
+__end_of_runMQ135 2A5E 0 CODE 0 text22 iteration-2.obj
 _key 77 0 COMMON 1 bssCOMMON iteration-2.obj
 _lastKeyState 7B 0 COMMON 1 dataCOMMON iteration-2.obj
+_calculateTemp 2C72 0 CODE 0 text40 iteration-2.obj
 _INTE 5C 0 ABS 0 - iteration-2.obj
 _INTF 59 0 ABS 0 - iteration-2.obj
 ___ftneg@f1 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___ftadd@f2 34 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setHoursEnd 0 0 ABS 0 - iteration-2.obj
+_CalcMQ135$684 AC 0 BANK1 1 cstackBANK1 iteration-2.obj
 __size_of_checkTime 0 0 ABS 0 - iteration-2.obj
-_mode DC 0 BANK1 1 bssBANK1 iteration-2.obj
+_mode DE 0 BANK1 1 bssBANK1 iteration-2.obj
 CalcMQ135@voltage A0 0 BANK1 1 cstackBANK1 iteration-2.obj
-_main 2D34 0 CODE 0 maintext iteration-2.obj
+_main 2F42 0 CODE 0 maintext iteration-2.obj
 ___sp 0 0 STACK 2 stack startup.obj
 btemp 7E 0 ABS 0 - iteration-2.obj
 ltemp 7E 0 ABS 0 - iteration-2.obj
 ttemp 7E 0 ABS 0 - iteration-2.obj
 wtemp 7E 0 ABS 0 - iteration-2.obj
 instCTRL@CMD 21 0 BANK0 1 cstackBANK0 iteration-2.obj
-updateState@buffer 63 0 BANK0 1 cstackBANK0 iteration-2.obj
+updateState@buffer 62 0 BANK0 1 cstackBANK0 iteration-2.obj
 start 24 0 CODE 0 init startup.obj
 __end_of_setMinutesStart 19F6 0 CODE 0 text2 iteration-2.obj
+_tempFlag E1 0 BANK1 1 bssBANK1 iteration-2.obj
 ?___ftadd 31 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___fttol@f1 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___ftmul@f1 3E 0 BANK0 1 cstackBANK0 iteration-2.obj
@@ -847,7 +881,7 @@ wtemp3 84 0 ABS 0 - iteration-2.obj
 ___ftmul@f2 41 0 BANK0 1 cstackBANK0 iteration-2.obj
 ttemp4 7F 0 ABS 0 - iteration-2.obj
 wtemp4 86 0 ABS 0 - iteration-2.obj
-_savedHoursStart EA 0 BANK1 1 dataBANK1 iteration-2.obj
+_savedHoursStart EC 0 BANK1 1 dataBANK1 iteration-2.obj
 wtemp5 88 0 ABS 0 - iteration-2.obj
 wtemp6 7F 0 ABS 0 - iteration-2.obj
 ___ftdiv@f2 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
@@ -856,58 +890,57 @@ __Hconfig 4010 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
 __size_of_printToLCD 0 0 ABS 0 - iteration-2.obj
 ?___ftneg 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
-___ftpack 2F2C 0 CODE 0 text29 iteration-2.obj
-_runClock 2910 0 CODE 0 text30 iteration-2.obj
+___ftpack F1E 0 CODE 0 text29 iteration-2.obj
+_runClock 295C 0 CODE 0 text30 iteration-2.obj
 ?___awmod 20 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setPortDirections 0 0 ABS 0 - iteration-2.obj
-__end_of__stringtab 1020 0 STRING 0 strings iteration-2.obj
+__end_of__stringtab 2024 0 STRCODE 0 stringtext iteration-2.obj
 __size_of_runClock 0 0 ABS 0 - iteration-2.obj
 CalcMQ135@ratio C4 0 BANK1 1 cstackBANK1 iteration-2.obj
-?___lwmod 28 0 BANK0 1 cstackBANK0 iteration-2.obj
+?___lwmod 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___ftdiv@f3 59 0 BANK0 1 cstackBANK0 iteration-2.obj
 checkSelect@currentRB1State 24 0 BANK0 1 cstackBANK0 iteration-2.obj
-_Read_ADC_MQ135 28A2 0 CODE 0 text23 iteration-2.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of__stringdata 11DA 0 STRING 0 strings iteration-2.obj
+__end_of__stringdata 221C 0 STRCODE 0 stringtext iteration-2.obj
 ___ftge@ff1 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-?_sprintf 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
-_printToLCD 2B8A 0 CODE 0 text18 iteration-2.obj
+?_sprintf 34 0 BANK0 1 cstackBANK0 iteration-2.obj
+_printToLCD 2C1C 0 CODE 0 text18 iteration-2.obj
 _hours 7A 0 COMMON 1 dataCOMMON iteration-2.obj
-_startUpLCD FD4 0 CODE 0 text17 iteration-2.obj
+_startUpLCD 288A 0 CODE 0 text17 iteration-2.obj
 ___ftmul@cntr 4C 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of___ftadd 0 0 ABS 0 - iteration-2.obj
-__end_of_ISR 298A 0 CODE 0 text39 iteration-2.obj
+__end_of_ISR 29D6 0 CODE 0 text43 iteration-2.obj
 ___ftdiv@cntr 58 0 BANK0 1 cstackBANK0 iteration-2.obj
-_checkMode 298A 0 CODE 0 text37 iteration-2.obj
+_checkMode 29D6 0 CODE 0 text38 iteration-2.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
 _ADCON0 1F 0 ABS 0 - iteration-2.obj
 _ADCON1 9F 0 ABS 0 - iteration-2.obj
 ___ftge@ff2 23 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_runClock 294A 0 CODE 0 text30 iteration-2.obj
+__end_of_runClock 2996 0 CODE 0 text30 iteration-2.obj
 __size_of_setMinutesStart 0 0 ABS 0 - iteration-2.obj
 printStatusPPM@handler 24 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_displayPPM 2000 0 CODE 0 text9 iteration-2.obj
+__end_of_displayPPM 2000 0 CODE 0 text11 iteration-2.obj
 __Hcommon 0 0 ABS 0 common -
 __Lcommon 0 0 ABS 0 common -
 ?___fttol 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 ?___ftmul 3E 0 BANK0 1 cstackBANK0 iteration-2.obj
-sprintf@ap 36 0 BANK0 1 cstackBANK0 iteration-2.obj
+sprintf@ap 3D 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___int_sp 0 0 STACK 2 stack startup.obj
 _INTEDG 40E 0 ABS 0 - iteration-2.obj
 ?___ftdiv 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_displayTime 2AA0 0 CODE 0 text8 iteration-2.obj
-___awtoft 2AA0 0 CODE 0 text28 iteration-2.obj
-_CalcMQ135$660 AF 0 BANK1 1 cstackBANK1 iteration-2.obj
-?___lwdiv 20 0 BANK0 1 cstackBANK0 iteration-2.obj
+__end_of_displayTime 2B36 0 CODE 0 text9 iteration-2.obj
+___awtoft 2B80 0 CODE 0 text28 iteration-2.obj
+__end_of_displayTemp 2AEE 0 CODE 0 text10 iteration-2.obj
+?___lwdiv 26 0 BANK0 1 cstackBANK0 iteration-2.obj
 _ADRESH 1E 0 ABS 0 - iteration-2.obj
-_CalcMQ135 9E 0 CODE 0 text24 iteration-2.obj
+_CalcMQ135 A2 0 CODE 0 text24 iteration-2.obj
 __size_of_initInterrupt 0 0 ABS 0 - iteration-2.obj
-__end_of_updateState EB8 0 CODE 0 text1 iteration-2.obj
-_checkTime 11EE 0 CODE 0 text35 iteration-2.obj
+__end_of_updateState F1E 0 CODE 0 text1 iteration-2.obj
+_checkTime 10A4 0 CODE 0 text36 iteration-2.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Labs1 0 0 ABS 0 abs1 -
 _ADRESL 9E 0 ABS 0 - iteration-2.obj
@@ -922,25 +955,27 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 ___ftmul@f3_as_product 49 0 BANK0 1 cstackBANK0 iteration-2.obj
 CalcMQ135@ratio3 B8 0 BANK1 1 cstackBANK1 iteration-2.obj
-__end_of_printStatusPPM 2910 0 CODE 0 text7 iteration-2.obj
-__end_of___ftpack 3000 0 CODE 0 text29 iteration-2.obj
+displayTemp@buffer 4A 0 BANK0 1 cstackBANK0 iteration-2.obj
+__end_of_printStatusPPM 2924 0 CODE 0 text8 iteration-2.obj
+__end_of_printStatusTMP 295C 0 CODE 0 text7 iteration-2.obj
+_CalcMQ135$685 AF 0 BANK1 1 cstackBANK1 iteration-2.obj
+__end_of___ftpack FF2 0 CODE 0 text29 iteration-2.obj
 ?___ftpack 20 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setMinutesEnd 0 0 ABS 0 - iteration-2.obj
 __size_of_checkMode 0 0 ABS 0 - iteration-2.obj
 __size_of_initADC 0 0 ABS 0 - iteration-2.obj
 __size_of___ftpack 0 0 ABS 0 - iteration-2.obj
-__end_of_dpowers 1034 0 STRING 0 strings iteration-2.obj
+__end_of_dpowers 2038 0 STRCODE 0 stringtext iteration-2.obj
 __size_of___fttol 0 0 ABS 0 - iteration-2.obj
-__end_of___awmod 2E6E 0 CODE 0 text6 iteration-2.obj
+__end_of___awmod 10A4 0 CODE 0 text6 iteration-2.obj
 ___ftadd@sign 3B 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
-?_Read_ADC_MQ135 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-_debugInfo DF 0 BANK1 1 bssBANK1 iteration-2.obj
-___ftge 2E6E 0 CODE 0 text34 iteration-2.obj
+_debugInfo E2 0 BANK1 1 bssBANK1 iteration-2.obj
+___ftge 2E84 0 CODE 0 text35 iteration-2.obj
 CalcMQ135@ratio6 A3 0 BANK1 1 cstackBANK1 iteration-2.obj
 stackhi 0 0 ABS 0 - startup.obj
-sprintf@sp 42 0 BANK0 1 cstackBANK0 iteration-2.obj
+sprintf@sp 49 0 BANK0 1 cstackBANK0 iteration-2.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __size_of_CalcMQ135 0 0 ABS 0 - iteration-2.obj
@@ -948,56 +983,59 @@ __pcstackBANK0 20 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___awmod@sign 26 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setHoursStart 0 0 ABS 0 - iteration-2.obj
 stacklo 0 0 ABS 0 - startup.obj
-_select DE 0 BANK1 1 bssBANK1 iteration-2.obj
+_select E0 0 BANK1 1 bssBANK1 iteration-2.obj
 saved_w 7E 0 ABS 0 - iteration-2.obj
-checkSelect@lastRB1State DA 0 BANK1 1 bssBANK1 iteration-2.obj
+checkSelect@lastRB1State DC 0 BANK1 1 bssBANK1 iteration-2.obj
 __Hinit 24 0 CODE 0 init -
 __Linit 24 0 CODE 0 init -
-___wmul 2AEA 0 CODE 0 text12 iteration-2.obj
+___wmul 2B36 0 CODE 0 text41 iteration-2.obj
 displayPPM@bufPtr D6 0 BANK1 1 cstackBANK1 iteration-2.obj
-__end_of_main 2DD0 0 CODE 0 maintext iteration-2.obj
+__end_of_main 3000 0 CODE 0 maintext iteration-2.obj
 i1instCTRL@CMD 71 0 COMMON 1 cstackCOMMON iteration-2.obj
+_displayTemp 2AA6 0 CODE 0 text10 iteration-2.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
-_checkSelect 2BE0 0 CODE 0 text36 iteration-2.obj
-sprintf@width 3F 0 BANK0 1 cstackBANK0 iteration-2.obj
+_checkSelect 2D30 0 CODE 0 text37 iteration-2.obj
+sprintf@width 46 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___wmul@multiplier 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_instCTRL 287C 0 CODE 0 text38 iteration-2.obj
-_CalcMQ135$657 A6 0 BANK1 1 cstackBANK1 iteration-2.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__end_of_instCTRL 2864 0 CODE 0 text39 iteration-2.obj
+__pdataBANK0 6F 0 BANK0 1 dataBANK0 iteration-2.obj
 __size_of___ftneg 0 0 ABS 0 - iteration-2.obj
 ___ftmul@sign 4D 0 BANK0 1 cstackBANK0 iteration-2.obj
-end_of_initialization 96 0 CODE 0 cinit iteration-2.obj
+end_of_initialization 9A 0 CODE 0 cinit iteration-2.obj
 ___ftdiv@sign 5D 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_ISR 0 0 ABS 0 - iteration-2.obj
 ___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 iteration-2.obj
-__stringtab 1000 0 STRING 0 strings iteration-2.obj
-displayTime@timeFormat 48 0 BANK0 1 cstackBANK0 iteration-2.obj
+__stringtab 2000 0 STRCODE 0 stringtext iteration-2.obj
+displayTime@timeFormat 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_initLCD 0 0 ABS 0 - iteration-2.obj
 __size_of___awtoft 0 0 ABS 0 - iteration-2.obj
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
-__pdataBANK1 E9 0 BANK1 1 dataBANK1 iteration-2.obj
-_CalcMQ135$661 B2 0 BANK1 1 cstackBANK1 iteration-2.obj
+__pdataBANK1 EC 0 BANK1 1 dataBANK1 iteration-2.obj
 __end_of___ftadd 1DAE 0 CODE 0 text27 iteration-2.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
-__pstrings 1000 0 STRING 0 strings iteration-2.obj
-_initADC 27E0 0 CODE 0 text32 iteration-2.obj
-__end_of_dataCTRL 28A2 0 CODE 0 text19 iteration-2.obj
+_readADC 2BCA 0 CODE 0 text23 iteration-2.obj
+_initADC 27B4 0 CODE 0 text32 iteration-2.obj
+__end_of_dataCTRL 288A 0 CODE 0 text19 iteration-2.obj
 ?___awtoft 28 0 BANK0 1 cstackBANK0 iteration-2.obj
 _GO_DONE FA 0 ABS 0 - iteration-2.obj
-_initLCD 2A10 0 CODE 0 text20 iteration-2.obj
-__end_of_initInterrupt 27D0 0 CODE 0 text31 iteration-2.obj
-_setMinutesEnd 1716 0 CODE 0 text3 iteration-2.obj
+_initLCD 2A5E 0 CODE 0 text20 iteration-2.obj
+_CalcMQ135$686 B2 0 BANK1 1 cstackBANK1 iteration-2.obj
+__end_of_initInterrupt 1000 0 CODE 0 text31 iteration-2.obj
+_setMinutesEnd 16F6 0 CODE 0 text3 iteration-2.obj
 ?_CalcMQ135 5E 0 BANK0 1 cstackBANK0 iteration-2.obj
-sprintf@ccnt 38 0 BANK0 1 cstackBANK0 iteration-2.obj
+sprintf@ccnt 3F 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Lbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
-_initInterrupt 27C2 0 CODE 0 text31 iteration-2.obj
+_initInterrupt FF2 0 CODE 0 text31 iteration-2.obj
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
 ___latbits 2 0 ABS 0 - iteration-2.obj
@@ -1006,20 +1044,20 @@ ___ftdiv@exp 5C 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
 __size_of_checkSelect 0 0 ABS 0 - iteration-2.obj
-__ptext1 BB2 0 CODE 0 text1 iteration-2.obj
-__ptext2 1886 0 CODE 0 text2 iteration-2.obj
-__ptext3 1716 0 CODE 0 text3 iteration-2.obj
-__ptext4 15A6 0 CODE 0 text4 iteration-2.obj
-i1_instCTRL 2830 0 CODE 0 text40 iteration-2.obj
-__ptext5 1436 0 CODE 0 text5 iteration-2.obj
-__ptext6 2DD0 0 CODE 0 text6 iteration-2.obj
-__end_ofi1_instCTRL 2856 0 CODE 0 text40 iteration-2.obj
-__end_of_setHoursEnd 15A6 0 CODE 0 text5 iteration-2.obj
-__ptext7 28D8 0 CODE 0 text7 iteration-2.obj
+__ptext1 BEE 0 CODE 0 text1 iteration-2.obj
+__ptext2 1876 0 CODE 0 text2 iteration-2.obj
+__ptext3 16F6 0 CODE 0 text3 iteration-2.obj
+__ptext4 1576 0 CODE 0 text4 iteration-2.obj
+i1_instCTRL 2818 0 CODE 0 text44 iteration-2.obj
+__ptext5 12AE 0 CODE 0 text5 iteration-2.obj
+__ptext6 1006 0 CODE 0 text6 iteration-2.obj
+__end_ofi1_instCTRL 283E 0 CODE 0 text44 iteration-2.obj
+__end_of_setHoursEnd 1406 0 CODE 0 text5 iteration-2.obj
+__ptext7 2924 0 CODE 0 text7 iteration-2.obj
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
-__ptext8 2A58 0 CODE 0 text8 iteration-2.obj
-__ptext9 1DAE 0 CODE 0 text9 iteration-2.obj
+__ptext8 28EC 0 CODE 0 text8 iteration-2.obj
+__ptext9 2AEE 0 CODE 0 text9 iteration-2.obj
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 iteration-2.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -1027,191 +1065,214 @@ __HdataCOMMON 0 0 ABS 0 dataCOMMON -
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __pdataCOMMON 7A 0 COMMON 1 dataCOMMON iteration-2.obj
 printToLCD@str 22 0 BANK0 1 cstackBANK0 iteration-2.obj
-__size_of_Read_ADC_MQ135 0 0 ABS 0 - iteration-2.obj
-_savedHoursEnd E9 0 BANK1 1 dataBANK1 iteration-2.obj
-__end_of_checkMode 29CA 0 CODE 0 text37 iteration-2.obj
-_CalcMQ135$658 A9 0 BANK1 1 cstackBANK1 iteration-2.obj
+_savedHoursEnd 6F 0 BANK0 1 dataBANK0 iteration-2.obj
+__end_of_checkMode 2A16 0 CODE 0 text38 iteration-2.obj
 CalcMQ135@co2 C1 0 BANK1 1 cstackBANK1 iteration-2.obj
-__end_of__initialization 96 0 CODE 0 cinit iteration-2.obj
-__end_of___lwdiv 2D34 0 CODE 0 text14 iteration-2.obj
+__end_of__initialization 9A 0 CODE 0 cinit iteration-2.obj
+__end_of___lwdiv 2E84 0 CODE 0 text42 iteration-2.obj
 dataCTRL@DAT 21 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of_Read_ADC_MQ135 28D8 0 CODE 0 text23 iteration-2.obj
+__end_of_calculateTemp 2CD0 0 CODE 0 text40 iteration-2.obj
 CalcMQ135@ratio2 B5 0 BANK1 1 cstackBANK1 iteration-2.obj
-_setHoursStart 15A6 0 CODE 0 text4 iteration-2.obj
-_ppmFlag DD 0 BANK1 1 bssBANK1 iteration-2.obj
+_setHoursStart 1576 0 CODE 0 text4 iteration-2.obj
+_ppmFlag DF 0 BANK1 1 bssBANK1 iteration-2.obj
 ___ftadd 1B9C 0 CODE 0 text27 iteration-2.obj
-_displayPPM 1DAE 0 CODE 0 text9 iteration-2.obj
+_displayPPM 1DAE 0 CODE 0 text11 iteration-2.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
-___ftneg 11DA 0 CODE 0 text16 iteration-2.obj
-___awmod 2DD0 0 CODE 0 text6 iteration-2.obj
-___lwmod 2C48 0 CODE 0 text13 iteration-2.obj
+___ftneg 27C6 0 CODE 0 text16 iteration-2.obj
+___awmod 1006 0 CODE 0 text6 iteration-2.obj
+___lwmod 2D98 0 CODE 0 text14 iteration-2.obj
 __Hspace_0 2008 0 ABS 0 - -
 __Lspace_0 0 0 ABS 0 - -
-__end_of_setHoursStart 1716 0 CODE 0 text4 iteration-2.obj
+_isdigit$441 20 0 BANK0 1 cstackBANK0 iteration-2.obj
+__end_of_setHoursStart 16F6 0 CODE 0 text4 iteration-2.obj
 ___ftpack@sign 24 0 BANK0 1 cstackBANK0 iteration-2.obj
-_sprintf 7EC 0 CODE 0 text10 iteration-2.obj
-__Hspace_1 ED 0 ABS 0 - -
+_sprintf 7F0 0 CODE 0 text12 iteration-2.obj
+__Hspace_1 EF 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 ___ftadd@exp1 3D 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hspace_2 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
-___fttol EB8 0 CODE 0 text15 iteration-2.obj
+___fttol 1192 0 CODE 0 text15 iteration-2.obj
+__size_of_calculateTemp 0 0 ABS 0 - iteration-2.obj
 ?___wmul 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-_isdigit 2810 0 CODE 0 text11 iteration-2.obj
-__Hcinit 9E 0 CODE 0 cinit -
+_isdigit 27F8 0 CODE 0 text13 iteration-2.obj
+__Hcinit A2 0 CODE 0 cinit -
 CalcMQ135@ratio5 BE 0 BANK1 1 cstackBANK1 iteration-2.obj
 ___ftmul 19F6 0 CODE 0 text25 iteration-2.obj
 __Lcinit 2A 0 CODE 0 cinit -
 __CFG_FOSC$HS 0 0 ABS 0 - iteration-2.obj
-___ftdiv 12C6 0 CODE 0 text26 iteration-2.obj
+___ftdiv 1406 0 CODE 0 text26 iteration-2.obj
 _minutes 79 0 COMMON 1 bssCOMMON iteration-2.obj
 __Hspace_3 0 0 ABS 0 - -
-___lwdiv 2CB4 0 CODE 0 text14 iteration-2.obj
+___lwdiv 2E04 0 CODE 0 text42 iteration-2.obj
 __Lspace_3 0 0 ABS 0 - -
 __size_of_main 0 0 ABS 0 - iteration-2.obj
-_savedMinutesEnd EB 0 BANK1 1 dataBANK1 iteration-2.obj
-_runMQ135 29CA 0 CODE 0 text22 iteration-2.obj
-_dpowers 1020 0 STRING 0 strings iteration-2.obj
-__end_of_setMinutesEnd 1886 0 CODE 0 text3 iteration-2.obj
-_setHoursEnd 1436 0 CODE 0 text5 iteration-2.obj
+printStatusTMP@handler 24 0 BANK0 1 cstackBANK0 iteration-2.obj
+_savedMinutesEnd ED 0 BANK1 1 dataBANK1 iteration-2.obj
+_runMQ135 2A16 0 CODE 0 text22 iteration-2.obj
+_dpowers 2024 0 STRCODE 0 stringtext iteration-2.obj
+__end_of_setMinutesEnd 1876 0 CODE 0 text3 iteration-2.obj
+__size_of_readADC 0 0 ABS 0 - iteration-2.obj
+_setHoursEnd 12AE 0 CODE 0 text5 iteration-2.obj
+_handleTemp 28B4 0 CODE 0 text33 iteration-2.obj
 ___fttol@exp1 5B 0 BANK0 1 cstackBANK0 iteration-2.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __size_of___ftdiv 0 0 ABS 0 - iteration-2.obj
-__end_of_isdigit 2830 0 CODE 0 text11 iteration-2.obj
-__end_of_sprintf BB2 0 CODE 0 text10 iteration-2.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__pidataBANK0 6 0 CODE 0 idataBANK0 iteration-2.obj
+_tempBuffer DA 0 BANK1 1 bssBANK1 iteration-2.obj
+__end_of_isdigit 2818 0 CODE 0 text13 iteration-2.obj
+__end_of_sprintf BEE 0 CODE 0 text12 iteration-2.obj
 ___awtoft@sign 2D 0 BANK0 1 cstackBANK0 iteration-2.obj
-clear_ram0 27D0 0 CODE 0 clrtext iteration-2.obj
+clear_ram0 27A4 0 CODE 0 clrtext iteration-2.obj
 ___ftpack@arg 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-_CalcMQ135$659 AC 0 BANK1 1 cstackBANK1 iteration-2.obj
 __size_of___lwdiv 0 0 ABS 0 - iteration-2.obj
 ___ftadd@exp2 3C 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_isdigit 0 0 ABS 0 - iteration-2.obj
-sprintf@flag 3E 0 BANK0 1 cstackBANK0 iteration-2.obj
+sprintf@flag 45 0 BANK0 1 cstackBANK0 iteration-2.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __pbssBANK1 D7 0 BANK1 1 bssBANK1 iteration-2.obj
-__ptext10 7EC 0 CODE 0 text10 iteration-2.obj
-__end_of_checkSelect 2C48 0 CODE 0 text36 iteration-2.obj
-__ptext20 2A10 0 CODE 0 text20 iteration-2.obj
-__ptext11 2810 0 CODE 0 text11 iteration-2.obj
-__ptext30 2910 0 CODE 0 text30 iteration-2.obj
-__ptext21 27F2 0 CODE 0 text21 iteration-2.obj
-__ptext40 2830 0 CODE 0 text40 iteration-2.obj
-__ptext12 2AEA 0 CODE 0 text12 iteration-2.obj
-__ptext31 27C2 0 CODE 0 text31 iteration-2.obj
-__ptext22 29CA 0 CODE 0 text22 iteration-2.obj
-__ptext13 2C48 0 CODE 0 text13 iteration-2.obj
-__ptext32 27E0 0 CODE 0 text32 iteration-2.obj
-__ptext23 28A2 0 CODE 0 text23 iteration-2.obj
-sprintf@prec 37 0 BANK0 1 cstackBANK0 iteration-2.obj
+__Hstringtext 0 0 ABS 0 stringtext -
+__Lstringtext 0 0 ABS 0 stringtext -
+__pstringtext 2000 0 STRCODE 0 stringtext iteration-2.obj
+__ptext10 2AA6 0 CODE 0 text10 iteration-2.obj
+__end_of_checkSelect 2D98 0 CODE 0 text37 iteration-2.obj
+__ptext20 2A5E 0 CODE 0 text20 iteration-2.obj
+__ptext11 1DAE 0 CODE 0 text11 iteration-2.obj
+__ptext30 295C 0 CODE 0 text30 iteration-2.obj
+__ptext21 27DA 0 CODE 0 text21 iteration-2.obj
+__ptext40 2C72 0 CODE 0 text40 iteration-2.obj
+__ptext12 7F0 0 CODE 0 text12 iteration-2.obj
+__ptext31 FF2 0 CODE 0 text31 iteration-2.obj
+__ptext22 2A16 0 CODE 0 text22 iteration-2.obj
+__ptext41 2B36 0 CODE 0 text41 iteration-2.obj
+__ptext13 27F8 0 CODE 0 text13 iteration-2.obj
+__ptext32 27B4 0 CODE 0 text32 iteration-2.obj
+_CalcMQ135$682 A6 0 BANK1 1 cstackBANK1 iteration-2.obj
+__ptext23 2BCA 0 CODE 0 text23 iteration-2.obj
+__ptext42 2E04 0 CODE 0 text42 iteration-2.obj
+sprintf@prec 3E 0 BANK0 1 cstackBANK0 iteration-2.obj
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
-__end_of_initADC 27F2 0 CODE 0 text32 iteration-2.obj
-__ptext14 2CB4 0 CODE 0 text14 iteration-2.obj
-__ptext33 2B34 0 CODE 0 text33 iteration-2.obj
-__pidataBANK1 27BA 0 CODE 0 idataBANK1 iteration-2.obj
-__ptext24 9E 0 CODE 0 text24 iteration-2.obj
-__ptext15 EB8 0 CODE 0 text15 iteration-2.obj
-__ptext34 2E6E 0 CODE 0 text34 iteration-2.obj
+__end_of_initADC 27C6 0 CODE 0 text32 iteration-2.obj
+__ptext14 2D98 0 CODE 0 text14 iteration-2.obj
+__ptext33 28B4 0 CODE 0 text33 iteration-2.obj
+__pidataBANK1 279E 0 CODE 0 idataBANK1 iteration-2.obj
+__ptext24 A2 0 CODE 0 text24 iteration-2.obj
+__ptext43 2996 0 CODE 0 text43 iteration-2.obj
+__ptext15 1192 0 CODE 0 text15 iteration-2.obj
+__ptext34 2CD0 0 CODE 0 text34 iteration-2.obj
 __size_ofi1_instCTRL 0 0 ABS 0 - iteration-2.obj
+__end_of_handleTemp 28EC 0 CODE 0 text33 iteration-2.obj
 __ptext25 19F6 0 CODE 0 text25 iteration-2.obj
-__ptext16 11DA 0 CODE 0 text16 iteration-2.obj
-__ptext35 11EE 0 CODE 0 text35 iteration-2.obj
-__ptext26 12C6 0 CODE 0 text26 iteration-2.obj
-__ptext17 FD4 0 CODE 0 text17 iteration-2.obj
-__ptext36 2BE0 0 CODE 0 text36 iteration-2.obj
+__ptext44 2818 0 CODE 0 text44 iteration-2.obj
+__ptext16 27C6 0 CODE 0 text16 iteration-2.obj
+__ptext35 2E84 0 CODE 0 text35 iteration-2.obj
+__ptext26 1406 0 CODE 0 text26 iteration-2.obj
+__ptext17 288A 0 CODE 0 text17 iteration-2.obj
+__ptext36 10A4 0 CODE 0 text36 iteration-2.obj
 ___awmod@divisor 20 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of___lwmod 2CB4 0 CODE 0 text13 iteration-2.obj
+__end_of___lwmod 2E04 0 CODE 0 text14 iteration-2.obj
 __ptext27 1B9C 0 CODE 0 text27 iteration-2.obj
-___lwmod@divisor 28 0 BANK0 1 cstackBANK0 iteration-2.obj
-__ptext18 2B8A 0 CODE 0 text18 iteration-2.obj
-__ptext37 298A 0 CODE 0 text37 iteration-2.obj
-_isdigit$426 20 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwmod@divisor 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
+__ptext18 2C1C 0 CODE 0 text18 iteration-2.obj
+__ptext37 2D30 0 CODE 0 text37 iteration-2.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - iteration-2.obj
-__ptext28 2AA0 0 CODE 0 text28 iteration-2.obj
+__ptext28 2B80 0 CODE 0 text28 iteration-2.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___fttol@sign1 56 0 BANK0 1 cstackBANK0 iteration-2.obj
-__ptext19 287C 0 CODE 0 text19 iteration-2.obj
-__ptext38 2856 0 CODE 0 text38 iteration-2.obj
+__ptext19 2864 0 CODE 0 text19 iteration-2.obj
+__ptext38 29D6 0 CODE 0 text38 iteration-2.obj
 __pbssCOMMON 77 0 COMMON 1 bssCOMMON iteration-2.obj
-__ptext29 2F2C 0 CODE 0 text29 iteration-2.obj
-_handlePPM 2B34 0 CODE 0 text33 iteration-2.obj
-__ptext39 294A 0 CODE 0 text39 iteration-2.obj
+__ptext29 F1E 0 CODE 0 text29 iteration-2.obj
+_handlePPM 2CD0 0 CODE 0 text34 iteration-2.obj
+__ptext39 283E 0 CODE 0 text39 iteration-2.obj
 __Hend_init 2A 0 CODE 0 end_init -
 __Lend_init 24 0 CODE 0 end_init -
-__end_of_checkTime 12C6 0 CODE 0 text35 iteration-2.obj
+?_readADC 20 0 BANK0 1 cstackBANK0 iteration-2.obj
+__end_of_checkTime 1192 0 CODE 0 text36 iteration-2.obj
 ___ftpack@exp 23 0 BANK0 1 cstackBANK0 iteration-2.obj
-___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwdiv@divisor 26 0 BANK0 1 cstackBANK0 iteration-2.obj
 __end_of___ftmul 1B9C 0 CODE 0 text25 iteration-2.obj
+_printStatusTMP 2924 0 CODE 0 text7 iteration-2.obj
 __size_of___wmul 0 0 ABS 0 - iteration-2.obj
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
+readADC@channel 24 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_instCTRL 0 0 ABS 0 - iteration-2.obj
 CalcMQ135@RAW_ADC 5E 0 BANK0 1 cstackBANK0 iteration-2.obj
-__stringdata 1034 0 STRING 0 strings iteration-2.obj
+__stringdata 2038 0 STRCODE 0 stringtext iteration-2.obj
 intlevel0 0 0 CODE 0 functab startup.obj
+calculateTemp@adcValue 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - iteration-2.obj
 displayPPM@ppmWhole D2 0 BANK1 1 cstackBANK1 iteration-2.obj
 intlevel1 0 0 CODE 0 functab startup.obj
 intlevel2 0 0 CODE 0 functab startup.obj
-__end_of___awtoft 2AEA 0 CODE 0 text28 iteration-2.obj
+__end_of___awtoft 2BCA 0 CODE 0 text28 iteration-2.obj
 __size_of_printStatusPPM 0 0 ABS 0 - iteration-2.obj
-_setPortDirections 27F2 0 CODE 0 text21 iteration-2.obj
+_setPortDirections 27DA 0 CODE 0 text21 iteration-2.obj
 intlevel3 0 0 CODE 0 functab startup.obj
-__end_of_CalcMQ135 7EC 0 CODE 0 text24 iteration-2.obj
+__end_of_CalcMQ135 7F0 0 CODE 0 text24 iteration-2.obj
+__size_of_printStatusTMP 0 0 ABS 0 - iteration-2.obj
 __size_of_handlePPM 0 0 ABS 0 - iteration-2.obj
-_dataCTRL 287C 0 CODE 0 text19 iteration-2.obj
+_dataCTRL 2864 0 CODE 0 text19 iteration-2.obj
 intlevel4 0 0 CODE 0 functab startup.obj
 intlevel5 0 0 CODE 0 functab startup.obj
-_instCTRL 2856 0 CODE 0 text38 iteration-2.obj
-__end_of_setPortDirections 2810 0 CODE 0 text21 iteration-2.obj
-_displayTime 2A58 0 CODE 0 text8 iteration-2.obj
+_instCTRL 283E 0 CODE 0 text39 iteration-2.obj
+__end_of_setPortDirections 27F8 0 CODE 0 text21 iteration-2.obj
+_displayTime 2AEE 0 CODE 0 text9 iteration-2.obj
 __size_of_displayPPM 0 0 ABS 0 - iteration-2.obj
+__size_of_handleTemp 0 0 ABS 0 - iteration-2.obj
 __size_of___lwmod 0 0 ABS 0 - iteration-2.obj
+_CalcMQ135$683 A9 0 BANK1 1 cstackBANK1 iteration-2.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON iteration-2.obj
-__end_of___wmul 2B34 0 CODE 0 text12 iteration-2.obj
+__end_of___wmul 2B80 0 CODE 0 text41 iteration-2.obj
 __CFG_CPD$OFF 0 0 ABS 0 - iteration-2.obj
 start_initialization 2A 0 CODE 0 cinit iteration-2.obj
+__end_of_readADC 2C1C 0 CODE 0 text23 iteration-2.obj
 __size_of_runMQ135 0 0 ABS 0 - iteration-2.obj
 CalcMQ135@ratio4 BB 0 BANK1 1 cstackBANK1 iteration-2.obj
-___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwdiv@quotient 2B 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of___ftge 0 0 ABS 0 - iteration-2.obj
 displayPPM@strBuffer A0 0 BANK1 1 cstackBANK1 iteration-2.obj
 __size_of_displayTime 0 0 ABS 0 - iteration-2.obj
-__end_of_printToLCD 2BE0 0 CODE 0 text18 iteration-2.obj
+__size_of_displayTemp 0 0 ABS 0 - iteration-2.obj
+__end_of_printToLCD 2C72 0 CODE 0 text18 iteration-2.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__pmaintext 2D34 0 CODE 0 maintext iteration-2.obj
-__end_of___fttol FD4 0 CODE 0 text15 iteration-2.obj
-_printStatusPPM 28D8 0 CODE 0 text7 iteration-2.obj
+__pmaintext 2F42 0 CODE 0 maintext iteration-2.obj
+__end_of___fttol 12AE 0 CODE 0 text15 iteration-2.obj
+_printStatusPPM 28EC 0 CODE 0 text8 iteration-2.obj
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
-__pidataCOMMON 27B4 0 CODE 0 idataCOMMON iteration-2.obj
+__pidataCOMMON 1000 0 CODE 0 idataCOMMON iteration-2.obj
 __size_of_sprintf 0 0 ABS 0 - iteration-2.obj
 __size_of___awmod 0 0 ABS 0 - iteration-2.obj
 __initialization 2A 0 CODE 0 cinit iteration-2.obj
-__end_of___ftge 2F2C 0 CODE 0 text34 iteration-2.obj
-__end_of_initLCD 2A58 0 CODE 0 text20 iteration-2.obj
+__end_of___ftge 2F42 0 CODE 0 text35 iteration-2.obj
+__end_of_initLCD 2AA6 0 CODE 0 text20 iteration-2.obj
 __size_of_startUpLCD 0 0 ABS 0 - iteration-2.obj
-__stringbase 101E 0 STRING 0 strings iteration-2.obj
-__end_of_handlePPM 2B8A 0 CODE 0 text33 iteration-2.obj
+__stringbase 2024 0 STRCODE 0 stringtext iteration-2.obj
+__end_of_handlePPM 2D30 0 CODE 0 text34 iteration-2.obj
 __size_of_dataCTRL 0 0 ABS 0 - iteration-2.obj
 ___awmod@dividend 22 0 BANK0 1 cstackBANK0 iteration-2.obj
-___lwmod@dividend 2A 0 BANK0 1 cstackBANK0 iteration-2.obj
-sprintf@_val 3A 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwmod@dividend 30 0 BANK0 1 cstackBANK0 iteration-2.obj
+sprintf@_val 41 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___awmod@counter 25 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___wmul@product 24 0 BANK0 1 cstackBANK0 iteration-2.obj
-___lwmod@counter 2D 0 BANK0 1 cstackBANK0 iteration-2.obj
+___lwmod@counter 33 0 BANK0 1 cstackBANK0 iteration-2.obj
 __CFG_CP$OFF 0 0 ABS 0 - iteration-2.obj
 __size_of___ftmul 0 0 ABS 0 - iteration-2.obj
 __CFG_LVP$OFF 0 0 ABS 0 - iteration-2.obj
-sprintf@c 41 0 BANK0 1 cstackBANK0 iteration-2.obj
-__end_of___ftdiv 1436 0 CODE 0 text26 iteration-2.obj
+sprintf@c 48 0 BANK0 1 cstackBANK0 iteration-2.obj
+__end_of___ftdiv 1576 0 CODE 0 text26 iteration-2.obj
 displayPPM@ppmFraction D4 0 BANK1 1 cstackBANK1 iteration-2.obj
 isdigit@c 21 0 BANK0 1 cstackBANK0 iteration-2.obj
 # %SPLITSTAB Section
@@ -1239,49 +1300,52 @@ isdigit@c 21 0 BANK0 1 cstackBANK0 iteration-2.obj
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-reset_vec 0 0 0 3 2
-intentry 0 4 8 7FB 2
+reset_vec 0 0 0 4 2
+intentry 0 4 8 7FF 2
 config 0 2007 400E 1 2
 cstackCOMMON 1 70 70 D 1
 cstackBANK0 1 20 20 50 1
-cstackBANK1 1 A0 A0 4D 1
-text9 0 ED7 1DAE 129 2
+cstackBANK1 1 A0 A0 4F 1
+text11 0 ED7 1DAE 129 2
+stringtext 0 1000 2000 10E 2
 text27 0 DCE 1B9C 109 2
-strings 0 800 1000 ED 2
 text25 0 CFB 19F6 D3 2
-text2 0 C43 1886 B8 2
-text3 0 B8B 1716 B8 2
-text4 0 AD3 15A6 B8 2
-text5 0 A1B 1436 B8 2
-text26 0 963 12C6 B8 2
-text35 0 8F7 11EE 6C 2
-text29 0 1796 2F2C 6A 2
-text34 0 1737 2E6E 5F 2
-text6 0 16E8 2DD0 4F 2
-maintext 0 169A 2D34 4E 2
-text14 0 165A 2CB4 40 2
-text13 0 1624 2C48 36 2
-text36 0 15F0 2BE0 34 2
-text18 0 15C5 2B8A 2B 2
-text33 0 159A 2B34 2B 2
-text12 0 1575 2AEA 25 2
-text28 0 1550 2AA0 25 2
-text8 0 152C 2A58 24 2
-text20 0 1508 2A10 24 2
-text22 0 14E5 29CA 23 2
-text37 0 14C5 298A 20 2
-text39 0 14A5 294A 20 2
-text30 0 1488 2910 1D 2
-text7 0 146C 28D8 1C 2
-text23 0 1451 28A2 1B 2
-text19 0 143E 287C 13 2
-text38 0 142B 2856 13 2
-text40 0 1418 2830 13 2
-text11 0 1408 2810 10 2
-text21 0 13F9 27F2 F 2
-text16 0 8ED 11DA A 2
-text32 0 13F0 27E0 9 2
-clrtext 0 13E8 27D0 8 2
-text31 0 13E1 27C2 7 2
-idataBANK1 0 13DD 27BA 4 2
-idataCOMMON 0 13DA 27B4 3 2
+text2 0 C3B 1876 C0 2
+text3 0 B7B 16F6 C0 2
+text4 0 ABB 1576 C0 2
+text26 0 A03 1406 B8 2
+text5 0 957 12AE AC 2
+text15 0 8C9 1192 8E 2
+text36 0 852 10A4 77 2
+maintext 0 17A1 2F42 5F 2
+text35 0 1742 2E84 5F 2
+text6 0 803 1006 4F 2
+text42 0 1702 2E04 40 2
+text14 0 16CC 2D98 36 2
+text37 0 1698 2D30 34 2
+text34 0 1668 2CD0 30 2
+text40 0 1639 2C72 2F 2
+text18 0 160E 2C1C 2B 2
+text23 0 15E5 2BCA 29 2
+text28 0 15C0 2B80 25 2
+text41 0 159B 2B36 25 2
+text9 0 1577 2AEE 24 2
+text10 0 1553 2AA6 24 2
+text20 0 152F 2A5E 24 2
+text22 0 150B 2A16 24 2
+text38 0 14EB 29D6 20 2
+text43 0 14CB 2996 20 2
+text30 0 14AE 295C 1D 2
+text7 0 1492 2924 1C 2
+text8 0 1476 28EC 1C 2
+text33 0 145A 28B4 1C 2
+text17 0 1445 288A 15 2
+text19 0 1432 2864 13 2
+text39 0 141F 283E 13 2
+text44 0 140C 2818 13 2
+text13 0 13FC 27F8 10 2
+text21 0 13ED 27DA F 2
+text16 0 13E3 27C6 A 2
+text32 0 13DA 27B4 9 2
+clrtext 0 13D2 27A4 8 2
+idataBANK1 0 13CF 279E 3 2

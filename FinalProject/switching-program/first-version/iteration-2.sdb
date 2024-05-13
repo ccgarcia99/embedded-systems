@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"14 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
-[e E1265 . `uc
+"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[e E1279 . `uc
 DISP_CMN 0
 SET_ACTV_START 1
 SET_ACTV_END 2
@@ -114,6 +114,8 @@ CHCK_IO 3
 [v ___fltoee __fltoee `(d  1 e 3 0 ]
 "49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h
+[v _readADC readADC `T(i  1 e 2 0 ]
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
 [v i1_instCTRL instCTRL `(v  1 e 0 0 ]
@@ -123,36 +125,42 @@ CHCK_IO 3
 [v _initLCD initLCD `(v  1 e 0 0 ]
 "47
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
-"30 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"29 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _main main `(v  1 e 0 0 ]
-"50
+"51
 [v _setPortDirections setPortDirections `(v  1 e 0 0 ]
-"62
+"63
 [v _initADC initADC `(v  1 e 0 0 ]
-"68
+"69
 [v _startUpLCD startUpLCD `(v  1 e 0 0 ]
-"75
+"76
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]
-"83
+"84
 [v _ISR ISR `II(v  1 e 0 0 ]
-"96
+"97
 [v _updateState updateState `(v  1 e 0 0 ]
-"173
+"179
 [v _checkMode checkMode `(v  1 e 0 0 ]
-"184
+"190
 [v _checkSelect checkSelect `(v  1 e 0 0 ]
-"30 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+"32 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _runMQ135 runMQ135 `(v  1 e 0 0 ]
-"35
+"37
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
-"52
+"54
 [v _handlePPM handlePPM `(uc  1 e 1 0 ]
-"66
+"70
 [v _printStatusPPM printStatusPPM `(v  1 e 0 0 ]
-"78
-[v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
-"87
+"93
 [v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
+"19 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _calculateTemp calculateTemp `(v  1 e 0 0 ]
+"24
+[v _displayTemp displayTemp `(v  1 e 0 0 ]
+"31
+[v _handleTemp handleTemp `(uc  1 e 1 0 ]
+"47
+[v _printStatusTMP printStatusTMP `(v  1 e 0 0 ]
 "33 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _runClock runClock `(v  1 e 0 0 ]
 "48
@@ -223,6 +231,8 @@ CHCK_IO 3
 [v _RC3 RC3 `VEb  1 e 0 @59 ]
 "2539
 [v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2541
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
 "2559
 [v _RD RD `VEb  1 e 0 @3168 ]
 "2759
@@ -231,16 +241,20 @@ CHCK_IO 3
 [v _WREN WREN `VEb  1 e 0 @3170 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
-"14 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
-[v _mode mode `E1265  1 e 1 0 ]
-"15
-[v _lastMode lastMode `E1265  1 e 1 0 ]
+"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+[v _mode mode `E1279  1 e 1 0 ]
 "16
-[v _select select `VEuc  1 e 1 0 ]
+[v _lastMode lastMode `E1279  1 e 1 0 ]
 "17
-[v _ppmFlag ppmFlag `uc  1 e 1 0 ]
+[v _select select `VEuc  1 e 1 0 ]
 "21 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _PPM PPM `VEf  1 e 3 0 ]
+"30
+[v _ppmFlag ppmFlag `uc  1 e 1 0 ]
+"15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _tempFlag tempFlag `uc  1 e 1 0 ]
+"17
+[v _tempBuffer tempBuffer `i  1 e 2 0 ]
 "12 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _hours hours `VEuc  1 e 1 0 ]
 "13
@@ -261,17 +275,17 @@ CHCK_IO 3
 [v _keyValid keyValid `uc  1 e 1 0 ]
 "22
 [v _key key `uc  1 e 1 0 ]
-"30 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"29 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"47
+"48
 } 0
-"96
+"97
 [v _updateState updateState `(v  1 e 0 0 ]
 {
-"98
-[v updateState@buffer buffer `[10]uc  1 a 10 67 ]
-"171
+"99
+[v updateState@buffer buffer `[10]uc  1 a 10 66 ]
+"177
 } 0
 "132 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _setMinutesStart setMinutesStart `(v  1 e 0 0 ]
@@ -304,60 +318,76 @@ CHCK_IO 3
 [v ___awmod@dividend dividend `i  1 p 2 2 ]
 "35
 } 0
-"66 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+"47 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _printStatusTMP printStatusTMP `(v  1 e 0 0 ]
+{
+[v printStatusTMP@handler handler `uc  1 a 1 wreg ]
+[v printStatusTMP@handler handler `uc  1 a 1 wreg ]
+"49
+[v printStatusTMP@handler handler `uc  1 a 1 4 ]
+"57
+} 0
+"70 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _printStatusPPM printStatusPPM `(v  1 e 0 0 ]
 {
 [v printStatusPPM@handler handler `uc  1 a 1 wreg ]
 [v printStatusPPM@handler handler `uc  1 a 1 wreg ]
-"68
+"72
 [v printStatusPPM@handler handler `uc  1 a 1 4 ]
-"76
+"80
 } 0
 "48 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _displayTime displayTime `(v  1 e 0 0 ]
 {
 "50
-[v displayTime@timeFormat timeFormat `[10]uc  1 a 10 40 ]
+[v displayTime@timeFormat timeFormat `[10]uc  1 a 10 46 ]
 "53
 } 0
-"35 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+"24 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _displayTemp displayTemp `(v  1 e 0 0 ]
+{
+"26
+[v displayTemp@buffer buffer `[20]uc  1 a 20 42 ]
+"29
+} 0
+"37 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
 {
-"37
-[v displayPPM@strBuffer strBuffer `[50]uc  1 a 50 0 ]
 "39
+[v displayPPM@strBuffer strBuffer `[50]uc  1 a 50 0 ]
+"41
 [v displayPPM@ppmFraction ppmFraction `i  1 a 2 52 ]
-"38
+"40
 [v displayPPM@ppmWhole ppmWhole `i  1 a 2 50 ]
-"42
+"44
 [v displayPPM@bufPtr bufPtr `*.4uc  1 a 1 54 ]
-"50
+"52
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[s S230 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+[s S245 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
 "533
-[u S233 . 4 `ui 1 _val 2 0 `S230 1 _str 4 0 ]
-[v sprintf@_val _val `S233  1 a 4 26 ]
+[u S248 . 4 `ui 1 _val 2 0 `S245 1 _str 4 0 ]
+[v sprintf@_val _val `S248  1 a 4 33 ]
 "501
-[v sprintf@width width `i  1 a 2 31 ]
+[v sprintf@width width `i  1 a 2 38 ]
 "510
-[v sprintf@ccnt ccnt `i  1 a 2 24 ]
+[v sprintf@ccnt ccnt `i  1 a 2 31 ]
 "499
-[v sprintf@c c `c  1 a 1 33 ]
+[v sprintf@c c `c  1 a 1 40 ]
 "508
-[v sprintf@flag flag `uc  1 a 1 30 ]
+[v sprintf@flag flag `uc  1 a 1 37 ]
 "506
-[v sprintf@prec prec `c  1 a 1 23 ]
+[v sprintf@prec prec `c  1 a 1 30 ]
 "494
-[v sprintf@ap ap `[1]*.4v  1 a 1 22 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 29 ]
 "492
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCCuc  1 p 1 14 ]
+[v sprintf@f f `*.25DCCuc  1 p 2 20 ]
 "510
-[v sprintf@sp sp `*.4uc  1 a 1 34 ]
+[v sprintf@sp sp `*.4uc  1 a 1 41 ]
 "1550
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
@@ -369,37 +399,15 @@ CHCK_IO 3
 [v isdigit@c c `uc  1 a 1 1 ]
 "15
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
-} 0
 "6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwmod@counter counter `uc  1 a 1 13 ]
+[v ___lwmod@counter counter `uc  1 a 1 19 ]
 "6
-[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 14 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 16 ]
 "26
-} 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
-"12
-[v ___lwdiv@counter counter `uc  1 a 1 7 ]
-"6
-[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
-"31
 } 0
 "44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -419,10 +427,10 @@ CHCK_IO 3
 [v ___ftneg@f1 f1 `f  1 p 3 14 ]
 "20
 } 0
-"68 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"69 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _startUpLCD startUpLCD `(v  1 e 0 0 ]
 {
-"73
+"74
 } 0
 "47 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
@@ -444,43 +452,47 @@ CHCK_IO 3
 {
 "45
 } 0
-"50 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"51 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _setPortDirections setPortDirections `(v  1 e 0 0 ]
 {
-"60
+"61
 } 0
-"30 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+"32 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _runMQ135 runMQ135 `(v  1 e 0 0 ]
 {
-"33
+"35
 } 0
-"78
-[v _Read_ADC_MQ135 Read_ADC_MQ135 `T(i  1 e 2 0 ]
+"23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h
+[v _readADC readADC `T(i  1 e 2 0 ]
 {
-"85
+[v readADC@channel channel `uc  1 a 1 wreg ]
+[v readADC@channel channel `uc  1 a 1 wreg ]
+"25
+[v readADC@channel channel `uc  1 a 1 4 ]
+"32
 } 0
-"87
+"93 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _CalcMQ135 CalcMQ135 `(f  1 e 3 0 ]
 {
-"90
-[v CalcMQ135@ratio ratio `f  1 a 3 36 ]
-"100
-[v CalcMQ135@co2 co2 `f  1 a 3 33 ]
 "96
+[v CalcMQ135@ratio ratio `f  1 a 3 36 ]
+"106
+[v CalcMQ135@co2 co2 `f  1 a 3 33 ]
+"102
 [v CalcMQ135@ratio5 ratio5 `f  1 a 3 30 ]
-"95
+"101
 [v CalcMQ135@ratio4 ratio4 `f  1 a 3 27 ]
-"94
+"100
 [v CalcMQ135@ratio3 ratio3 `f  1 a 3 24 ]
-"93
+"99
 [v CalcMQ135@ratio2 ratio2 `f  1 a 3 21 ]
-"97
+"103
 [v CalcMQ135@ratio6 ratio6 `f  1 a 3 3 ]
-"89
+"95
 [v CalcMQ135@voltage voltage `f  1 a 3 0 ]
-"87
+"93
 [v CalcMQ135@RAW_ADC RAW_ADC `i  1 p 2 62 ]
-"105
+"111
 } 0
 "62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
@@ -544,20 +556,25 @@ CHCK_IO 3
 {
 "46
 } 0
-"75 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"76 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]
 {
-"81
+"82
 } 0
-"62
+"63
 [v _initADC initADC `(v  1 e 0 0 ]
 {
-"66
+"67
 } 0
-"52 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
+"31 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _handleTemp handleTemp `(uc  1 e 1 0 ]
+{
+"45
+} 0
+"54 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
 [v _handlePPM handlePPM `(uc  1 e 1 0 ]
 {
-"64
+"68
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]
@@ -571,19 +588,19 @@ CHCK_IO 3
 {
 "251
 } 0
-"184 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"190 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _checkSelect checkSelect `(v  1 e 0 0 ]
 {
-"187
+"193
 [v checkSelect@currentRB1State currentRB1State `i  1 a 2 4 ]
-"186
+"192
 [v checkSelect@lastRB1State lastRB1State `i  1 s 2 lastRB1State ]
-"195
+"201
 } 0
-"173
+"179
 [v _checkMode checkMode `(v  1 e 0 0 ]
 {
-"182
+"188
 } 0
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
@@ -594,10 +611,38 @@ CHCK_IO 3
 [v instCTRL@CMD CMD `uc  1 a 1 1 ]
 "25
 } 0
-"83 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
+"19 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
+[v _calculateTemp calculateTemp `(v  1 e 0 0 ]
+{
+[v calculateTemp@adcValue adcValue `ui  1 p 2 14 ]
+"22
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"31
+} 0
+"84 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _ISR ISR `II(v  1 e 0 0 ]
 {
-"93
+"94
 } 0
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
 [v i1_instCTRL instCTRL `(v  1 e 0 0 ]
