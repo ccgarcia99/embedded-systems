@@ -1,1 +1,0 @@
- Macalalad_LE3.d  Macalalad_LE3.p1:  D:/uni_2023-2024/cpe3201/embedded-systems/testbenches/pa-3-macalalad/Macalalad_LE3.c
