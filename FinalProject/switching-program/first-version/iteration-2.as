@@ -907,7 +907,7 @@ __pcstackBANK1:
 	global	CalcMQ135@voltage
 CalcMQ135@voltage:	; 3 bytes @ 0x0
 	global	displayPPM@strBuffer
-displayPPM@strBuffer:	; 50 bytes @ 0x0
+displayPPM@strBuffer:	; 20 bytes @ 0x0
 	ds	3
 	global	CalcMQ135@ratio6
 CalcMQ135@ratio6:	; 3 bytes @ 0x3
@@ -926,10 +926,18 @@ _CalcMQ135$685:	; 3 bytes @ 0xF
 	ds	3
 	global	_CalcMQ135$686
 _CalcMQ135$686:	; 3 bytes @ 0x12
-	ds	3
+	ds	2
+	global	displayPPM@ppmWhole
+displayPPM@ppmWhole:	; 2 bytes @ 0x14
+	ds	1
 	global	CalcMQ135@ratio2
 CalcMQ135@ratio2:	; 3 bytes @ 0x15
-	ds	3
+	ds	1
+	global	displayPPM@ppmFraction
+displayPPM@ppmFraction:	; 2 bytes @ 0x16
+	ds	2
+	global	displayPPM@bufPtr
+displayPPM@bufPtr:	; 1 bytes @ 0x18
 	global	CalcMQ135@ratio3
 CalcMQ135@ratio3:	; 3 bytes @ 0x18
 	ds	3
@@ -944,16 +952,7 @@ CalcMQ135@co2:	; 3 bytes @ 0x21
 	ds	3
 	global	CalcMQ135@ratio
 CalcMQ135@ratio:	; 3 bytes @ 0x24
-	ds	14
-	global	displayPPM@ppmWhole
-displayPPM@ppmWhole:	; 2 bytes @ 0x32
-	ds	2
-	global	displayPPM@ppmFraction
-displayPPM@ppmFraction:	; 2 bytes @ 0x34
-	ds	2
-	global	displayPPM@bufPtr
-displayPPM@bufPtr:	; 1 bytes @ 0x36
-	ds	1
+	ds	3
 psect	cstackCOMMON,class=COMMON,space=1,noexec
 global __pcstackCOMMON
 __pcstackCOMMON:
@@ -1205,7 +1204,7 @@ ___ftdiv@f2:	; 3 bytes @ 0x2E
 	global	___fttol@f1
 ___fttol@f1:	; 3 bytes @ 0x2E
 	global	displayTime@timeFormat
-displayTime@timeFormat:	; 10 bytes @ 0x2E
+displayTime@timeFormat:	; 16 bytes @ 0x2E
 	ds	3
 	global	___ftdiv@f1
 ___ftdiv@f1:	; 3 bytes @ 0x31
@@ -1263,7 +1262,7 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!    Space          Size  Autos    Used
 ;!    COMMON           14      7      13
 ;!    BANK0            80     79      80
-;!    BANK1            80     55      79
+;!    BANK1            80     39      63
 ;!    BANK3            96      0       0
 ;!    BANK2            96      0       0
 
@@ -1277,9 +1276,9 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!		 -> STR_9(CODE[10]), STR_8(CODE[10]), STR_7(CODE[10]), STR_6(CODE[16]), 
 ;!		 -> STR_3(CODE[9]), STR_2(CODE[3]), STR_1(CODE[6]), 
 ;!
-;!    sprintf@sp	PTR unsigned char  size(1) Largest target is 50
-;!		 -> updateState@buffer(BANK0[10]), displayTemp@buffer(BANK0[20]), debugInfo(BANK1[10]), displayTime@timeFormat(BANK0[10]), 
-;!		 -> displayPPM@strBuffer(BANK1[50]), 
+;!    sprintf@sp	PTR unsigned char  size(1) Largest target is 20
+;!		 -> updateState@buffer(BANK0[10]), displayTemp@buffer(BANK0[20]), debugInfo(BANK1[10]), displayTime@timeFormat(BANK0[16]), 
+;!		 -> displayPPM@strBuffer(BANK1[20]), 
 ;!
 ;!    sprintf@ap	PTR void [1] size(1) Largest target is 2
 ;!		 -> ?_sprintf(BANK0[2]), 
@@ -1288,15 +1287,15 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!
 ;!    _val._str._cp	PTR const unsigned char  size(1) Largest target is 0
 ;!
-;!    displayPPM@bufPtr	PTR unsigned char  size(1) Largest target is 50
-;!		 -> displayPPM@strBuffer(BANK1[50]), 
+;!    displayPPM@bufPtr	PTR unsigned char  size(1) Largest target is 20
+;!		 -> displayPPM@strBuffer(BANK1[20]), 
 ;!
-;!    printToLCD@str	PTR const unsigned char  size(2) Largest target is 50
+;!    printToLCD@str	PTR const unsigned char  size(2) Largest target is 20
 ;!		 -> STR_34(CODE[11]), STR_33(CODE[12]), STR_32(CODE[10]), STR_31(CODE[14]), 
 ;!		 -> STR_30(CODE[12]), STR_29(CODE[10]), STR_28(CODE[16]), STR_27(CODE[15]), 
 ;!		 -> updateState@buffer(BANK0[10]), STR_24(CODE[15]), STR_23(CODE[7]), STR_22(CODE[7]), 
 ;!		 -> STR_21(CODE[8]), STR_20(CODE[9]), displayTemp@buffer(BANK0[20]), debugInfo(BANK1[10]), 
-;!		 -> displayTime@timeFormat(BANK0[10]), STR_5(CODE[8]), STR_4(CODE[8]), displayPPM@strBuffer(BANK1[50]), 
+;!		 -> displayTime@timeFormat(BANK0[16]), STR_5(CODE[8]), STR_4(CODE[8]), displayPPM@strBuffer(BANK1[20]), 
 ;!
 
 
@@ -1313,6 +1312,7 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!
 ;!    _main->_updateState
 ;!    _updateState->_displayTemp
+;!    _updateState->_displayTime
 ;!    _setMinutesStart->_sprintf
 ;!    _setMinutesEnd->_sprintf
 ;!    _setHoursStart->_sprintf
@@ -1448,8 +1448,8 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!                                              4 BANK0      1     1      0
 ;!                         _printToLCD
 ;! ---------------------------------------------------------------------------------
-;! (2) _displayTime                                         14    14      0    6094
-;!                                             42 BANK0     14    14      0
+;! (2) _displayTime                                         20    20      0    6094
+;!                                             42 BANK0     20    20      0
 ;!                         _printToLCD
 ;!                            _sprintf
 ;! ---------------------------------------------------------------------------------
@@ -1458,9 +1458,9 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!                         _printToLCD
 ;!                            _sprintf
 ;! ---------------------------------------------------------------------------------
-;! (2) _displayPPM                                          56    56      0   15618
+;! (2) _displayPPM                                          26    26      0   15618
 ;!                                             60 BANK0      1     1      0
-;!                                              0 BANK1     55    55      0
+;!                                              0 BANK1     25    25      0
 ;!                           ___awtoft
 ;!                            ___ftadd
 ;!                            ___ftmul
@@ -1861,7 +1861,7 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!BITBANK2            60      0       0      10        0.0%
 ;!SFR2                 0      0       0       5        0.0%
 ;!BITSFR2              0      0       0       5        0.0%
-;!BANK1               50     37      4F       7       98.8%
+;!BANK1               50     27      3F       7       78.8%
 ;!BITBANK1            50      0       0       6        0.0%
 ;!SFR1                 0      0       0       2        0.0%
 ;!BITSFR1              0      0       0       2        0.0%
@@ -1872,8 +1872,8 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;!COMMON               E      7       D       1       92.9%
 ;!BITCOMMON            E      0       0       0        0.0%
 ;!CODE                 0      0       0       0        0.0%
-;!DATA                 0      0      AC      12        0.0%
-;!ABS                  0      0      AC       3        0.0%
+;!DATA                 0      0      9C      12        0.0%
+;!ABS                  0      0      9C       3        0.0%
 ;!NULL                 0      0       0       0        0.0%
 ;!STACK                0      0       0       2        0.0%
 ;!EEDATA             100      0       0       0        0.0%
@@ -4818,11 +4818,11 @@ GLOBAL	__end_of_printStatusPPM
 
 ;; *************** function _displayTime *****************
 ;; Defined at:
-;;		line 48 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  timeFormat     10   46[BANK0 ] unsigned char [10]
+;;  timeFormat     16   46[BANK0 ] unsigned char [16]
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -4833,10 +4833,10 @@ GLOBAL	__end_of_printStatusPPM
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         0      10       0       0       0
+;;      Locals:         0      16       0       0       0
 ;;      Temps:          0       4       0       0       0
-;;      Totals:         0      14       0       0       0
-;;Total ram usage:       14 bytes
+;;      Totals:         0      20       0       0       0
+;;Total ram usage:       20 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -4848,12 +4848,12 @@ GLOBAL	__end_of_printStatusPPM
 ;;
 psect	text9,local,class=CODE,delta=2,merge=1
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
-	line	48
+	line	49
 global __ptext9
 __ptext9:	;psect for function _displayTime
 psect	text9
 	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
-	line	48
+	line	49
 	global	__size_of_displayTime
 	__size_of_displayTime	equ	__end_of_displayTime-_displayTime
 	
@@ -4861,11 +4861,11 @@ _displayTime:
 ;incstack = 0
 	opt	stack 2
 ; Regs used in _displayTime: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-	line	51
+	line	52
 	
 l3011:	
-;time_scheduler.h: 50: char timeFormat[10];
-;time_scheduler.h: 51: sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
+;time_scheduler.h: 51: char timeFormat[16];
+;time_scheduler.h: 52: sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
 	movlw	low((STR_6)|8000h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -4888,8 +4888,8 @@ l3011:
 	movwf	1+(?_sprintf)+04h
 	movlw	(displayTime@timeFormat)&0ffh
 	fcall	_sprintf
-	line	52
-;time_scheduler.h: 52: printToLCD(timeFormat);
+	line	53
+;time_scheduler.h: 53: printToLCD(timeFormat);
 	movlw	(displayTime@timeFormat&0ffh)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
@@ -4897,7 +4897,7 @@ l3011:
 	movlw	(0x0)
 	movwf	(printToLCD@str+1)
 	fcall	_printToLCD
-	line	53
+	line	54
 	
 l142:	
 	return
@@ -5005,11 +5005,11 @@ GLOBAL	__end_of_displayTemp
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  strBuffer      50    0[BANK1 ] unsigned char [50]
-;;  ppmFraction     2   52[BANK1 ] int 
-;;  ppmWhole        2   50[BANK1 ] int 
-;;  bufPtr          1   54[BANK1 ] PTR unsigned char 
-;;		 -> displayPPM@strBuffer(50), 
+;;  strBuffer      20    0[BANK1 ] unsigned char [20]
+;;  ppmFraction     2   22[BANK1 ] int 
+;;  ppmWhole        2   20[BANK1 ] int 
+;;  bufPtr          1   24[BANK1 ] PTR unsigned char 
+;;		 -> displayPPM@strBuffer(20), 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -5020,10 +5020,10 @@ GLOBAL	__end_of_displayTemp
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
 ;;      Params:         0       0       0       0       0
-;;      Locals:         0       0      55       0       0
+;;      Locals:         0       0      25       0       0
 ;;      Temps:          0       1       0       0       0
-;;      Totals:         0       1      55       0       0
-;;Total ram usage:       56 bytes
+;;      Totals:         0       1      25       0       0
+;;Total ram usage:       26 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -5056,7 +5056,7 @@ _displayPPM:
 	line	40
 	
 l2981:	
-;mq135_module.h: 39: char strBuffer[50];
+;mq135_module.h: 39: char strBuffer[20];
 ;mq135_module.h: 40: int ppmWhole = (int)PPM;
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	status, 6	;RP1=0, select bank1
@@ -5383,8 +5383,8 @@ GLOBAL	__end_of_displayPPM
 ;;		line 492 in file "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c"
 ;; Parameters:    Size  Location     Type
 ;;  sp              1    wreg     PTR unsigned char 
-;;		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(10), 
-;;		 -> displayPPM@strBuffer(50), 
+;;		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(16), 
+;;		 -> displayPPM@strBuffer(20), 
 ;;  f               2   20[BANK0 ] PTR const unsigned char 
 ;;		 -> STR_26(13), STR_25(14), STR_19(11), STR_18(10), 
 ;;		 -> STR_17(10), STR_16(10), STR_15(10), STR_14(10), 
@@ -5393,8 +5393,8 @@ GLOBAL	__end_of_displayPPM
 ;;		 -> STR_3(9), STR_2(3), STR_1(6), 
 ;; Auto vars:     Size  Location     Type
 ;;  sp              1   41[BANK0 ] PTR unsigned char 
-;;		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(10), 
-;;		 -> displayPPM@strBuffer(50), 
+;;		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(16), 
+;;		 -> displayPPM@strBuffer(20), 
 ;;  _val            4   33[BANK0 ] struct .
 ;;  width           2   38[BANK0 ] int 
 ;;  ccnt            2   31[BANK0 ] int 
@@ -7217,7 +7217,7 @@ GLOBAL	__end_of_startUpLCD
 ;;		 -> STR_30(12), STR_29(10), STR_28(16), STR_27(15), 
 ;;		 -> updateState@buffer(10), STR_24(15), STR_23(7), STR_22(7), 
 ;;		 -> STR_21(8), STR_20(9), displayTemp@buffer(20), debugInfo(10), 
-;;		 -> displayTime@timeFormat(10), STR_5(8), STR_4(8), displayPPM@strBuffer(50), 
+;;		 -> displayTime@timeFormat(16), STR_5(8), STR_4(8), displayPPM@strBuffer(20), 
 ;; Auto vars:     Size  Location     Type
 ;;		None
 ;; Return value:  Size  Location     Type
@@ -10605,20 +10605,20 @@ _runClock:
 ;incstack = 0
 	opt	stack 5
 ; Regs used in _runClock: [wreg+status,2+status,0]
-	line	35
+	line	36
 	
 l2589:	
-;time_scheduler.h: 35: minutes++;
+;time_scheduler.h: 36: minutes++;
 	movlw	(01h)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movwf	(??_runClock+0)+0
 	movf	(??_runClock+0)+0,w
 	addwf	(_minutes),f	;volatile
-	line	36
+	line	37
 	
 l2591:	
-;time_scheduler.h: 36: if (minutes >= 60)
+;time_scheduler.h: 37: if (minutes >= 60)
 	movlw	(03Ch)
 	subwf	(_minutes),w	;volatile
 	skipc
@@ -10627,24 +10627,24 @@ l2591:
 u3581:
 	goto	l2601
 u3580:
-	line	38
-	
-l2593:	
-;time_scheduler.h: 37: {
-;time_scheduler.h: 38: minutes = 0;
-	clrf	(_minutes)	;volatile
 	line	39
 	
+l2593:	
+;time_scheduler.h: 38: {
+;time_scheduler.h: 39: minutes = 0;
+	clrf	(_minutes)	;volatile
+	line	40
+	
 l2595:	
-;time_scheduler.h: 39: hours++;
+;time_scheduler.h: 40: hours++;
 	movlw	(01h)
 	movwf	(??_runClock+0)+0
 	movf	(??_runClock+0)+0,w
 	addwf	(_hours),f	;volatile
-	line	40
+	line	41
 	
 l2597:	
-;time_scheduler.h: 40: if (hours >= 24)
+;time_scheduler.h: 41: if (hours >= 24)
 	movlw	(018h)
 	subwf	(_hours),w	;volatile
 	skipc
@@ -10653,40 +10653,40 @@ l2597:
 u3591:
 	goto	l2601
 u3590:
-	line	42
-	
-l2599:	
-;time_scheduler.h: 41: {
-;time_scheduler.h: 42: hours = 0;
-	clrf	(_hours)	;volatile
-	goto	l2601
 	line	43
 	
-l138:	
+l2599:	
+;time_scheduler.h: 42: {
+;time_scheduler.h: 43: hours = 0;
+	clrf	(_hours)	;volatile
 	goto	l2601
 	line	44
 	
-l137:	
+l138:	
+	goto	l2601
 	line	45
 	
+l137:	
+	line	46
+	
 l2601:	
-;time_scheduler.h: 43: }
 ;time_scheduler.h: 44: }
-;time_scheduler.h: 45: _delay((unsigned long)((50)*(4000000/4000.0)));
+;time_scheduler.h: 45: }
+;time_scheduler.h: 46: _delay((unsigned long)((100)*(4000000/4000.0)));
 	opt asmopt_off
-movlw	65
+movlw	130
 movwf	((??_runClock+0)+0+1),f
-	movlw	238
+	movlw	221
 movwf	((??_runClock+0)+0),f
 u4837:
 	decfsz	((??_runClock+0)+0),f
 	goto	u4837
 	decfsz	((??_runClock+0)+0+1),f
 	goto	u4837
-	nop
+	nop2
 opt asmopt_on
 
-	line	46
+	line	47
 	
 l139:	
 	return

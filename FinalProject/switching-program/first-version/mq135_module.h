@@ -36,7 +36,7 @@ void runMQ135()
 
 void displayPPM()
 {
-    char strBuffer[50];
+    char strBuffer[20];
     int ppmWhole = (int)PPM;                         // Extract the whole part of the PPM value
     int ppmFraction = (int)((PPM - ppmWhole) * 100); // Extract fractional part
 

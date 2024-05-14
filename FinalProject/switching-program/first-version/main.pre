@@ -1679,7 +1679,7 @@ PPM = CalcMQ135(readADC(0));
 
 void displayPPM()
 {
-char strBuffer[50];
+char strBuffer[20];
 int ppmWhole = (int)PPM;
 int ppmFraction = (int)((PPM - ppmWhole) * 100);
 
@@ -1767,6 +1767,7 @@ void checkTime(void);
 
 void runClock(void)
 {
+
 minutes++;
 if (minutes >= 60)
 {
@@ -1777,16 +1778,15 @@ if (hours >= 24)
 hours = 0;
 }
 }
-_delay((unsigned long)((50)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
 }
 
 void displayTime(void)
 {
-char timeFormat[10];
+char timeFormat[16];
 sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
 printToLCD(timeFormat);
 }
-
 void setHoursStart(void)
 {
 keyValid = (PORTB & 0x08) >> 3;

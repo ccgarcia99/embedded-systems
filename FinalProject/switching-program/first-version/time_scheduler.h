@@ -32,6 +32,7 @@ void checkTime(void);       // Check time
 
 void runClock(void)
 {
+
     minutes++;
     if (minutes >= 60)
     {
@@ -42,16 +43,15 @@ void runClock(void)
             hours = 0;
         }
     }
-    __delay_ms(50);
+    __delay_ms(100);
 }
 
 void displayTime(void)
 {
-    char timeFormat[10];
+    char timeFormat[16];
     sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
     printToLCD(timeFormat);
 }
-
 void setHoursStart(void)
 {
     keyValid = (PORTB & 0x08) >> 3;

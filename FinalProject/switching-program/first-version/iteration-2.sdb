@@ -163,7 +163,7 @@ CHCK_IO 3
 [v _printStatusTMP printStatusTMP `(v  1 e 0 0 ]
 "33 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _runClock runClock `(v  1 e 0 0 ]
-"48
+"49
 [v _displayTime displayTime `(v  1 e 0 0 ]
 "55
 [v _setHoursStart setHoursStart `(v  1 e 0 0 ]
@@ -336,12 +336,12 @@ CHCK_IO 3
 [v printStatusPPM@handler handler `uc  1 a 1 4 ]
 "80
 } 0
-"48 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
+"49 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _displayTime displayTime `(v  1 e 0 0 ]
 {
-"50
-[v displayTime@timeFormat timeFormat `[10]uc  1 a 10 46 ]
-"53
+"51
+[v displayTime@timeFormat timeFormat `[16]uc  1 a 16 46 ]
+"54
 } 0
 "24 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
 [v _displayTemp displayTemp `(v  1 e 0 0 ]
@@ -354,13 +354,13 @@ CHCK_IO 3
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
 {
 "39
-[v displayPPM@strBuffer strBuffer `[50]uc  1 a 50 0 ]
+[v displayPPM@strBuffer strBuffer `[20]uc  1 a 20 0 ]
 "41
-[v displayPPM@ppmFraction ppmFraction `i  1 a 2 52 ]
+[v displayPPM@ppmFraction ppmFraction `i  1 a 2 22 ]
 "40
-[v displayPPM@ppmWhole ppmWhole `i  1 a 2 50 ]
+[v displayPPM@ppmWhole ppmWhole `i  1 a 2 20 ]
 "44
-[v displayPPM@bufPtr bufPtr `*.4uc  1 a 1 54 ]
+[v displayPPM@bufPtr bufPtr `*.4uc  1 a 1 24 ]
 "52
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
@@ -554,7 +554,7 @@ CHCK_IO 3
 "33 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 [v _runClock runClock `(v  1 e 0 0 ]
 {
-"46
+"47
 } 0
 "76 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]

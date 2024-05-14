@@ -27,8 +27,6 @@
 [v ___awmod __awmod `(i  1 e 2 0 ]
 "32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
-"492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
@@ -107,36 +105,30 @@
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
 "36 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
 [v _main main `(v  1 e 0 0 ]
-"64
-[v _initADC initADC `(v  1 e 0 0 ]
-"71
-[v _readADC readADC `(ui  1 e 2 0 ]
-"83
-[v _instCTRL instCTRL `(v  1 e 0 0 ]
-"93
-[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
-"103
-[v _initLCD initLCD `(v  1 e 0 0 ]
-"113
-[v _printToLCD printToLCD `(v  1 e 0 0 ]
-"268 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+"66
+[v _startSignal startSignal `(v  1 e 0 0 ]
+"76
+[v _checkResponse checkResponse `(s  1 e 2 0 ]
+"91
+[v _readData readData `(uc  1 e 1 0 ]
+"123
+[v _initUART initUART `(v  1 e 0 0 ]
+"138
+[v _sendByte sendByte `(v  1 e 0 0 ]
+"145
+[v _sendData sendData `(v  1 e 0 0 ]
+"207 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"268
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-"329
-[v _PORTD PORTD `VEuc  1 e 1 @8 ]
-"1116
-[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-"1122
-[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-"1286
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1029
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1335
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1396
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-"1457
-[v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"2167
-[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-"2173
-[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2028
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2231
 [v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
 "2237
@@ -145,132 +137,88 @@
 [v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
 "2299
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2339
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
 "2349
 [v _CARRY CARRY `VEb  1 e 0 @24 ]
+"2405
+[v _CREN CREN `VEb  1 e 0 @196 ]
 "2441
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"2445
-[v _GO_DONE GO_DONE `VEb  1 e 0 @250 ]
-"2531
-[v _RC0 RC0 `VEb  1 e 0 @56 ]
-"2533
-[v _RC1 RC1 `VEb  1 e 0 @57 ]
-"2535
-[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2515
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
 "2559
 [v _RD RD `VEb  1 e 0 @3168 ]
+"2603
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2623
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2689
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"2713
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2715
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"2749
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"2753
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
 "2759
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2761
 [v _WREN WREN `VEb  1 e 0 @3170 ]
-"354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
-[v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
-"34 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
-[v _adcValue adcValue `ui  1 e 2 0 ]
+"33 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
+[v _checkbit checkbit `uc  1 e 1 0 ]
+"34
+[v _T_byte1 T_byte1 `uc  1 e 1 0 ]
+[v _T_byte2 T_byte2 `uc  1 e 1 0 ]
+[v _RH_byte RH_byte `uc  1 e 1 0 ]
+[v _RH_byte2 RH_byte2 `uc  1 e 1 0 ]
+[v _CheckSum CheckSum `uc  1 e 1 0 ]
 "36
 [v _main main `(v  1 e 0 0 ]
 {
-"48
-[v main@adcValue adcValue `ui  1 a 2 43 ]
-"38
-[v main@buffer buffer `[20]uc  1 a 20 23 ]
-"62
+"64
 } 0
-"492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
+"66
+[v _startSignal startSignal `(v  1 e 0 0 ]
 {
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[s S102 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
-"533
-[u S105 . 4 `ui 1 _val 2 0 `S102 1 _str 4 0 ]
-[v sprintf@_val _val `S105  1 a 4 15 ]
-"499
-[v sprintf@c c `c  1 a 1 20 ]
-"506
-[v sprintf@prec prec `c  1 a 1 14 ]
-"508
-[v sprintf@flag flag `uc  1 a 1 13 ]
-"494
-[v sprintf@ap ap `[1]*.4v  1 a 1 12 ]
-"492
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCCuc  1 p 1 6 ]
-"542
-[v sprintf@sp sp `*.4uc  1 a 1 19 ]
-"1550
+"74
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"145
+[v _sendData sendData `(v  1 e 0 0 ]
 {
-"11
-[v ___lwmod@counter counter `uc  1 a 1 5 ]
-"6
-[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
-"26
+[v sendData@temp temp `uc  1 a 1 wreg ]
+[v sendData@temp temp `uc  1 a 1 wreg ]
+[v sendData@humidity humidity `uc  1 p 1 1 ]
+"147
+[v sendData@temp temp `uc  1 a 1 2 ]
+"149
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"138
+[v _sendByte sendByte `(v  1 e 0 0 ]
 {
-"11
-[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
-"12
-[v ___lwdiv@counter counter `uc  1 a 1 13 ]
-"6
-[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
-"31
+[v sendByte@data data `uc  1 a 1 wreg ]
+[v sendByte@data data `uc  1 a 1 wreg ]
+[v sendByte@data data `uc  1 a 1 0 ]
+"143
 } 0
-"71 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c
-[v _readADC readADC `(ui  1 e 2 0 ]
+"91
+[v _readData readData `(uc  1 e 1 0 ]
 {
-[v readADC@channel channel `uc  1 a 1 wreg ]
-[v readADC@channel channel `uc  1 a 1 wreg ]
-"73
-[v readADC@channel channel `uc  1 a 1 4 ]
-"81
-} 0
-"113
-[v _printToLCD printToLCD `(v  1 e 0 0 ]
-{
-[v printToLCD@str str `*.26DCCuc  1 p 2 2 ]
+"93
+[v readData@bitcount bitcount `uc  1 a 1 4 ]
+[v readData@_data _data `uc  1 a 1 3 ]
+[v readData@index index `uc  1 a 1 2 ]
 "121
 } 0
-"93
-[v _dataCTRL dataCTRL `(v  1 e 0 0 ]
+"123
+[v _initUART initUART `(v  1 e 0 0 ]
 {
-[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
-[v dataCTRL@DAT DAT `uc  1 a 1 wreg ]
-"95
-[v dataCTRL@DAT DAT `uc  1 a 1 1 ]
-"101
+"136
 } 0
-"103
-[v _initLCD initLCD `(v  1 e 0 0 ]
+"76
+[v _checkResponse checkResponse `(s  1 e 2 0 ]
 {
-"111
-} 0
-"83
-[v _instCTRL instCTRL `(v  1 e 0 0 ]
-{
-[v instCTRL@CMD CMD `uc  1 a 1 wreg ]
-[v instCTRL@CMD CMD `uc  1 a 1 wreg ]
-"85
-[v instCTRL@CMD CMD `uc  1 a 1 1 ]
-"91
-} 0
-"64
-[v _initADC initADC `(v  1 e 0 0 ]
-{
-"69
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
+"89
 } 0

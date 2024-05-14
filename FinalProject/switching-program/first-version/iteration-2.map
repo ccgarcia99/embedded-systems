@@ -4,7 +4,7 @@ Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
   -h+iteration-2.sym --cmf=iteration-2.cmf -z -Q16F877A \
-  -oC:\Users\ACER\AppData\Local\Temp\so5o.6 -Miteration-2.map -E1 -ver=XC8 \
+  -oC:\Users\ACER\AppData\Local\Temp\sj4k.6 -Miteration-2.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -77,10 +77,10 @@ iteration-2.obj cinit                                15       15       3C       
                 maintext                           17A1     17A1       5F     2F42       0
                 cstackBANK0                          20       20       4F       20       1
                 cstackCOMMON                         70       70        7       70       1
-                cstackBANK1                          A0       A0       37       A0       1
+                cstackBANK1                          A0       A0       27       A0       1
                 clrtext                            13D2     13D2        8     27A4       0
-                dataBANK1                            EC       EC        3       A0       1
-                bssBANK1                             D7       D7       15       A0       1
+                dataBANK1                            DC       DC        3       A0       1
+                bssBANK1                             C7       C7       15       A0       1
                 dataBANK0                            6F       6F        1       20       1
                 dataCOMMON                           7A       7A        3       70       1
                 bssCOMMON                            77       77        3       70       1
@@ -166,9 +166,9 @@ TOTAL           Name                               Link     Load   Length     Sp
                 dataBANK0                            6F       6F        1         1
 
         CLASS   BANK1          
-                cstackBANK1                          A0       A0       37         1
-                dataBANK1                            EC       EC        3         1
-                bssBANK1                             D7       D7       15         1
+                cstackBANK1                          A0       A0       27         1
+                dataBANK1                            DC       DC        3         1
+                bssBANK1                             C7       C7       15         1
 
         CLASS   BANK2          
 
@@ -202,7 +202,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 intentry                       000004  0007FF  000803         8       0  CODE        2
                 cstackBANK0                    000020  000050  000070        20       1  BANK0       1
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
-                cstackBANK1                    0000A0  00004F  0000EF        A0       1  BANK1       1
+                cstackBANK1                    0000A0  00003F  0000DF        A0       1  BANK1       1
                 text6                          000803  00004F  000852      1006       0  CODE        2
                 text36                         000852  000077  0008C9      10A4       0  CODE        2
                 text15                         0008C9  00008E  000957      1192       0  CODE        2
@@ -252,7 +252,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK1            00EF-00EF              1           1
+        BANK1            00DF-00EF             11           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             110E-13CE            2C1           2
@@ -264,7 +264,7 @@ UNUSED ADDRESS RANGES
         ENTRY            110E-13CE            100           2
                          1800-1FFF            100
         IDLOC            2000-2003              4           2
-        RAM              00EF-00EF              1           1
+        RAM              00DF-00EF             11           1
                          0110-016F             60
                          0190-01EF             60
         SFR0             0000-001F             20           1
@@ -322,7 +322,7 @@ _PORTA                      (abs)        0005
 _PORTB                      (abs)        0006
 _PORTC                      (abs)        0007
 _PORTD                      (abs)        0008
-_PPM                        bssBANK1     00D7
+_PPM                        bssBANK1     00C7
 _RB1                        (abs)        0031
 _RC0                        (abs)        0038
 _RC1                        (abs)        0039
@@ -378,7 +378,7 @@ __Hsfr1                     sfr1         0000
 __Hsfr2                     sfr2         0000
 __Hsfr3                     sfr3         0000
 __Hspace_0                  (abs)        2008
-__Hspace_1                  (abs)        00EF
+__Hspace_1                  (abs)        00DF
 __Hspace_2                  (abs)        0000
 __Hspace_3                  (abs)        0000
 __Hstack                    stack        0000
@@ -429,7 +429,7 @@ __Lstrings                  strings      0000
 __Lstringtext               stringtext   0000
 __Ltext                     text         0000
 __S0                        (abs)        2008
-__S1                        (abs)        00EF
+__S1                        (abs)        00DF
 __S2                        (abs)        0000
 __S3                        (abs)        0000
 ___awmod                    text6        0803
@@ -540,13 +540,13 @@ __end_of_startUpLCD         text17       145A
 __end_of_updateState        text1        078F
 __end_ofi1_instCTRL         text44       141F
 __initialization            cinit        0015
-__pbssBANK1                 bssBANK1     00D7
+__pbssBANK1                 bssBANK1     00C7
 __pbssCOMMON                bssCOMMON    0077
 __pcstackBANK0              cstackBANK0  0020
 __pcstackBANK1              cstackBANK1  00A0
 __pcstackCOMMON             cstackCOMMON 0070
 __pdataBANK0                dataBANK0    006F
-__pdataBANK1                dataBANK1    00EC
+__pdataBANK1                dataBANK1    00DC
 __pdataCOMMON               dataCOMMON   007A
 __pidataBANK0               idataBANK0   0003
 __pidataBANK1               idataBANK1   13CF
@@ -651,7 +651,7 @@ _checkMode                  text38       14EB
 _checkSelect                text37       1698
 _checkTime                  text36       0852
 _dataCTRL                   text19       1432
-_debugInfo                  bssBANK1     00E2
+_debugInfo                  bssBANK1     00D2
 _displayPPM                 text11       0ED7
 _displayTemp                text10       1553
 _displayTime                text9        1577
@@ -671,8 +671,8 @@ _lastKeyState               dataCOMMON   007B
 _lastMode                   dataCOMMON   007C
 _main                       maintext     17A1
 _minutes                    bssCOMMON    0079
-_mode                       bssBANK1     00DE
-_ppmFlag                    bssBANK1     00DF
+_mode                       bssBANK1     00CE
+_ppmFlag                    bssBANK1     00CF
 _printStatusPPM             text8        1476
 _printStatusTMP             text7        1492
 _printToLCD                 text18       160E
@@ -680,10 +680,10 @@ _readADC                    text23       15E5
 _runClock                   text30       14AE
 _runMQ135                   text22       150B
 _savedHoursEnd              dataBANK0    006F
-_savedHoursStart            dataBANK1    00EC
-_savedMinutesEnd            dataBANK1    00ED
-_savedMinutesStart          dataBANK1    00EE
-_select                     bssBANK1     00E0
+_savedHoursStart            dataBANK1    00DC
+_savedMinutesEnd            dataBANK1    00DD
+_savedMinutesStart          dataBANK1    00DE
+_select                     bssBANK1     00D0
 _setHoursEnd                text5        0957
 _setHoursStart              text4        0ABB
 _setMinutesEnd              text3        0B7B
@@ -691,18 +691,18 @@ _setMinutesStart            text2        0C3B
 _setPortDirections          text21       13ED
 _sprintf                    text12       03F8
 _startUpLCD                 text17       1445
-_tempBuffer                 bssBANK1     00DA
-_tempFlag                   bssBANK1     00E1
+_tempBuffer                 bssBANK1     00CA
+_tempFlag                   bssBANK1     00D1
 _updateState                text1        05F7
 btemp                       (abs)        007E
 calculateTemp@adcValue      cstackBANK0  002E
 checkSelect@currentRB1State cstackBANK0  0024
-checkSelect@lastRB1State    bssBANK1     00DC
+checkSelect@lastRB1State    bssBANK1     00CC
 clear_ram0                  clrtext      13D2
 dataCTRL@DAT                cstackBANK0  0021
-displayPPM@bufPtr           cstackBANK1  00D6
-displayPPM@ppmFraction      cstackBANK1  00D4
-displayPPM@ppmWhole         cstackBANK1  00D2
+displayPPM@bufPtr           cstackBANK1  00B8
+displayPPM@ppmFraction      cstackBANK1  00B6
+displayPPM@ppmWhole         cstackBANK1  00B4
 displayPPM@strBuffer        cstackBANK1  00A0
 displayTemp@buffer          cstackBANK0  004A
 displayTime@timeFormat      cstackBANK0  004E
@@ -1069,11 +1069,11 @@ Total ram usage:        1 bytes
 
  *************** function _displayTime *****************
  Defined at:
-		line 48 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  timeFormat     10   46[BANK0 ] unsigned char [10]
+  timeFormat     16   46[BANK0 ] unsigned char [16]
  Return value:  Size  Location     Type
 		None               void
  Registers used:
@@ -1084,10 +1084,10 @@ Total ram usage:        1 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
-      Locals:         0      10       0       0       0
+      Locals:         0      16       0       0       0
       Temps:          0       4       0       0       0
-      Totals:         0      14       0       0       0
-Total ram usage:       14 bytes
+      Totals:         0      20       0       0       0
+Total ram usage:       20 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    4
  This function calls:
@@ -1135,11 +1135,11 @@ Total ram usage:       20 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  strBuffer      50    0[BANK1 ] unsigned char [50]
-  ppmFraction     2   52[BANK1 ] int 
-  ppmWhole        2   50[BANK1 ] int 
-  bufPtr          1   54[BANK1 ] PTR unsigned char 
-		 -> displayPPM@strBuffer(50), 
+  strBuffer      20    0[BANK1 ] unsigned char [20]
+  ppmFraction     2   22[BANK1 ] int 
+  ppmWhole        2   20[BANK1 ] int 
+  bufPtr          1   24[BANK1 ] PTR unsigned char 
+		 -> displayPPM@strBuffer(20), 
  Return value:  Size  Location     Type
 		None               void
  Registers used:
@@ -1150,10 +1150,10 @@ Total ram usage:       20 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
-      Locals:         0       0      55       0       0
+      Locals:         0       0      25       0       0
       Temps:          0       1       0       0       0
-      Totals:         0       1      55       0       0
-Total ram usage:       56 bytes
+      Totals:         0       1      25       0       0
+Total ram usage:       26 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    4
  This function calls:
@@ -1174,8 +1174,8 @@ Total ram usage:       56 bytes
 		line 492 in file "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c"
  Parameters:    Size  Location     Type
   sp              1    wreg     PTR unsigned char 
-		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(10), 
-		 -> displayPPM@strBuffer(50), 
+		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(16), 
+		 -> displayPPM@strBuffer(20), 
   f               2   20[BANK0 ] PTR const unsigned char 
 		 -> STR_26(13), STR_25(14), STR_19(11), STR_18(10), 
 		 -> STR_17(10), STR_16(10), STR_15(10), STR_14(10), 
@@ -1184,8 +1184,8 @@ Total ram usage:       56 bytes
 		 -> STR_3(9), STR_2(3), STR_1(6), 
  Auto vars:     Size  Location     Type
   sp              1   41[BANK0 ] PTR unsigned char 
-		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(10), 
-		 -> displayPPM@strBuffer(50), 
+		 -> updateState@buffer(10), displayTemp@buffer(20), debugInfo(10), displayTime@timeFormat(16), 
+		 -> displayPPM@strBuffer(20), 
   _val            4   33[BANK0 ] struct .
   width           2   38[BANK0 ] int 
   ccnt            2   31[BANK0 ] int 
@@ -1391,7 +1391,7 @@ Total ram usage:        0 bytes
 		 -> STR_30(12), STR_29(10), STR_28(16), STR_27(15), 
 		 -> updateState@buffer(10), STR_24(15), STR_23(7), STR_22(7), 
 		 -> STR_21(8), STR_20(9), displayTemp@buffer(20), debugInfo(10), 
-		 -> displayTime@timeFormat(10), STR_5(8), STR_4(8), displayPPM@strBuffer(50), 
+		 -> displayTime@timeFormat(16), STR_5(8), STR_4(8), displayPPM@strBuffer(20), 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type

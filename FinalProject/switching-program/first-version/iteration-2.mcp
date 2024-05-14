@@ -30,6 +30,7 @@ file_002=.
 file_003=.
 file_004=.
 file_005=.
+file_006=.
 [GENERATED_FILES]
 file_000=no
 file_001=no
@@ -37,6 +38,7 @@ file_002=no
 file_003=no
 file_004=no
 file_005=no
+file_006=no
 [OTHER_FILES]
 file_000=no
 file_001=no
@@ -44,6 +46,7 @@ file_002=no
 file_003=no
 file_004=no
 file_005=no
+file_006=no
 [FILE_INFO]
 file_000=main.c
 file_001=common_dependencies.h
@@ -51,6 +54,7 @@ file_002=lcd_functions.h
 file_003=mq135_module.h
 file_004=time_scheduler.h
 file_005=temp_module.h
+file_006=dht11_module.h
 [SUITE_INFO]
 suite_guid={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
 suite_state=

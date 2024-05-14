@@ -1587,7 +1587,7 @@ typedef uint16_t uintptr_t;
 typedef unsigned char bool;
 
 
-# 6 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c"
+# 7 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c"
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -1597,102 +1597,131 @@ typedef unsigned char bool;
 #pragma config WRT = OFF
 #pragma config CP = OFF
 
-# 24
-void instCTRL(unsigned char CMD);
-void dataCTRL(unsigned char DAT);
-void initLCD();
-void printToLCD(const unsigned char *str);
+# 23
+short checkResponse();
+void startSignal();
+uint8_t readData();
 
 
-void initADC();
-uint16_t readADC(char channel);
+void initUART(void);
+void sendByte(uint8_t data);
+void sendData(uint8_t temp, uint8_t humidity);
 
 
-uint16_t adcValue = 0;
+unsigned char checkbit;
+uint8_t T_byte1, T_byte2, RH_byte, RH_byte2, CheckSum;
 
 void main()
 {
-char buffer[20];
+TRISB = 0xFF;
+PORTB = 0x00;
+TRISB2 = 0;
 TRISC = 0x00;
-TRISD = 0x00;
 PORTC = 0x00;
-initADC();
-initLCD();
-instCTRL(0x80);
-printToLCD("ADC Test");
+initUART();
 
 while (1)
 {
-uint16_t adcValue = readADC(0);
-sprintf(buffer, "ADC0: %d        ", adcValue);
-instCTRL(0xC0);
-printToLCD(buffer);
-_delay((unsigned long)((50)*(4000000/4000.0)));
-
-adcValue = readADC(1);
-adcValue = (adcValue * 500) / 1023;
-sprintf(buffer, "ADC1: %d        ", adcValue);
-instCTRL(0x94);
-printToLCD(buffer);
-_delay((unsigned long)((50)*(4000000/4000.0)));
-}
-}
-
-void initADC()
+_delay((unsigned long)((800)*(4000000/4000.0)));
+startSignal();
+if (checkResponse())
 {
-TRISA = 0xFF;
-ADCON1 = 0x80;
-ADCON0 = 0x01;
+RH_byte = readData();
+RH_byte2 = readData();
+T_byte1 = readData();
+T_byte2 = readData();
+CheckSum = readData();
+if (CheckSum == (RH_byte + RH_byte2 + T_byte1 + T_byte2))
+{
+
+sendData(T_byte1, RH_byte);
+}
+}
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+}
 }
 
-uint16_t readADC(char channel)
+void startSignal()
 {
-ADCON0 &= 0xC3;
-ADCON0 |= (channel << 3);
-ADCON0 |= 0x01;
-_delay((unsigned long)((20)*(4000000/4000000.0)));
-GO_DONE = 1;
-while (GO_DONE)
-;
-return ((uint16_t)ADRESH << 8) | ADRESL;
+TRISB2 = 0;
+RB2 = 0;
+_delay((unsigned long)((25)*(4000000/4000.0)));
+RB2 = 1;
+_delay((unsigned long)((30)*(4000000/4000000.0)));
+TRISB2 = 1;
 }
 
-void instCTRL(unsigned char CMD)
+short checkResponse()
 {
-PORTD = CMD;
-RC0 = 0;
-RC1 = 0;
-RC2 = 1;
-_delay((unsigned long)((1)*(4000000/4000.0)));
-RC2 = 0;
-}
-
-void dataCTRL(unsigned char DAT)
+_delay((unsigned long)((40)*(4000000/4000000.0)));
+if (!RB2)
 {
-PORTD = DAT;
-RC0 = 1;
-RC1 = 0;
-RC2 = 1;
-_delay((unsigned long)((1)*(4000000/4000.0)));
-RC2 = 0;
-}
-
-void initLCD()
+_delay((unsigned long)((80)*(4000000/4000000.0)));
+if (RB2)
 {
-instCTRL(0x38);
 _delay((unsigned long)((50)*(4000000/4000000.0)));
-instCTRL(0x0C);
-instCTRL(0x01);
-instCTRL(0x06);
-instCTRL(0x0F);
+return 1;
+}
+}
+return 0;
 }
 
-void printToLCD(const unsigned char *str)
+uint8_t readData()
 {
-instCTRL(0x0C);
-while (*str)
+uint8_t index, bitcount, _data = 0;
+for (index = 0; index < 8; index++)
 {
-dataCTRL(*str);
-str++;
+bitcount = 0;
+while (!RB2)
+{
+bitcount++;
+_delay((unsigned long)((1)*(4000000/4000000.0)));
+if (bitcount > 100)
+break;
 }
+_delay((unsigned long)((30)*(4000000/4000000.0)));
+if (!RB2)
+checkbit = 0;
+else
+{
+checkbit = 1;
+while (RB2)
+{
+bitcount++;
+_delay((unsigned long)((1)*(4000000/4000000.0)));
+if (bitcount > 100)
+break;
+}
+}
+_data = (_data << 1) | checkbit;
+}
+return _data;
+}
+
+void initUART(void)
+{
+
+TRISC6 = 0;
+TRISC7 = 1;
+
+SPBRG = 25;
+BRGH = 1;
+
+SYNC = 0;
+SPEN = 1;
+TXEN = 1;
+CREN = 1;
+}
+
+void sendByte(uint8_t data)
+{
+while (!TXIF)
+;
+TXREG = data;
+}
+
+void sendData(uint8_t temp, uint8_t humidity)
+{
+sendByte(humidity);
+sendByte(temp);
 }

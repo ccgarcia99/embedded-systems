@@ -1,16 +1,9 @@
-__stringtab: STRING, 3 0 16
-__stringdata: STRING, 29 0 43
-_dpowers: STRING, 19 0 10
-_main: CODE, 1640 0 183
-_instCTRL: CODE, 1336 0 19
-_dataCTRL: CODE, 1355 0 19
-__initialization: CODE, 2042 0 2
-___lwdiv: CODE, 1578 0 62
-_sprintf: CODE, 1823 0 219
-_initADC: CODE, 1325 0 11
-___lwmod: CODE, 1524 0 54
-___wmul: CODE, 1408 0 35
-_readADC: CODE, 1443 0 40
-_printToLCD: CODE, 1483 0 41
-_initLCD: CODE, 1374 0 34
-Total: 788
+_readData: CODE, 1834 0 63
+_main: CODE, 1897 0 141
+_initUART: CODE, 1759 0 18
+_checkResponse: CODE, 1804 0 30
+__initialization: CODE, 2038 0 6
+_startSignal: CODE, 1777 0 27
+_sendByte: CODE, 1739 0 8
+_sendData: CODE, 1747 0 12
+Total: 305

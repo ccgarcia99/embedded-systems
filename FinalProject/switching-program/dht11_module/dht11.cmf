@@ -15,41 +15,36 @@ $startup.obj
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 $dht11.obj
-cinit CODE 0 7FA 7FA 6 2
-text10 CODE 0 580 580 23 2
-text9 CODE 0 52D 52D B 2
-text8 CODE 0 538 538 13 2
-text7 CODE 0 55E 55E 22 2
-text6 CODE 0 54B 54B 13 2
-text5 CODE 0 5CB 5CB 29 2
-text4 CODE 0 5A3 5A3 28 2
-text3 CODE 0 62A 62A 3E 2
-text2 CODE 0 5F4 5F4 36 2
-text1 CODE 0 71F 71F DB 2
-maintext CODE 0 668 668 B7 2
-cstackBANK0 BANK0 1 20 20 2D 1
-cstackCOMMON COMMON 1 70 70 E 1
-bssBANK0 BANK0 1 4D 4D 2 1
-strings STRING 0 3 3 45 2
+cinit CODE 0 7F6 7F6 A 2
+text6 CODE 0 70C 70C 1E 2
+text5 CODE 0 6DF 6DF 12 2
+text4 CODE 0 72A 72A 3F 2
+text3 CODE 0 6CB 6CB 8 2
+text2 CODE 0 6D3 6D3 C 2
+text1 CODE 0 6F1 6F1 1B 2
+maintext CODE 0 769 769 8D 2
+cstackCOMMON COMMON 1 70 70 B 1
+bssBANK0 BANK0 1 20 20 3 1
+bssCOMMON COMMON 1 7B 7B 3 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK0 004F-006F 1
+BANK0 0023-006F 1
 BANK1 00A0-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
-CODE 0048-052C 2
+CODE 0003-06CA 2
 CODE 0800-1FFF 2
-CONST 0048-052C 2
+CONST 0003-06CA 2
 CONST 0800-1FFF 2
 EEDATA 2100-21FF 2
-ENTRY 0048-052C 2
+ENTRY 0003-06CA 2
 ENTRY 0800-1FFF 2
 IDLOC 2000-2003 2
-RAM 004F-006F 1
+RAM 0023-006F 1
 RAM 00A0-00EF 1
 RAM 0110-016F 1
 RAM 0190-01EF 1
@@ -58,9 +53,9 @@ SFR1 0080-009F 1
 SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
-STRCODE 0048-052C 2
+STRCODE 0003-06CA 2
 STRCODE 0800-1FFF 2
-STRING 0048-052C 2
+STRING 0003-06CA 2
 STRING 0800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -76,135 +71,94 @@ STRING 0800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dht11.obj
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":64 52D text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":66 52D text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":67 531 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":68 533 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":69 537 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":83 538 text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":85 539 text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":86 53D text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":87 53E text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":88 53F text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":89 540 text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":90 547 text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":91 54A text8 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":93 54B text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":95 54C text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":96 550 text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":97 551 text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":98 552 text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":99 553 text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":100 55A text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":101 55D text6 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":103 55E text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":105 55E text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":106 564 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":107 569 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":108 56F text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":109 575 text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":110 57B text7 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":111 57F text7 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 580 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 580 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 582 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 584 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 58A text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 591 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 598 text10 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 59C text10 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":71 5A3 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":73 5A4 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":74 5AA text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":75 5B7 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":76 5B8 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":77 5BD text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":78 5C0 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":79 5C0 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":80 5C2 text4 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":113 5CB text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":115 5CB text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":116 5D1 text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":118 5DF text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":119 5EF text5 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":116 5F3 text5 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":6 5F4 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 5F4 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 5FA text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 5FC text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 5FE text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 605 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 609 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 60A text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 612 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 618 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 61F text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 623 text2 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 62A text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 62A text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 62C text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 630 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 632 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 634 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 63B text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 63F text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 640 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 647 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 64F text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 655 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 656 text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 65D text3 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 661 text3 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":36 668 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":39 668 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":40 66B maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":41 66C maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":42 66F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":43 674 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":44 679 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":45 67F maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":49 688 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":50 696 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":51 6A6 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":52 6AC maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":53 6B5 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":55 6C0 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":56 6CE maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":57 6F4 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":58 704 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":59 70A maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":60 713 maintext CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":47 71E maintext CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":492 71F text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":542 722 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 726 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":547 736 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":550 73A text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":551 745 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":557 746 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 747 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1268 75C text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1270 768 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1271 76A text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1272 76E text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 773 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1315 779 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1314 792 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1447 79A text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1448 79E text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1481 7A9 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 7AD text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1498 7B5 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1533 7E9 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1483 7F4 text1 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1547 7F5 text1 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":331 7FA cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":334 7FA cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":344 7FA cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":345 7FB cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":351 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":352 7FC cinit CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":353 7FD cinit CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":138 6CB text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":140 6CC text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":141 6CC text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":142 6D0 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":143 6D2 text3 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":145 6D3 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":147 6D4 text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":148 6DA text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":149 6DE text2 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":123 6DF text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":126 6DF text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":127 6E2 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":129 6E3 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":130 6E5 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":132 6E6 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":133 6E7 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":134 6EA text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":135 6ED text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":136 6F0 text5 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":66 6F1 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":68 6F1 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":69 6F4 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":70 6F7 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":71 700 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":72 703 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":73 708 text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":74 70B text1 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":76 70C text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":78 70C text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":79 710 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":81 714 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":82 719 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":84 71D text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":85 722 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":88 727 text6 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":91 72A text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":93 72A text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":94 72B text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":96 730 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":97 731 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":103 731 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":99 735 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":100 739 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":101 73A text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":104 73E text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":105 743 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":106 747 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":107 749 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":109 749 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":110 74B text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":116 74B text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":112 74F text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":113 753 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":114 754 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":118 758 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":94 75F text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":120 767 text4 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":36 769 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":38 769 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":39 76D maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":40 770 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":41 773 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":42 774 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":43 777 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":47 77C maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":48 788 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":49 78D maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":51 796 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":52 79E maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":53 7A8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":54 7B0 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":55 7BA maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":56 7C4 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":59 7DE maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":62 7E8 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\main.c":45 7F5 maintext CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":233 7F6 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":236 7F6 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":264 7F6 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":265 7F7 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":266 7F8 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":269 7F9 cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":270 7FA cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":271 7FB cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":277 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":278 7FC cinit CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\dht11.as":279 7FD cinit CODE
 $startup.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\startup.as":39 0 functab CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\dht11_module\startup.as":40 0 functab CODE
@@ -227,13 +181,9 @@ $startup.obj
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___lwdiv@dividend 78 0 COMMON 1 cstackCOMMON dht11.obj
-sprintf@f 26 0 BANK0 1 cstackBANK0 dht11.obj
-___lwdiv@counter 7D 0 COMMON 1 cstackCOMMON dht11.obj
+_startSignal DE2 0 CODE 0 text1 dht11.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dht11.obj
-_RC0 38 0 ABS 0 - dht11.obj
-_RC1 39 0 ABS 0 - dht11.obj
-_RC2 3A 0 ABS 0 - dht11.obj
+_RB2 32 0 ABS 0 - dht11.obj
 __S0 2008 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
@@ -241,21 +191,30 @@ __S3 0 0 ABS 0 - -
 __Hintentry 0 0 CODE 0 intentry -
 __Lintentry 0 0 CODE 0 intentry -
 __CFG_BOREN$ON 0 0 ABS 0 - dht11.obj
-main@adcValue 4B 0 BANK0 1 cstackBANK0 dht11.obj
-_main CD0 0 CODE 0 maintext dht11.obj
+_BRGH 4C2 0 ABS 0 - dht11.obj
+_SYNC 4C4 0 ABS 0 - dht11.obj
+_TXIF 64 0 ABS 0 - dht11.obj
+_CREN C4 0 ABS 0 - dht11.obj
+_SPEN C7 0 ABS 0 - dht11.obj
+_TXEN 4C5 0 ABS 0 - dht11.obj
+_main ED2 0 CODE 0 maintext dht11.obj
+__size_of_initUART 0 0 ABS 0 - dht11.obj
 ___sp 0 0 STACK 2 stack startup.obj
 btemp 7E 0 ABS 0 - dht11.obj
 ltemp 7E 0 ABS 0 - dht11.obj
 ttemp 7E 0 ABS 0 - dht11.obj
 wtemp 7E 0 ABS 0 - dht11.obj
-instCTRL@CMD 71 0 COMMON 1 cstackCOMMON dht11.obj
 start 0 0 CODE 0 init startup.obj
-_TRISA 85 0 ABS 0 - dht11.obj
+_readData E54 0 CODE 0 text4 dht11.obj
+_sendData DA6 0 CODE 0 text2 dht11.obj
+_TRISB 86 0 ABS 0 - dht11.obj
 _TRISC 87 0 ABS 0 - dht11.obj
+_TXREG 19 0 ABS 0 - dht11.obj
 reset_vec 0 0 CODE 0 reset_vec startup.obj
-_TRISD 88 0 ABS 0 - dht11.obj
+_PORTB 6 0 ABS 0 - dht11.obj
+_SPBRG 99 0 ABS 0 - dht11.obj
 _PORTC 7 0 ABS 0 - dht11.obj
-_PORTD 8 0 ABS 0 - dht11.obj
+__end_of_readData ED2 0 CODE 0 text4 dht11.obj
 ltemp0 7E 0 ABS 0 - dht11.obj
 ttemp0 7E 0 ABS 0 - dht11.obj
 wtemp0 7E 0 ABS 0 - dht11.obj
@@ -274,30 +233,23 @@ wtemp5 88 0 ABS 0 - dht11.obj
 wtemp6 7F 0 ABS 0 - dht11.obj
 __Hconfig 4010 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
-__size_of_printToLCD 0 0 ABS 0 - dht11.obj
-__end_of__stringtab 26 0 STRING 0 strings dht11.obj
-_adcValue 4D 0 BANK0 1 bssBANK0 dht11.obj
-?___lwmod 20 0 BANK0 1 cstackBANK0 dht11.obj
+_sendByte D96 0 CODE 0 text3 dht11.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of__stringdata 90 0 STRING 0 strings dht11.obj
-?_sprintf 26 0 BANK0 1 cstackBANK0 dht11.obj
-_printToLCD B96 0 CODE 0 text5 dht11.obj
+_CheckSum 20 0 BANK0 1 bssBANK0 dht11.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
-_ADCON0 1F 0 ABS 0 - dht11.obj
-_ADCON1 9F 0 ABS 0 - dht11.obj
+_TRISB2 432 0 ABS 0 - dht11.obj
+_TRISC6 43E 0 ABS 0 - dht11.obj
+_TRISC7 43F 0 ABS 0 - dht11.obj
+_checkbit 7D 0 COMMON 1 bssCOMMON dht11.obj
 __Hcommon 0 0 ABS 0 common -
 __Lcommon 0 0 ABS 0 common -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-sprintf@ap 2C 0 BANK0 1 cstackBANK0 dht11.obj
 ___int_sp 0 0 STACK 2 stack startup.obj
-?___lwdiv 76 0 COMMON 1 cstackCOMMON dht11.obj
-_ADRESH 1E 0 ABS 0 - dht11.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Labs1 0 0 ABS 0 abs1 -
-_ADRESL 9E 0 ABS 0 - dht11.obj
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
@@ -306,36 +258,20 @@ __Hsfr2 0 0 ABS 0 sfr2 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Hsfr3 0 0 ABS 0 sfr3 -
 __Lsfr3 0 0 ABS 0 sfr3 -
-__size_of_initADC 0 0 ABS 0 - dht11.obj
-__end_of_dpowers 3A 0 STRING 0 strings dht11.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
 stackhi 0 0 ABS 0 - startup.obj
-sprintf@sp 33 0 BANK0 1 cstackBANK0 dht11.obj
-__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dht11.obj
 stacklo 0 0 ABS 0 - startup.obj
 __Hinit 0 0 CODE 0 init -
 __Linit 0 0 CODE 0 init -
-___wmul B00 0 CODE 0 text10 dht11.obj
-__end_of_main E3E 0 CODE 0 maintext dht11.obj
+__end_of_main FEC 0 CODE 0 maintext dht11.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
-___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dht11.obj
-__end_of_instCTRL A96 0 CODE 0 text8 dht11.obj
 end_of_initialization FF8 0 CODE 0 cinit dht11.obj
-___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dht11.obj
-__stringtab 6 0 STRING 0 strings dht11.obj
-__size_of_initLCD 0 0 ABS 0 - dht11.obj
+sendData@humidity 71 0 COMMON 1 cstackCOMMON dht11.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
-__pstrings 6 0 STRING 0 strings dht11.obj
-_readADC B46 0 CODE 0 text4 dht11.obj
-_initADC A5A 0 CODE 0 text9 dht11.obj
-__end_of_dataCTRL ABC 0 CODE 0 text6 dht11.obj
-_GO_DONE FA 0 ABS 0 - dht11.obj
-_initLCD ABC 0 CODE 0 text7 dht11.obj
+sendByte@data 70 0 COMMON 1 cstackCOMMON dht11.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Lbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -343,104 +279,86 @@ __Lbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
+_T_byte1 7C 0 COMMON 1 bssCOMMON dht11.obj
 __Lbank3 0 0 ABS 0 bank3 -
 ___latbits 2 0 ABS 0 - dht11.obj
+_T_byte2 22 0 BANK0 1 bssBANK0 dht11.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
-__ptext1 E3E 0 CODE 0 text1 dht11.obj
-__ptext2 BE8 0 CODE 0 text2 dht11.obj
-__ptext3 C54 0 CODE 0 text3 dht11.obj
-__ptext4 B46 0 CODE 0 text4 dht11.obj
-__ptext5 B96 0 CODE 0 text5 dht11.obj
-__ptext6 A96 0 CODE 0 text6 dht11.obj
-__ptext7 ABC 0 CODE 0 text7 dht11.obj
-__ptext8 A70 0 CODE 0 text8 dht11.obj
-__ptext9 A5A 0 CODE 0 text9 dht11.obj
+__ptext0 0 0 CODE 0 text0 dht11.obj
+__ptext1 DE2 0 CODE 0 text1 dht11.obj
+?_checkResponse 70 0 COMMON 1 cstackCOMMON dht11.obj
+__ptext2 DA6 0 CODE 0 text2 dht11.obj
+__ptext3 D96 0 CODE 0 text3 dht11.obj
+__end_of_initUART DE2 0 CODE 0 text5 dht11.obj
+__ptext4 E54 0 CODE 0 text4 dht11.obj
+__ptext5 DBE 0 CODE 0 text5 dht11.obj
+__ptext6 E18 0 CODE 0 text6 dht11.obj
+__end_of_checkResponse E54 0 CODE 0 text6 dht11.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
-printToLCD@str 72 0 COMMON 1 cstackCOMMON dht11.obj
 __end_of__initialization FF8 0 CODE 0 cinit dht11.obj
-__end_of___lwdiv CD0 0 CODE 0 text3 dht11.obj
-dataCTRL@DAT 71 0 COMMON 1 cstackCOMMON dht11.obj
+__end_of_startSignal E18 0 CODE 0 text1 dht11.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
-___lwmod BE8 0 CODE 0 text2 dht11.obj
 __Hspace_0 2008 0 ABS 0 - -
 __Lspace_0 0 0 ABS 0 - -
-_sprintf E3E 0 CODE 0 text1 dht11.obj
+__size_of_sendByte 0 0 ABS 0 - dht11.obj
+_RH_byte 7B 0 COMMON 1 bssCOMMON dht11.obj
 __Hspace_1 7E 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
+__end_of_sendByte DA6 0 CODE 0 text3 dht11.obj
 __Hspace_2 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
-?___wmul 70 0 COMMON 1 cstackCOMMON dht11.obj
 __Hcinit 1000 0 CODE 0 cinit -
-__Lcinit FF4 0 CODE 0 cinit -
+__Lcinit FEC 0 CODE 0 cinit -
 __CFG_FOSC$HS 0 0 ABS 0 - dht11.obj
 __Hspace_3 0 0 ABS 0 - -
-___lwdiv C54 0 CODE 0 text3 dht11.obj
 __Lspace_3 0 0 ABS 0 - -
 __size_of_main 0 0 ABS 0 - dht11.obj
-_dpowers 26 0 STRING 0 strings dht11.obj
-__size_of_readADC 0 0 ABS 0 - dht11.obj
-__end_of_sprintf FF4 0 CODE 0 text1 dht11.obj
-main@buffer 37 0 BANK0 1 cstackBANK0 dht11.obj
-__size_of___lwdiv 0 0 ABS 0 - dht11.obj
+__size_of_readData 0 0 ABS 0 - dht11.obj
+sendData@temp 72 0 COMMON 1 cstackCOMMON dht11.obj
+__size_of_startSignal 0 0 ABS 0 - dht11.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__pbssBANK0 4D 0 BANK0 1 bssBANK0 dht11.obj
-sprintf@flag 2D 0 BANK0 1 cstackBANK0 dht11.obj
-__ptext10 B00 0 CODE 0 text10 dht11.obj
-sprintf@prec 2E 0 BANK0 1 cstackBANK0 dht11.obj
-__end_of_initADC A70 0 CODE 0 text9 dht11.obj
-__end_of___lwmod C54 0 CODE 0 text2 dht11.obj
-___lwmod@divisor 20 0 BANK0 1 cstackBANK0 dht11.obj
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dht11.obj
+__end_of_sendData DBE 0 CODE 0 text2 dht11.obj
+readData@bitcount 74 0 COMMON 1 cstackCOMMON dht11.obj
+_checkResponse E18 0 CODE 0 text6 dht11.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dht11.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 7B 0 COMMON 1 bssCOMMON dht11.obj
+__size_of_sendData 0 0 ABS 0 - dht11.obj
 __Hend_init 6 0 CODE 0 end_init -
 __Lend_init 0 0 CODE 0 end_init -
-?_readADC 70 0 COMMON 1 cstackCOMMON dht11.obj
-___lwdiv@divisor 76 0 COMMON 1 cstackCOMMON dht11.obj
-__size_of___wmul 0 0 ABS 0 - dht11.obj
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-readADC@channel 74 0 COMMON 1 cstackCOMMON dht11.obj
-__size_of_instCTRL 0 0 ABS 0 - dht11.obj
-__stringdata 3A 0 STRING 0 strings dht11.obj
 intlevel0 0 0 CODE 0 functab startup.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dht11.obj
 intlevel1 0 0 CODE 0 functab startup.obj
+_RH_byte2 21 0 BANK0 1 bssBANK0 dht11.obj
 intlevel2 0 0 CODE 0 functab startup.obj
 intlevel3 0 0 CODE 0 functab startup.obj
-_dataCTRL A96 0 CODE 0 text6 dht11.obj
 intlevel4 0 0 CODE 0 functab startup.obj
 intlevel5 0 0 CODE 0 functab startup.obj
-_instCTRL A70 0 CODE 0 text8 dht11.obj
-__size_of___lwmod 0 0 ABS 0 - dht11.obj
+readData@_data 73 0 COMMON 1 cstackCOMMON dht11.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_initUART DBE 0 CODE 0 text5 dht11.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dht11.obj
-__end_of___wmul B46 0 CODE 0 text10 dht11.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dht11.obj
-start_initialization FF4 0 CODE 0 cinit dht11.obj
-__end_of_readADC B96 0 CODE 0 text4 dht11.obj
-___lwdiv@quotient 7B 0 COMMON 1 cstackCOMMON dht11.obj
-__end_of_printToLCD BE8 0 CODE 0 text5 dht11.obj
+start_initialization FEC 0 CODE 0 cinit dht11.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__pmaintext CD0 0 CODE 0 maintext dht11.obj
-__size_of_sprintf 0 0 ABS 0 - dht11.obj
-__initialization FF4 0 CODE 0 cinit dht11.obj
-__end_of_initLCD B00 0 CODE 0 text7 dht11.obj
-__stringbase 24 0 STRING 0 strings dht11.obj
-__size_of_dataCTRL 0 0 ABS 0 - dht11.obj
-___lwmod@dividend 22 0 BANK0 1 cstackBANK0 dht11.obj
-sprintf@_val 2F 0 BANK0 1 cstackBANK0 dht11.obj
-___wmul@product 74 0 COMMON 1 cstackCOMMON dht11.obj
-___lwmod@counter 25 0 BANK0 1 cstackBANK0 dht11.obj
+__pmaintext ED2 0 CODE 0 maintext dht11.obj
+__initialization FEC 0 CODE 0 cinit dht11.obj
+__size_of_checkResponse 0 0 ABS 0 - dht11.obj
 __CFG_CP$OFF 0 0 ABS 0 - dht11.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dht11.obj
-sprintf@c 34 0 BANK0 1 cstackBANK0 dht11.obj
+readData@index 72 0 COMMON 1 cstackCOMMON dht11.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -467,19 +385,14 @@ sprintf@c 34 0 BANK0 1 cstackBANK0 dht11.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 3 2
-cinit 0 7FA FF4 6 2
+cinit 0 7F6 FEC A 2
 config 0 2007 400E 1 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 2F 1
-text1 0 71F E3E DB 2
-maintext 0 668 CD0 B7 2
-strings 0 3 6 45 2
-text3 0 62A C54 3E 2
-text2 0 5F4 BE8 36 2
-text5 0 5CB B96 29 2
-text4 0 5A3 B46 28 2
-text10 0 580 B00 23 2
-text7 0 55E ABC 22 2
-text6 0 54B A96 13 2
-text8 0 538 A70 13 2
-text9 0 52D A5A B 2
+bssBANK0 1 20 20 3 1
+maintext 0 769 ED2 8D 2
+text4 0 72A E54 3F 2
+text6 0 70C E18 1E 2
+text1 0 6F1 DE2 1B 2
+text5 0 6DF DBE 12 2
+text2 0 6D3 DA6 C 2
+text3 0 6CB D96 8 2

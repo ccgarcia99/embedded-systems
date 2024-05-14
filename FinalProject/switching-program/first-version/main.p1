@@ -1386,10 +1386,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _displayPPM ]
 [f ]
 "39
-[v _strBuffer `uc ~T0 @X0 -> 50 `i a ]
+[v _strBuffer `uc ~T0 @X0 -> 20 `i a ]
 "40
 [v _ppmWhole `i ~T0 @X0 1 a ]
-[; ;mq135_module.h: 39: char strBuffer[50];
+[; ;mq135_module.h: 39: char strBuffer[20];
 [; ;mq135_module.h: 40: int ppmWhole = (int)PPM;
 [e = _ppmWhole -> _PPM `i ]
 "41
@@ -1643,64 +1643,64 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;time_scheduler.h: 34: {
 [e :U _runClock ]
 [f ]
-[; ;time_scheduler.h: 35: minutes++;
-"35
-[e ++ _minutes -> -> 1 `i `uc ]
-[; ;time_scheduler.h: 36: if (minutes >= 60)
+[; ;time_scheduler.h: 36: minutes++;
 "36
-[e $ ! >= -> _minutes `i -> 60 `i 120  ]
-[; ;time_scheduler.h: 37: {
+[e ++ _minutes -> -> 1 `i `uc ]
+[; ;time_scheduler.h: 37: if (minutes >= 60)
 "37
-{
-[; ;time_scheduler.h: 38: minutes = 0;
+[e $ ! >= -> _minutes `i -> 60 `i 120  ]
+[; ;time_scheduler.h: 38: {
 "38
-[e = _minutes -> -> 0 `i `uc ]
-[; ;time_scheduler.h: 39: hours++;
-"39
-[e ++ _hours -> -> 1 `i `uc ]
-[; ;time_scheduler.h: 40: if (hours >= 24)
-"40
-[e $ ! >= -> _hours `i -> 24 `i 121  ]
-[; ;time_scheduler.h: 41: {
-"41
 {
-[; ;time_scheduler.h: 42: hours = 0;
+[; ;time_scheduler.h: 39: minutes = 0;
+"39
+[e = _minutes -> -> 0 `i `uc ]
+[; ;time_scheduler.h: 40: hours++;
+"40
+[e ++ _hours -> -> 1 `i `uc ]
+[; ;time_scheduler.h: 41: if (hours >= 24)
+"41
+[e $ ! >= -> _hours `i -> 24 `i 121  ]
+[; ;time_scheduler.h: 42: {
 "42
-[e = _hours -> -> 0 `i `uc ]
+{
+[; ;time_scheduler.h: 43: hours = 0;
 "43
-}
-[e :U 121 ]
+[e = _hours -> -> 0 `i `uc ]
 "44
 }
-[e :U 120 ]
-[; ;time_scheduler.h: 43: }
-[; ;time_scheduler.h: 44: }
-[; ;time_scheduler.h: 45: _delay((unsigned long)((50)*(4000000/4000.0)));
+[e :U 121 ]
 "45
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;time_scheduler.h: 46: }
+}
+[e :U 120 ]
+[; ;time_scheduler.h: 44: }
+[; ;time_scheduler.h: 45: }
+[; ;time_scheduler.h: 46: _delay((unsigned long)((100)*(4000000/4000.0)));
 "46
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;time_scheduler.h: 47: }
+"47
 [e :UE 119 ]
 }
-"48
-[v _displayTime `(v ~T0 @X0 1 ef ]
 "49
+[v _displayTime `(v ~T0 @X0 1 ef ]
+"50
 {
-[; ;time_scheduler.h: 48: void displayTime(void)
-[; ;time_scheduler.h: 49: {
+[; ;time_scheduler.h: 49: void displayTime(void)
+[; ;time_scheduler.h: 50: {
 [e :U _displayTime ]
 [f ]
-"50
-[v _timeFormat `uc ~T0 @X0 -> 10 `i a ]
-[; ;time_scheduler.h: 50: char timeFormat[10];
-[; ;time_scheduler.h: 51: sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
 "51
-[e ( _sprintf (1 , , (. , &U _timeFormat :s 6C -> _hours `i -> _minutes `i ]
-[; ;time_scheduler.h: 52: printToLCD(timeFormat);
+[v _timeFormat `uc ~T0 @X0 -> 16 `i a ]
+[; ;time_scheduler.h: 51: char timeFormat[16];
+[; ;time_scheduler.h: 52: sprintf(timeFormat, "Time: %02d:%02d", hours, minutes);
 "52
-[e ( _printToLCD (1 -> &U _timeFormat `*Cuc ]
-[; ;time_scheduler.h: 53: }
+[e ( _sprintf (1 , , (. , &U _timeFormat :s 6C -> _hours `i -> _minutes `i ]
+[; ;time_scheduler.h: 53: printToLCD(timeFormat);
 "53
+[e ( _printToLCD (1 -> &U _timeFormat `*Cuc ]
+[; ;time_scheduler.h: 54: }
+"54
 [e :UE 122 ]
 }
 "55

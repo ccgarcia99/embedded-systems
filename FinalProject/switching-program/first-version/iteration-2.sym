@@ -5,7 +5,7 @@ ___lwdiv@counter 2D 0 BANK0 1
 ___awtoft@c 28 0 BANK0 1
 __end_of___ftneg 13ED 0 CODE 0
 __CFG_WRT$OFF 0 0 ABS 0
-_savedMinutesStart EE 0 BANK1 1
+_savedMinutesStart DE 0 BANK1 1
 _RC0 38 0 ABS 0
 _RB1 31 0 ABS 0
 _RC1 39 0 ABS 0
@@ -14,13 +14,13 @@ _RC3 3B 0 ABS 0
 _RC4 3C 0 ABS 0
 _RC5 3D 0 ABS 0
 __S0 2008 0 ABS 0
-__S1 EF 0 ABS 0
+__S1 DF 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 _GIE 5F 0 ABS 0
 __end_of_startUpLCD 145A 0 CODE 0
 _setMinutesStart C3B 0 CODE 0
-_PPM D7 0 BANK1 1
+_PPM C7 0 BANK1 1
 _ISR 14CB 0 CODE 0
 __Hintentry 12 0 CODE 0
 __Lintentry 4 0 CODE 0
@@ -38,7 +38,7 @@ ___ftadd@f2 34 0 BANK0 1
 __size_of_setHoursEnd 0 0 ABS 0
 _CalcMQ135$684 AC 0 BANK1 1
 __size_of_checkTime 0 0 ABS 0
-_mode DE 0 BANK1 1
+_mode CE 0 BANK1 1
 CalcMQ135@voltage A0 0 BANK1 1
 _main 17A1 0 CODE 0
 ___sp 0 0 STACK 2
@@ -50,7 +50,7 @@ instCTRL@CMD 21 0 BANK0 1
 updateState@buffer 62 0 BANK0 1
 start 12 0 CODE 0
 __end_of_setMinutesStart CFB 0 CODE 0
-_tempFlag E1 0 BANK1 1
+_tempFlag D1 0 BANK1 1
 ?___ftadd 31 0 BANK0 1
 ___fttol@f1 4E 0 BANK0 1
 ___ftmul@f1 3E 0 BANK0 1
@@ -82,7 +82,7 @@ wtemp3 84 0 ABS 0
 ___ftmul@f2 41 0 BANK0 1
 ttemp4 7F 0 ABS 0
 wtemp4 86 0 ABS 0
-_savedHoursStart EC 0 BANK1 1
+_savedHoursStart DC 0 BANK1 1
 wtemp5 88 0 ABS 0
 wtemp6 7F 0 ABS 0
 ___ftdiv@f2 4E 0 BANK0 1
@@ -172,7 +172,7 @@ __end_of___awmod 852 0 CODE 0
 ___ftadd@sign 3B 0 BANK0 1
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
-_debugInfo E2 0 BANK1 1
+_debugInfo D2 0 BANK1 1
 ___ftge 1742 0 CODE 0
 CalcMQ135@ratio6 A3 0 BANK1 1
 stackhi 0 0 ABS 0
@@ -184,13 +184,13 @@ __pcstackBANK0 20 0 BANK0 1
 ___awmod@sign 26 0 BANK0 1
 __size_of_setHoursStart 0 0 ABS 0
 stacklo 0 0 ABS 0
-_select E0 0 BANK1 1
+_select D0 0 BANK1 1
 saved_w 7E 0 ABS 0
-checkSelect@lastRB1State DC 0 BANK1 1
+checkSelect@lastRB1State CC 0 BANK1 1
 __Hinit 12 0 CODE 0
 __Linit 12 0 CODE 0
 ___wmul 159B 0 CODE 0
-displayPPM@bufPtr D6 0 BANK1 1
+displayPPM@bufPtr B8 0 BANK1 1
 __end_of_main 1800 0 CODE 0
 i1instCTRL@CMD 71 0 COMMON 1
 _displayTemp 1553 0 CODE 0
@@ -215,7 +215,7 @@ __size_of_initLCD 0 0 ABS 0
 __size_of___awtoft 0 0 ABS 0
 __HdataBANK1 0 0 ABS 0
 __LdataBANK1 0 0 ABS 0
-__pdataBANK1 EC 0 BANK1 1
+__pdataBANK1 DC 0 BANK1 1
 __end_of___ftadd ED7 0 CODE 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
@@ -275,7 +275,7 @@ dataCTRL@DAT 21 0 BANK0 1
 __end_of_calculateTemp 1668 0 CODE 0
 CalcMQ135@ratio2 B5 0 BANK1 1
 _setHoursStart ABB 0 CODE 0
-_ppmFlag DF 0 BANK1 1
+_ppmFlag CF 0 BANK1 1
 ___ftadd DCE 0 CODE 0
 _displayPPM ED7 0 CODE 0
 __Hidloc 0 0 IDLOC 0
@@ -291,7 +291,7 @@ _isdigit$441 20 0 BANK0 1
 __end_of_setHoursStart B7B 0 CODE 0
 ___ftpack@sign 24 0 BANK0 1
 _sprintf 3F8 0 CODE 0
-__Hspace_1 EF 0 ABS 0
+__Hspace_1 DF 0 ABS 0
 __Lspace_1 0 0 ABS 0
 ___ftadd@exp1 3D 0 BANK0 1
 __Hspace_2 0 0 ABS 0
@@ -312,7 +312,7 @@ ___lwdiv 1702 0 CODE 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
 printStatusTMP@handler 24 0 BANK0 1
-_savedMinutesEnd ED 0 BANK1 1
+_savedMinutesEnd DD 0 BANK1 1
 _runMQ135 150B 0 CODE 0
 _dpowers 1012 0 STRCODE 0
 __end_of_setMinutesEnd C3B 0 CODE 0
@@ -324,7 +324,7 @@ __HidataBANK0 0 0 ABS 0
 __size_of___ftdiv 0 0 ABS 0
 __LidataBANK0 0 0 ABS 0
 __pidataBANK0 3 0 CODE 0
-_tempBuffer DA 0 BANK1 1
+_tempBuffer CA 0 BANK1 1
 __end_of_isdigit 140C 0 CODE 0
 __end_of_sprintf 5F7 0 CODE 0
 ___awtoft@sign 2D 0 BANK0 1
@@ -336,7 +336,7 @@ __size_of_isdigit 0 0 ABS 0
 sprintf@flag 45 0 BANK0 1
 __HbssBANK1 0 0 ABS 0
 __LbssBANK1 0 0 ABS 0
-__pbssBANK1 D7 0 BANK1 1
+__pbssBANK1 C7 0 BANK1 1
 __Hstringtext 0 0 ABS 0
 __Lstringtext 0 0 ABS 0
 __pstringtext 1000 0 STRCODE 0
@@ -411,7 +411,7 @@ __stringdata 101C 0 STRCODE 0
 intlevel0 0 0 CODE 0
 calculateTemp@adcValue 2E 0 BANK0 1
 __CFG_WDTE$OFF 0 0 ABS 0
-displayPPM@ppmWhole D2 0 BANK1 1
+displayPPM@ppmWhole B4 0 BANK1 1
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 __end_of___awtoft 15E5 0 CODE 0
@@ -474,7 +474,7 @@ __size_of___ftmul 0 0 ABS 0
 __CFG_LVP$OFF 0 0 ABS 0
 sprintf@c 48 0 BANK0 1
 __end_of___ftdiv ABB 0 CODE 0
-displayPPM@ppmFraction D4 0 BANK1 1
+displayPPM@ppmFraction B6 0 BANK1 1
 isdigit@c 21 0 BANK0 1
 %segments
 reset_vec 0 7 CODE 0 0
@@ -482,7 +482,7 @@ intentry 8 1005 CODE 8 0
 config 400E 400F CONFIG 400E 0
 cstackCOMMON 70 7C COMMON 70 1
 cstackBANK0 20 6F BANK0 20 1
-cstackBANK1 A0 EE BANK1 A0 1
+cstackBANK1 A0 DE BANK1 A0 1
 text11 1DAE 1FFF CODE 1DAE 0
 stringtext 2000 221B STRCODE 2000 0
 text27 1B9C 1DAD CODE 1B9C 0
@@ -784,10 +784,10 @@ D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-v
 78 148A 0 CODE 0
 79 1491 0 CODE 0
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
-48 1577 0 CODE 0
-51 1577 0 CODE 0
-52 1591 0 CODE 0
-53 159A 0 CODE 0
+49 1577 0 CODE 0
+52 1577 0 CODE 0
+53 1591 0 CODE 0
+54 159A 0 CODE 0
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
 24 1553 0 CODE 0
 27 1553 0 CODE 0
@@ -1089,14 +1089,14 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
 86 7F8 0 CODE 0
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
 33 14AE 0 CODE 0
-35 14AE 0 CODE 0
-36 14B4 0 CODE 0
-38 14B8 0 CODE 0
-39 14B9 0 CODE 0
-40 14BD 0 CODE 0
-42 14C0 0 CODE 0
-45 14C1 0 CODE 0
-46 14CA 0 CODE 0
+36 14AE 0 CODE 0
+37 14B4 0 CODE 0
+39 14B8 0 CODE 0
+40 14B9 0 CODE 0
+41 14BD 0 CODE 0
+43 14C0 0 CODE 0
+46 14C1 0 CODE 0
+47 14CA 0 CODE 0
 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
 76 7F9 0 CODE 0
 78 7F9 0 CODE 0

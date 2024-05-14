@@ -65,10 +65,10 @@ text1 CODE 0 5F7 5F7 198 2
 maintext CODE 0 17A1 17A1 5F 2
 cstackBANK0 BANK0 1 20 20 4F 1
 cstackCOMMON COMMON 1 70 70 7 1
-cstackBANK1 BANK1 1 A0 A0 37 1
+cstackBANK1 BANK1 1 A0 A0 27 1
 clrtext CODE 0 13D2 13D2 8 2
-dataBANK1 BANK1 1 EC EC 3 1
-bssBANK1 BANK1 1 D7 D7 15 1
+dataBANK1 BANK1 1 DC DC 3 1
+bssBANK1 BANK1 1 C7 C7 15 1
 dataBANK0 BANK0 1 6F 6F 1 1
 dataCOMMON COMMON 1 7A 7A 3 1
 bssCOMMON COMMON 1 77 77 3 1
@@ -82,7 +82,7 @@ idataCOMMON CODE 0 800 800 3 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK1 00EF-00EF 1
+BANK1 00DF-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
 CODE 110E-13CE 2
@@ -94,7 +94,7 @@ EEDATA 2100-21FF 2
 ENTRY 110E-13CE 2
 ENTRY 1800-1FFF 2
 IDLOC 2000-2003 2
-RAM 00EF-00EF 1
+RAM 00DF-00EF 1
 RAM 0110-016F 1
 RAM 0190-01EF 1
 SFR0 0000-001F 1
@@ -636,14 +636,14 @@ $iteration-2.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":55 14A6 text7 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":56 14AD text7 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":33 14AE text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":35 14AE text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":36 14B4 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":38 14B8 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":39 14B9 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":40 14BD text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":42 14C0 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":45 14C1 text30 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":46 14CA text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":36 14AE text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":37 14B4 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":39 14B8 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":40 14B9 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":41 14BD text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":43 14C0 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":46 14C1 text30 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":47 14CA text30 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":84 14CB text43 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":86 14CB text43 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c":87 14CC text43 CODE
@@ -672,10 +672,10 @@ $iteration-2.obj
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":27 1553 text10 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":28 156D text10 CODE
 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h":29 1576 text10 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":48 1577 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":51 1577 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":52 1591 text9 CODE
-"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":53 159A text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":49 1577 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":52 1577 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":53 1591 text9 CODE
+"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h":54 159A text9 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 159B text41 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 159B text41 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 159F text41 CODE
@@ -804,7 +804,7 @@ ___lwdiv@counter 2D 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___awtoft@c 28 0 BANK0 1 cstackBANK0 iteration-2.obj
 __end_of___ftneg 27DA 0 CODE 0 text16 iteration-2.obj
 __CFG_WRT$OFF 0 0 ABS 0 - iteration-2.obj
-_savedMinutesStart EE 0 BANK1 1 dataBANK1 iteration-2.obj
+_savedMinutesStart DE 0 BANK1 1 dataBANK1 iteration-2.obj
 _RC0 38 0 ABS 0 - iteration-2.obj
 _RB1 31 0 ABS 0 - iteration-2.obj
 _RC1 39 0 ABS 0 - iteration-2.obj
@@ -813,13 +813,13 @@ _RC3 3B 0 ABS 0 - iteration-2.obj
 _RC4 3C 0 ABS 0 - iteration-2.obj
 _RC5 3D 0 ABS 0 - iteration-2.obj
 __S0 2008 0 ABS 0 - -
-__S1 EF 0 ABS 0 - -
+__S1 DF 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _GIE 5F 0 ABS 0 - iteration-2.obj
 __end_of_startUpLCD 28B4 0 CODE 0 text17 iteration-2.obj
 _setMinutesStart 1876 0 CODE 0 text2 iteration-2.obj
-_PPM D7 0 BANK1 1 bssBANK1 iteration-2.obj
+_PPM C7 0 BANK1 1 bssBANK1 iteration-2.obj
 _ISR 2996 0 CODE 0 text43 iteration-2.obj
 __Hintentry 24 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
@@ -837,7 +837,7 @@ ___ftadd@f2 34 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setHoursEnd 0 0 ABS 0 - iteration-2.obj
 _CalcMQ135$684 AC 0 BANK1 1 cstackBANK1 iteration-2.obj
 __size_of_checkTime 0 0 ABS 0 - iteration-2.obj
-_mode DE 0 BANK1 1 bssBANK1 iteration-2.obj
+_mode CE 0 BANK1 1 bssBANK1 iteration-2.obj
 CalcMQ135@voltage A0 0 BANK1 1 cstackBANK1 iteration-2.obj
 _main 2F42 0 CODE 0 maintext iteration-2.obj
 ___sp 0 0 STACK 2 stack startup.obj
@@ -849,7 +849,7 @@ instCTRL@CMD 21 0 BANK0 1 cstackBANK0 iteration-2.obj
 updateState@buffer 62 0 BANK0 1 cstackBANK0 iteration-2.obj
 start 24 0 CODE 0 init startup.obj
 __end_of_setMinutesStart 19F6 0 CODE 0 text2 iteration-2.obj
-_tempFlag E1 0 BANK1 1 bssBANK1 iteration-2.obj
+_tempFlag D1 0 BANK1 1 bssBANK1 iteration-2.obj
 ?___ftadd 31 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___fttol@f1 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___ftmul@f1 3E 0 BANK0 1 cstackBANK0 iteration-2.obj
@@ -881,7 +881,7 @@ wtemp3 84 0 ABS 0 - iteration-2.obj
 ___ftmul@f2 41 0 BANK0 1 cstackBANK0 iteration-2.obj
 ttemp4 7F 0 ABS 0 - iteration-2.obj
 wtemp4 86 0 ABS 0 - iteration-2.obj
-_savedHoursStart EC 0 BANK1 1 dataBANK1 iteration-2.obj
+_savedHoursStart DC 0 BANK1 1 dataBANK1 iteration-2.obj
 wtemp5 88 0 ABS 0 - iteration-2.obj
 wtemp6 7F 0 ABS 0 - iteration-2.obj
 ___ftdiv@f2 4E 0 BANK0 1 cstackBANK0 iteration-2.obj
@@ -971,7 +971,7 @@ __end_of___awmod 10A4 0 CODE 0 text6 iteration-2.obj
 ___ftadd@sign 3B 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
-_debugInfo E2 0 BANK1 1 bssBANK1 iteration-2.obj
+_debugInfo D2 0 BANK1 1 bssBANK1 iteration-2.obj
 ___ftge 2E84 0 CODE 0 text35 iteration-2.obj
 CalcMQ135@ratio6 A3 0 BANK1 1 cstackBANK1 iteration-2.obj
 stackhi 0 0 ABS 0 - startup.obj
@@ -983,13 +983,13 @@ __pcstackBANK0 20 0 BANK0 1 cstackBANK0 iteration-2.obj
 ___awmod@sign 26 0 BANK0 1 cstackBANK0 iteration-2.obj
 __size_of_setHoursStart 0 0 ABS 0 - iteration-2.obj
 stacklo 0 0 ABS 0 - startup.obj
-_select E0 0 BANK1 1 bssBANK1 iteration-2.obj
+_select D0 0 BANK1 1 bssBANK1 iteration-2.obj
 saved_w 7E 0 ABS 0 - iteration-2.obj
-checkSelect@lastRB1State DC 0 BANK1 1 bssBANK1 iteration-2.obj
+checkSelect@lastRB1State CC 0 BANK1 1 bssBANK1 iteration-2.obj
 __Hinit 24 0 CODE 0 init -
 __Linit 24 0 CODE 0 init -
 ___wmul 2B36 0 CODE 0 text41 iteration-2.obj
-displayPPM@bufPtr D6 0 BANK1 1 cstackBANK1 iteration-2.obj
+displayPPM@bufPtr B8 0 BANK1 1 cstackBANK1 iteration-2.obj
 __end_of_main 3000 0 CODE 0 maintext iteration-2.obj
 i1instCTRL@CMD 71 0 COMMON 1 cstackCOMMON iteration-2.obj
 _displayTemp 2AA6 0 CODE 0 text10 iteration-2.obj
@@ -1014,7 +1014,7 @@ __size_of_initLCD 0 0 ABS 0 - iteration-2.obj
 __size_of___awtoft 0 0 ABS 0 - iteration-2.obj
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
-__pdataBANK1 EC 0 BANK1 1 dataBANK1 iteration-2.obj
+__pdataBANK1 DC 0 BANK1 1 dataBANK1 iteration-2.obj
 __end_of___ftadd 1DAE 0 CODE 0 text27 iteration-2.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
@@ -1074,7 +1074,7 @@ dataCTRL@DAT 21 0 BANK0 1 cstackBANK0 iteration-2.obj
 __end_of_calculateTemp 2CD0 0 CODE 0 text40 iteration-2.obj
 CalcMQ135@ratio2 B5 0 BANK1 1 cstackBANK1 iteration-2.obj
 _setHoursStart 1576 0 CODE 0 text4 iteration-2.obj
-_ppmFlag DF 0 BANK1 1 bssBANK1 iteration-2.obj
+_ppmFlag CF 0 BANK1 1 bssBANK1 iteration-2.obj
 ___ftadd 1B9C 0 CODE 0 text27 iteration-2.obj
 _displayPPM 1DAE 0 CODE 0 text11 iteration-2.obj
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -1090,7 +1090,7 @@ _isdigit$441 20 0 BANK0 1 cstackBANK0 iteration-2.obj
 __end_of_setHoursStart 16F6 0 CODE 0 text4 iteration-2.obj
 ___ftpack@sign 24 0 BANK0 1 cstackBANK0 iteration-2.obj
 _sprintf 7F0 0 CODE 0 text12 iteration-2.obj
-__Hspace_1 EF 0 ABS 0 - -
+__Hspace_1 DF 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 ___ftadd@exp1 3D 0 BANK0 1 cstackBANK0 iteration-2.obj
 __Hspace_2 0 0 ABS 0 - -
@@ -1111,7 +1111,7 @@ ___lwdiv 2E04 0 CODE 0 text42 iteration-2.obj
 __Lspace_3 0 0 ABS 0 - -
 __size_of_main 0 0 ABS 0 - iteration-2.obj
 printStatusTMP@handler 24 0 BANK0 1 cstackBANK0 iteration-2.obj
-_savedMinutesEnd ED 0 BANK1 1 dataBANK1 iteration-2.obj
+_savedMinutesEnd DD 0 BANK1 1 dataBANK1 iteration-2.obj
 _runMQ135 2A16 0 CODE 0 text22 iteration-2.obj
 _dpowers 2024 0 STRCODE 0 stringtext iteration-2.obj
 __end_of_setMinutesEnd 1876 0 CODE 0 text3 iteration-2.obj
@@ -1123,7 +1123,7 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __size_of___ftdiv 0 0 ABS 0 - iteration-2.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __pidataBANK0 6 0 CODE 0 idataBANK0 iteration-2.obj
-_tempBuffer DA 0 BANK1 1 bssBANK1 iteration-2.obj
+_tempBuffer CA 0 BANK1 1 bssBANK1 iteration-2.obj
 __end_of_isdigit 2818 0 CODE 0 text13 iteration-2.obj
 __end_of_sprintf BEE 0 CODE 0 text12 iteration-2.obj
 ___awtoft@sign 2D 0 BANK0 1 cstackBANK0 iteration-2.obj
@@ -1135,7 +1135,7 @@ __size_of_isdigit 0 0 ABS 0 - iteration-2.obj
 sprintf@flag 45 0 BANK0 1 cstackBANK0 iteration-2.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-__pbssBANK1 D7 0 BANK1 1 bssBANK1 iteration-2.obj
+__pbssBANK1 C7 0 BANK1 1 bssBANK1 iteration-2.obj
 __Hstringtext 0 0 ABS 0 stringtext -
 __Lstringtext 0 0 ABS 0 stringtext -
 __pstringtext 2000 0 STRCODE 0 stringtext iteration-2.obj
@@ -1210,7 +1210,7 @@ __stringdata 2038 0 STRCODE 0 stringtext iteration-2.obj
 intlevel0 0 0 CODE 0 functab startup.obj
 calculateTemp@adcValue 2E 0 BANK0 1 cstackBANK0 iteration-2.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - iteration-2.obj
-displayPPM@ppmWhole D2 0 BANK1 1 cstackBANK1 iteration-2.obj
+displayPPM@ppmWhole B4 0 BANK1 1 cstackBANK1 iteration-2.obj
 intlevel1 0 0 CODE 0 functab startup.obj
 intlevel2 0 0 CODE 0 functab startup.obj
 __end_of___awtoft 2BCA 0 CODE 0 text28 iteration-2.obj
@@ -1273,7 +1273,7 @@ __size_of___ftmul 0 0 ABS 0 - iteration-2.obj
 __CFG_LVP$OFF 0 0 ABS 0 - iteration-2.obj
 sprintf@c 48 0 BANK0 1 cstackBANK0 iteration-2.obj
 __end_of___ftdiv 1576 0 CODE 0 text26 iteration-2.obj
-displayPPM@ppmFraction D4 0 BANK1 1 cstackBANK1 iteration-2.obj
+displayPPM@ppmFraction B6 0 BANK1 1 cstackBANK1 iteration-2.obj
 isdigit@c 21 0 BANK0 1 cstackBANK0 iteration-2.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -1305,7 +1305,7 @@ intentry 0 4 8 7FF 2
 config 0 2007 400E 1 2
 cstackCOMMON 1 70 70 D 1
 cstackBANK0 1 20 20 50 1
-cstackBANK1 1 A0 A0 4F 1
+cstackBANK1 1 A0 A0 3F 1
 text11 0 ED7 1DAE 129 2
 stringtext 0 1000 2000 10E 2
 text27 0 DCE 1B9C 109 2
