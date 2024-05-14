@@ -13,7 +13,7 @@ void startSignal();
 uint8_t readData();
 
 void runDHT11Stat();
-void displayDHT11();
+void displayDHT11Stat();
 
 // Global variables
 unsigned char checkbit;
@@ -23,7 +23,7 @@ char message2[] = "HMDT: ";
 // FIX
 void runDHT11Stat()
 {
-    delayMS(500);        // Wait for sensor stabilization
+    __delay_ms(500);        // Wait for sensor stabilization
     startSignal();       // Send start signal
     if (checkResponse()) // Check response from sensor
     {
@@ -34,7 +34,9 @@ void runDHT11Stat()
         CheckSum = readData(); // Read checksum
         if (CheckSum == (RH_byte1 + RH_byte2 + T_byte1 + T_byte2))
         {
-            // Valid data received
+            instCTRL(0x01); // Clear display
+            instCTRL(0x80); // Set cursor to beginning
+            printToLCD("SIGNAL OK"); // Print sensor name
         }
         else
         {
@@ -49,7 +51,7 @@ void runDHT11Stat()
         instCTRL(0x80);                   // Set cursor to beginning
         printToLCD("NO SIGNAL -> DHT11"); // Print no response message
     }
-    delayMS(1000); // Wait before next read
+    __delay_ms(1000); // Wait before next read
 }
 
 void displayDHT11Stat()
@@ -68,7 +70,7 @@ void startSignal()
 {
     DHT11_PIN_DIR = 0; // Set as output
     DHT11_PIN = 0;     // Set pin low
-    delayMS(18);       // Pull low for at least 18ms
+    __delay_ms(18);       // Pull low for at least 18ms
     DHT11_PIN = 1;     // Set pin high
     __delay_us(20);    // Pull high for 20-40us
     DHT11_PIN_DIR = 1; // Set as input

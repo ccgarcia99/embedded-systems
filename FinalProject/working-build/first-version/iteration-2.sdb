@@ -4,7 +4,7 @@
 [d chip 16F877A ]
 [d frameptr 6 ]
 "15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
-[e E1279 . `uc
+[e E1303 . `uc
 DISP_CMN 0
 SET_ACTV_START 1
 SET_ACTV_END 2
@@ -116,6 +116,16 @@ CHCK_IO 3
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
 "23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h
 [v _readADC readADC `T(i  1 e 2 0 ]
+"24 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\dht11_module.h
+[v _runDHT11Stat runDHT11Stat `(v  1 e 0 0 ]
+"57
+[v _displayDHT11Stat displayDHT11Stat `(v  1 e 0 0 ]
+"69
+[v _startSignal startSignal `(v  1 e 0 0 ]
+"79
+[v _checkResponse checkResponse `(s  1 e 2 0 ]
+"94
+[v _readData readData `(uc  1 e 1 0 ]
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
 [v i1_instCTRL instCTRL `(v  1 e 0 0 ]
@@ -127,21 +137,21 @@ CHCK_IO 3
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
 "29 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _main main `(v  1 e 0 0 ]
-"51
+"53
 [v _setPortDirections setPortDirections `(v  1 e 0 0 ]
-"63
+"65
 [v _initADC initADC `(v  1 e 0 0 ]
-"69
+"71
 [v _startUpLCD startUpLCD `(v  1 e 0 0 ]
-"76
+"78
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]
-"84
+"86
 [v _ISR ISR `II(v  1 e 0 0 ]
-"97
+"99
 [v _updateState updateState `(v  1 e 0 0 ]
-"179
+"182
 [v _checkMode checkMode `(v  1 e 0 0 ]
-"190
+"193
 [v _checkSelect checkSelect `(v  1 e 0 0 ]
 "32 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h
 [v _runMQ135 runMQ135 `(v  1 e 0 0 ]
@@ -221,6 +231,8 @@ CHCK_IO 3
 [v _INTF INTF `VEb  1 e 0 @89 ]
 "2513
 [v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2515
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
 "2531
 [v _RC0 RC0 `VEb  1 e 0 @56 ]
 "2533
@@ -235,16 +247,30 @@ CHCK_IO 3
 [v _RC5 RC5 `VEb  1 e 0 @61 ]
 "2559
 [v _RD RD `VEb  1 e 0 @3168 ]
+"2689
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
 "2759
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2761
 [v _WREN WREN `VEb  1 e 0 @3170 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
+"19 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\dht11_module.h
+[v _checkbit checkbit `uc  1 e 1 0 ]
+"20
+[v _T_byte1 T_byte1 `uc  1 e 1 0 ]
+[v _T_byte2 T_byte2 `uc  1 e 1 0 ]
+[v _RH_byte1 RH_byte1 `uc  1 e 1 0 ]
+[v _RH_byte2 RH_byte2 `uc  1 e 1 0 ]
+[v _CheckSum CheckSum `uc  1 e 1 0 ]
+"21
+[v _message1 message1 `[7]uc  1 e 7 0 ]
+"22
+[v _message2 message2 `[7]uc  1 e 7 0 ]
 "15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
-[v _mode mode `E1279  1 e 1 0 ]
+[v _mode mode `E1303  1 e 1 0 ]
 "16
-[v _lastMode lastMode `E1279  1 e 1 0 ]
+[v _lastMode lastMode `E1303  1 e 1 0 ]
 "17
 [v _select select `VEuc  1 e 1 0 ]
 "21 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h
@@ -278,14 +304,14 @@ CHCK_IO 3
 "29 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"48
+"50
 } 0
-"97
+"99
 [v _updateState updateState `(v  1 e 0 0 ]
 {
-"99
-[v updateState@buffer buffer `[10]uc  1 a 10 66 ]
-"177
+"101
+[v updateState@buffer buffer `[10]uc  1 a 10 70 ]
+"180
 } 0
 "132 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
 [v _setMinutesStart setMinutesStart `(v  1 e 0 0 ]
@@ -343,13 +369,6 @@ CHCK_IO 3
 [v displayTime@timeFormat timeFormat `[16]uc  1 a 16 46 ]
 "54
 } 0
-"24 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h
-[v _displayTemp displayTemp `(v  1 e 0 0 ]
-{
-"26
-[v displayTemp@buffer buffer `[20]uc  1 a 20 42 ]
-"29
-} 0
 "37 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h
 [v _displayPPM displayPPM `(v  1 e 0 0 ]
 {
@@ -363,14 +382,39 @@ CHCK_IO 3
 [v displayPPM@bufPtr bufPtr `*.4uc  1 a 1 24 ]
 "52
 } 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 55 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 59 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 54 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 46 ]
+"73
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 14 ]
+"20
+} 0
+"57 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\dht11_module.h
+[v _displayDHT11Stat displayDHT11Stat `(v  1 e 0 0 ]
+{
+"59
+[v displayDHT11Stat@buffer buffer `[20]uc  1 a 20 46 ]
+"67
+} 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[s S245 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+[s S280 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
 "533
-[u S248 . 4 `ui 1 _val 2 0 `S245 1 _str 4 0 ]
-[v sprintf@_val _val `S248  1 a 4 33 ]
+[u S283 . 4 `ui 1 _val 2 0 `S280 1 _str 4 0 ]
+[v sprintf@_val _val `S283  1 a 4 33 ]
 "501
 [v sprintf@width width `i  1 a 2 38 ]
 "510
@@ -409,28 +453,10 @@ CHCK_IO 3
 [v ___lwmod@dividend dividend `ui  1 p 2 16 ]
 "26
 } 0
-"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-{
-"47
-[v ___fttol@lval lval `ul  1 a 4 55 ]
-"46
-[v ___fttol@exp1 exp1 `uc  1 a 1 59 ]
-[v ___fttol@sign1 sign1 `uc  1 a 1 54 ]
-"44
-[v ___fttol@f1 f1 `f  1 p 3 46 ]
-"73
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-{
-[v ___ftneg@f1 f1 `f  1 p 3 14 ]
-"20
-} 0
-"69 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+"71 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _startUpLCD startUpLCD `(v  1 e 0 0 ]
 {
-"74
+"76
 } 0
 "47 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
@@ -452,10 +478,10 @@ CHCK_IO 3
 {
 "45
 } 0
-"51 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+"53 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _setPortDirections setPortDirections `(v  1 e 0 0 ]
 {
-"61
+"63
 } 0
 "32 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h
 [v _runMQ135 runMQ135 `(v  1 e 0 0 ]
@@ -556,15 +582,15 @@ CHCK_IO 3
 {
 "47
 } 0
-"76 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+"78 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _initInterrupt initInterrupt `(v  1 e 0 0 ]
 {
-"82
+"84
 } 0
-"63
+"65
 [v _initADC initADC `(v  1 e 0 0 ]
 {
-"67
+"69
 } 0
 "31 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h
 [v _handleTemp handleTemp `(uc  1 e 1 0 ]
@@ -588,19 +614,19 @@ CHCK_IO 3
 {
 "251
 } 0
-"190 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+"193 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _checkSelect checkSelect `(v  1 e 0 0 ]
 {
-"193
+"196
 [v checkSelect@currentRB1State currentRB1State `i  1 a 2 4 ]
-"192
+"195
 [v checkSelect@lastRB1State lastRB1State `i  1 s 2 lastRB1State ]
-"201
+"204
 } 0
-"179
+"182
 [v _checkMode checkMode `(v  1 e 0 0 ]
 {
-"188
+"191
 } 0
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
@@ -639,10 +665,10 @@ CHCK_IO 3
 [v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
 "31
 } 0
-"84 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+"86 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
 [v _ISR ISR `II(v  1 e 0 0 ]
 {
-"94
+"96
 } 0
 "17 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h
 [v i1_instCTRL instCTRL `(v  1 e 0 0 ]

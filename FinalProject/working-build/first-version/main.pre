@@ -2035,6 +2035,108 @@ printToLCD("FAN OFF");
 }
 }
 
+# 11 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\dht11_module.h"
+short checkResponse();
+void startSignal();
+uint8_t readData();
+
+void runDHT11Stat();
+void displayDHT11Stat();
+
+
+unsigned char checkbit;
+uint8_t T_byte1, T_byte2, RH_byte1, RH_byte2, CheckSum;
+char message1[] = "TEMP: ";
+char message2[] = "HMDT: ";
+
+void runDHT11Stat()
+{
+_delay((unsigned long)((500)*(4000000/4000.0)));
+startSignal();
+if (checkResponse())
+{
+RH_byte1 = readData();
+RH_byte2 = readData();
+T_byte1 = readData();
+T_byte2 = readData();
+CheckSum = readData();
+if (CheckSum == (RH_byte1 + RH_byte2 + T_byte1 + T_byte2))
+{
+instCTRL(0x01);
+instCTRL(0x80);
+printToLCD("SIGNAL OK");
+}
+else
+{
+instCTRL(0x01);
+instCTRL(0x80);
+printToLCD("Error");
+}
+}
+else
+{
+instCTRL(0x01);
+instCTRL(0x80);
+printToLCD("NO SIGNAL -> DHT11");
+}
+_delay((unsigned long)((1000)*(4000000/4000.0)));
+}
+
+void displayDHT11Stat()
+{
+char buffer[20];
+printToLCD(message1);
+sprintf(buffer, "%d.%d", T_byte1, T_byte2);
+printToLCD(buffer);
+instCTRL(0xD4);
+printToLCD(message2);
+sprintf(buffer, "%d.%d", RH_byte1, RH_byte2);
+printToLCD(buffer);
+}
+
+void startSignal()
+{
+TRISB2 = 0;
+RB2 = 0;
+_delay((unsigned long)((18)*(4000000/4000.0)));
+RB2 = 1;
+_delay((unsigned long)((20)*(4000000/4000000.0)));
+TRISB2 = 1;
+}
+
+short checkResponse()
+{
+_delay((unsigned long)((40)*(4000000/4000000.0)));
+if (!RB2)
+{
+_delay((unsigned long)((80)*(4000000/4000000.0)));
+if (RB2)
+{
+_delay((unsigned long)((50)*(4000000/4000000.0)));
+return 1;
+}
+}
+return 0;
+}
+
+uint8_t readData()
+{
+uint8_t _data = 0;
+for (int i = 0; i < 8; i++)
+{
+while (!RB2)
+;
+_delay((unsigned long)((30)*(4000000/4000000.0)));
+if (RB2)
+_data = (_data << 1) | 1;
+else
+_data = (_data << 1);
+while (RB2)
+;
+}
+return _data;
+}
+
 # 7 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 typedef enum
 {
@@ -2065,6 +2167,7 @@ initADC();
 initInterrupt();
 startUpLCD();
 _delay((unsigned long)((250)*(4000000/4000.0)));
+instCTRL(0x80);
 while (1)
 {
 runClock();
@@ -2073,6 +2176,7 @@ runMQ135();
 handlePPM();
 calculateTemp(readADC(1));
 handleTemp();
+
 checkSelect();
 checkMode();
 updateState();
@@ -2152,8 +2256,9 @@ printToLCD("DISP CMMON PG2");
 instCTRL(0xC0);
 displayPPM();
 instCTRL(0x94);
-displayTemp();
 
+
+displayDHT11Stat();
 break;
 }
 break;

@@ -3,7 +3,7 @@
 #include "lcd_functions.h"
 #include "time_scheduler.h"
 #include "temp_module.h"
-
+#include "dht11_module.h"
 typedef enum
 {
     DISP_CMN = 0,       // Show status(PPM, T, H, Time)
@@ -33,6 +33,7 @@ void main(void)
     initInterrupt();     // Initialize Interrupt
     startUpLCD();        // Start up LCD
     __delay_ms(250);
+    instCTRL(0x80); // Clear display
     while (1)
     {
         runClock();                // Run clock
@@ -41,6 +42,7 @@ void main(void)
         handlePPM();               // Handle PPM
         calculateTemp(readADC(1)); // Calculate temperature
         handleTemp();              // Handle temperature
+        //runDHT11Stat();           // Run DHT11
         checkSelect();             // Check select
         checkMode();               // Check mode
         updateState();             // Update state
@@ -120,8 +122,9 @@ void updateState(void)
             instCTRL(0xC0);
             displayPPM();
             instCTRL(0x94);
-            displayTemp();
+            // displayTemp();
             // displayHumidity();
+            displayDHT11Stat();
             break;
         }
         break;
