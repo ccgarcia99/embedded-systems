@@ -2,7 +2,7 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.p1
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -15,7 +15,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File001]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.cof
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.cof
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -28,7 +28,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File002]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.hex
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.hex
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -41,7 +41,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File003]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.sym
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.sym
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -54,7 +54,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File004]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.map
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.map
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -67,7 +67,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File005]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.hxl
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.hxl
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -80,7 +80,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File006]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\startup.lst
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\startup.lst
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -93,7 +93,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File007]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\startup.rlf
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\startup.rlf
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -106,7 +106,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File008]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\doprnt.p1
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\doprnt.p1
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -119,7 +119,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File009]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\doprnt.pre
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\doprnt.pre
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -132,7 +132,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File010]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.obj
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.obj
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -145,7 +145,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File011]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.lst
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.lst
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -158,7 +158,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File012]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.rlf
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.rlf
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -171,7 +171,7 @@ ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File013]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\iteration-2.sdb
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\iteration-2.sdb
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}

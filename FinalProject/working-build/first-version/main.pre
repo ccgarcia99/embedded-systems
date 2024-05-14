@@ -1,5 +1,5 @@
 
-# 1 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+# 1 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 
 # 21 "C:\Program Files (x86)\Microchip\xc8\v1.33\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -1587,7 +1587,7 @@ typedef uint16_t uintptr_t;
 typedef unsigned char bool;
 
 
-# 9 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h"
+# 9 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h"
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -1613,7 +1613,7 @@ while (GO_DONE)
 return ((ADRESH << 8) + ADRESL);
 }
 
-# 11 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+# 11 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 void instCTRL(unsigned char CMD);
 void dataCTRL(unsigned char DAT);
 void initLCD();
@@ -1660,7 +1660,7 @@ str++;
 }
 }
 
-# 21 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+# 21 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 volatile float PPM = 0.0;
 
 void displayPPM();
@@ -1743,7 +1743,7 @@ co2 *= 415.58;
 return co2;
 }
 
-# 12 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+# 12 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 volatile uint8_t hours = 4;
 volatile uint8_t minutes = 0;
 volatile uint8_t savedHoursStart = 9;
@@ -1985,7 +1985,7 @@ RC4 = 0;
 }
 }
 
-# 10 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+# 10 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 void calculateTemp(uint16_t adcValue);
 void displayTemp();
 bool handleTemp();
@@ -2035,7 +2035,7 @@ printToLCD("FAN OFF");
 }
 }
 
-# 7 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+# 7 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 typedef enum
 {
 DISP_CMN = 0,

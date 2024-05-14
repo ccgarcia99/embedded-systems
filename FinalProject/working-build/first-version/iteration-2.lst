@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
-                                                                                               Tue May 14 17:55:07 2024
+                                                                                               Tue May 14 17:59:50 2024
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      1                           	processor	16F877A
@@ -1209,7 +1209,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   1203 ;;
   1204 ;; *************** function _main *****************
   1205 ;; Defined at:
-  1206 ;;		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  1206 ;;		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   1207 ;; Parameters:    Size  Location     Type
   1208 ;;		None
   1209 ;; Auto vars:     Size  Location     Type
@@ -1333,7 +1333,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   1327  05F7                     __ptext1:	
   1328 ;; *************** function _updateState *****************
   1329 ;; Defined at:
-  1330 ;;		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  1330 ;;		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   1331 ;; Parameters:    Size  Location     Type
   1332 ;;		None
   1333 ;; Auto vars:     Size  Location     Type
@@ -1838,8 +1838,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   1832  0C3B                     __ptext2:	
   1833 ;; *************** function _setMinutesStart *****************
   1834 ;; Defined at:
-  1835 ;;		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedu
-      +ler.h"
+  1835 ;;		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.
+      +h"
   1836 ;; Parameters:    Size  Location     Type
   1837 ;;		None
   1838 ;; Auto vars:     Size  Location     Type
@@ -2117,8 +2117,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2110  0B7B                     __ptext3:	
   2111 ;; *************** function _setMinutesEnd *****************
   2112 ;; Defined at:
-  2113 ;;		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedu
-      +ler.h"
+  2113 ;;		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.
+      +h"
   2114 ;; Parameters:    Size  Location     Type
   2115 ;;		None
   2116 ;; Auto vars:     Size  Location     Type
@@ -2396,8 +2396,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2388  0ABB                     __ptext4:	
   2389 ;; *************** function _setHoursStart *****************
   2390 ;; Defined at:
-  2391 ;;		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedul
-      +er.h"
+  2391 ;;		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
+      +"
   2392 ;; Parameters:    Size  Location     Type
   2393 ;;		None
   2394 ;; Auto vars:     Size  Location     Type
@@ -2675,8 +2675,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2666  0957                     __ptext5:	
   2667 ;; *************** function _setHoursEnd *****************
   2668 ;; Defined at:
-  2669 ;;		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedul
-      +er.h"
+  2669 ;;		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
+      +"
   2670 ;; Parameters:    Size  Location     Type
   2671 ;;		None
   2672 ;; Auto vars:     Size  Location     Type
@@ -3068,8 +3068,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   3058  1492                     __ptext7:	
   3059 ;; *************** function _printStatusTMP *****************
   3060 ;; Defined at:
-  3061 ;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.
-      +h"
+  3061 ;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
   3062 ;; Parameters:    Size  Location     Type
   3063 ;;  handler         1    wreg     unsigned char 
   3064 ;; Auto vars:     Size  Location     Type
@@ -3147,8 +3146,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   3136  1476                     __ptext8:	
   3137 ;; *************** function _printStatusPPM *****************
   3138 ;; Defined at:
-  3139 ;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module
-      +.h"
+  3139 ;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
   3140 ;; Parameters:    Size  Location     Type
   3141 ;;  handler         1    wreg     unsigned char 
   3142 ;; Auto vars:     Size  Location     Type
@@ -3226,8 +3224,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   3214  1577                     __ptext9:	
   3215 ;; *************** function _displayTime *****************
   3216 ;; Defined at:
-  3217 ;;		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedul
-      +er.h"
+  3217 ;;		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
+      +"
   3218 ;; Parameters:    Size  Location     Type
   3219 ;;		None
   3220 ;; Auto vars:     Size  Location     Type
@@ -3303,8 +3301,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   3290  1553                     __ptext10:	
   3291 ;; *************** function _displayTemp *****************
   3292 ;; Defined at:
-  3293 ;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.
-      +h"
+  3293 ;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
   3294 ;; Parameters:    Size  Location     Type
   3295 ;;		None
   3296 ;; Auto vars:     Size  Location     Type
@@ -3380,8 +3377,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   3366  0ED7                     __ptext11:	
   3367 ;; *************** function _displayPPM *****************
   3368 ;; Defined at:
-  3369 ;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module
-      +.h"
+  3369 ;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
   3370 ;; Parameters:    Size  Location     Type
   3371 ;;		None
   3372 ;; Auto vars:     Size  Location     Type
@@ -4832,7 +4828,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   4817  1445                     __ptext17:	
   4818 ;; *************** function _startUpLCD *****************
   4819 ;; Defined at:
-  4820 ;;		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  4820 ;;		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   4821 ;; Parameters:    Size  Location     Type
   4822 ;;		None
   4823 ;; Auto vars:     Size  Location     Type
@@ -4891,8 +4887,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   4876  160E                     __ptext18:	
   4877 ;; *************** function _printToLCD *****************
   4878 ;; Defined at:
-  4879 ;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_function
-      +s.h"
+  4879 ;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
   4880 ;; Parameters:    Size  Location     Type
   4881 ;;  str             2    2[BANK0 ] PTR const unsigned char 
   4882 ;;		 -> STR_34(11), STR_33(12), STR_32(10), STR_31(14), 
@@ -4985,8 +4980,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   4969  1432                     __ptext19:	
   4970 ;; *************** function _dataCTRL *****************
   4971 ;; Defined at:
-  4972 ;;		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_function
-      +s.h"
+  4972 ;;		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
   4973 ;; Parameters:    Size  Location     Type
   4974 ;;  DAT             1    wreg     unsigned char 
   4975 ;; Auto vars:     Size  Location     Type
@@ -5059,8 +5053,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   5042  152F                     __ptext20:	
   5043 ;; *************** function _initLCD *****************
   5044 ;; Defined at:
-  5045 ;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_function
-      +s.h"
+  5045 ;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
   5046 ;; Parameters:    Size  Location     Type
   5047 ;;		None
   5048 ;; Auto vars:     Size  Location     Type
@@ -5131,7 +5124,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   5113  13ED                     __ptext21:	
   5114 ;; *************** function _setPortDirections *****************
   5115 ;; Defined at:
-  5116 ;;		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  5116 ;;		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   5117 ;; Parameters:    Size  Location     Type
   5118 ;;		None
   5119 ;; Auto vars:     Size  Location     Type
@@ -5202,8 +5195,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   5184  150B                     __ptext22:	
   5185 ;; *************** function _runMQ135 *****************
   5186 ;; Defined at:
-  5187 ;;		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module
-      +.h"
+  5187 ;;		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
   5188 ;; Parameters:    Size  Location     Type
   5189 ;;		None
   5190 ;; Auto vars:     Size  Location     Type
@@ -5276,8 +5268,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   5257  15E5                     __ptext23:	
   5258 ;; *************** function _readADC *****************
   5259 ;; Defined at:
-  5260 ;;		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_depen
-      +dencies.h"
+  5260 ;;		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependenc
+      +ies.h"
   5261 ;; Parameters:    Size  Location     Type
   5262 ;;  channel         1    wreg     unsigned char 
   5263 ;; Auto vars:     Size  Location     Type
@@ -5377,8 +5369,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   5357  0051                     __ptext24:	
   5358 ;; *************** function _CalcMQ135 *****************
   5359 ;; Defined at:
-  5360 ;;		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module
-      +.h"
+  5360 ;;		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
   5361 ;; Parameters:    Size  Location     Type
   5362 ;;  RAW_ADC         2   62[BANK0 ] int 
   5363 ;; Auto vars:     Size  Location     Type
@@ -7391,8 +7382,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7358  14AE                     __ptext30:	
   7359 ;; *************** function _runClock *****************
   7360 ;; Defined at:
-  7361 ;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedul
-      +er.h"
+  7361 ;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
+      +"
   7362 ;; Parameters:    Size  Location     Type
   7363 ;;		None
   7364 ;; Auto vars:     Size  Location     Type
@@ -7481,7 +7472,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7447  07F9                     __ptext31:	
   7448 ;; *************** function _initInterrupt *****************
   7449 ;; Defined at:
-  7450 ;;		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  7450 ;;		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   7451 ;; Parameters:    Size  Location     Type
   7452 ;;		None
   7453 ;; Auto vars:     Size  Location     Type
@@ -7536,7 +7527,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7502  13DA                     __ptext32:	
   7503 ;; *************** function _initADC *****************
   7504 ;; Defined at:
-  7505 ;;		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  7505 ;;		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   7506 ;; Parameters:    Size  Location     Type
   7507 ;;		None
   7508 ;; Auto vars:     Size  Location     Type
@@ -7589,8 +7580,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7555  145A                     __ptext33:	
   7556 ;; *************** function _handleTemp *****************
   7557 ;; Defined at:
-  7558 ;;		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.
-      +h"
+  7558 ;;		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
   7559 ;; Parameters:    Size  Location     Type
   7560 ;;		None
   7561 ;; Auto vars:     Size  Location     Type
@@ -7681,8 +7671,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7646  1668                     __ptext34:	
   7647 ;; *************** function _handlePPM *****************
   7648 ;; Defined at:
-  7649 ;;		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module
-      +.h"
+  7649 ;;		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
   7650 ;; Parameters:    Size  Location     Type
   7651 ;;		None
   7652 ;; Auto vars:     Size  Location     Type
@@ -7934,8 +7923,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   7898  0852                     __ptext36:	
   7899 ;; *************** function _checkTime *****************
   7900 ;; Defined at:
-  7901 ;;		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_schedu
-      +ler.h"
+  7901 ;;		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.
+      +h"
   7902 ;; Parameters:    Size  Location     Type
   7903 ;;		None
   7904 ;; Auto vars:     Size  Location     Type
@@ -8164,7 +8153,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8123  1698                     __ptext37:	
   8124 ;; *************** function _checkSelect *****************
   8125 ;; Defined at:
-  8126 ;;		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  8126 ;;		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   8127 ;; Parameters:    Size  Location     Type
   8128 ;;		None
   8129 ;; Auto vars:     Size  Location     Type
@@ -8268,7 +8257,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8227  14EB                     __ptext38:	
   8228 ;; *************** function _checkMode *****************
   8229 ;; Defined at:
-  8230 ;;		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  8230 ;;		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   8231 ;; Parameters:    Size  Location     Type
   8232 ;;		None
   8233 ;; Auto vars:     Size  Location     Type
@@ -8346,8 +8335,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8305  141F                     __ptext39:	
   8306 ;; *************** function _instCTRL *****************
   8307 ;; Defined at:
-  8308 ;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_function
-      +s.h"
+  8308 ;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
   8309 ;; Parameters:    Size  Location     Type
   8310 ;;  CMD             1    wreg     unsigned char 
   8311 ;; Auto vars:     Size  Location     Type
@@ -8425,8 +8413,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8383  1639                     __ptext40:	
   8384 ;; *************** function _calculateTemp *****************
   8385 ;; Defined at:
-  8386 ;;		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.
-      +h"
+  8386 ;;		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
   8387 ;; Parameters:    Size  Location     Type
   8388 ;;  adcValue        2   14[BANK0 ] unsigned int 
   8389 ;; Auto vars:     Size  Location     Type
@@ -8708,7 +8695,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8665  14CB                     __ptext43:	
   8666 ;; *************** function _ISR *****************
   8667 ;; Defined at:
-  8668 ;;		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+  8668 ;;		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
   8669 ;; Parameters:    Size  Location     Type
   8670 ;;		None
   8671 ;; Auto vars:     Size  Location     Type
@@ -8808,8 +8795,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   8765  140C                     __ptext44:	
   8766 ;; *************** function i1_instCTRL *****************
   8767 ;; Defined at:
-  8768 ;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_function
-      +s.h"
+  8768 ;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
   8769 ;; Parameters:    Size  Location     Type
   8770 ;;  CMD             1    wreg     unsigned char 
   8771 ;; Auto vars:     Size  Location     Type
@@ -9518,7 +9504,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                   Tue May 14 17:55:07 2024
+Symbol Table                                                                                   Tue May 14 17:59:50 2024
 
                          pc 0002                ?_displayTemp 0070                ?_displayTime 0070  
                __CFG_CP$OFF 0000                          l71 1601                          fsr 0004  

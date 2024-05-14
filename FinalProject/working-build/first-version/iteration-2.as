@@ -250,7 +250,7 @@ EECON2 equ 018Dh ;#
 psect	idataCOMMON,class=CODE,space=0,delta=2,noexec
 global __pidataCOMMON
 __pidataCOMMON:
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	12
 
 ;initializer for _hours
@@ -259,7 +259,7 @@ __pidataCOMMON:
 
 ;initializer for _lastKeyState
 	retlw	0FFh
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	16
 
 ;initializer for _lastMode
@@ -267,7 +267,7 @@ __pidataCOMMON:
 psect	idataBANK0,class=CODE,space=0,delta=2,noexec
 global __pidataBANK0
 __pidataBANK0:
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	16
 
 ;initializer for _savedHoursEnd
@@ -764,19 +764,19 @@ _minutes:
 psect	dataCOMMON,class=COMMON,space=1,noexec
 global __pdataCOMMON
 __pdataCOMMON:
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	12
 _hours:
        ds      1
 
 psect	dataCOMMON
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	20
 _lastKeyState:
        ds      1
 
 psect	dataCOMMON
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	16
 _lastMode:
        ds      1
@@ -784,7 +784,7 @@ _lastMode:
 psect	dataBANK0,class=BANK0,space=1,noexec
 global __pdataBANK0
 __pdataBANK0:
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	16
 _savedHoursEnd:
        ds      1
@@ -819,19 +819,19 @@ _debugInfo:
 psect	dataBANK1,class=BANK1,space=1,noexec
 global __pdataBANK1
 __pdataBANK1:
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	14
 _savedHoursStart:
        ds      1
 
 psect	dataBANK1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	17
 _savedMinutesEnd:
        ds      1
 
 psect	dataBANK1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	15
 _savedMinutesStart:
        ds      1
@@ -1882,7 +1882,7 @@ updateState@buffer:	; 10 bytes @ 0x42
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -1922,12 +1922,12 @@ updateState@buffer:	; 10 bytes @ 0x42
 ;; This function uses a non-reentrant model
 ;;
 psect	maintext,global,class=CODE,delta=2,split=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	29
 global __pmaintext
 __pmaintext:	;psect for function _main
 psect	maintext
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	29
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
@@ -2060,7 +2060,7 @@ GLOBAL	__end_of_main
 
 ;; *************** function _updateState *****************
 ;; Defined at:
-;;		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -2103,7 +2103,7 @@ psect	text1,local,class=CODE,delta=2,merge=1
 global __ptext1
 __ptext1:	;psect for function _updateState
 psect	text1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	97
 	global	__size_of_updateState
 	__size_of_updateState	equ	__end_of_updateState-_updateState
@@ -2711,7 +2711,7 @@ GLOBAL	__end_of_updateState
 
 ;; *************** function _setMinutesStart *****************
 ;; Defined at:
-;;		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -2741,12 +2741,12 @@ GLOBAL	__end_of_updateState
 ;; This function uses a non-reentrant model
 ;;
 psect	text2,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	132
 global __ptext2
 __ptext2:	;psect for function _setMinutesStart
 psect	text2
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	132
 	global	__size_of_setMinutesStart
 	__size_of_setMinutesStart	equ	__end_of_setMinutesStart-_setMinutesStart
@@ -3123,7 +3123,7 @@ GLOBAL	__end_of_setMinutesStart
 
 ;; *************** function _setMinutesEnd *****************
 ;; Defined at:
-;;		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -3157,7 +3157,7 @@ psect	text3,local,class=CODE,delta=2,merge=1
 global __ptext3
 __ptext3:	;psect for function _setMinutesEnd
 psect	text3
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	170
 	global	__size_of_setMinutesEnd
 	__size_of_setMinutesEnd	equ	__end_of_setMinutesEnd-_setMinutesEnd
@@ -3534,7 +3534,7 @@ GLOBAL	__end_of_setMinutesEnd
 
 ;; *************** function _setHoursStart *****************
 ;; Defined at:
-;;		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -3568,7 +3568,7 @@ psect	text4,local,class=CODE,delta=2,merge=1
 global __ptext4
 __ptext4:	;psect for function _setHoursStart
 psect	text4
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	55
 	global	__size_of_setHoursStart
 	__size_of_setHoursStart	equ	__end_of_setHoursStart-_setHoursStart
@@ -3945,7 +3945,7 @@ GLOBAL	__end_of_setHoursStart
 
 ;; *************** function _setHoursEnd *****************
 ;; Defined at:
-;;		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -3979,7 +3979,7 @@ psect	text5,local,class=CODE,delta=2,merge=1
 global __ptext5
 __ptext5:	;psect for function _setHoursEnd
 psect	text5
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	94
 	global	__size_of_setHoursEnd
 	__size_of_setHoursEnd	equ	__end_of_setHoursEnd-_setHoursEnd
@@ -4588,7 +4588,7 @@ GLOBAL	__end_of___awmod
 
 ;; *************** function _printStatusTMP *****************
 ;; Defined at:
-;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 ;; Parameters:    Size  Location     Type
 ;;  handler         1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -4616,12 +4616,12 @@ GLOBAL	__end_of___awmod
 ;; This function uses a non-reentrant model
 ;;
 psect	text7,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	47
 global __ptext7
 __ptext7:	;psect for function _printStatusTMP
 psect	text7
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	47
 	global	__size_of_printStatusTMP
 	__size_of_printStatusTMP	equ	__end_of_printStatusTMP-_printStatusTMP
@@ -4703,7 +4703,7 @@ GLOBAL	__end_of_printStatusTMP
 
 ;; *************** function _printStatusPPM *****************
 ;; Defined at:
-;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+;;		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 ;; Parameters:    Size  Location     Type
 ;;  handler         1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -4731,12 +4731,12 @@ GLOBAL	__end_of_printStatusTMP
 ;; This function uses a non-reentrant model
 ;;
 psect	text8,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	70
 global __ptext8
 __ptext8:	;psect for function _printStatusPPM
 psect	text8
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	70
 	global	__size_of_printStatusPPM
 	__size_of_printStatusPPM	equ	__end_of_printStatusPPM-_printStatusPPM
@@ -4818,7 +4818,7 @@ GLOBAL	__end_of_printStatusPPM
 
 ;; *************** function _displayTime *****************
 ;; Defined at:
-;;		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -4847,12 +4847,12 @@ GLOBAL	__end_of_printStatusPPM
 ;; This function uses a non-reentrant model
 ;;
 psect	text9,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	49
 global __ptext9
 __ptext9:	;psect for function _displayTime
 psect	text9
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	49
 	global	__size_of_displayTime
 	__size_of_displayTime	equ	__end_of_displayTime-_displayTime
@@ -4909,7 +4909,7 @@ GLOBAL	__end_of_displayTime
 
 ;; *************** function _displayTemp *****************
 ;; Defined at:
-;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+;;		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -4938,12 +4938,12 @@ GLOBAL	__end_of_displayTime
 ;; This function uses a non-reentrant model
 ;;
 psect	text10,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	24
 global __ptext10
 __ptext10:	;psect for function _displayTemp
 psect	text10
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	24
 	global	__size_of_displayTemp
 	__size_of_displayTemp	equ	__end_of_displayTemp-_displayTemp
@@ -5001,7 +5001,7 @@ GLOBAL	__end_of_displayTemp
 
 ;; *************** function _displayPPM *****************
 ;; Defined at:
-;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -5039,12 +5039,12 @@ GLOBAL	__end_of_displayTemp
 ;; This function uses a non-reentrant model
 ;;
 psect	text11,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	37
 global __ptext11
 __ptext11:	;psect for function _displayPPM
 psect	text11
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	37
 	global	__size_of_displayPPM
 	__size_of_displayPPM	equ	__end_of_displayPPM-_displayPPM
@@ -7134,7 +7134,7 @@ GLOBAL	__end_of___ftneg
 
 ;; *************** function _startUpLCD *****************
 ;; Defined at:
-;;		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7164,12 +7164,12 @@ GLOBAL	__end_of___ftneg
 ;; This function uses a non-reentrant model
 ;;
 psect	text17,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	69
 global __ptext17
 __ptext17:	;psect for function _startUpLCD
 psect	text17
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	69
 	global	__size_of_startUpLCD
 	__size_of_startUpLCD	equ	__end_of_startUpLCD-_startUpLCD
@@ -7210,7 +7210,7 @@ GLOBAL	__end_of_startUpLCD
 
 ;; *************** function _printToLCD *****************
 ;; Defined at:
-;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+;;		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 ;; Parameters:    Size  Location     Type
 ;;  str             2    2[BANK0 ] PTR const unsigned char 
 ;;		 -> STR_34(11), STR_33(12), STR_32(10), STR_31(14), 
@@ -7254,12 +7254,12 @@ GLOBAL	__end_of_startUpLCD
 ;; This function uses a non-reentrant model
 ;;
 psect	text18,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	47
 global __ptext18
 __ptext18:	;psect for function _printToLCD
 psect	text18
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	47
 	global	__size_of_printToLCD
 	__size_of_printToLCD	equ	__end_of_printToLCD-_printToLCD
@@ -7338,7 +7338,7 @@ GLOBAL	__end_of_printToLCD
 
 ;; *************** function _dataCTRL *****************
 ;; Defined at:
-;;		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+;;		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 ;; Parameters:    Size  Location     Type
 ;;  DAT             1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -7370,7 +7370,7 @@ psect	text19,local,class=CODE,delta=2,merge=1
 global __ptext19
 __ptext19:	;psect for function _dataCTRL
 psect	text19
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	27
 	global	__size_of_dataCTRL
 	__size_of_dataCTRL	equ	__end_of_dataCTRL-_dataCTRL
@@ -7436,7 +7436,7 @@ GLOBAL	__end_of_dataCTRL
 
 ;; *************** function _initLCD *****************
 ;; Defined at:
-;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+;;		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7468,7 +7468,7 @@ psect	text20,local,class=CODE,delta=2,merge=1
 global __ptext20
 __ptext20:	;psect for function _initLCD
 psect	text20
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	37
 	global	__size_of_initLCD
 	__size_of_initLCD	equ	__end_of_initLCD-_initLCD
@@ -7534,7 +7534,7 @@ GLOBAL	__end_of_initLCD
 
 ;; *************** function _setPortDirections *****************
 ;; Defined at:
-;;		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7562,12 +7562,12 @@ GLOBAL	__end_of_initLCD
 ;; This function uses a non-reentrant model
 ;;
 psect	text21,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	51
 global __ptext21
 __ptext21:	;psect for function _setPortDirections
 psect	text21
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	51
 	global	__size_of_setPortDirections
 	__size_of_setPortDirections	equ	__end_of_setPortDirections-_setPortDirections
@@ -7632,7 +7632,7 @@ GLOBAL	__end_of_setPortDirections
 
 ;; *************** function _runMQ135 *****************
 ;; Defined at:
-;;		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+;;		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7661,12 +7661,12 @@ GLOBAL	__end_of_setPortDirections
 ;; This function uses a non-reentrant model
 ;;
 psect	text22,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	32
 global __ptext22
 __ptext22:	;psect for function _runMQ135
 psect	text22
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	32
 	global	__size_of_runMQ135
 	__size_of_runMQ135	equ	__end_of_runMQ135-_runMQ135
@@ -7721,7 +7721,7 @@ GLOBAL	__end_of_runMQ135
 
 ;; *************** function _readADC *****************
 ;; Defined at:
-;;		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h"
+;;		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h"
 ;; Parameters:    Size  Location     Type
 ;;  channel         1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -7750,12 +7750,12 @@ GLOBAL	__end_of_runMQ135
 ;; This function uses a non-reentrant model
 ;;
 psect	text23,local,class=CODE,delta=2,merge=1,inline
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h"
 	line	23
 global __ptext23
 __ptext23:	;psect for function _readADC
 psect	text23
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h"
 	line	23
 	global	__size_of_readADC
 	__size_of_readADC	equ	__end_of_readADC-_readADC
@@ -7861,7 +7861,7 @@ GLOBAL	__end_of_readADC
 
 ;; *************** function _CalcMQ135 *****************
 ;; Defined at:
-;;		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+;;		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 ;; Parameters:    Size  Location     Type
 ;;  RAW_ADC         2   62[BANK0 ] int 
 ;; Auto vars:     Size  Location     Type
@@ -7899,12 +7899,12 @@ GLOBAL	__end_of_readADC
 ;; This function uses a non-reentrant model
 ;;
 psect	text24,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	93
 global __ptext24
 __ptext24:	;psect for function _CalcMQ135
 psect	text24
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	93
 	global	__size_of_CalcMQ135
 	__size_of_CalcMQ135	equ	__end_of_CalcMQ135-_CalcMQ135
@@ -10563,7 +10563,7 @@ GLOBAL	__end_of___ftpack
 
 ;; *************** function _runClock *****************
 ;; Defined at:
-;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10591,12 +10591,12 @@ GLOBAL	__end_of___ftpack
 ;; This function uses a non-reentrant model
 ;;
 psect	text30,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	33
 global __ptext30
 __ptext30:	;psect for function _runClock
 psect	text30
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	33
 	global	__size_of_runClock
 	__size_of_runClock	equ	__end_of_runClock-_runClock
@@ -10698,7 +10698,7 @@ GLOBAL	__end_of_runClock
 
 ;; *************** function _initInterrupt *****************
 ;; Defined at:
-;;		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10726,12 +10726,12 @@ GLOBAL	__end_of_runClock
 ;; This function uses a non-reentrant model
 ;;
 psect	text31,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	76
 global __ptext31
 __ptext31:	;psect for function _initInterrupt
 psect	text31
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	76
 	global	__size_of_initInterrupt
 	__size_of_initInterrupt	equ	__end_of_initInterrupt-_initInterrupt
@@ -10768,7 +10768,7 @@ GLOBAL	__end_of_initInterrupt
 
 ;; *************** function _initADC *****************
 ;; Defined at:
-;;		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10800,7 +10800,7 @@ psect	text32,local,class=CODE,delta=2,merge=1
 global __ptext32
 __ptext32:	;psect for function _initADC
 psect	text32
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	63
 	global	__size_of_initADC
 	__size_of_initADC	equ	__end_of_initADC-_initADC
@@ -10835,7 +10835,7 @@ GLOBAL	__end_of_initADC
 
 ;; *************** function _handleTemp *****************
 ;; Defined at:
-;;		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+;;		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10863,12 +10863,12 @@ GLOBAL	__end_of_initADC
 ;; This function uses a non-reentrant model
 ;;
 psect	text33,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	31
 global __ptext33
 __ptext33:	;psect for function _handleTemp
 psect	text33
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	31
 	global	__size_of_handleTemp
 	__size_of_handleTemp	equ	__end_of_handleTemp-_handleTemp
@@ -10962,7 +10962,7 @@ GLOBAL	__end_of_handleTemp
 
 ;; *************** function _handlePPM *****************
 ;; Defined at:
-;;		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+;;		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10990,12 +10990,12 @@ GLOBAL	__end_of_handleTemp
 ;; This function uses a non-reentrant model
 ;;
 psect	text34,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	54
 global __ptext34
 __ptext34:	;psect for function _handlePPM
 psect	text34
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
 	line	54
 	global	__size_of_handlePPM
 	__size_of_handlePPM	equ	__end_of_handlePPM-_handlePPM
@@ -11323,7 +11323,7 @@ GLOBAL	__end_of___ftge
 
 ;; *************** function _checkTime *****************
 ;; Defined at:
-;;		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+;;		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -11351,12 +11351,12 @@ GLOBAL	__end_of___ftge
 ;; This function uses a non-reentrant model
 ;;
 psect	text36,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	208
 global __ptext36
 __ptext36:	;psect for function _checkTime
 psect	text36
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
 	line	208
 	global	__size_of_checkTime
 	__size_of_checkTime	equ	__end_of_checkTime-_checkTime
@@ -11714,7 +11714,7 @@ GLOBAL	__end_of_checkTime
 
 ;; *************** function _checkSelect *****************
 ;; Defined at:
-;;		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -11742,12 +11742,12 @@ GLOBAL	__end_of_checkTime
 ;; This function uses a non-reentrant model
 ;;
 psect	text37,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	190
 global __ptext37
 __ptext37:	;psect for function _checkSelect
 psect	text37
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	190
 	global	__size_of_checkSelect
 	__size_of_checkSelect	equ	__end_of_checkSelect-_checkSelect
@@ -11856,7 +11856,7 @@ GLOBAL	__end_of_checkSelect
 
 ;; *************** function _checkMode *****************
 ;; Defined at:
-;;		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -11888,7 +11888,7 @@ psect	text38,local,class=CODE,delta=2,merge=1
 global __ptext38
 __ptext38:	;psect for function _checkMode
 psect	text38
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	179
 	global	__size_of_checkMode
 	__size_of_checkMode	equ	__end_of_checkMode-_checkMode
@@ -11965,7 +11965,7 @@ GLOBAL	__end_of_checkMode
 
 ;; *************** function _instCTRL *****************
 ;; Defined at:
-;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 ;; Parameters:    Size  Location     Type
 ;;  CMD             1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -11998,12 +11998,12 @@ GLOBAL	__end_of_checkMode
 ;; This function uses a non-reentrant model
 ;;
 psect	text39,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	17
 global __ptext39
 __ptext39:	;psect for function _instCTRL
 psect	text39
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	17
 	global	__size_of_instCTRL
 	__size_of_instCTRL	equ	__end_of_instCTRL-_instCTRL
@@ -12069,7 +12069,7 @@ GLOBAL	__end_of_instCTRL
 
 ;; *************** function _calculateTemp *****************
 ;; Defined at:
-;;		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+;;		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 ;; Parameters:    Size  Location     Type
 ;;  adcValue        2   14[BANK0 ] unsigned int 
 ;; Auto vars:     Size  Location     Type
@@ -12098,12 +12098,12 @@ GLOBAL	__end_of_instCTRL
 ;; This function uses a non-reentrant model
 ;;
 psect	text40,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	19
 global __ptext40
 __ptext40:	;psect for function _calculateTemp
 psect	text40
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
 	line	19
 	global	__size_of_calculateTemp
 	__size_of_calculateTemp	equ	__end_of_calculateTemp-_calculateTemp
@@ -12514,7 +12514,7 @@ GLOBAL	__end_of___lwdiv
 
 ;; *************** function _ISR *****************
 ;; Defined at:
-;;		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+;;		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -12542,12 +12542,12 @@ GLOBAL	__end_of___lwdiv
 ;; This function uses a non-reentrant model
 ;;
 psect	text43,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	84
 global __ptext43
 __ptext43:	;psect for function _ISR
 psect	text43
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
 	line	84
 	global	__size_of_ISR
 	__size_of_ISR	equ	__end_of_ISR-_ISR
@@ -12647,7 +12647,7 @@ GLOBAL	__end_of_ISR
 
 ;; *************** function i1_instCTRL *****************
 ;; Defined at:
-;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+;;		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 ;; Parameters:    Size  Location     Type
 ;;  CMD             1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -12674,12 +12674,12 @@ GLOBAL	__end_of_ISR
 ;; This function uses a non-reentrant model
 ;;
 psect	text44,local,class=CODE,delta=2,merge=1
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	17
 global __ptext44
 __ptext44:	;psect for function i1_instCTRL
 psect	text44
-	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+	file	"D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
 	line	17
 	global	__size_ofi1_instCTRL
 	__size_ofi1_instCTRL	equ	__end_ofi1_instCTRL-i1_instCTRL

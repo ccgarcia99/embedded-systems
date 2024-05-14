@@ -4,7 +4,7 @@ Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
   -h+iteration-2.sym --cmf=iteration-2.cmf -z -Q16F877A \
-  -oC:\Users\ACER\AppData\Local\Temp\sj4k.6 -Miteration-2.map -E1 -ver=XC8 \
+  -oC:\Users\ACER\AppData\Local\Temp\sd8c.6 -Miteration-2.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -763,7 +763,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 29 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -805,7 +805,7 @@ Total ram usage:        3 bytes
 
  *************** function _updateState *****************
  Defined at:
-		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 97 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -846,7 +846,7 @@ Total ram usage:       14 bytes
 
  *************** function _setMinutesStart *****************
  Defined at:
-		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 132 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -878,7 +878,7 @@ Total ram usage:        2 bytes
 
  *************** function _setMinutesEnd *****************
  Defined at:
-		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 170 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -910,7 +910,7 @@ Total ram usage:        2 bytes
 
  *************** function _setHoursStart *****************
  Defined at:
-		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 55 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -942,7 +942,7 @@ Total ram usage:        2 bytes
 
  *************** function _setHoursEnd *****************
  Defined at:
-		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 94 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1009,7 +1009,7 @@ Total ram usage:        7 bytes
 
  *************** function _printStatusTMP *****************
  Defined at:
-		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
  Parameters:    Size  Location     Type
   handler         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1039,7 +1039,7 @@ Total ram usage:        1 bytes
 
  *************** function _printStatusPPM *****************
  Defined at:
-		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+		line 70 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
  Parameters:    Size  Location     Type
   handler         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1069,7 +1069,7 @@ Total ram usage:        1 bytes
 
  *************** function _displayTime *****************
  Defined at:
-		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 49 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1100,7 +1100,7 @@ Total ram usage:       20 bytes
 
  *************** function _displayTemp *****************
  Defined at:
-		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+		line 24 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1131,7 +1131,7 @@ Total ram usage:       20 bytes
 
  *************** function _displayPPM *****************
  Defined at:
-		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1352,7 +1352,7 @@ Total ram usage:        3 bytes
 
  *************** function _startUpLCD *****************
  Defined at:
-		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 69 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1384,7 +1384,7 @@ Total ram usage:        0 bytes
 
  *************** function _printToLCD *****************
  Defined at:
-		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+		line 47 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
  Parameters:    Size  Location     Type
   str             2    2[BANK0 ] PTR const unsigned char 
 		 -> STR_34(11), STR_33(12), STR_32(10), STR_31(14), 
@@ -1430,7 +1430,7 @@ Total ram usage:        2 bytes
 
  *************** function _dataCTRL *****************
  Defined at:
-		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+		line 27 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
  Parameters:    Size  Location     Type
   DAT             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1460,7 +1460,7 @@ Total ram usage:        2 bytes
 
  *************** function _initLCD *****************
  Defined at:
-		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+		line 37 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1490,7 +1490,7 @@ Total ram usage:        1 bytes
 
  *************** function _setPortDirections *****************
  Defined at:
-		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 51 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1520,7 +1520,7 @@ Total ram usage:        0 bytes
 
  *************** function _runMQ135 *****************
  Defined at:
-		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+		line 32 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1551,7 +1551,7 @@ Total ram usage:        0 bytes
 
  *************** function _readADC *****************
  Defined at:
-		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h"
+		line 23 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h"
  Parameters:    Size  Location     Type
   channel         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1582,7 +1582,7 @@ Total ram usage:        5 bytes
 
  *************** function _CalcMQ135 *****************
  Defined at:
-		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+		line 93 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
  Parameters:    Size  Location     Type
   RAW_ADC         2   62[BANK0 ] int 
  Auto vars:     Size  Location     Type
@@ -1791,7 +1791,7 @@ Total ram usage:        8 bytes
 
  *************** function _runClock *****************
  Defined at:
-		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 33 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1821,7 +1821,7 @@ Total ram usage:        2 bytes
 
  *************** function _initInterrupt *****************
  Defined at:
-		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 76 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1851,7 +1851,7 @@ Total ram usage:        0 bytes
 
  *************** function _initADC *****************
  Defined at:
-		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 63 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1881,7 +1881,7 @@ Total ram usage:        0 bytes
 
  *************** function _handleTemp *****************
  Defined at:
-		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+		line 31 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1911,7 +1911,7 @@ Total ram usage:        0 bytes
 
  *************** function _handlePPM *****************
  Defined at:
-		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h"
+		line 54 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1972,7 +1972,7 @@ Total ram usage:       12 bytes
 
  *************** function _checkTime *****************
  Defined at:
-		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h"
+		line 208 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2002,7 +2002,7 @@ Total ram usage:        0 bytes
 
  *************** function _checkSelect *****************
  Defined at:
-		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 190 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2032,7 +2032,7 @@ Total ram usage:        4 bytes
 
  *************** function _checkMode *****************
  Defined at:
-		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 179 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2062,7 +2062,7 @@ Total ram usage:        2 bytes
 
  *************** function _instCTRL *****************
  Defined at:
-		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
  Parameters:    Size  Location     Type
   CMD             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -2097,7 +2097,7 @@ Total ram usage:        2 bytes
 
  *************** function _calculateTemp *****************
  Defined at:
-		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h"
+		line 19 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h"
  Parameters:    Size  Location     Type
   adcValue        2   14[BANK0 ] unsigned int 
  Auto vars:     Size  Location     Type
@@ -2193,7 +2193,7 @@ Total ram usage:        8 bytes
 
  *************** function _ISR *****************
  Defined at:
-		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c"
+		line 84 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2223,7 +2223,7 @@ Total ram usage:        5 bytes
 
  *************** function i1_instCTRL *****************
  Defined at:
-		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h"
+		line 17 in file "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h"
  Parameters:    Size  Location     Type
   CMD             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -2254,6 +2254,14 @@ Total ram usage:        2 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h
+		_instCTRL      		CODE           	141F	0000	19
+		_dataCTRL      		CODE           	1432	0000	19
+		_printToLCD    		CODE           	160E	0000	43
+		_initLCD       		CODE           	152F	0000	36
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\lcd_functions.h estimated size: 117
+
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
 		___ftneg       		CODE           	13E3	0000	10
 
@@ -2264,14 +2272,6 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c estimated size: 95
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h
-		_instCTRL      		CODE           	141F	0000	19
-		_dataCTRL      		CODE           	1432	0000	19
-		_printToLCD    		CODE           	160E	0000	43
-		_initLCD       		CODE           	152F	0000	36
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\lcd_functions.h estimated size: 117
-
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c
 		_sprintf       		CODE           	03F8	0000	511
 
@@ -2281,6 +2281,11 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
 		___ftpack      		CODE           	078F	0000	106
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c estimated size: 106
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h
+		_readADC       		CODE           	15E5	0000	41
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\common_dependencies.h estimated size: 41
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
 		___lwmod       		CODE           	16CC	0000	54
@@ -2297,48 +2302,36 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c estimated size: 37
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h
-		_displayTemp   		CODE           	1553	0000	36
-		_printStatusTMP		CODE           	1492	0000	28
-		_calculateTemp 		CODE           	1639	0000	47
-		_handleTemp    		CODE           	145A	0000	28
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\temp_module.h estimated size: 139
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h
-		_readADC       		CODE           	15E5	0000	41
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\common_dependencies.h estimated size: 41
-
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
 		___ftmul       		CODE           	0CFB	0000	211
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c estimated size: 211
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h
-		_runMQ135      		CODE           	150B	0000	36
-		_displayPPM    		CODE           	0ED7	0000	297
-		_printStatusPPM		CODE           	1476	0000	28
-		_CalcMQ135     		CODE           	0051	0000	935
-		_handlePPM     		CODE           	1668	0000	48
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c
+		_startUpLCD    		CODE           	1445	0000	21
+		_ISR           		CODE           	14CB	0000	32
+		_updateState   		CODE           	05F7	0000	408
+		_main          		CODE           	17A1	0000	95
+		_initInterrupt 		CODE           	07F9	0000	7
+		_checkMode     		CODE           	14EB	0000	32
+		_checkSelect   		CODE           	1698	0000	52
+		_initADC       		CODE           	13DA	0000	9
+		_setPortDirecti		CODE           	13ED	0000	15
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\mq135_module.h estimated size: 1344
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h
-		_setMinutesStar		CODE           	0C3B	0000	192
-		_runClock      		CODE           	14AE	0000	29
-		_displayTime   		CODE           	1577	0000	36
-		_setHoursEnd   		CODE           	0957	0000	172
-		_setHoursStart 		CODE           	0ABB	0000	192
-		_setMinutesEnd 		CODE           	0B7B	0000	192
-		_checkTime     		CODE           	0852	0000	119
-
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\time_scheduler.h estimated size: 932
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\main.c estimated size: 671
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
 		___lwdiv       		CODE           	1702	0000	64
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c estimated size: 64
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h
+		_displayTemp   		CODE           	1553	0000	36
+		_printStatusTMP		CODE           	1492	0000	28
+		_calculateTemp 		CODE           	1639	0000	47
+		_handleTemp    		CODE           	145A	0000	28
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\temp_module.h estimated size: 139
 
 shared
 		__stringtab    		STRCODE        	1000	0000	18
@@ -2348,6 +2341,17 @@ shared
 		__initializatio		CODE           	0015	0000	56
 
 shared estimated size: 345
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h
+		_setMinutesStar		CODE           	0C3B	0000	192
+		_runClock      		CODE           	14AE	0000	29
+		_displayTime   		CODE           	1577	0000	36
+		_setHoursEnd   		CODE           	0957	0000	172
+		_setHoursStart 		CODE           	0ABB	0000	192
+		_setMinutesEnd 		CODE           	0B7B	0000	192
+		_checkTime     		CODE           	0852	0000	119
+
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\time_scheduler.h estimated size: 932
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
 		___fttol       		CODE           	08C9	0000	142
@@ -2369,18 +2373,14 @@ C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c estimated size: 184
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c
-		_startUpLCD    		CODE           	1445	0000	21
-		_ISR           		CODE           	14CB	0000	32
-		_updateState   		CODE           	05F7	0000	408
-		_main          		CODE           	17A1	0000	95
-		_initInterrupt 		CODE           	07F9	0000	7
-		_checkMode     		CODE           	14EB	0000	32
-		_checkSelect   		CODE           	1698	0000	52
-		_initADC       		CODE           	13DA	0000	9
-		_setPortDirecti		CODE           	13ED	0000	15
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h
+		_runMQ135      		CODE           	150B	0000	36
+		_displayPPM    		CODE           	0ED7	0000	297
+		_printStatusPPM		CODE           	1476	0000	28
+		_CalcMQ135     		CODE           	0051	0000	935
+		_handlePPM     		CODE           	1668	0000	48
 
-D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\switching-program\first-version\main.c estimated size: 671
+D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\first-version\mq135_module.h estimated size: 1344
 
 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\isdigit.c
 		_isdigit       		CODE           	13FC	0000	16
