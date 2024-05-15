@@ -5,7 +5,7 @@
   <WINDOW type="default" module="ISIS">
    <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="162" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
     <world y1="-8890000" x1="-12700000" y2="8890000" x2="12700000"/>
-    <centre x="4056945" y="2896696"/>
+    <centre x="3276914" y="5032962"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -20,13 +20,13 @@
  <MODULE name="ISIS">
   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="162" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
    <world y1="-8890000" x1="-12700000" y2="8890000" x2="12700000"/>
-   <centre x="4056945" y="2896696"/>
+   <centre x="3276914" y="5032962"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="1070" x="104" flags="00000002" y="383" h="519" pid="0" iid="-1">
+   <POPUP w="1070" x="104" flags="00008003" y="383" h="519" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">798</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
