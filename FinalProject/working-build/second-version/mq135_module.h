@@ -16,7 +16,7 @@
 #define ATMOCO2 415.58 // Calibration CO2 level in ppm
 
 #define PPM_THRESHOLD 9
-#define AIRPURIFIER_EN RC3
+#define AIRPURIFIER_EN PORTCbits.RC5 // Relay is active LOW
 
 volatile float PPM = 0.0;
 
@@ -52,16 +52,16 @@ void displayPPM()
 }
 
 bool handlePPM()
-{
+{ // Relay is active LOW
     if (PPM > PPM_THRESHOLD)
     {
-        AIRPURIFIER_EN = 1;
+        AIRPURIFIER_EN = 0; // Turn on the air purifier
         ppmFlag = true;
         return true;
     }
     else
     {
-        AIRPURIFIER_EN = 0;
+        AIRPURIFIER_EN = 1; // Turn off the air purifier
         ppmFlag = false;
         return false;
     }
@@ -80,7 +80,7 @@ void printStatusPPM(bool handler)
 }
 
 /*inline int Read_ADC_MQ135(char channel)
-{
+{   // Read ADC function is already in common_dependencies.hF
     ADCON0 &= 0xC3;
     ADCON0 |= (channel << 3);
     __delay_us(20);

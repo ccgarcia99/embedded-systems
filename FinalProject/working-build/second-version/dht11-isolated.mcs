@@ -2,7 +2,7 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\main.p1
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -11,11 +11,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File001]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.cof
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.cof
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -24,11 +24,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File002]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.hex
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.hex
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -37,11 +37,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File003]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.sym
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.sym
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -50,11 +50,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File004]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.map
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.map
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -63,11 +63,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File005]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.hxl
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.hxl
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -76,11 +76,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File006]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\startup.lst
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\startup.lst
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -89,11 +89,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File007]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\startup.rlf
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\startup.rlf
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -102,11 +102,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File008]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\doprnt.p1
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\doprnt.p1
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -115,11 +115,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File009]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\doprnt.pre
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\doprnt.pre
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -128,11 +128,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File010]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.obj
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.obj
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -141,11 +141,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File011]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.lst
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.lst
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -154,11 +154,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File012]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.rlf
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.rlf
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -167,11 +167,11 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File013]
-Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\isolated\dht11-isolated.sdb
+Location=D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11-isolated.sdb
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
@@ -180,6 +180,6 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=

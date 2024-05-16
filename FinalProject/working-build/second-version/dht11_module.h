@@ -7,6 +7,7 @@ uint8_t temperature = 0;
 uint8_t humidity = 0;
 #define DHT11_PIN PORTBbits.RB2
 #define DHT11_PIN_TRIS TRISBbits.TRISB2
+#define HUMIDIFIER_EN PORTCbits.RC3 // Relay is active LOW
 
 // Function prototypes
 void initDHT11();
@@ -15,6 +16,7 @@ void startUP();
 void runDHT11();
 uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity);
 void displayDataDHT11();
+void activateHumidifier();
 
 void initDHT11()
 {
@@ -73,16 +75,20 @@ uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity)
 
 void displayDataDHT11()
 {
-    char buffer[20];
+    char buffer[15];
     __delay_ms(2);
-
-    sprintf(buffer, "TMP: %dC HMD: %d", temperature, humidity);
-    printToLCD(buffer);
-    /*
-    instCTRL(0xC0); // Move to second line
-    sprintf(buffer, "Humidity: %d%%", humidity);
+    /* 
+    sprintf(buffer, "TMP: %dC HMD: %d", temperature, humidity); // 16x02 LCD
     printToLCD(buffer);
     */
+    
+    //instCTRL(0x80); // Move to first line                       // 20x04 LCD
+    sprintf(buffer, "TEMP: %dC", temperature);
+    printToLCD(buffer);
+    instCTRL(0xC0); // Move to second line
+    sprintf(buffer, "HMDT: %d%%", humidity);
+    printToLCD(buffer);
+
 }
 
 void runDHT11()
@@ -95,9 +101,21 @@ void runDHT11()
     {
         instCTRL(0x80); // Move to first line
         instCTRL(0x0C); // Turn off cursor
-        printToLCD("Error reading DHT11");
+        printToLCD("ERROR!");
     }
     __delay_ms(500); // Wait for 2 seconds before the next read
+}
+
+void activateHumidifier()
+{
+    if (humidity > 50 && temperature > 25)
+    {
+        HUMIDIFIER_EN = 0; // Turn on the humidifier
+    }
+    else
+    {
+        HUMIDIFIER_EN = 1; // Turn off the humidifier
+    }
 }
 
 #endif // DHT11_MODULE_H

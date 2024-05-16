@@ -7,6 +7,7 @@
 #define INCREMENT 0b00001100
 #define DECREMENT 0b00001110
 #define SET 0b00001101
+#define ENABLE_FAN PORTCbits.RC4
 
 // Global variables
 volatile uint8_t hours = 4;
@@ -209,7 +210,7 @@ void checkTime(void)
 {
     if (hours == savedHoursEnd && minutes == savedMinutesEnd)
     {
-        RC4 = 1; // Still on at the exact end time minute
+        ENABLE_FAN = 1; // Still on at the exact end time minute
     }
     else if (savedHoursEnd > savedHoursStart)
     {
@@ -217,11 +218,11 @@ void checkTime(void)
         if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) &&
             (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
         {
-            RC4 = 1; // Turn the device on
+            ENABLE_FAN = 0; // Turn the device on
         }
         else
         {
-            RC4 = 0; // Turn the device off
+            ENABLE_FAN = 1; // Turn the device off
         }
     }
     else if (savedHoursEnd < savedHoursStart)
@@ -230,22 +231,22 @@ void checkTime(void)
         if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) ||
             (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
         {
-            RC4 = 1; // Turn the device on
+            ENABLE_FAN = 0; // Turn the device on
         }
         else
         {
-            RC4 = 0; // Turn the device off
+            ENABLE_FAN = 1; // Turn the device off
         }
     }
     else
     { // savedHoursEnd == savedHoursStart, check only minutes
         if (minutes >= savedMinutesStart && minutes < savedMinutesEnd)
         {
-            RC4 = 1; // Turn the device on
+            ENABLE_FAN = 0; // Turn the device on
         }
         else
         {
-            RC4 = 0; // Turn the device off
+            ENABLE_FAN = 1; // Turn the device off
         }
     }
 }
