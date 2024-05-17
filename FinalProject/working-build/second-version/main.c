@@ -42,9 +42,15 @@ void main(void)
         // Temporarily disable interrupts to prevent conflicts
         GIE = 0;
         PEIE = 0;
-        runDHT11();
+
+        if (mode == STAT && SEL == 0)
+        {
+            runDHT11();
+        }
+
         runMQ135();
         runClock();
+
         GIE = 1;
         PEIE = 1;
 
@@ -60,16 +66,15 @@ void main(void)
             switch (SEL)
             {
             case 0:
-                instCTRL(0x80);
+                setCursor(0, 0);
                 displayDataDHT11();
-                //instCTRL(0xC0);
-                instCTRL(0x94);
+                setCursor(2, 0);
                 displayPPM();
                 break;
             case 1:
-                instCTRL(0x80);
+                setCursor(0, 0);
                 displayTime();
-                instCTRL(0xC0);
+                setCursor(1, 0);
                 sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
                 printToLCD(buffer);
                 break;
@@ -78,20 +83,25 @@ void main(void)
             }
             break;
         case SET_TIME_START:
-            // instCTRL(0x01);
-            instCTRL(0x80);
+            setCursor(0, 0);
             printToLCD("Set SCHED - START");
-            instCTRL(0xC0);
+            setCursor(1, 0);
             switch (SEL)
             {
             case 0:
                 printToLCD("START HOURS");
-                instCTRL(0x94);
+                setCursor(3, 0);
+                sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+                printToLCD(buffer);
+                setCursor(2, 0);
                 setHoursStart();
                 break;
             case 1:
                 printToLCD("START MINS");
-                instCTRL(0x94);
+                setCursor(3, 0);
+                sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+                printToLCD(buffer);
+                setCursor(2, 0);
                 setMinutesStart();
                 break;
             default:
@@ -99,20 +109,25 @@ void main(void)
             }
             break;
         case SET_TIME_END:
-            // instCTRL(0x01);
-            instCTRL(0x80);
+            setCursor(0, 0);
             printToLCD("Set SCHED - END");
-            instCTRL(0xC0);
+            setCursor(1, 0);
             switch (SEL)
             {
             case 0:
                 printToLCD("END HOURS");
-                instCTRL(0x94);
+                setCursor(3, 0);
+                sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
+                printToLCD(buffer);
+                setCursor(2, 0);
                 setHoursEnd();
                 break;
             case 1:
                 printToLCD("END MINS");
-                instCTRL(0x94);
+                setCursor(3, 0);
+                sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
+                printToLCD(buffer);
+                setCursor(2, 0);
                 setMinutesEnd();
                 break;
             default:
@@ -137,11 +152,11 @@ void interrupt ISR(void)
 
 void initPorts(void)
 {
-    TRISA = 0xFF; // Set PORTA as input
-    TRISB = 0xFF; // Set PORTB as input
-    TRISC = 0x00; // Set PORTC as output
+    TRISA = 0xFF;       // Set PORTA as input
+    TRISB = 0xFF;       // Set PORTB as input
+    TRISC = 0x00;       // Set PORTC as output
     PORTC = 0b00111000; // Set PORTC to 0x38
-    TRISD = 0x00; // Set PORTD as output
+    TRISD = 0x00;       // Set PORTD as output
 }
 
 void initRegisters(void)
@@ -165,20 +180,19 @@ void startUpSequence(void)
     // Initialize LCD
     initLCD();
     __delay_ms(500);
-    instCTRL(0x80);
-    instCTRL(0x0C);
+    setCursor(0, 0);
     printToLCD("Initializing...");
     // Initialize DHT11
     initDHT11();
     __delay_ms(2000);
-    instCTRL(0x01);
+    instCTRL(0x01); // Clear display
 }
 
 void checkMode(void)
 {
     if (lastMode != mode)
     {
-        instCTRL(0x01);
+        instCTRL(0x01); // Clear display
         __delay_ms(50);
         lastMode = mode;
     }
@@ -191,7 +205,7 @@ void checkSEL(void)
     if (currentRB1State == 1 && lastRB1State == 0)
     {
         SEL ^= 1;
-        instCTRL(0x01);
+        instCTRL(0x01); // Clear display
     }
     lastRB1State = currentRB1State;
 }

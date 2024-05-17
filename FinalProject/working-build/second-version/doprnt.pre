@@ -367,32 +367,11 @@ case 'd':
 case 'i':
 break;
 
-# 759
-dostring:
-
-# 766
-if(width > _val._str._len)
-width -= _val._str._len;
-else
-width = 0;
-
-# 773
-while(width--)
-((*sp++ = (' ')),(++ccnt));
-
-while(_val._str._len--)
-((*sp++ = (*_val._str._cp++)),(++ccnt));
-
-# 783
-continue;
-
 # 811
 default:
 
-
-_val._str._cp = (char *)&c;
-_val._str._len = 1;
-goto dostring;
+# 822
+continue;
 
 # 831
 }

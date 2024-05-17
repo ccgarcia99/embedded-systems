@@ -1618,6 +1618,7 @@ void instCTRL(unsigned char CMD);
 void dataCTRL(unsigned char DAT);
 void initLCD();
 void printToLCD(const unsigned char *str);
+void setCursor(unsigned char row, unsigned char column);
 
 
 void instCTRL(unsigned char CMD)
@@ -1642,17 +1643,47 @@ RC2 = 0;
 
 void initLCD()
 {
+_delay((unsigned long)((20)*(4000000/4000.0)));
+instCTRL(0x30);
+_delay((unsigned long)((5)*(4000000/4000.0)));
+instCTRL(0x30);
+_delay((unsigned long)((200)*(4000000/4000000.0)));
+instCTRL(0x30);
+
 instCTRL(0x38);
-_delay((unsigned long)((50)*(4000000/4000000.0)));
 instCTRL(0x0C);
 instCTRL(0x01);
+_delay((unsigned long)((2)*(4000000/4000.0)));
 instCTRL(0x06);
-instCTRL(0x0F);
+}
+
+void setCursor(unsigned char row, unsigned char column)
+{
+unsigned char address;
+switch (row)
+{
+case 0:
+address = 0x00;
+break;
+case 1:
+address = 0x40;
+break;
+case 2:
+address = 0x14;
+break;
+case 3:
+address = 0x54;
+break;
+default:
+address = 0x00;
+break;
+}
+address += column;
+instCTRL(0x80 | address);
 }
 
 void printToLCD(const unsigned char *str)
 {
-instCTRL(0x0C);
 while (*str)
 {
 dataCTRL(*str);
@@ -1660,11 +1691,11 @@ str++;
 }
 }
 
-# 6 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h"
+# 7 "D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h"
 uint8_t temperature = 0;
 uint8_t humidity = 0;
 
-# 13
+# 14
 void initDHT11();
 void initPORTS();
 void startUP();
@@ -1733,25 +1764,23 @@ void displayDataDHT11()
 char buffer[15];
 _delay((unsigned long)((2)*(4000000/4000.0)));
 
-# 86
+setCursor(0, 0);
 sprintf(buffer, "TEMP: %dC", temperature);
 printToLCD(buffer);
-instCTRL(0xC0);
-sprintf(buffer, "HMDT: %d%%", humidity);
+setCursor(1, 0);
+sprintf(buffer, "HMDT: %d", humidity);
 printToLCD(buffer);
-
 }
 
 void runDHT11()
 {
 if (readDHT11(&temperature, &humidity))
 {
-
+displayDataDHT11();
 }
 else
 {
-instCTRL(0x80);
-instCTRL(0x0C);
+setCursor(0, 0);
 printToLCD("ERROR!");
 }
 _delay((unsigned long)((500)*(4000000/4000.0)));
@@ -1905,12 +1934,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00001100)
+if (key == 0b00000000)
 {
 savedHoursStart = (savedHoursStart + 1) % 24;
 sprintf(debugInfo, "INC: %02d", savedHoursStart);
 }
-else if (key == 0b00001110)
+else if (key == 0b00001100)
 {
 savedHoursStart = (savedHoursStart - 1 + 24) % 24;
 sprintf(debugInfo, "DEC: %02d", savedHoursStart);
@@ -1944,12 +1973,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00001100)
+if (key == 0b00000000)
 {
 savedHoursEnd = (savedHoursEnd + 1) % 24;
 sprintf(debugInfo, "INC: %02d", savedHoursEnd);
 }
-else if (key == 0b00001110)
+else if (key == 0b00001100)
 {
 savedHoursEnd = (savedHoursEnd - 1 + 24) % 24;
 sprintf(debugInfo, "DEC: %02d", savedHoursEnd);
@@ -1982,12 +2011,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00001100)
+if (key == 0b00000000)
 {
 savedMinutesStart = (savedMinutesStart + 5) % 60;
 sprintf(debugInfo, "INC: %02d", savedMinutesStart);
 }
-else if (key == 0b00001110)
+else if (key == 0b00001100)
 {
 savedMinutesStart = (savedMinutesStart - 5 + 60) % 60;
 sprintf(debugInfo, "DEC: %02d", savedMinutesStart);
@@ -2020,12 +2049,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00001100)
+if (key == 0b00000000)
 {
 savedMinutesEnd = (savedMinutesEnd + 5) % 60;
 sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
 }
-else if (key == 0b00001110)
+else if (key == 0b00001100)
 {
 savedMinutesEnd = (savedMinutesEnd - 5 + 60) % 60;
 sprintf(debugInfo, "DEC: %02d", savedMinutesEnd);
@@ -2132,9 +2161,15 @@ while (1)
 
 GIE = 0;
 PEIE = 0;
+
+if (mode == STAT && SEL == 0)
+{
 runDHT11();
+}
+
 runMQ135();
 runClock();
+
 GIE = 1;
 PEIE = 1;
 
@@ -2150,16 +2185,15 @@ case STAT:
 switch (SEL)
 {
 case 0:
-instCTRL(0x80);
+setCursor(0, 0);
 displayDataDHT11();
-
-instCTRL(0x94);
+setCursor(2, 0);
 displayPPM();
 break;
 case 1:
-instCTRL(0x80);
+setCursor(0, 0);
 displayTime();
-instCTRL(0xC0);
+setCursor(1, 0);
 sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
 printToLCD(buffer);
 break;
@@ -2168,20 +2202,25 @@ break;
 }
 break;
 case SET_TIME_START:
-
-instCTRL(0x80);
+setCursor(0, 0);
 printToLCD("Set SCHED - START");
-instCTRL(0xC0);
+setCursor(1, 0);
 switch (SEL)
 {
 case 0:
 printToLCD("START HOURS");
-instCTRL(0x94);
+setCursor(3, 0);
+sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+printToLCD(buffer);
+setCursor(2, 0);
 setHoursStart();
 break;
 case 1:
 printToLCD("START MINS");
-instCTRL(0x94);
+setCursor(3, 0);
+sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+printToLCD(buffer);
+setCursor(2, 0);
 setMinutesStart();
 break;
 default:
@@ -2189,20 +2228,25 @@ break;
 }
 break;
 case SET_TIME_END:
-
-instCTRL(0x80);
+setCursor(0, 0);
 printToLCD("Set SCHED - END");
-instCTRL(0xC0);
+setCursor(1, 0);
 switch (SEL)
 {
 case 0:
 printToLCD("END HOURS");
-instCTRL(0x94);
+setCursor(3, 0);
+sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
+printToLCD(buffer);
+setCursor(2, 0);
 setHoursEnd();
 break;
 case 1:
 printToLCD("END MINS");
-instCTRL(0x94);
+setCursor(3, 0);
+sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
+printToLCD(buffer);
+setCursor(2, 0);
 setMinutesEnd();
 break;
 default:
@@ -2255,8 +2299,7 @@ void startUpSequence(void)
 
 initLCD();
 _delay((unsigned long)((500)*(4000000/4000.0)));
-instCTRL(0x80);
-instCTRL(0x0C);
+setCursor(0, 0);
 printToLCD("Initializing...");
 
 initDHT11();

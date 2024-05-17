@@ -1,6 +1,7 @@
 #ifndef DHT11_MODULE_H
 #define DHT11_MODULE_H
 #include "common_dependencies.h"
+#include "lcd_functions.h"
 
 // Global variables
 uint8_t temperature = 0;
@@ -20,8 +21,8 @@ void activateHumidifier();
 
 void initDHT11()
 {
-    DHT11_PIN_TRIS = 0; // Set RB3 as output
-    DHT11_PIN = 1;      // Set RB3 high
+    DHT11_PIN_TRIS = 0; // Set RB2 as output
+    DHT11_PIN = 1;      // Set RB2 high
 }
 
 uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity)
@@ -30,12 +31,12 @@ uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity)
     uint8_t i, j;
 
     // Send start signal
-    DHT11_PIN_TRIS = 0; // Set RB3 as output
-    DHT11_PIN = 0;      // Set RB3 low
+    DHT11_PIN_TRIS = 0; // Set RB2 as output
+    DHT11_PIN = 0;      // Set RB2 low
     __delay_ms(18);
-    DHT11_PIN = 1; // Set RB3 high
+    DHT11_PIN = 1; // Set RB2 high
     __delay_us(20);
-    DHT11_PIN_TRIS = 1; // Set RB3 as input
+    DHT11_PIN_TRIS = 1; // Set RB2 as input
 
     // Wait for response
     __delay_us(40);
@@ -77,33 +78,27 @@ void displayDataDHT11()
 {
     char buffer[15];
     __delay_ms(2);
-    /* 
-    sprintf(buffer, "TMP: %dC HMD: %d", temperature, humidity); // 16x02 LCD
-    printToLCD(buffer);
-    */
-    
-    //instCTRL(0x80); // Move to first line                       // 20x04 LCD
+
+    setCursor(0, 0); // Move to first line
     sprintf(buffer, "TEMP: %dC", temperature);
     printToLCD(buffer);
-    instCTRL(0xC0); // Move to second line
-    sprintf(buffer, "HMDT: %d%%", humidity);
+    setCursor(1, 0); // Move to second line
+    sprintf(buffer, "HMDT: %d", humidity);
     printToLCD(buffer);
-
 }
 
 void runDHT11()
 {
     if (readDHT11(&temperature, &humidity))
     {
-        // displayData(temperature, humidity);
+        displayDataDHT11();
     }
     else
     {
-        instCTRL(0x80); // Move to first line
-        instCTRL(0x0C); // Turn off cursor
+        setCursor(0, 0); // Move to first line
         printToLCD("ERROR!");
     }
-    __delay_ms(500); // Wait for 2 seconds before the next read
+    __delay_ms(500); // Wait for 500 milliseconds before the next read
 }
 
 void activateHumidifier()

@@ -50,8 +50,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "207 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
-[c E1294 0 1 2 .. ]
-[n E1294 . STAT SET_TIME_START SET_TIME_END  ]
+[c E1303 0 1 2 .. ]
+[n E1303 . STAT SET_TIME_START SET_TIME_END  ]
 [p mainexit ]
 "21
 [v _initPorts `(v ~T0 @X0 0 ef ]
@@ -1227,454 +1227,559 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_functions.h: 17: void dataCTRL(unsigned char DAT);
 [; ;lcd_functions.h: 18: void initLCD();
 [; ;lcd_functions.h: 19: void printToLCD(const unsigned char *str);
-"22 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
+[; ;lcd_functions.h: 20: void setCursor(unsigned char row, unsigned char column);
+"23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
 [v _instCTRL `(v ~T0 @X0 1 ef1`uc ]
-"23
-{
-[; ;lcd_functions.h: 22: void instCTRL(unsigned char CMD)
-[; ;lcd_functions.h: 23: {
-[e :U _instCTRL ]
-"22
-[v _CMD `uc ~T0 @X0 1 r1 ]
-"23
-[f ]
-[; ;lcd_functions.h: 24: PORTD = CMD;
 "24
-[e = _PORTD _CMD ]
-[; ;lcd_functions.h: 25: RC0 = 0;
+{
+[; ;lcd_functions.h: 23: void instCTRL(unsigned char CMD)
+[; ;lcd_functions.h: 24: {
+[e :U _instCTRL ]
+"23
+[v _CMD `uc ~T0 @X0 1 r1 ]
+"24
+[f ]
+[; ;lcd_functions.h: 25: PORTD = CMD;
 "25
-[e = _RC0 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 26: RC1 = 0;
+[e = _PORTD _CMD ]
+[; ;lcd_functions.h: 26: RC0 = 0;
 "26
-[e = _RC1 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 27: RC2 = 1;
+[e = _RC0 -> -> 0 `i `b ]
+[; ;lcd_functions.h: 27: RC1 = 0;
 "27
-[e = _RC2 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 28: _delay((unsigned long)((1)*(4000000/4000.0)));
+[e = _RC1 -> -> 0 `i `b ]
+[; ;lcd_functions.h: 28: RC2 = 1;
 "28
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;lcd_functions.h: 29: RC2 = 0;
+[e = _RC2 -> -> 1 `i `b ]
+[; ;lcd_functions.h: 29: _delay((unsigned long)((1)*(4000000/4000.0)));
 "29
-[e = _RC2 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 30: }
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lcd_functions.h: 30: RC2 = 0;
 "30
+[e = _RC2 -> -> 0 `i `b ]
+[; ;lcd_functions.h: 31: }
+"31
 [e :UE 101 ]
 }
-"32
+"33
 [v _dataCTRL `(v ~T0 @X0 1 ef1`uc ]
-"33
-{
-[; ;lcd_functions.h: 32: void dataCTRL(unsigned char DAT)
-[; ;lcd_functions.h: 33: {
-[e :U _dataCTRL ]
-"32
-[v _DAT `uc ~T0 @X0 1 r1 ]
-"33
-[f ]
-[; ;lcd_functions.h: 34: PORTD = DAT;
 "34
-[e = _PORTD _DAT ]
-[; ;lcd_functions.h: 35: RC0 = 1;
+{
+[; ;lcd_functions.h: 33: void dataCTRL(unsigned char DAT)
+[; ;lcd_functions.h: 34: {
+[e :U _dataCTRL ]
+"33
+[v _DAT `uc ~T0 @X0 1 r1 ]
+"34
+[f ]
+[; ;lcd_functions.h: 35: PORTD = DAT;
 "35
-[e = _RC0 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 36: RC1 = 0;
+[e = _PORTD _DAT ]
+[; ;lcd_functions.h: 36: RC0 = 1;
 "36
-[e = _RC1 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 37: RC2 = 1;
+[e = _RC0 -> -> 1 `i `b ]
+[; ;lcd_functions.h: 37: RC1 = 0;
 "37
-[e = _RC2 -> -> 1 `i `b ]
-[; ;lcd_functions.h: 38: _delay((unsigned long)((1)*(4000000/4000.0)));
+[e = _RC1 -> -> 0 `i `b ]
+[; ;lcd_functions.h: 38: RC2 = 1;
 "38
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;lcd_functions.h: 39: RC2 = 0;
+[e = _RC2 -> -> 1 `i `b ]
+[; ;lcd_functions.h: 39: _delay((unsigned long)((1)*(4000000/4000.0)));
 "39
-[e = _RC2 -> -> 0 `i `b ]
-[; ;lcd_functions.h: 40: }
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lcd_functions.h: 40: RC2 = 0;
 "40
+[e = _RC2 -> -> 0 `i `b ]
+[; ;lcd_functions.h: 41: }
+"41
 [e :UE 102 ]
 }
-"42
-[v _initLCD `(v ~T0 @X0 1 ef ]
 "43
+[v _initLCD `(v ~T0 @X0 1 ef ]
+"44
 {
-[; ;lcd_functions.h: 42: void initLCD()
-[; ;lcd_functions.h: 43: {
+[; ;lcd_functions.h: 43: void initLCD()
+[; ;lcd_functions.h: 44: {
 [e :U _initLCD ]
 [f ]
-[; ;lcd_functions.h: 44: instCTRL(0x38);
-"44
-[e ( _instCTRL (1 -> -> 56 `i `uc ]
-[; ;lcd_functions.h: 45: _delay((unsigned long)((50)*(4000000/4000000.0)));
+[; ;lcd_functions.h: 45: _delay((unsigned long)((20)*(4000000/4000.0)));
 "45
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;lcd_functions.h: 46: instCTRL(0x0C);
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lcd_functions.h: 46: instCTRL(0x30);
 "46
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;lcd_functions.h: 47: instCTRL(0x01);
+[e ( _instCTRL (1 -> -> 48 `i `uc ]
+[; ;lcd_functions.h: 47: _delay((unsigned long)((5)*(4000000/4000.0)));
 "47
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;lcd_functions.h: 48: instCTRL(0x06);
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lcd_functions.h: 48: instCTRL(0x30);
 "48
-[e ( _instCTRL (1 -> -> 6 `i `uc ]
-[; ;lcd_functions.h: 49: instCTRL(0x0F);
+[e ( _instCTRL (1 -> -> 48 `i `uc ]
+[; ;lcd_functions.h: 49: _delay((unsigned long)((200)*(4000000/4000000.0)));
 "49
-[e ( _instCTRL (1 -> -> 15 `i `uc ]
-[; ;lcd_functions.h: 50: }
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;lcd_functions.h: 50: instCTRL(0x30);
 "50
+[e ( _instCTRL (1 -> -> 48 `i `uc ]
+[; ;lcd_functions.h: 52: instCTRL(0x38);
+"52
+[e ( _instCTRL (1 -> -> 56 `i `uc ]
+[; ;lcd_functions.h: 53: instCTRL(0x0C);
+"53
+[e ( _instCTRL (1 -> -> 12 `i `uc ]
+[; ;lcd_functions.h: 54: instCTRL(0x01);
+"54
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+[; ;lcd_functions.h: 55: _delay((unsigned long)((2)*(4000000/4000.0)));
+"55
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lcd_functions.h: 56: instCTRL(0x06);
+"56
+[e ( _instCTRL (1 -> -> 6 `i `uc ]
+[; ;lcd_functions.h: 57: }
+"57
 [e :UE 103 ]
 }
-"52
-[v _printToLCD `(v ~T0 @X0 1 ef1`*Cuc ]
-"53
-{
-[; ;lcd_functions.h: 52: void printToLCD(const unsigned char *str)
-[; ;lcd_functions.h: 53: {
-[e :U _printToLCD ]
-"52
-[v _str `*Cuc ~T0 @X0 1 r1 ]
-"53
-[f ]
-[; ;lcd_functions.h: 54: instCTRL(0x0C);
-"54
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;lcd_functions.h: 55: while (*str)
-"55
-[e $U 105  ]
-[e :U 106 ]
-[; ;lcd_functions.h: 56: {
-"56
-{
-[; ;lcd_functions.h: 57: dataCTRL(*str);
-"57
-[e ( _dataCTRL (1 *U _str ]
-[; ;lcd_functions.h: 58: str++;
-"58
-[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "59
-}
-[e :U 105 ]
-"55
-[e $ != -> *U _str `i -> -> -> 0 `i `Cuc `i 106  ]
-[e :U 107 ]
-[; ;lcd_functions.h: 59: }
-[; ;lcd_functions.h: 60: }
+[v _setCursor `(v ~T0 @X0 1 ef2`uc`uc ]
 "60
+{
+[; ;lcd_functions.h: 59: void setCursor(unsigned char row, unsigned char column)
+[; ;lcd_functions.h: 60: {
+[e :U _setCursor ]
+"59
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _column `uc ~T0 @X0 1 r2 ]
+"60
+[f ]
+"61
+[v _address `uc ~T0 @X0 1 a ]
+[; ;lcd_functions.h: 61: unsigned char address;
+[; ;lcd_functions.h: 62: switch (row)
+"62
+[e $U 106  ]
+[; ;lcd_functions.h: 63: {
+"63
+{
+[; ;lcd_functions.h: 64: case 0:
+"64
+[e :U 107 ]
+[; ;lcd_functions.h: 65: address = 0x00;
+"65
+[e = _address -> -> 0 `i `uc ]
+[; ;lcd_functions.h: 66: break;
+"66
+[e $U 105  ]
+[; ;lcd_functions.h: 67: case 1:
+"67
+[e :U 108 ]
+[; ;lcd_functions.h: 68: address = 0x40;
+"68
+[e = _address -> -> 64 `i `uc ]
+[; ;lcd_functions.h: 69: break;
+"69
+[e $U 105  ]
+[; ;lcd_functions.h: 70: case 2:
+"70
+[e :U 109 ]
+[; ;lcd_functions.h: 71: address = 0x14;
+"71
+[e = _address -> -> 20 `i `uc ]
+[; ;lcd_functions.h: 72: break;
+"72
+[e $U 105  ]
+[; ;lcd_functions.h: 73: case 3:
+"73
+[e :U 110 ]
+[; ;lcd_functions.h: 74: address = 0x54;
+"74
+[e = _address -> -> 84 `i `uc ]
+[; ;lcd_functions.h: 75: break;
+"75
+[e $U 105  ]
+[; ;lcd_functions.h: 76: default:
+"76
+[e :U 111 ]
+[; ;lcd_functions.h: 77: address = 0x00;
+"77
+[e = _address -> -> 0 `i `uc ]
+[; ;lcd_functions.h: 78: break;
+"78
+[e $U 105  ]
+"79
+}
+[; ;lcd_functions.h: 79: }
+[e $U 105  ]
+"62
+[e :U 106 ]
+[e [\ _row , $ -> -> 0 `i `uc 107
+ , $ -> -> 1 `i `uc 108
+ , $ -> -> 2 `i `uc 109
+ , $ -> -> 3 `i `uc 110
+ 111 ]
+"79
+[e :U 105 ]
+[; ;lcd_functions.h: 80: address += column;
+"80
+[e =+ _address _column ]
+[; ;lcd_functions.h: 81: instCTRL(0x80 | address);
+"81
+[e ( _instCTRL (1 -> | -> 128 `i -> _address `i `uc ]
+[; ;lcd_functions.h: 82: }
+"82
 [e :UE 104 ]
 }
-"6 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
+"84
+[v _printToLCD `(v ~T0 @X0 1 ef1`*Cuc ]
+"85
+{
+[; ;lcd_functions.h: 84: void printToLCD(const unsigned char *str)
+[; ;lcd_functions.h: 85: {
+[e :U _printToLCD ]
+"84
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+"85
+[f ]
+[; ;lcd_functions.h: 86: while (*str)
+"86
+[e $U 113  ]
+[e :U 114 ]
+[; ;lcd_functions.h: 87: {
+"87
+{
+[; ;lcd_functions.h: 88: dataCTRL(*str);
+"88
+[e ( _dataCTRL (1 *U _str ]
+[; ;lcd_functions.h: 89: str++;
+"89
+[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"90
+}
+[e :U 113 ]
+"86
+[e $ != -> *U _str `i -> -> -> 0 `i `Cuc `i 114  ]
+[e :U 115 ]
+[; ;lcd_functions.h: 90: }
+[; ;lcd_functions.h: 91: }
+"91
+[e :UE 112 ]
+}
+"7 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
 [v _temperature `uc ~T0 @X0 1 e ]
 [i _temperature
 -> -> 0 `i `uc
 ]
-[; ;dht11_module.h: 6: uint8_t temperature = 0;
-"7
+[; ;dht11_module.h: 7: uint8_t temperature = 0;
+"8
 [v _humidity `uc ~T0 @X0 1 e ]
 [i _humidity
 -> -> 0 `i `uc
 ]
-[; ;dht11_module.h: 7: uint8_t humidity = 0;
-[; ;dht11_module.h: 13: void initDHT11();
-[; ;dht11_module.h: 14: void initPORTS();
-[; ;dht11_module.h: 15: void startUP();
-[; ;dht11_module.h: 16: void runDHT11();
-[; ;dht11_module.h: 17: uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity);
-[; ;dht11_module.h: 18: void displayDataDHT11();
-[; ;dht11_module.h: 19: void activateHumidifier();
-"21
-[v _initDHT11 `(v ~T0 @X0 1 ef ]
+[; ;dht11_module.h: 8: uint8_t humidity = 0;
+[; ;dht11_module.h: 14: void initDHT11();
+[; ;dht11_module.h: 15: void initPORTS();
+[; ;dht11_module.h: 16: void startUP();
+[; ;dht11_module.h: 17: void runDHT11();
+[; ;dht11_module.h: 18: uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity);
+[; ;dht11_module.h: 19: void displayDataDHT11();
+[; ;dht11_module.h: 20: void activateHumidifier();
 "22
+[v _initDHT11 `(v ~T0 @X0 1 ef ]
+"23
 {
-[; ;dht11_module.h: 21: void initDHT11()
-[; ;dht11_module.h: 22: {
+[; ;dht11_module.h: 22: void initDHT11()
+[; ;dht11_module.h: 23: {
 [e :U _initDHT11 ]
 [f ]
-[; ;dht11_module.h: 23: TRISBbits.TRISB2 = 0;
-"23
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;dht11_module.h: 24: PORTBbits.RB2 = 1;
+[; ;dht11_module.h: 24: TRISBbits.TRISB2 = 0;
 "24
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-[; ;dht11_module.h: 25: }
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;dht11_module.h: 25: PORTBbits.RB2 = 1;
 "25
-[e :UE 108 ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[; ;dht11_module.h: 26: }
+"26
+[e :UE 116 ]
 }
-"27
-[v _readDHT11 `(uc ~T0 @X0 1 ef2`*uc`*uc ]
 "28
+[v _readDHT11 `(uc ~T0 @X0 1 ef2`*uc`*uc ]
+"29
 {
-[; ;dht11_module.h: 27: uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity)
-[; ;dht11_module.h: 28: {
+[; ;dht11_module.h: 28: uint8_t readDHT11(uint8_t *temperature, uint8_t *humidity)
+[; ;dht11_module.h: 29: {
 [e :U _readDHT11 ]
 [v _temperature `*uc ~T0 @X0 1 r1 ]
 [v _humidity `*uc ~T0 @X0 1 r2 ]
 [f ]
-[v F1216 `uc ~T0 @X0 -> 5 `i s ]
-[i F1216
+[v F1225 `uc ~T0 @X0 -> 5 `i s ]
+[i F1225
 :U ..
-"29
+"30
 -> -> 0 `i `uc
 ..
 ]
 [v _bits `uc ~T0 @X0 -> 5 `i a ]
-[; ;dht11_module.h: 29: uint8_t bits[5] = {0};
-[e = _bits F1216 ]
-"30
+[; ;dht11_module.h: 30: uint8_t bits[5] = {0};
+[e = _bits F1225 ]
+"31
 [v _i `uc ~T0 @X0 1 a ]
 [v _j `uc ~T0 @X0 1 a ]
-[; ;dht11_module.h: 30: uint8_t i, j;
-[; ;dht11_module.h: 33: TRISBbits.TRISB2 = 0;
-"33
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;dht11_module.h: 34: PORTBbits.RB2 = 0;
+[; ;dht11_module.h: 31: uint8_t i, j;
+[; ;dht11_module.h: 34: TRISBbits.TRISB2 = 0;
 "34
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;dht11_module.h: 35: _delay((unsigned long)((18)*(4000000/4000.0)));
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;dht11_module.h: 35: PORTBbits.RB2 = 0;
 "35
-[e ( __delay (1 -> * -> -> 18 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;dht11_module.h: 36: PORTBbits.RB2 = 1;
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;dht11_module.h: 36: _delay((unsigned long)((18)*(4000000/4000.0)));
 "36
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-[; ;dht11_module.h: 37: _delay((unsigned long)((20)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 18 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;dht11_module.h: 37: PORTBbits.RB2 = 1;
 "37
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;dht11_module.h: 38: TRISBbits.TRISB2 = 1;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[; ;dht11_module.h: 38: _delay((unsigned long)((20)*(4000000/4000000.0)));
 "38
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;dht11_module.h: 39: TRISBbits.TRISB2 = 1;
+"39
 [e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-[; ;dht11_module.h: 41: _delay((unsigned long)((40)*(4000000/4000000.0)));
-"41
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;dht11_module.h: 42: if (PORTBbits.RB2)
+[; ;dht11_module.h: 42: _delay((unsigned long)((40)*(4000000/4000000.0)));
 "42
-[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 110  ]
-[; ;dht11_module.h: 43: return 0;
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;dht11_module.h: 43: if (PORTBbits.RB2)
 "43
-[e ) -> -> 0 `i `uc ]
-[e $UE 109  ]
-[e :U 110 ]
-[; ;dht11_module.h: 44: _delay((unsigned long)((80)*(4000000/4000000.0)));
+[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 118  ]
+[; ;dht11_module.h: 44: return 0;
 "44
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;dht11_module.h: 45: if (!PORTBbits.RB2)
-"45
-[e $ ! ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 111  ]
-[; ;dht11_module.h: 46: return 0;
-"46
 [e ) -> -> 0 `i `uc ]
-[e $UE 109  ]
-[e :U 111 ]
-[; ;dht11_module.h: 47: _delay((unsigned long)((80)*(4000000/4000000.0)));
-"47
+[e $UE 117  ]
+[e :U 118 ]
+[; ;dht11_module.h: 45: _delay((unsigned long)((80)*(4000000/4000000.0)));
+"45
 [e ( __delay (1 -> * -> -> 80 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;dht11_module.h: 50: for (j = 0; j < 5; j++)
-"50
+[; ;dht11_module.h: 46: if (!PORTBbits.RB2)
+"46
+[e $ ! ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 119  ]
+[; ;dht11_module.h: 47: return 0;
+"47
+[e ) -> -> 0 `i `uc ]
+[e $UE 117  ]
+[e :U 119 ]
+[; ;dht11_module.h: 48: _delay((unsigned long)((80)*(4000000/4000000.0)));
+"48
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;dht11_module.h: 51: for (j = 0; j < 5; j++)
+"51
 {
 [e = _j -> -> 0 `i `uc ]
-[e $ < -> _j `i -> 5 `i 112  ]
-[e $U 113  ]
-"51
-[e :U 112 ]
-[; ;dht11_module.h: 51: {
-{
-[; ;dht11_module.h: 52: for (i = 0; i < 8; i++)
+[e $ < -> _j `i -> 5 `i 120  ]
+[e $U 121  ]
 "52
+[e :U 120 ]
+[; ;dht11_module.h: 52: {
+{
+[; ;dht11_module.h: 53: for (i = 0; i < 8; i++)
+"53
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 115  ]
-[e $U 116  ]
-"53
-[e :U 115 ]
-[; ;dht11_module.h: 53: {
-{
-[; ;dht11_module.h: 54: while (!PORTBbits.RB2)
+[e $ < -> _i `i -> 8 `i 123  ]
+[e $U 124  ]
 "54
-[e $U 118  ]
-[e :U 119 ]
-[; ;dht11_module.h: 55: ;
-"55
-[e :U 118 ]
-"54
-[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 119  ]
-[e :U 120 ]
-[; ;dht11_module.h: 56: _delay((unsigned long)((30)*(4000000/4000000.0)));
-"56
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;dht11_module.h: 57: if (PORTBbits.RB2)
-"57
-[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 121  ]
-[; ;dht11_module.h: 58: {
-"58
-{
-[; ;dht11_module.h: 59: bits[j] |= (1 << (7 - i));
-"59
-[e =| *U + &U _bits * -> _j `ux -> -> # *U &U _bits `ui `ux -> << -> 1 `i - -> 7 `i -> _i `i `uc ]
-[; ;dht11_module.h: 60: while (PORTBbits.RB2)
-"60
-[e $U 122  ]
 [e :U 123 ]
-[; ;dht11_module.h: 61: ;
-"61
-[e :U 122 ]
+[; ;dht11_module.h: 54: {
+{
+[; ;dht11_module.h: 55: while (!PORTBbits.RB2)
+"55
+[e $U 126  ]
+[e :U 127 ]
+[; ;dht11_module.h: 56: ;
+"56
+[e :U 126 ]
+"55
+[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 127  ]
+[e :U 128 ]
+[; ;dht11_module.h: 57: _delay((unsigned long)((30)*(4000000/4000000.0)));
+"57
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;dht11_module.h: 58: if (PORTBbits.RB2)
+"58
+[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 129  ]
+[; ;dht11_module.h: 59: {
+"59
+{
+[; ;dht11_module.h: 60: bits[j] |= (1 << (7 - i));
 "60
-[e $ != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 123  ]
-[e :U 124 ]
+[e =| *U + &U _bits * -> _j `ux -> -> # *U &U _bits `ui `ux -> << -> 1 `i - -> 7 `i -> _i `i `uc ]
+[; ;dht11_module.h: 61: while (PORTBbits.RB2)
+"61
+[e $U 130  ]
+[e :U 131 ]
+[; ;dht11_module.h: 62: ;
 "62
-}
-[e :U 121 ]
+[e :U 130 ]
+"61
+[e $ != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 131  ]
+[e :U 132 ]
 "63
 }
-"52
+[e :U 129 ]
+"64
+}
+"53
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 115  ]
-[e :U 116 ]
-"63
-}
+[e $ < -> _i `i -> 8 `i 123  ]
+[e :U 124 ]
 "64
 }
-"50
+"65
+}
+"51
 [e ++ _j -> -> 1 `i `uc ]
-[e $ < -> _j `i -> 5 `i 112  ]
-[e :U 113 ]
-"64
+[e $ < -> _j `i -> 5 `i 120  ]
+[e :U 121 ]
+"65
 }
-[; ;dht11_module.h: 62: }
 [; ;dht11_module.h: 63: }
 [; ;dht11_module.h: 64: }
-[; ;dht11_module.h: 67: if (bits[4] != (bits[0] + bits[1] + bits[2] + bits[3]))
-"67
-[e $ ! != -> *U + &U _bits * -> -> -> 4 `i `ui `ux -> -> # *U &U _bits `ui `ux `i + + + -> *U + &U _bits * -> -> -> 0 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 1 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 2 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 3 `i `ui `ux -> -> # *U &U _bits `ui `ux `i 125  ]
-[; ;dht11_module.h: 68: return 0;
+[; ;dht11_module.h: 65: }
+[; ;dht11_module.h: 68: if (bits[4] != (bits[0] + bits[1] + bits[2] + bits[3]))
 "68
+[e $ ! != -> *U + &U _bits * -> -> -> 4 `i `ui `ux -> -> # *U &U _bits `ui `ux `i + + + -> *U + &U _bits * -> -> -> 0 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 1 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 2 `i `ui `ux -> -> # *U &U _bits `ui `ux `i -> *U + &U _bits * -> -> -> 3 `i `ui `ux -> -> # *U &U _bits `ui `ux `i 133  ]
+[; ;dht11_module.h: 69: return 0;
+"69
 [e ) -> -> 0 `i `uc ]
-[e $UE 109  ]
-[e :U 125 ]
-[; ;dht11_module.h: 70: *humidity = bits[0];
-"70
-[e = *U _humidity *U + &U _bits * -> -> -> 0 `i `ui `ux -> -> # *U &U _bits `ui `ux ]
-[; ;dht11_module.h: 71: *temperature = bits[2];
+[e $UE 117  ]
+[e :U 133 ]
+[; ;dht11_module.h: 71: *humidity = bits[0];
 "71
+[e = *U _humidity *U + &U _bits * -> -> -> 0 `i `ui `ux -> -> # *U &U _bits `ui `ux ]
+[; ;dht11_module.h: 72: *temperature = bits[2];
+"72
 [e = *U _temperature *U + &U _bits * -> -> -> 2 `i `ui `ux -> -> # *U &U _bits `ui `ux ]
-[; ;dht11_module.h: 73: return 1;
-"73
-[e ) -> -> 1 `i `uc ]
-[e $UE 109  ]
-[; ;dht11_module.h: 74: }
+[; ;dht11_module.h: 74: return 1;
 "74
-[e :UE 109 ]
+[e ) -> -> 1 `i `uc ]
+[e $UE 117  ]
+[; ;dht11_module.h: 75: }
+"75
+[e :UE 117 ]
 }
-"76
-[v _displayDataDHT11 `(v ~T0 @X0 1 ef ]
 "77
+[v _displayDataDHT11 `(v ~T0 @X0 1 ef ]
+"78
 {
-[; ;dht11_module.h: 76: void displayDataDHT11()
-[; ;dht11_module.h: 77: {
+[; ;dht11_module.h: 77: void displayDataDHT11()
+[; ;dht11_module.h: 78: {
 [e :U _displayDataDHT11 ]
 [f ]
-"78
-[v _buffer `uc ~T0 @X0 -> 15 `i a ]
-[; ;dht11_module.h: 78: char buffer[15];
-[; ;dht11_module.h: 79: _delay((unsigned long)((2)*(4000000/4000.0)));
 "79
+[v _buffer `uc ~T0 @X0 -> 15 `i a ]
+[; ;dht11_module.h: 79: char buffer[15];
+[; ;dht11_module.h: 80: _delay((unsigned long)((2)*(4000000/4000.0)));
+"80
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;dht11_module.h: 86: sprintf(buffer, "TEMP: %dC", temperature);
-"86
+[; ;dht11_module.h: 82: setCursor(0, 0);
+"82
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;dht11_module.h: 83: sprintf(buffer, "TEMP: %dC", temperature);
+"83
 [e ( _sprintf (1 , (. , &U _buffer :s 1C -> _temperature `i ]
+[; ;dht11_module.h: 84: printToLCD(buffer);
+"84
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;dht11_module.h: 85: setCursor(1, 0);
+"85
+[e ( _setCursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;dht11_module.h: 86: sprintf(buffer, "HMDT: %d", humidity);
+"86
+[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _humidity `i ]
 [; ;dht11_module.h: 87: printToLCD(buffer);
 "87
 [e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;dht11_module.h: 88: instCTRL(0xC0);
+[; ;dht11_module.h: 88: }
 "88
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;dht11_module.h: 89: sprintf(buffer, "HMDT: %d%%", humidity);
-"89
-[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _humidity `i ]
-[; ;dht11_module.h: 90: printToLCD(buffer);
-"90
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;dht11_module.h: 92: }
-"92
-[e :UE 126 ]
+[e :UE 134 ]
 }
-"94
+"90
 [v _runDHT11 `(v ~T0 @X0 1 ef ]
-"95
+"91
 {
-[; ;dht11_module.h: 94: void runDHT11()
-[; ;dht11_module.h: 95: {
+[; ;dht11_module.h: 90: void runDHT11()
+[; ;dht11_module.h: 91: {
 [e :U _runDHT11 ]
 [f ]
-[; ;dht11_module.h: 96: if (readDHT11(&temperature, &humidity))
+[; ;dht11_module.h: 92: if (readDHT11(&temperature, &humidity))
+"92
+[e $ ! != -> ( _readDHT11 (2 , &U _temperature &U _humidity `i -> -> -> 0 `i `uc `i 136  ]
+[; ;dht11_module.h: 93: {
+"93
+{
+[; ;dht11_module.h: 94: displayDataDHT11();
+"94
+[e ( _displayDataDHT11 ..  ]
+"95
+}
+[; ;dht11_module.h: 95: }
+[e $U 137  ]
 "96
-[e $ ! != -> ( _readDHT11 (2 , &U _temperature &U _humidity `i -> -> -> 0 `i `uc `i 128  ]
+[e :U 136 ]
+[; ;dht11_module.h: 96: else
 [; ;dht11_module.h: 97: {
 "97
 {
+[; ;dht11_module.h: 98: setCursor(0, 0);
+"98
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;dht11_module.h: 99: printToLCD("ERROR!");
 "99
-}
-[; ;dht11_module.h: 99: }
-[e $U 129  ]
-"100
-[e :U 128 ]
-[; ;dht11_module.h: 100: else
-[; ;dht11_module.h: 101: {
-"101
-{
-[; ;dht11_module.h: 102: instCTRL(0x80);
-"102
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;dht11_module.h: 103: instCTRL(0x0C);
-"103
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;dht11_module.h: 104: printToLCD("ERROR!");
-"104
 [e ( _printToLCD (1 :s 3C ]
-"105
+"100
 }
-[e :U 129 ]
-[; ;dht11_module.h: 105: }
-[; ;dht11_module.h: 106: _delay((unsigned long)((500)*(4000000/4000.0)));
-"106
+[e :U 137 ]
+[; ;dht11_module.h: 100: }
+[; ;dht11_module.h: 101: _delay((unsigned long)((500)*(4000000/4000.0)));
+"101
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;dht11_module.h: 107: }
-"107
-[e :UE 127 ]
+[; ;dht11_module.h: 102: }
+"102
+[e :UE 135 ]
 }
-"109
+"104
 [v _activateHumidifier `(v ~T0 @X0 1 ef ]
-"110
+"105
 {
-[; ;dht11_module.h: 109: void activateHumidifier()
-[; ;dht11_module.h: 110: {
+[; ;dht11_module.h: 104: void activateHumidifier()
+[; ;dht11_module.h: 105: {
 [e :U _activateHumidifier ]
 [f ]
-[; ;dht11_module.h: 111: if (humidity > 50 && temperature > 25)
-"111
-[e $ ! && > -> _humidity `i -> 50 `i > -> _temperature `i -> 25 `i 131  ]
-[; ;dht11_module.h: 112: {
-"112
+[; ;dht11_module.h: 106: if (humidity > 50 && temperature > 25)
+"106
+[e $ ! && > -> _humidity `i -> 50 `i > -> _temperature `i -> 25 `i 139  ]
+[; ;dht11_module.h: 107: {
+"107
 {
-[; ;dht11_module.h: 113: PORTCbits.RC3 = 0;
-"113
+[; ;dht11_module.h: 108: PORTCbits.RC3 = 0;
+"108
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-"114
+"109
 }
-[; ;dht11_module.h: 114: }
-[e $U 132  ]
-"115
-[e :U 131 ]
-[; ;dht11_module.h: 115: else
-[; ;dht11_module.h: 116: {
-"116
+[; ;dht11_module.h: 109: }
+[e $U 140  ]
+"110
+[e :U 139 ]
+[; ;dht11_module.h: 110: else
+[; ;dht11_module.h: 111: {
+"111
 {
-[; ;dht11_module.h: 117: PORTCbits.RC3 = 1;
-"117
+[; ;dht11_module.h: 112: PORTCbits.RC3 = 1;
+"112
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-"118
+"113
 }
-[e :U 132 ]
-[; ;dht11_module.h: 118: }
-[; ;dht11_module.h: 119: }
-"119
-[e :UE 130 ]
+[e :U 140 ]
+[; ;dht11_module.h: 113: }
+[; ;dht11_module.h: 114: }
+"114
+[e :UE 138 ]
 }
 "21 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\mq135_module.h
 [v _PPM `Vf ~T0 @X0 1 e ]
@@ -1706,7 +1811,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _PPM ( _CalcMQ135 (1 ( _readADC (1 -> -> 0 `i `uc ]
 [; ;mq135_module.h: 35: }
 "35
-[e :UE 133 ]
+[e :UE 141 ]
 }
 "37
 [v _displayPPM `(v ~T0 @X0 1 ef ]
@@ -1742,11 +1847,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U ++ _bufPtr * -> -> 1 `i `x -> -> # *U _bufPtr `i `x -> -> 46 `ui `uc ]
 [; ;mq135_module.h: 48: if (ppmFraction < 10)
 "48
-[e $ ! < _ppmFraction -> 10 `i 135  ]
+[e $ ! < _ppmFraction -> 10 `i 143  ]
 [; ;mq135_module.h: 49: *bufPtr++ = '0';
 "49
 [e = *U ++ _bufPtr * -> -> 1 `i `x -> -> # *U _bufPtr `i `x -> -> 48 `ui `uc ]
-[e :U 135 ]
+[e :U 143 ]
 [; ;mq135_module.h: 50: sprintf(bufPtr, "%d ppm  ", ppmFraction);
 "50
 [e ( _sprintf (1 , (. , _bufPtr :s 6C _ppmFraction ]
@@ -1755,7 +1860,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printToLCD (1 -> &U _strBuffer `*Cuc ]
 [; ;mq135_module.h: 52: }
 "52
-[e :UE 134 ]
+[e :UE 142 ]
 }
 "54
 [v _handlePPM `(uc ~T0 @X0 1 ef ]
@@ -1767,7 +1872,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;mq135_module.h: 56: if (PPM > 9)
 "56
-[e $ ! > _PPM -> -> 9 `i `f 137  ]
+[e $ ! > _PPM -> -> 9 `i `f 145  ]
 [; ;mq135_module.h: 57: {
 "57
 {
@@ -1780,13 +1885,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mq135_module.h: 60: return 1;
 "60
 [e ) -> -> 1 `i `uc ]
-[e $UE 136  ]
+[e $UE 144  ]
 "61
 }
 [; ;mq135_module.h: 61: }
-[e $U 138  ]
+[e $U 146  ]
 "62
-[e :U 137 ]
+[e :U 145 ]
 [; ;mq135_module.h: 62: else
 [; ;mq135_module.h: 63: {
 "63
@@ -1800,14 +1905,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mq135_module.h: 66: return 0;
 "66
 [e ) -> -> 0 `i `uc ]
-[e $UE 136  ]
+[e $UE 144  ]
 "67
 }
-[e :U 138 ]
+[e :U 146 ]
 [; ;mq135_module.h: 67: }
 [; ;mq135_module.h: 68: }
 "68
-[e :UE 136 ]
+[e :UE 144 ]
 }
 "70
 [v _printStatusPPM `(v ~T0 @X0 1 ef1`uc ]
@@ -1822,7 +1927,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;mq135_module.h: 72: if (handler == 1)
 "72
-[e $ ! == -> _handler `i -> 1 `i 140  ]
+[e $ ! == -> _handler `i -> 1 `i 148  ]
 [; ;mq135_module.h: 73: {
 "73
 {
@@ -1832,11 +1937,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "75
 }
 [; ;mq135_module.h: 75: }
-[e $U 141  ]
+[e $U 149  ]
 "76
-[e :U 140 ]
+[e :U 148 ]
 [; ;mq135_module.h: 76: else if (handler == 0)
-[e $ ! == -> _handler `i -> 0 `i 142  ]
+[e $ ! == -> _handler `i -> 0 `i 150  ]
 [; ;mq135_module.h: 77: {
 "77
 {
@@ -1845,12 +1950,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printToLCD (1 :s 8C ]
 "79
 }
-[e :U 142 ]
+[e :U 150 ]
 "80
-[e :U 141 ]
+[e :U 149 ]
 [; ;mq135_module.h: 79: }
 [; ;mq135_module.h: 80: }
-[e :UE 139 ]
+[e :UE 147 ]
 }
 "93
 [v _CalcMQ135 `(f ~T0 @X0 1 ef1`i ]
@@ -1903,10 +2008,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mq135_module.h: 110: return co2;
 "110
 [e ) _co2 ]
-[e $UE 143  ]
+[e $UE 151  ]
 [; ;mq135_module.h: 111: }
 "111
-[e :UE 143 ]
+[e :UE 151 ]
 }
 "13 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\time_scheduler.h
 [v _hours `Vuc ~T0 @X0 1 e ]
@@ -1979,7 +2084,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _minutes -> -> 1 `i `uc ]
 [; ;time_scheduler.h: 38: if (minutes >= 60)
 "38
-[e $ ! >= -> _minutes `i -> 60 `i 145  ]
+[e $ ! >= -> _minutes `i -> 60 `i 153  ]
 [; ;time_scheduler.h: 39: {
 "39
 {
@@ -1991,7 +2096,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _hours -> -> 1 `i `uc ]
 [; ;time_scheduler.h: 42: if (hours >= 24)
 "42
-[e $ ! >= -> _hours `i -> 24 `i 146  ]
+[e $ ! >= -> _hours `i -> 24 `i 154  ]
 [; ;time_scheduler.h: 43: {
 "43
 {
@@ -2000,10 +2105,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _hours -> -> 0 `i `uc ]
 "45
 }
-[e :U 146 ]
+[e :U 154 ]
 "46
 }
-[e :U 145 ]
+[e :U 153 ]
 [; ;time_scheduler.h: 45: }
 [; ;time_scheduler.h: 46: }
 [; ;time_scheduler.h: 47: _delay((unsigned long)((100)*(4000000/4000.0)));
@@ -2011,7 +2116,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;time_scheduler.h: 48: }
 "48
-[e :UE 144 ]
+[e :UE 152 ]
 }
 "50
 [v _displayTime `(v ~T0 @X0 1 ef ]
@@ -2032,7 +2137,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printToLCD (1 -> &U _timeFormat `*Cuc ]
 [; ;time_scheduler.h: 55: }
 "55
-[e :UE 147 ]
+[e :UE 155 ]
 }
 "56
 [v _setHoursStart `(v ~T0 @X0 1 ef ]
@@ -2053,13 +2158,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;time_scheduler.h: 63: if (keyValid && key != lastKeyState)
 "63
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 149  ]
+[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 157  ]
 [; ;time_scheduler.h: 64: {
 "64
 {
-[; ;time_scheduler.h: 65: if (key == 0b00001100)
+[; ;time_scheduler.h: 65: if (key == 0b00000000)
 "65
-[e $ ! == -> _key `i -> 12 `i 150  ]
+[e $ ! == -> _key `i -> 0 `i 158  ]
 [; ;time_scheduler.h: 66: {
 "66
 {
@@ -2072,11 +2177,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "69
 }
 [; ;time_scheduler.h: 69: }
-[e $U 151  ]
+[e $U 159  ]
 "70
-[e :U 150 ]
-[; ;time_scheduler.h: 70: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 152  ]
+[e :U 158 ]
+[; ;time_scheduler.h: 70: else if (key == 0b00001100)
+[e $ ! == -> _key `i -> 12 `i 160  ]
 [; ;time_scheduler.h: 71: {
 "71
 {
@@ -2089,11 +2194,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "74
 }
 [; ;time_scheduler.h: 74: }
-[e $U 153  ]
+[e $U 161  ]
 "75
-[e :U 152 ]
+[e :U 160 ]
 [; ;time_scheduler.h: 75: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 154  ]
+[e $ ! == -> _key `i -> 13 `i 162  ]
 [; ;time_scheduler.h: 76: {
 "76
 {
@@ -2102,10 +2207,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _sprintf (1 , (. , &U _debugInfo :s 12C -> _savedHoursStart `i ]
 "79
 }
-[e :U 154 ]
+[e :U 162 ]
 "81
-[e :U 153 ]
-[e :U 151 ]
+[e :U 161 ]
+[e :U 159 ]
 [; ;time_scheduler.h: 79: }
 [; ;time_scheduler.h: 81: printToLCD(debugInfo);
 [e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
@@ -2114,8 +2219,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState _key ]
 [; ;time_scheduler.h: 84: while ((PORTB & 0x08) != 0)
 "84
-[e $U 155  ]
-[e :U 156 ]
+[e $U 163  ]
+[e :U 164 ]
 [; ;time_scheduler.h: 85: {
 "85
 {
@@ -2124,19 +2229,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "87
 }
-[e :U 155 ]
+[e :U 163 ]
 "84
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 156  ]
-[e :U 157 ]
+[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 164  ]
+[e :U 165 ]
 "88
 }
 [; ;time_scheduler.h: 87: }
 [; ;time_scheduler.h: 88: }
-[e $U 158  ]
+[e $U 166  ]
 "89
-[e :U 149 ]
+[e :U 157 ]
 [; ;time_scheduler.h: 89: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 159  ]
+[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 167  ]
 [; ;time_scheduler.h: 90: {
 "90
 {
@@ -2145,12 +2250,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState -> -> 255 `i `uc ]
 "92
 }
-[e :U 159 ]
+[e :U 167 ]
 "93
-[e :U 158 ]
+[e :U 166 ]
 [; ;time_scheduler.h: 92: }
 [; ;time_scheduler.h: 93: }
-[e :UE 148 ]
+[e :UE 156 ]
 }
 "95
 [v _setHoursEnd `(v ~T0 @X0 1 ef ]
@@ -2171,13 +2276,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;time_scheduler.h: 102: if (keyValid && key != lastKeyState)
 "102
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 161  ]
+[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 169  ]
 [; ;time_scheduler.h: 103: {
 "103
 {
-[; ;time_scheduler.h: 104: if (key == 0b00001100)
+[; ;time_scheduler.h: 104: if (key == 0b00000000)
 "104
-[e $ ! == -> _key `i -> 12 `i 162  ]
+[e $ ! == -> _key `i -> 0 `i 170  ]
 [; ;time_scheduler.h: 105: {
 "105
 {
@@ -2190,11 +2295,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "108
 }
 [; ;time_scheduler.h: 108: }
-[e $U 163  ]
+[e $U 171  ]
 "109
-[e :U 162 ]
-[; ;time_scheduler.h: 109: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 164  ]
+[e :U 170 ]
+[; ;time_scheduler.h: 109: else if (key == 0b00001100)
+[e $ ! == -> _key `i -> 12 `i 172  ]
 [; ;time_scheduler.h: 110: {
 "110
 {
@@ -2207,11 +2312,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "113
 }
 [; ;time_scheduler.h: 113: }
-[e $U 165  ]
+[e $U 173  ]
 "114
-[e :U 164 ]
+[e :U 172 ]
 [; ;time_scheduler.h: 114: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 166  ]
+[e $ ! == -> _key `i -> 13 `i 174  ]
 [; ;time_scheduler.h: 115: {
 "115
 {
@@ -2220,10 +2325,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _sprintf (1 , (. , &U _debugInfo :s 15C -> _savedHoursEnd `i ]
 "117
 }
-[e :U 166 ]
+[e :U 174 ]
 "119
-[e :U 165 ]
-[e :U 163 ]
+[e :U 173 ]
+[e :U 171 ]
 [; ;time_scheduler.h: 117: }
 [; ;time_scheduler.h: 119: printToLCD(debugInfo);
 [e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
@@ -2232,8 +2337,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState _key ]
 [; ;time_scheduler.h: 122: while ((PORTB & 0x08) != 0)
 "122
-[e $U 167  ]
-[e :U 168 ]
+[e $U 175  ]
+[e :U 176 ]
 [; ;time_scheduler.h: 123: {
 "123
 {
@@ -2242,19 +2347,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "125
 }
-[e :U 167 ]
+[e :U 175 ]
 "122
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 168  ]
-[e :U 169 ]
+[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 176  ]
+[e :U 177 ]
 "126
 }
 [; ;time_scheduler.h: 125: }
 [; ;time_scheduler.h: 126: }
-[e $U 170  ]
+[e $U 178  ]
 "127
-[e :U 161 ]
+[e :U 169 ]
 [; ;time_scheduler.h: 127: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 171  ]
+[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 179  ]
 [; ;time_scheduler.h: 128: {
 "128
 {
@@ -2263,12 +2368,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState -> -> 255 `i `uc ]
 "130
 }
-[e :U 171 ]
+[e :U 179 ]
 "131
-[e :U 170 ]
+[e :U 178 ]
 [; ;time_scheduler.h: 130: }
 [; ;time_scheduler.h: 131: }
-[e :UE 160 ]
+[e :UE 168 ]
 }
 "133
 [v _setMinutesStart `(v ~T0 @X0 1 ef ]
@@ -2289,13 +2394,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;time_scheduler.h: 140: if (keyValid && key != lastKeyState)
 "140
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 173  ]
+[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 181  ]
 [; ;time_scheduler.h: 141: {
 "141
 {
-[; ;time_scheduler.h: 142: if (key == 0b00001100)
+[; ;time_scheduler.h: 142: if (key == 0b00000000)
 "142
-[e $ ! == -> _key `i -> 12 `i 174  ]
+[e $ ! == -> _key `i -> 0 `i 182  ]
 [; ;time_scheduler.h: 143: {
 "143
 {
@@ -2308,11 +2413,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "146
 }
 [; ;time_scheduler.h: 146: }
-[e $U 175  ]
+[e $U 183  ]
 "147
-[e :U 174 ]
-[; ;time_scheduler.h: 147: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 176  ]
+[e :U 182 ]
+[; ;time_scheduler.h: 147: else if (key == 0b00001100)
+[e $ ! == -> _key `i -> 12 `i 184  ]
 [; ;time_scheduler.h: 148: {
 "148
 {
@@ -2325,11 +2430,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "151
 }
 [; ;time_scheduler.h: 151: }
-[e $U 177  ]
+[e $U 185  ]
 "152
-[e :U 176 ]
+[e :U 184 ]
 [; ;time_scheduler.h: 152: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 178  ]
+[e $ ! == -> _key `i -> 13 `i 186  ]
 [; ;time_scheduler.h: 153: {
 "153
 {
@@ -2338,10 +2443,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _sprintf (1 , (. , &U _debugInfo :s 18C -> _savedMinutesStart `i ]
 "155
 }
-[e :U 178 ]
+[e :U 186 ]
 "157
-[e :U 177 ]
-[e :U 175 ]
+[e :U 185 ]
+[e :U 183 ]
 [; ;time_scheduler.h: 155: }
 [; ;time_scheduler.h: 157: printToLCD(debugInfo);
 [e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
@@ -2350,8 +2455,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState _key ]
 [; ;time_scheduler.h: 160: while ((PORTB & 0x08) != 0)
 "160
-[e $U 179  ]
-[e :U 180 ]
+[e $U 187  ]
+[e :U 188 ]
 [; ;time_scheduler.h: 161: {
 "161
 {
@@ -2360,19 +2465,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "163
 }
-[e :U 179 ]
+[e :U 187 ]
 "160
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 180  ]
-[e :U 181 ]
+[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 188  ]
+[e :U 189 ]
 "164
 }
 [; ;time_scheduler.h: 163: }
 [; ;time_scheduler.h: 164: }
-[e $U 182  ]
+[e $U 190  ]
 "165
-[e :U 173 ]
+[e :U 181 ]
 [; ;time_scheduler.h: 165: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 183  ]
+[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 191  ]
 [; ;time_scheduler.h: 166: {
 "166
 {
@@ -2381,12 +2486,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState -> -> 255 `i `uc ]
 "168
 }
-[e :U 183 ]
+[e :U 191 ]
 "169
-[e :U 182 ]
+[e :U 190 ]
 [; ;time_scheduler.h: 168: }
 [; ;time_scheduler.h: 169: }
-[e :UE 172 ]
+[e :UE 180 ]
 }
 "171
 [v _setMinutesEnd `(v ~T0 @X0 1 ef ]
@@ -2407,13 +2512,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;time_scheduler.h: 178: if (keyValid && key != lastKeyState)
 "178
-[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 185  ]
+[e $ ! && != -> _keyValid `i -> -> -> 0 `i `uc `i != -> _key `i -> _lastKeyState `i 193  ]
 [; ;time_scheduler.h: 179: {
 "179
 {
-[; ;time_scheduler.h: 180: if (key == 0b00001100)
+[; ;time_scheduler.h: 180: if (key == 0b00000000)
 "180
-[e $ ! == -> _key `i -> 12 `i 186  ]
+[e $ ! == -> _key `i -> 0 `i 194  ]
 [; ;time_scheduler.h: 181: {
 "181
 {
@@ -2426,11 +2531,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "184
 }
 [; ;time_scheduler.h: 184: }
-[e $U 187  ]
+[e $U 195  ]
 "185
-[e :U 186 ]
-[; ;time_scheduler.h: 185: else if (key == 0b00001110)
-[e $ ! == -> _key `i -> 14 `i 188  ]
+[e :U 194 ]
+[; ;time_scheduler.h: 185: else if (key == 0b00001100)
+[e $ ! == -> _key `i -> 12 `i 196  ]
 [; ;time_scheduler.h: 186: {
 "186
 {
@@ -2443,11 +2548,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "189
 }
 [; ;time_scheduler.h: 189: }
-[e $U 189  ]
+[e $U 197  ]
 "190
-[e :U 188 ]
+[e :U 196 ]
 [; ;time_scheduler.h: 190: else if (key == 0b00001101)
-[e $ ! == -> _key `i -> 13 `i 190  ]
+[e $ ! == -> _key `i -> 13 `i 198  ]
 [; ;time_scheduler.h: 191: {
 "191
 {
@@ -2456,10 +2561,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _sprintf (1 , (. , &U _debugInfo :s 21C -> _savedMinutesEnd `i ]
 "193
 }
-[e :U 190 ]
+[e :U 198 ]
 "195
-[e :U 189 ]
-[e :U 187 ]
+[e :U 197 ]
+[e :U 195 ]
 [; ;time_scheduler.h: 193: }
 [; ;time_scheduler.h: 195: printToLCD(debugInfo);
 [e ( _printToLCD (1 -> &U _debugInfo `*Cuc ]
@@ -2468,8 +2573,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState _key ]
 [; ;time_scheduler.h: 198: while ((PORTB & 0x08) != 0)
 "198
-[e $U 191  ]
-[e :U 192 ]
+[e $U 199  ]
+[e :U 200 ]
 [; ;time_scheduler.h: 199: {
 "199
 {
@@ -2478,19 +2583,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "201
 }
-[e :U 191 ]
+[e :U 199 ]
 "198
-[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 192  ]
-[e :U 193 ]
+[e $ != & -> _PORTB `i -> 8 `i -> 0 `i 200  ]
+[e :U 201 ]
 "202
 }
 [; ;time_scheduler.h: 201: }
 [; ;time_scheduler.h: 202: }
-[e $U 194  ]
+[e $U 202  ]
 "203
-[e :U 185 ]
+[e :U 193 ]
 [; ;time_scheduler.h: 203: else if (!keyValid)
-[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 195  ]
+[e $ ! ! != -> _keyValid `i -> -> -> 0 `i `uc `i 203  ]
 [; ;time_scheduler.h: 204: {
 "204
 {
@@ -2499,12 +2604,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _lastKeyState -> -> 255 `i `uc ]
 "206
 }
-[e :U 195 ]
+[e :U 203 ]
 "207
-[e :U 194 ]
+[e :U 202 ]
 [; ;time_scheduler.h: 206: }
 [; ;time_scheduler.h: 207: }
-[e :UE 184 ]
+[e :UE 192 ]
 }
 "209
 [v _checkTime `(v ~T0 @X0 1 ef ]
@@ -2516,7 +2621,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;time_scheduler.h: 211: if (hours == savedHoursEnd && minutes == savedMinutesEnd)
 "211
-[e $ ! && == -> _hours `i -> _savedHoursEnd `i == -> _minutes `i -> _savedMinutesEnd `i 197  ]
+[e $ ! && == -> _hours `i -> _savedHoursEnd `i == -> _minutes `i -> _savedMinutesEnd `i 205  ]
 [; ;time_scheduler.h: 212: {
 "212
 {
@@ -2526,18 +2631,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 "214
 }
 [; ;time_scheduler.h: 214: }
-[e $U 198  ]
+[e $U 206  ]
 "215
-[e :U 197 ]
+[e :U 205 ]
 [; ;time_scheduler.h: 215: else if (savedHoursEnd > savedHoursStart)
-[e $ ! > -> _savedHoursEnd `i -> _savedHoursStart `i 199  ]
+[e $ ! > -> _savedHoursEnd `i -> _savedHoursStart `i 207  ]
 [; ;time_scheduler.h: 216: {
 "216
 {
 [; ;time_scheduler.h: 218: if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) &&
 [; ;time_scheduler.h: 219: (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
 "219
-[e $ ! && || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 200  ]
+[e $ ! && || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 208  ]
 [; ;time_scheduler.h: 220: {
 "220
 {
@@ -2547,9 +2652,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "222
 }
 [; ;time_scheduler.h: 222: }
-[e $U 201  ]
+[e $U 209  ]
 "223
-[e :U 200 ]
+[e :U 208 ]
 [; ;time_scheduler.h: 223: else
 [; ;time_scheduler.h: 224: {
 "224
@@ -2559,23 +2664,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "226
 }
-[e :U 201 ]
+[e :U 209 ]
 "227
 }
 [; ;time_scheduler.h: 226: }
 [; ;time_scheduler.h: 227: }
-[e $U 202  ]
+[e $U 210  ]
 "228
-[e :U 199 ]
+[e :U 207 ]
 [; ;time_scheduler.h: 228: else if (savedHoursEnd < savedHoursStart)
-[e $ ! < -> _savedHoursEnd `i -> _savedHoursStart `i 203  ]
+[e $ ! < -> _savedHoursEnd `i -> _savedHoursStart `i 211  ]
 [; ;time_scheduler.h: 229: {
 "229
 {
 [; ;time_scheduler.h: 231: if ((hours > savedHoursStart || (hours == savedHoursStart && minutes >= savedMinutesStart)) ||
 [; ;time_scheduler.h: 232: (hours < savedHoursEnd || (hours == savedHoursEnd && minutes < savedMinutesEnd)))
 "232
-[e $ ! || || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 204  ]
+[e $ ! || || > -> _hours `i -> _savedHoursStart `i && == -> _hours `i -> _savedHoursStart `i >= -> _minutes `i -> _savedMinutesStart `i || < -> _hours `i -> _savedHoursEnd `i && == -> _hours `i -> _savedHoursEnd `i < -> _minutes `i -> _savedMinutesEnd `i 212  ]
 [; ;time_scheduler.h: 233: {
 "233
 {
@@ -2585,9 +2690,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "235
 }
 [; ;time_scheduler.h: 235: }
-[e $U 205  ]
+[e $U 213  ]
 "236
-[e :U 204 ]
+[e :U 212 ]
 [; ;time_scheduler.h: 236: else
 [; ;time_scheduler.h: 237: {
 "237
@@ -2597,21 +2702,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "239
 }
-[e :U 205 ]
+[e :U 213 ]
 "240
 }
 [; ;time_scheduler.h: 239: }
 [; ;time_scheduler.h: 240: }
-[e $U 206  ]
+[e $U 214  ]
 "241
-[e :U 203 ]
+[e :U 211 ]
 [; ;time_scheduler.h: 241: else
 [; ;time_scheduler.h: 242: {
 "242
 {
 [; ;time_scheduler.h: 243: if (minutes >= savedMinutesStart && minutes < savedMinutesEnd)
 "243
-[e $ ! && >= -> _minutes `i -> _savedMinutesStart `i < -> _minutes `i -> _savedMinutesEnd `i 207  ]
+[e $ ! && >= -> _minutes `i -> _savedMinutesStart `i < -> _minutes `i -> _savedMinutesEnd `i 215  ]
 [; ;time_scheduler.h: 244: {
 "244
 {
@@ -2621,9 +2726,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "246
 }
 [; ;time_scheduler.h: 246: }
-[e $U 208  ]
+[e $U 216  ]
 "247
-[e :U 207 ]
+[e :U 215 ]
 [; ;time_scheduler.h: 247: else
 [; ;time_scheduler.h: 248: {
 "248
@@ -2633,17 +2738,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "250
 }
-[e :U 208 ]
+[e :U 216 ]
 "251
 }
+[e :U 214 ]
+[e :U 210 ]
 [e :U 206 ]
-[e :U 202 ]
-[e :U 198 ]
 [; ;time_scheduler.h: 250: }
 [; ;time_scheduler.h: 251: }
 [; ;time_scheduler.h: 252: }
 "252
-[e :UE 196 ]
+[e :UE 204 ]
 }
 [; ;main.c: 8: typedef enum
 [; ;main.c: 9: {
@@ -2652,15 +2757,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 12: SET_TIME_END = 2,
 [; ;main.c: 13: } MODE;
 "15 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
-[v _mode `E1294 ~T0 @X0 1 e ]
+[v _mode `E1303 ~T0 @X0 1 e ]
 [i _mode
--> . `E1294 0 `E1294
+-> . `E1303 0 `E1303
 ]
 [; ;main.c: 15: MODE mode = STAT;
 "16
-[v _lastMode `E1294 ~T0 @X0 1 e ]
+[v _lastMode `E1303 ~T0 @X0 1 e ]
 [i _lastMode
--> -U -> 1 `i `E1294
+-> -U -> 1 `i `E1303
 ]
 [; ;main.c: 16: MODE lastMode = -1;
 "17
@@ -2702,7 +2807,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _startUpSequence ..  ]
 [; ;main.c: 40: while (1)
 "40
-[e :U 211 ]
+[e :U 219 ]
 [; ;main.c: 41: {
 "41
 {
@@ -2712,487 +2817,534 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 44: PEIE = 0;
 "44
 [e = _PEIE -> -> 0 `i `b ]
-[; ;main.c: 45: runDHT11();
-"45
-[e ( _runDHT11 ..  ]
-[; ;main.c: 46: runMQ135();
+[; ;main.c: 46: if (mode == STAT && SEL == 0)
 "46
-[e ( _runMQ135 ..  ]
-[; ;main.c: 47: runClock();
+[e $ ! && == -> _mode `i -> . `E1303 0 `i == -> _SEL `i -> 0 `i 221  ]
+[; ;main.c: 47: {
 "47
-[e ( _runClock ..  ]
-[; ;main.c: 48: GIE = 1;
+{
+[; ;main.c: 48: runDHT11();
 "48
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 49: PEIE = 1;
+[e ( _runDHT11 ..  ]
 "49
-[e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 51: checkMode();
-"51
-[e ( _checkMode ..  ]
-[; ;main.c: 52: checkSEL();
-"52
-[e ( _checkSEL ..  ]
-[; ;main.c: 53: checkTime();
-"53
-[e ( _checkTime ..  ]
-[; ;main.c: 54: handlePPM();
-"54
-[e ( _handlePPM ..  ]
-[; ;main.c: 55: activateHumidifier();
-"55
-[e ( _activateHumidifier ..  ]
-[; ;main.c: 57: switch (mode)
-"57
-[e $U 214  ]
-[; ;main.c: 58: {
-"58
-{
-[; ;main.c: 59: case STAT:
-"59
-[e :U 215 ]
-[; ;main.c: 60: switch (SEL)
-"60
-[e $U 217  ]
-[; ;main.c: 61: {
-"61
-{
-[; ;main.c: 62: case 0:
-"62
-[e :U 218 ]
-[; ;main.c: 63: instCTRL(0x80);
-"63
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 64: displayDataDHT11();
-"64
-[e ( _displayDataDHT11 ..  ]
-[; ;main.c: 66: instCTRL(0x94);
-"66
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 67: displayPPM();
-"67
-[e ( _displayPPM ..  ]
-[; ;main.c: 68: break;
-"68
-[e $U 216  ]
-[; ;main.c: 69: case 1:
-"69
-[e :U 219 ]
-[; ;main.c: 70: instCTRL(0x80);
-"70
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 71: displayTime();
-"71
-[e ( _displayTime ..  ]
-[; ;main.c: 72: instCTRL(0xC0);
-"72
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 73: sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
-"73
-[e ( _sprintf (1 , , , , (. , &U _buffer :s 22C -> _savedHoursStart `i -> _savedMinutesStart `i -> _savedHoursEnd `i -> _savedMinutesEnd `i ]
-[; ;main.c: 74: printToLCD(buffer);
-"74
-[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
-[; ;main.c: 75: break;
-"75
-[e $U 216  ]
-[; ;main.c: 76: default:
-"76
-[e :U 220 ]
-[; ;main.c: 77: break;
-"77
-[e $U 216  ]
-"78
 }
-[; ;main.c: 78: }
-[e $U 216  ]
-"60
-[e :U 217 ]
-[e [\ _SEL , $ -> -> 0 `i `uc 218
- , $ -> -> 1 `i `uc 219
- 220 ]
-"78
-[e :U 216 ]
-[; ;main.c: 79: break;
-"79
-[e $U 213  ]
-[; ;main.c: 80: case SET_TIME_START:
-"80
 [e :U 221 ]
-[; ;main.c: 82: instCTRL(0x80);
-"82
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 83: printToLCD("Set SCHED - START");
-"83
-[e ( _printToLCD (1 :s 23C ]
-[; ;main.c: 84: instCTRL(0xC0);
-"84
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 85: switch (SEL)
-"85
+[; ;main.c: 49: }
+[; ;main.c: 51: runMQ135();
+"51
+[e ( _runMQ135 ..  ]
+[; ;main.c: 52: runClock();
+"52
+[e ( _runClock ..  ]
+[; ;main.c: 54: GIE = 1;
+"54
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 55: PEIE = 1;
+"55
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 57: checkMode();
+"57
+[e ( _checkMode ..  ]
+[; ;main.c: 58: checkSEL();
+"58
+[e ( _checkSEL ..  ]
+[; ;main.c: 59: checkTime();
+"59
+[e ( _checkTime ..  ]
+[; ;main.c: 60: handlePPM();
+"60
+[e ( _handlePPM ..  ]
+[; ;main.c: 61: activateHumidifier();
+"61
+[e ( _activateHumidifier ..  ]
+[; ;main.c: 63: switch (mode)
+"63
 [e $U 223  ]
-[; ;main.c: 86: {
-"86
+[; ;main.c: 64: {
+"64
 {
-[; ;main.c: 87: case 0:
-"87
+[; ;main.c: 65: case STAT:
+"65
 [e :U 224 ]
-[; ;main.c: 88: printToLCD("START HOURS");
-"88
-[e ( _printToLCD (1 :s 24C ]
-[; ;main.c: 89: instCTRL(0x94);
-"89
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 90: setHoursStart();
-"90
-[e ( _setHoursStart ..  ]
-[; ;main.c: 91: break;
-"91
-[e $U 222  ]
-[; ;main.c: 92: case 1:
-"92
-[e :U 225 ]
-[; ;main.c: 93: printToLCD("START MINS");
-"93
-[e ( _printToLCD (1 :s 25C ]
-[; ;main.c: 94: instCTRL(0x94);
-"94
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 95: setMinutesStart();
-"95
-[e ( _setMinutesStart ..  ]
-[; ;main.c: 96: break;
-"96
-[e $U 222  ]
-[; ;main.c: 97: default:
-"97
+[; ;main.c: 66: switch (SEL)
+"66
+[e $U 226  ]
+[; ;main.c: 67: {
+"67
+{
+[; ;main.c: 68: case 0:
+"68
+[e :U 227 ]
+[; ;main.c: 69: setCursor(0, 0);
+"69
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 70: displayDataDHT11();
+"70
+[e ( _displayDataDHT11 ..  ]
+[; ;main.c: 71: setCursor(2, 0);
+"71
+[e ( _setCursor (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 72: displayPPM();
+"72
+[e ( _displayPPM ..  ]
+[; ;main.c: 73: break;
+"73
+[e $U 225  ]
+[; ;main.c: 74: case 1:
+"74
+[e :U 228 ]
+[; ;main.c: 75: setCursor(0, 0);
+"75
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 76: displayTime();
+"76
+[e ( _displayTime ..  ]
+[; ;main.c: 77: setCursor(1, 0);
+"77
+[e ( _setCursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 78: sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
+"78
+[e ( _sprintf (1 , , , , (. , &U _buffer :s 22C -> _savedHoursStart `i -> _savedMinutesStart `i -> _savedHoursEnd `i -> _savedMinutesEnd `i ]
+[; ;main.c: 79: printToLCD(buffer);
+"79
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 80: break;
+"80
+[e $U 225  ]
+[; ;main.c: 81: default:
+"81
+[e :U 229 ]
+[; ;main.c: 82: break;
+"82
+[e $U 225  ]
+"83
+}
+[; ;main.c: 83: }
+[e $U 225  ]
+"66
 [e :U 226 ]
+[e [\ _SEL , $ -> -> 0 `i `uc 227
+ , $ -> -> 1 `i `uc 228
+ 229 ]
+"83
+[e :U 225 ]
+[; ;main.c: 84: break;
+"84
+[e $U 222  ]
+[; ;main.c: 85: case SET_TIME_START:
+"85
+[e :U 230 ]
+[; ;main.c: 86: setCursor(0, 0);
+"86
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 87: printToLCD("Set SCHED - START");
+"87
+[e ( _printToLCD (1 :s 23C ]
+[; ;main.c: 88: setCursor(1, 0);
+"88
+[e ( _setCursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 89: switch (SEL)
+"89
+[e $U 232  ]
+[; ;main.c: 90: {
+"90
+{
+[; ;main.c: 91: case 0:
+"91
+[e :U 233 ]
+[; ;main.c: 92: printToLCD("START HOURS");
+"92
+[e ( _printToLCD (1 :s 24C ]
+[; ;main.c: 93: setCursor(3, 0);
+"93
+[e ( _setCursor (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 94: sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+"94
+[e ( _sprintf (1 , , (. , &U _buffer :s 25C -> _savedHoursStart `i -> _savedMinutesStart `i ]
+[; ;main.c: 95: printToLCD(buffer);
+"95
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 96: setCursor(2, 0);
+"96
+[e ( _setCursor (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 97: setHoursStart();
+"97
+[e ( _setHoursStart ..  ]
 [; ;main.c: 98: break;
 "98
-[e $U 222  ]
+[e $U 231  ]
+[; ;main.c: 99: case 1:
 "99
-}
-[; ;main.c: 99: }
-[e $U 222  ]
-"85
-[e :U 223 ]
-[e [\ _SEL , $ -> -> 0 `i `uc 224
- , $ -> -> 1 `i `uc 225
- 226 ]
-"99
-[e :U 222 ]
-[; ;main.c: 100: break;
+[e :U 234 ]
+[; ;main.c: 100: printToLCD("START MINS");
 "100
-[e $U 213  ]
-[; ;main.c: 101: case SET_TIME_END:
-"101
-[e :U 227 ]
-[; ;main.c: 103: instCTRL(0x80);
-"103
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 104: printToLCD("Set SCHED - END");
-"104
 [e ( _printToLCD (1 :s 26C ]
-[; ;main.c: 105: instCTRL(0xC0);
+[; ;main.c: 101: setCursor(3, 0);
+"101
+[e ( _setCursor (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 102: sprintf(buffer, "START: %02d:%02d", savedHoursStart, savedMinutesStart);
+"102
+[e ( _sprintf (1 , , (. , &U _buffer :s 27C -> _savedHoursStart `i -> _savedMinutesStart `i ]
+[; ;main.c: 103: printToLCD(buffer);
+"103
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 104: setCursor(2, 0);
+"104
+[e ( _setCursor (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 105: setMinutesStart();
 "105
-[e ( _instCTRL (1 -> -> 192 `i `uc ]
-[; ;main.c: 106: switch (SEL)
+[e ( _setMinutesStart ..  ]
+[; ;main.c: 106: break;
 "106
-[e $U 229  ]
-[; ;main.c: 107: {
+[e $U 231  ]
+[; ;main.c: 107: default:
 "107
-{
-[; ;main.c: 108: case 0:
+[e :U 235 ]
+[; ;main.c: 108: break;
 "108
-[e :U 230 ]
-[; ;main.c: 109: printToLCD("END HOURS");
+[e $U 231  ]
 "109
-[e ( _printToLCD (1 :s 27C ]
-[; ;main.c: 110: instCTRL(0x94);
-"110
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 111: setHoursEnd();
-"111
-[e ( _setHoursEnd ..  ]
-[; ;main.c: 112: break;
-"112
-[e $U 228  ]
-[; ;main.c: 113: case 1:
-"113
-[e :U 231 ]
-[; ;main.c: 114: printToLCD("END MINS");
-"114
-[e ( _printToLCD (1 :s 28C ]
-[; ;main.c: 115: instCTRL(0x94);
-"115
-[e ( _instCTRL (1 -> -> 148 `i `uc ]
-[; ;main.c: 116: setMinutesEnd();
-"116
-[e ( _setMinutesEnd ..  ]
-[; ;main.c: 117: break;
-"117
-[e $U 228  ]
-[; ;main.c: 118: default:
-"118
+}
+[; ;main.c: 109: }
+[e $U 231  ]
+"89
 [e :U 232 ]
-[; ;main.c: 119: break;
+[e [\ _SEL , $ -> -> 0 `i `uc 233
+ , $ -> -> 1 `i `uc 234
+ 235 ]
+"109
+[e :U 231 ]
+[; ;main.c: 110: break;
+"110
+[e $U 222  ]
+[; ;main.c: 111: case SET_TIME_END:
+"111
+[e :U 236 ]
+[; ;main.c: 112: setCursor(0, 0);
+"112
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 113: printToLCD("Set SCHED - END");
+"113
+[e ( _printToLCD (1 :s 28C ]
+[; ;main.c: 114: setCursor(1, 0);
+"114
+[e ( _setCursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 115: switch (SEL)
+"115
+[e $U 238  ]
+[; ;main.c: 116: {
+"116
+{
+[; ;main.c: 117: case 0:
+"117
+[e :U 239 ]
+[; ;main.c: 118: printToLCD("END HOURS");
+"118
+[e ( _printToLCD (1 :s 29C ]
+[; ;main.c: 119: setCursor(3, 0);
 "119
-[e $U 228  ]
+[e ( _setCursor (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 120: sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
 "120
-}
-[; ;main.c: 120: }
-[e $U 228  ]
-"106
-[e :U 229 ]
-[e [\ _SEL , $ -> -> 0 `i `uc 230
- , $ -> -> 1 `i `uc 231
- 232 ]
-"120
-[e :U 228 ]
-[; ;main.c: 121: break;
+[e ( _sprintf (1 , , (. , &U _buffer :s 30C -> _savedHoursEnd `i -> _savedMinutesEnd `i ]
+[; ;main.c: 121: printToLCD(buffer);
 "121
-[e $U 213  ]
-[; ;main.c: 122: default:
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 122: setCursor(2, 0);
 "122
-[e :U 233 ]
-[; ;main.c: 123: break;
+[e ( _setCursor (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 123: setHoursEnd();
 "123
-[e $U 213  ]
+[e ( _setHoursEnd ..  ]
+[; ;main.c: 124: break;
 "124
-}
-[; ;main.c: 124: }
-[e $U 213  ]
-"57
-[e :U 214 ]
-[e [\ _mode , $ -> . `E1294 0 `E1294 215
- , $ -> . `E1294 1 `E1294 221
- , $ -> . `E1294 2 `E1294 227
- 233 ]
-"124
-[e :U 213 ]
+[e $U 237  ]
+[; ;main.c: 125: case 1:
 "125
-}
-[e :U 210 ]
-"40
-[e $U 211  ]
-[e :U 212 ]
-[; ;main.c: 125: }
-[; ;main.c: 126: }
+[e :U 240 ]
+[; ;main.c: 126: printToLCD("END MINS");
 "126
-[e :UE 209 ]
-}
-[v F1304 `(v ~T0 @X0 1 tf ]
+[e ( _printToLCD (1 :s 31C ]
+[; ;main.c: 127: setCursor(3, 0);
+"127
+[e ( _setCursor (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 128: sprintf(buffer, "END: %02d:%02d", savedHoursEnd, savedMinutesEnd);
+"128
+[e ( _sprintf (1 , , (. , &U _buffer :s 32C -> _savedHoursEnd `i -> _savedMinutesEnd `i ]
+[; ;main.c: 129: printToLCD(buffer);
 "129
-[v _ISR `IF1304 ~T0 @X0 1 e ]
+[e ( _printToLCD (1 -> &U _buffer `*Cuc ]
+[; ;main.c: 130: setCursor(2, 0);
 "130
-{
-[; ;main.c: 129: void interrupt ISR(void)
-[; ;main.c: 130: {
-[e :U _ISR ]
-[f ]
-[; ;main.c: 131: if (INTF)
+[e ( _setCursor (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 131: setMinutesEnd();
 "131
-[e $ ! _INTF 235  ]
-[; ;main.c: 132: {
+[e ( _setMinutesEnd ..  ]
+[; ;main.c: 132: break;
 "132
-{
-[; ;main.c: 133: INTF = 0;
+[e $U 237  ]
+[; ;main.c: 133: default:
 "133
-[e = _INTF -> -> 0 `i `b ]
-[; ;main.c: 134: mode = (mode + 1) % 3;
+[e :U 241 ]
+[; ;main.c: 134: break;
 "134
-[e = _mode -> % + -> _mode `i -> 1 `i -> 3 `i `E1294 ]
+[e $U 237  ]
 "135
 }
-[e :U 235 ]
 [; ;main.c: 135: }
-[; ;main.c: 136: }
+[e $U 237  ]
+"115
+[e :U 238 ]
+[e [\ _SEL , $ -> -> 0 `i `uc 239
+ , $ -> -> 1 `i `uc 240
+ 241 ]
+"135
+[e :U 237 ]
+[; ;main.c: 136: break;
 "136
-[e :UE 234 ]
-}
+[e $U 222  ]
+[; ;main.c: 137: default:
+"137
+[e :U 242 ]
+[; ;main.c: 138: break;
 "138
-[v _initPorts `(v ~T0 @X0 1 ef ]
+[e $U 222  ]
 "139
+}
+[; ;main.c: 139: }
+[e $U 222  ]
+"63
+[e :U 223 ]
+[e [\ _mode , $ -> . `E1303 0 `E1303 224
+ , $ -> . `E1303 1 `E1303 230
+ , $ -> . `E1303 2 `E1303 236
+ 242 ]
+"139
+[e :U 222 ]
+"140
+}
+[e :U 218 ]
+"40
+[e $U 219  ]
+[e :U 220 ]
+[; ;main.c: 140: }
+[; ;main.c: 141: }
+"141
+[e :UE 217 ]
+}
+[v F1313 `(v ~T0 @X0 1 tf ]
+"144
+[v _ISR `IF1313 ~T0 @X0 1 e ]
+"145
 {
-[; ;main.c: 138: void initPorts(void)
-[; ;main.c: 139: {
+[; ;main.c: 144: void interrupt ISR(void)
+[; ;main.c: 145: {
+[e :U _ISR ]
+[f ]
+[; ;main.c: 146: if (INTF)
+"146
+[e $ ! _INTF 244  ]
+[; ;main.c: 147: {
+"147
+{
+[; ;main.c: 148: INTF = 0;
+"148
+[e = _INTF -> -> 0 `i `b ]
+[; ;main.c: 149: mode = (mode + 1) % 3;
+"149
+[e = _mode -> % + -> _mode `i -> 1 `i -> 3 `i `E1303 ]
+"150
+}
+[e :U 244 ]
+[; ;main.c: 150: }
+[; ;main.c: 151: }
+"151
+[e :UE 243 ]
+}
+"153
+[v _initPorts `(v ~T0 @X0 1 ef ]
+"154
+{
+[; ;main.c: 153: void initPorts(void)
+[; ;main.c: 154: {
 [e :U _initPorts ]
 [f ]
-[; ;main.c: 140: TRISA = 0xFF;
-"140
+[; ;main.c: 155: TRISA = 0xFF;
+"155
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 141: TRISB = 0xFF;
-"141
+[; ;main.c: 156: TRISB = 0xFF;
+"156
 [e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 142: TRISC = 0x00;
-"142
+[; ;main.c: 157: TRISC = 0x00;
+"157
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 143: PORTC = 0b00111000;
-"143
+[; ;main.c: 158: PORTC = 0b00111000;
+"158
 [e = _PORTC -> -> 56 `i `uc ]
-[; ;main.c: 144: TRISD = 0x00;
-"144
+[; ;main.c: 159: TRISD = 0x00;
+"159
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 145: }
-"145
-[e :UE 236 ]
+[; ;main.c: 160: }
+"160
+[e :UE 245 ]
 }
-"147
+"162
 [v _initRegisters `(v ~T0 @X0 1 ef ]
-"148
+"163
 {
-[; ;main.c: 147: void initRegisters(void)
-[; ;main.c: 148: {
+[; ;main.c: 162: void initRegisters(void)
+[; ;main.c: 163: {
 [e :U _initRegisters ]
 [f ]
-[; ;main.c: 150: ADCON1 = 0x80;
-"150
+[; ;main.c: 165: ADCON1 = 0x80;
+"165
 [e = _ADCON1 -> -> 128 `i `uc ]
-[; ;main.c: 151: ADCON0 = 0x01;
-"151
+[; ;main.c: 166: ADCON0 = 0x01;
+"166
 [e = _ADCON0 -> -> 1 `i `uc ]
-[; ;main.c: 152: }
-"152
-[e :UE 237 ]
+[; ;main.c: 167: }
+"167
+[e :UE 246 ]
 }
-"154
+"169
 [v _initInterrupts `(v ~T0 @X0 1 ef ]
-"155
+"170
 {
-[; ;main.c: 154: void initInterrupts(void)
-[; ;main.c: 155: {
+[; ;main.c: 169: void initInterrupts(void)
+[; ;main.c: 170: {
 [e :U _initInterrupts ]
 [f ]
-[; ;main.c: 156: INTE = 1;
-"156
+[; ;main.c: 171: INTE = 1;
+"171
 [e = _INTE -> -> 1 `i `b ]
-[; ;main.c: 157: INTF = 0;
-"157
+[; ;main.c: 172: INTF = 0;
+"172
 [e = _INTF -> -> 0 `i `b ]
-[; ;main.c: 158: INTEDG = 1;
-"158
+[; ;main.c: 173: INTEDG = 1;
+"173
 [e = _INTEDG -> -> 1 `i `b ]
-[; ;main.c: 159: GIE = 1;
-"159
+[; ;main.c: 174: GIE = 1;
+"174
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 160: PEIE = 1;
-"160
+[; ;main.c: 175: PEIE = 1;
+"175
 [e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 161: }
-"161
-[e :UE 238 ]
+[; ;main.c: 176: }
+"176
+[e :UE 247 ]
 }
-"163
+"178
 [v _startUpSequence `(v ~T0 @X0 1 ef ]
-"164
+"179
 {
-[; ;main.c: 163: void startUpSequence(void)
-[; ;main.c: 164: {
+[; ;main.c: 178: void startUpSequence(void)
+[; ;main.c: 179: {
 [e :U _startUpSequence ]
 [f ]
-[; ;main.c: 166: initLCD();
-"166
-[e ( _initLCD ..  ]
-[; ;main.c: 167: _delay((unsigned long)((500)*(4000000/4000.0)));
-"167
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 168: instCTRL(0x80);
-"168
-[e ( _instCTRL (1 -> -> 128 `i `uc ]
-[; ;main.c: 169: instCTRL(0x0C);
-"169
-[e ( _instCTRL (1 -> -> 12 `i `uc ]
-[; ;main.c: 170: printToLCD("Initializing...");
-"170
-[e ( _printToLCD (1 :s 29C ]
-[; ;main.c: 172: initDHT11();
-"172
-[e ( _initDHT11 ..  ]
-[; ;main.c: 173: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"173
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 174: instCTRL(0x01);
-"174
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;main.c: 175: }
-"175
-[e :UE 239 ]
-}
-"177
-[v _checkMode `(v ~T0 @X0 1 ef ]
-"178
-{
-[; ;main.c: 177: void checkMode(void)
-[; ;main.c: 178: {
-[e :U _checkMode ]
-[f ]
-[; ;main.c: 179: if (lastMode != mode)
-"179
-[e $ ! != -> _lastMode `i -> _mode `i 241  ]
-[; ;main.c: 180: {
-"180
-{
-[; ;main.c: 181: instCTRL(0x01);
+[; ;main.c: 181: initLCD();
 "181
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
-[; ;main.c: 182: _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( _initLCD ..  ]
+[; ;main.c: 182: _delay((unsigned long)((500)*(4000000/4000.0)));
 "182
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 183: lastMode = mode;
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 183: setCursor(0, 0);
 "183
-[e = _lastMode _mode ]
+[e ( _setCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 184: printToLCD("Initializing...");
 "184
-}
-[e :U 241 ]
-[; ;main.c: 184: }
-[; ;main.c: 185: }
-"185
-[e :UE 240 ]
-}
+[e ( _printToLCD (1 :s 33C ]
+[; ;main.c: 186: initDHT11();
+"186
+[e ( _initDHT11 ..  ]
+[; ;main.c: 187: _delay((unsigned long)((2000)*(4000000/4000.0)));
 "187
-[v _checkSEL `(v ~T0 @X0 1 ef ]
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 188: instCTRL(0x01);
 "188
-{
-[; ;main.c: 187: void checkSEL(void)
-[; ;main.c: 188: {
-[e :U _checkSEL ]
-[f ]
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+[; ;main.c: 189: }
 "189
-[v F1333 `i ~T0 @X0 1 s lastRB1State ]
-[i F1333
--> 0 `i
-]
-"190
-[v _currentRB1State `i ~T0 @X0 1 a ]
-[; ;main.c: 189: static int lastRB1State = 0;
-[; ;main.c: 190: int currentRB1State = RB1;
-[e = _currentRB1State -> _RB1 `i ]
-[; ;main.c: 191: if (currentRB1State == 1 && lastRB1State == 0)
+[e :UE 248 ]
+}
 "191
-[e $ ! && == _currentRB1State -> 1 `i == F1333 -> 0 `i 243  ]
-[; ;main.c: 192: {
+[v _checkMode `(v ~T0 @X0 1 ef ]
 "192
 {
-[; ;main.c: 193: SEL ^= 1;
+[; ;main.c: 191: void checkMode(void)
+[; ;main.c: 192: {
+[e :U _checkMode ]
+[f ]
+[; ;main.c: 193: if (lastMode != mode)
 "193
-[e =^ _SEL -> -> 1 `i `uc ]
-[; ;main.c: 194: instCTRL(0x01);
+[e $ ! != -> _lastMode `i -> _mode `i 250  ]
+[; ;main.c: 194: {
 "194
-[e ( _instCTRL (1 -> -> 1 `i `uc ]
+{
+[; ;main.c: 195: instCTRL(0x01);
 "195
-}
-[e :U 243 ]
-[; ;main.c: 195: }
-[; ;main.c: 196: lastRB1State = currentRB1State;
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+[; ;main.c: 196: _delay((unsigned long)((50)*(4000000/4000.0)));
 "196
-[e = F1333 _currentRB1State ]
-[; ;main.c: 197: }
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 197: lastMode = mode;
 "197
-[e :UE 242 ]
+[e = _lastMode _mode ]
+"198
 }
-[p f _sprintf 9470084 ]
+[e :U 250 ]
+[; ;main.c: 198: }
+[; ;main.c: 199: }
+"199
+[e :UE 249 ]
+}
+"201
+[v _checkSEL `(v ~T0 @X0 1 ef ]
+"202
+{
+[; ;main.c: 201: void checkSEL(void)
+[; ;main.c: 202: {
+[e :U _checkSEL ]
+[f ]
+"203
+[v F1342 `i ~T0 @X0 1 s lastRB1State ]
+[i F1342
+-> 0 `i
+]
+"204
+[v _currentRB1State `i ~T0 @X0 1 a ]
+[; ;main.c: 203: static int lastRB1State = 0;
+[; ;main.c: 204: int currentRB1State = RB1;
+[e = _currentRB1State -> _RB1 `i ]
+[; ;main.c: 205: if (currentRB1State == 1 && lastRB1State == 0)
+"205
+[e $ ! && == _currentRB1State -> 1 `i == F1342 -> 0 `i 252  ]
+[; ;main.c: 206: {
+"206
+{
+[; ;main.c: 207: SEL ^= 1;
+"207
+[e =^ _SEL -> -> 1 `i `uc ]
+[; ;main.c: 208: instCTRL(0x01);
+"208
+[e ( _instCTRL (1 -> -> 1 `i `uc ]
+"209
+}
+[e :U 252 ]
+[; ;main.c: 209: }
+[; ;main.c: 210: lastRB1State = currentRB1State;
+"210
+[e = F1342 _currentRB1State ]
+[; ;main.c: 211: }
+"211
+[e :UE 251 ]
+}
+[p f _sprintf 8421508 ]
 [a 22C 82 85 78 58 32 37 48 50 100 58 37 48 50 100 45 37 48 50 100 58 37 48 50 100 0 ]
 [a 9C 84 105 109 101 58 32 37 48 50 100 58 37 48 50 100 0 ]
+[a 25C 83 84 65 82 84 58 32 37 48 50 100 58 37 48 50 100 0 ]
+[a 27C 83 84 65 82 84 58 32 37 48 50 100 58 37 48 50 100 0 ]
+[a 30C 69 78 68 58 32 37 48 50 100 58 37 48 50 100 0 ]
+[a 32C 69 78 68 58 32 37 48 50 100 58 37 48 50 100 0 ]
 [a 12C 83 69 84 58 32 37 48 50 100 0 ]
 [a 15C 83 69 84 58 32 37 48 50 100 0 ]
 [a 18C 83 69 84 58 32 37 48 50 100 0 ]
@@ -3205,18 +3357,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 14C 68 69 67 58 32 37 48 50 100 0 ]
 [a 17C 68 69 67 58 32 37 48 50 100 0 ]
 [a 20C 68 69 67 58 32 37 48 50 100 0 ]
+[a 2C 72 77 68 84 58 32 37 100 0 ]
 [a 5C 37 100 0 ]
 [a 23C 83 101 116 32 83 67 72 69 68 32 45 32 83 84 65 82 84 0 ]
 [a 24C 83 84 65 82 84 32 72 79 85 82 83 0 ]
-[a 27C 69 78 68 32 72 79 85 82 83 0 ]
-[a 25C 83 84 65 82 84 32 77 73 78 83 0 ]
-[a 28C 69 78 68 32 77 73 78 83 0 ]
+[a 29C 69 78 68 32 72 79 85 82 83 0 ]
+[a 26C 83 84 65 82 84 32 77 73 78 83 0 ]
+[a 31C 69 78 68 32 77 73 78 83 0 ]
 [a 8C 80 85 82 70 32 76 79 0 ]
 [a 7C 80 85 82 70 32 72 73 0 ]
-[a 26C 83 101 116 32 83 67 72 69 68 32 45 32 69 78 68 0 ]
+[a 28C 83 101 116 32 83 67 72 69 68 32 45 32 69 78 68 0 ]
 [a 1C 84 69 77 80 58 32 37 100 67 0 ]
-[a 29C 73 110 105 116 105 97 108 105 122 105 110 103 46 46 46 0 ]
-[a 2C 72 77 68 84 58 32 37 100 37 37 0 ]
+[a 33C 73 110 105 116 105 97 108 105 122 105 110 103 46 46 46 0 ]
 [a 3C 69 82 82 79 82 33 0 ]
 [a 4C 67 79 50 58 32 0 ]
 [a 6C 37 100 32 112 112 109 32 32 0 ]
