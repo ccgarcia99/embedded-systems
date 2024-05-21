@@ -42,17 +42,14 @@ void main(void)
         // Temporarily disable interrupts to prevent conflicts
         GIE = 0;
         PEIE = 0;
-
-        if (mode == STAT && SEL == 0)
+        if(mode == STAT)
         {
             runDHT11();
         }
-
-        runMQ135();
-        runClock();
-
         GIE = 1;
         PEIE = 1;
+        runMQ135();
+        runClock();
 
         checkMode();
         checkSEL();
@@ -63,24 +60,14 @@ void main(void)
         switch (mode)
         {
         case STAT:
-            switch (SEL)
-            {
-            case 0:
-                setCursor(0, 0);
-                displayDataDHT11();
-                setCursor(2, 0);
-                displayPPM();
-                break;
-            case 1:
-                setCursor(0, 0);
-                displayTime();
-                setCursor(1, 0);
-                sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
-                printToLCD(buffer);
-                break;
-            default:
-                break;
-            }
+            displayDataDHT11();
+            instCTRL(0xC0); // Set cursor to second line
+            displayPPM();
+            instCTRL(0x94);
+            displayTime();
+            instCTRL(0xD4);
+            sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
+            printToLCD(buffer);
             break;
         case SET_TIME_START:
             setCursor(0, 0);
@@ -147,6 +134,8 @@ void interrupt ISR(void)
     {
         INTF = 0;
         mode = (mode + 1) % 3;
+        SEL = 0;
+        __delay_ms(200);
     }
 }
 

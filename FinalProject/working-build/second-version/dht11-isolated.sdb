@@ -122,9 +122,9 @@ SET_TIME_END 2
 [v _readDHT11 readDHT11 `(uc  1 e 1 0 ]
 "77
 [v _displayDataDHT11 displayDataDHT11 `(v  1 e 0 0 ]
-"90
+"87
 [v _runDHT11 runDHT11 `(v  1 e 0 0 ]
-"104
+"101
 [v _activateHumidifier activateHumidifier `(v  1 e 0 0 ]
 "23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
@@ -138,19 +138,19 @@ SET_TIME_END 2
 [v _printToLCD printToLCD `(v  1 e 0 0 ]
 "29 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
 [v _main main `(v  1 e 0 0 ]
-"144
+"131
 [v _ISR ISR `II(v  1 e 0 0 ]
-"153
+"142
 [v _initPorts initPorts `(v  1 e 0 0 ]
-"162
+"151
 [v _initRegisters initRegisters `(v  1 e 0 0 ]
-"169
+"158
 [v _initInterrupts initInterrupts `(v  1 e 0 0 ]
-"178
+"167
 [v _startUpSequence startUpSequence `(v  1 e 0 0 ]
-"191
+"180
 [v _checkMode checkMode `(v  1 e 0 0 ]
-"201
+"190
 [v _checkSEL checkSEL `(v  1 e 0 0 ]
 "32 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\mq135_module.h
 [v _runMQ135 runMQ135 `(v  1 e 0 0 ]
@@ -291,12 +291,12 @@ SET_TIME_END 2
 {
 "31
 [v main@buffer buffer `[16]uc  1 a 16 39 ]
-"141
+"128
 } 0
-"178
+"167
 [v _startUpSequence startUpSequence `(v  1 e 0 0 ]
 {
-"189
+"178
 } 0
 "43 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
 [v _initLCD initLCD `(v  1 e 0 0 ]
@@ -390,12 +390,24 @@ SET_TIME_END 2
 [v ___ftdiv@f1 f1 `f  1 p 3 36 ]
 "78
 } 0
-"90 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
+"87 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
 [v _runDHT11 runDHT11 `(v  1 e 0 0 ]
 {
-"102
+"99
 } 0
-"28
+"59 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
+[v _setCursor setCursor `(v  1 e 0 0 ]
+{
+[v setCursor@row row `uc  1 a 1 wreg ]
+"61
+[v setCursor@address address `uc  1 a 1 5 ]
+"59
+[v setCursor@row row `uc  1 a 1 wreg ]
+[v setCursor@column column `uc  1 p 1 2 ]
+[v setCursor@row row `uc  1 a 1 4 ]
+"82
+} 0
+"28 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
 [v _readDHT11 readDHT11 `(uc  1 e 1 0 ]
 {
 "29
@@ -416,40 +428,28 @@ SET_TIME_END 2
 [v _displayDataDHT11 displayDataDHT11 `(v  1 e 0 0 ]
 {
 "79
-[v displayDataDHT11@buffer buffer `[15]uc  1 a 15 42 ]
-"88
-} 0
-"59 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
-[v _setCursor setCursor `(v  1 e 0 0 ]
-{
-[v setCursor@row row `uc  1 a 1 wreg ]
-"61
-[v setCursor@address address `uc  1 a 1 5 ]
-"59
-[v setCursor@row row `uc  1 a 1 wreg ]
-[v setCursor@column column `uc  1 p 1 2 ]
-[v setCursor@row row `uc  1 a 1 4 ]
-"82
+[v displayDataDHT11@buffer buffer `[15]uc  1 a 15 44 ]
+"85
 } 0
 "34 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\time_scheduler.h
 [v _runClock runClock `(v  1 e 0 0 ]
 {
 "48
 } 0
-"162 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
+"151 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
 [v _initRegisters initRegisters `(v  1 e 0 0 ]
 {
-"167
+"156
 } 0
-"153
+"142
 [v _initPorts initPorts `(v  1 e 0 0 ]
 {
-"160
+"149
 } 0
-"169
+"158
 [v _initInterrupts initInterrupts `(v  1 e 0 0 ]
 {
-"176
+"165
 } 0
 "54 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\mq135_module.h
 [v _handlePPM handlePPM `(uc  1 e 1 0 ]
@@ -487,10 +487,10 @@ SET_TIME_END 2
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[s S332 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+[s S331 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
 "533
-[u S335 . 4 `ui 1 _val 2 0 `S332 1 _str 4 0 ]
-[v sprintf@_val _val `S335  1 a 4 31 ]
+[u S334 . 4 `ui 1 _val 2 0 `S331 1 _str 4 0 ]
+[v sprintf@_val _val `S334  1 a 4 31 ]
 "501
 [v sprintf@width width `i  1 a 2 36 ]
 "510
@@ -632,19 +632,19 @@ SET_TIME_END 2
 {
 "252
 } 0
-"201 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
+"190 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
 [v _checkSEL checkSEL `(v  1 e 0 0 ]
 {
-"204
+"193
 [v checkSEL@currentRB1State currentRB1State `i  1 a 2 4 ]
-"203
+"192
 [v checkSEL@lastRB1State lastRB1State `i  1 s 2 lastRB1State ]
-"211
+"200
 } 0
-"191
+"180
 [v _checkMode checkMode `(v  1 e 0 0 ]
 {
-"199
+"188
 } 0
 "23 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\lcd_functions.h
 [v _instCTRL instCTRL `(v  1 e 0 0 ]
@@ -655,15 +655,15 @@ SET_TIME_END 2
 [v instCTRL@CMD CMD `uc  1 a 1 1 ]
 "31
 } 0
-"104 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
+"101 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\dht11_module.h
 [v _activateHumidifier activateHumidifier `(v  1 e 0 0 ]
 {
-"114
+"111
 } 0
-"144 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
+"131 D:\uni_2023-2024\cpe3201\embedded-systems\FinalProject\working-build\second-version\main.c
 [v _ISR ISR `II(v  1 e 0 0 ]
 {
-"151
+"140
 } 0
 "6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
 [v i1___awmod __awmod `(i  1 e 2 0 ]

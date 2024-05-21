@@ -1764,11 +1764,8 @@ void displayDataDHT11()
 char buffer[15];
 _delay((unsigned long)((2)*(4000000/4000.0)));
 
-setCursor(0, 0);
-sprintf(buffer, "TEMP: %dC", temperature);
-printToLCD(buffer);
-setCursor(1, 0);
-sprintf(buffer, "HMDT: %d", humidity);
+instCTRL(0x80);
+sprintf(buffer, "TMP: %dC HMDT: %d", temperature, humidity);
 printToLCD(buffer);
 }
 
@@ -1788,7 +1785,7 @@ _delay((unsigned long)((500)*(4000000/4000.0)));
 
 void activateHumidifier()
 {
-if (humidity > 50 && temperature > 25)
+if (humidity > 50 || temperature > 25)
 {
 PORTCbits.RC3 = 0;
 }
@@ -2161,17 +2158,14 @@ while (1)
 
 GIE = 0;
 PEIE = 0;
-
-if (mode == STAT && SEL == 0)
+if(mode == STAT)
 {
 runDHT11();
 }
-
-runMQ135();
-runClock();
-
 GIE = 1;
 PEIE = 1;
+runMQ135();
+runClock();
 
 checkMode();
 checkSEL();
@@ -2182,24 +2176,14 @@ activateHumidifier();
 switch (mode)
 {
 case STAT:
-switch (SEL)
-{
-case 0:
-setCursor(0, 0);
 displayDataDHT11();
-setCursor(2, 0);
+instCTRL(0xC0);
 displayPPM();
-break;
-case 1:
-setCursor(0, 0);
+instCTRL(0x94);
 displayTime();
-setCursor(1, 0);
+instCTRL(0xD4);
 sprintf(buffer, "RUN: %02d:%02d-%02d:%02d", savedHoursStart, savedMinutesStart, savedHoursEnd, savedMinutesEnd);
 printToLCD(buffer);
-break;
-default:
-break;
-}
 break;
 case SET_TIME_START:
 setCursor(0, 0);
@@ -2266,6 +2250,8 @@ if (INTF)
 {
 INTF = 0;
 mode = (mode + 1) % 3;
+SEL = 0;
+_delay((unsigned long)((200)*(4000000/4000.0)));
 }
 }
 

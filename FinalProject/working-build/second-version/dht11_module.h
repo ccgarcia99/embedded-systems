@@ -79,11 +79,8 @@ void displayDataDHT11()
     char buffer[15];
     __delay_ms(2);
 
-    setCursor(0, 0); // Move to first line
-    sprintf(buffer, "TEMP: %dC", temperature);
-    printToLCD(buffer);
-    setCursor(1, 0); // Move to second line
-    sprintf(buffer, "HMDT: %d", humidity);
+    instCTRL(0x80); // Move to first line
+    sprintf(buffer, "TMP: %dC HMDT: %d", temperature, humidity);
     printToLCD(buffer);
 }
 
@@ -103,7 +100,7 @@ void runDHT11()
 
 void activateHumidifier()
 {
-    if (humidity > 50 && temperature > 25)
+    if (humidity > 50 || temperature > 25)
     {
         HUMIDIFIER_EN = 0; // Turn on the humidifier
     }
