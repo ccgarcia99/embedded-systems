@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
-                                                                                               Mon May 20 07:54:26 2024
+                                                                                               Thu May 23 12:42:06 2024
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      1                           	processor	16F877A
@@ -2214,46 +2214,46 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2205  0AF8  2B6C               	goto	l2812
   2206                           
   2207                           ;time_scheduler.h: 141: {
-  2208                           ;time_scheduler.h: 142: if (key == 0b00000000)
-  2209  0AF9  08EC               	movf	_key,f
-  2210  0AFA  1D03               	skipz
-  2211  0AFB  2B16               	goto	l2796
-  2212                           
-  2213                           ;time_scheduler.h: 143: {
-  2214                           ;time_scheduler.h: 144: savedMinutesStart = (savedMinutesStart + 5) % 60;
-  2215  0AFC  303C               	movlw	60
-  2216  0AFD  00A0               	movwf	___awmod@divisor
-  2217  0AFE  3000               	movlw	0
-  2218  0AFF  00A1               	movwf	___awmod@divisor+1
-  2219  0B00  086B               	movf	_savedMinutesStart,w	;volatile
-  2220  0B01  3E05               	addlw	5
-  2221  0B02  00A2               	movwf	___awmod@dividend
-  2222  0B03  3000               	movlw	0
-  2223  0B04  1803               	skipnc
-  2224  0B05  3001               	movlw	1
-  2225  0B06  00A3               	movwf	___awmod@dividend+1
-  2226  0B07  160A  118A  2640  120A  158A  	fcall	___awmod
-  2227  0B0C  1283               	bcf	3,5	;RP0=0, select bank0
-  2228  0B0D  1303               	bcf	3,6	;RP1=0, select bank0
-  2229  0B0E  0820               	movf	?___awmod,w
-  2230  0B0F  00C8               	movwf	??_setMinutesStart
-  2231  0B10  0848               	movf	??_setMinutesStart,w
-  2232  0B11  00EB               	movwf	_savedMinutesStart	;volatile
-  2233                           
-  2234                           ;time_scheduler.h: 145: sprintf(debugInfo, "INC: %02d", savedMinutesStart);
-  2235  0B12  30D4               	movlw	low (STR_9| (0+32768))
-  2236  0B13  00AE               	movwf	sprintf@f
-  2237  0B14  3090               	movlw	high (STR_9| (0+32768))
-  2238  0B15  2B3F               	goto	L1
-  2239  0B16                     l2796:	
-  2240                           ;time_scheduler.h: 146: }
-  2241                           
+  2208                           ;time_scheduler.h: 142: if (key == 0b00000010)
+  2209  0AF9  086C               	movf	_key,w
+  2210  0AFA  3A02               	xorlw	2
+  2211  0AFB  1D03               	skipz
+  2212  0AFC  2B17               	goto	l2796
+  2213                           
+  2214                           ;time_scheduler.h: 143: {
+  2215                           ;time_scheduler.h: 144: savedMinutesStart = (savedMinutesStart + 5) % 60;
+  2216  0AFD  303C               	movlw	60
+  2217  0AFE  00A0               	movwf	___awmod@divisor
+  2218  0AFF  3000               	movlw	0
+  2219  0B00  00A1               	movwf	___awmod@divisor+1
+  2220  0B01  086B               	movf	_savedMinutesStart,w	;volatile
+  2221  0B02  3E05               	addlw	5
+  2222  0B03  00A2               	movwf	___awmod@dividend
+  2223  0B04  3000               	movlw	0
+  2224  0B05  1803               	skipnc
+  2225  0B06  3001               	movlw	1
+  2226  0B07  00A3               	movwf	___awmod@dividend+1
+  2227  0B08  160A  118A  2640  120A  158A  	fcall	___awmod
+  2228  0B0D  1283               	bcf	3,5	;RP0=0, select bank0
+  2229  0B0E  1303               	bcf	3,6	;RP1=0, select bank0
+  2230  0B0F  0820               	movf	?___awmod,w
+  2231  0B10  00C8               	movwf	??_setMinutesStart
+  2232  0B11  0848               	movf	??_setMinutesStart,w
+  2233  0B12  00EB               	movwf	_savedMinutesStart	;volatile
+  2234                           
+  2235                           ;time_scheduler.h: 145: sprintf(debugInfo, "INC: %02d", savedMinutesStart);
+  2236  0B13  30D4               	movlw	low (STR_9| (0+32768))
+  2237  0B14  00AE               	movwf	sprintf@f
+  2238  0B15  3090               	movlw	high (STR_9| (0+32768))
+  2239  0B16  2B3F               	goto	L1
+  2240  0B17                     l2796:	
+  2241                           ;time_scheduler.h: 146: }
   2242                           
-  2243                           ;time_scheduler.h: 147: else if (key == 0b00001100)
-  2244  0B16  1283               	bcf	3,5	;RP0=0, select bank0
-  2245  0B17  1303               	bcf	3,6	;RP1=0, select bank0
-  2246  0B18  086C               	movf	_key,w
-  2247  0B19  3A0C               	xorlw	12
+  2243                           
+  2244                           ;time_scheduler.h: 147: else if (key == 0b00000000)
+  2245  0B17  1283               	bcf	3,5	;RP0=0, select bank0
+  2246  0B18  1303               	bcf	3,6	;RP1=0, select bank0
+  2247  0B19  08EC               	movf	_key,f
   2248  0B1A  1D03               	skipz
   2249  0B1B  2B36               	goto	l2802
   2250                           
@@ -2470,46 +2470,46 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2460  0A4F  2AC3               	goto	l2846
   2461                           
   2462                           ;time_scheduler.h: 179: {
-  2463                           ;time_scheduler.h: 180: if (key == 0b00000000)
-  2464  0A50  08EC               	movf	_key,f
-  2465  0A51  1D03               	skipz
-  2466  0A52  2A6D               	goto	l2830
-  2467                           
-  2468                           ;time_scheduler.h: 181: {
-  2469                           ;time_scheduler.h: 182: savedMinutesEnd = (savedMinutesEnd + 5) % 60;
-  2470  0A53  303C               	movlw	60
-  2471  0A54  00A0               	movwf	___awmod@divisor
-  2472  0A55  3000               	movlw	0
-  2473  0A56  00A1               	movwf	___awmod@divisor+1
-  2474  0A57  086A               	movf	_savedMinutesEnd,w	;volatile
-  2475  0A58  3E05               	addlw	5
-  2476  0A59  00A2               	movwf	___awmod@dividend
-  2477  0A5A  3000               	movlw	0
-  2478  0A5B  1803               	skipnc
-  2479  0A5C  3001               	movlw	1
-  2480  0A5D  00A3               	movwf	___awmod@dividend+1
-  2481  0A5E  160A  118A  2640  120A  158A  	fcall	___awmod
-  2482  0A63  1283               	bcf	3,5	;RP0=0, select bank0
-  2483  0A64  1303               	bcf	3,6	;RP1=0, select bank0
-  2484  0A65  0820               	movf	?___awmod,w
-  2485  0A66  00C8               	movwf	??_setMinutesEnd
-  2486  0A67  0848               	movf	??_setMinutesEnd,w
-  2487  0A68  00EA               	movwf	_savedMinutesEnd	;volatile
-  2488                           
-  2489                           ;time_scheduler.h: 183: sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
-  2490  0A69  30D4               	movlw	low (STR_9| (0+32768))
-  2491  0A6A  00AE               	movwf	sprintf@f
-  2492  0A6B  3090               	movlw	high (STR_9| (0+32768))
-  2493  0A6C  2A96               	goto	L2
-  2494  0A6D                     l2830:	
-  2495                           ;time_scheduler.h: 184: }
-  2496                           
+  2463                           ;time_scheduler.h: 180: if (key == 0b00000010)
+  2464  0A50  086C               	movf	_key,w
+  2465  0A51  3A02               	xorlw	2
+  2466  0A52  1D03               	skipz
+  2467  0A53  2A6E               	goto	l2830
+  2468                           
+  2469                           ;time_scheduler.h: 181: {
+  2470                           ;time_scheduler.h: 182: savedMinutesEnd = (savedMinutesEnd + 5) % 60;
+  2471  0A54  303C               	movlw	60
+  2472  0A55  00A0               	movwf	___awmod@divisor
+  2473  0A56  3000               	movlw	0
+  2474  0A57  00A1               	movwf	___awmod@divisor+1
+  2475  0A58  086A               	movf	_savedMinutesEnd,w	;volatile
+  2476  0A59  3E05               	addlw	5
+  2477  0A5A  00A2               	movwf	___awmod@dividend
+  2478  0A5B  3000               	movlw	0
+  2479  0A5C  1803               	skipnc
+  2480  0A5D  3001               	movlw	1
+  2481  0A5E  00A3               	movwf	___awmod@dividend+1
+  2482  0A5F  160A  118A  2640  120A  158A  	fcall	___awmod
+  2483  0A64  1283               	bcf	3,5	;RP0=0, select bank0
+  2484  0A65  1303               	bcf	3,6	;RP1=0, select bank0
+  2485  0A66  0820               	movf	?___awmod,w
+  2486  0A67  00C8               	movwf	??_setMinutesEnd
+  2487  0A68  0848               	movf	??_setMinutesEnd,w
+  2488  0A69  00EA               	movwf	_savedMinutesEnd	;volatile
+  2489                           
+  2490                           ;time_scheduler.h: 183: sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
+  2491  0A6A  30D4               	movlw	low (STR_9| (0+32768))
+  2492  0A6B  00AE               	movwf	sprintf@f
+  2493  0A6C  3090               	movlw	high (STR_9| (0+32768))
+  2494  0A6D  2A96               	goto	L2
+  2495  0A6E                     l2830:	
+  2496                           ;time_scheduler.h: 184: }
   2497                           
-  2498                           ;time_scheduler.h: 185: else if (key == 0b00001100)
-  2499  0A6D  1283               	bcf	3,5	;RP0=0, select bank0
-  2500  0A6E  1303               	bcf	3,6	;RP1=0, select bank0
-  2501  0A6F  086C               	movf	_key,w
-  2502  0A70  3A0C               	xorlw	12
+  2498                           
+  2499                           ;time_scheduler.h: 185: else if (key == 0b00000000)
+  2500  0A6E  1283               	bcf	3,5	;RP0=0, select bank0
+  2501  0A6F  1303               	bcf	3,6	;RP1=0, select bank0
+  2502  0A70  08EC               	movf	_key,f
   2503  0A71  1D03               	skipz
   2504  0A72  2A8D               	goto	l2836
   2505                           
@@ -2726,46 +2726,46 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2715  09A6  2A1A               	goto	l2744
   2716                           
   2717                           ;time_scheduler.h: 64: {
-  2718                           ;time_scheduler.h: 65: if (key == 0b00000000)
-  2719  09A7  08EC               	movf	_key,f
-  2720  09A8  1D03               	skipz
-  2721  09A9  29C4               	goto	l2728
-  2722                           
-  2723                           ;time_scheduler.h: 66: {
-  2724                           ;time_scheduler.h: 67: savedHoursStart = (savedHoursStart + 1) % 24;
-  2725  09AA  3018               	movlw	24
-  2726  09AB  00A0               	movwf	___awmod@divisor
-  2727  09AC  3000               	movlw	0
-  2728  09AD  00A1               	movwf	___awmod@divisor+1
-  2729  09AE  0869               	movf	_savedHoursStart,w	;volatile
-  2730  09AF  3E01               	addlw	1
-  2731  09B0  00A2               	movwf	___awmod@dividend
-  2732  09B1  3000               	movlw	0
-  2733  09B2  1803               	skipnc
-  2734  09B3  3001               	movlw	1
-  2735  09B4  00A3               	movwf	___awmod@dividend+1
-  2736  09B5  160A  118A  2640  120A  158A  	fcall	___awmod
-  2737  09BA  1283               	bcf	3,5	;RP0=0, select bank0
-  2738  09BB  1303               	bcf	3,6	;RP1=0, select bank0
-  2739  09BC  0820               	movf	?___awmod,w
-  2740  09BD  00C8               	movwf	??_setHoursStart
-  2741  09BE  0848               	movf	??_setHoursStart,w
-  2742  09BF  00E9               	movwf	_savedHoursStart	;volatile
-  2743                           
-  2744                           ;time_scheduler.h: 68: sprintf(debugInfo, "INC: %02d", savedHoursStart);
-  2745  09C0  30D4               	movlw	low (STR_9| (0+32768))
-  2746  09C1  00AE               	movwf	sprintf@f
-  2747  09C2  3090               	movlw	high (STR_9| (0+32768))
-  2748  09C3  29ED               	goto	L3
-  2749  09C4                     l2728:	
-  2750                           ;time_scheduler.h: 69: }
-  2751                           
+  2718                           ;time_scheduler.h: 65: if (key == 0b00000010)
+  2719  09A7  086C               	movf	_key,w
+  2720  09A8  3A02               	xorlw	2
+  2721  09A9  1D03               	skipz
+  2722  09AA  29C5               	goto	l2728
+  2723                           
+  2724                           ;time_scheduler.h: 66: {
+  2725                           ;time_scheduler.h: 67: savedHoursStart = (savedHoursStart + 1) % 24;
+  2726  09AB  3018               	movlw	24
+  2727  09AC  00A0               	movwf	___awmod@divisor
+  2728  09AD  3000               	movlw	0
+  2729  09AE  00A1               	movwf	___awmod@divisor+1
+  2730  09AF  0869               	movf	_savedHoursStart,w	;volatile
+  2731  09B0  3E01               	addlw	1
+  2732  09B1  00A2               	movwf	___awmod@dividend
+  2733  09B2  3000               	movlw	0
+  2734  09B3  1803               	skipnc
+  2735  09B4  3001               	movlw	1
+  2736  09B5  00A3               	movwf	___awmod@dividend+1
+  2737  09B6  160A  118A  2640  120A  158A  	fcall	___awmod
+  2738  09BB  1283               	bcf	3,5	;RP0=0, select bank0
+  2739  09BC  1303               	bcf	3,6	;RP1=0, select bank0
+  2740  09BD  0820               	movf	?___awmod,w
+  2741  09BE  00C8               	movwf	??_setHoursStart
+  2742  09BF  0848               	movf	??_setHoursStart,w
+  2743  09C0  00E9               	movwf	_savedHoursStart	;volatile
+  2744                           
+  2745                           ;time_scheduler.h: 68: sprintf(debugInfo, "INC: %02d", savedHoursStart);
+  2746  09C1  30D4               	movlw	low (STR_9| (0+32768))
+  2747  09C2  00AE               	movwf	sprintf@f
+  2748  09C3  3090               	movlw	high (STR_9| (0+32768))
+  2749  09C4  29ED               	goto	L3
+  2750  09C5                     l2728:	
+  2751                           ;time_scheduler.h: 69: }
   2752                           
-  2753                           ;time_scheduler.h: 70: else if (key == 0b00001100)
-  2754  09C4  1283               	bcf	3,5	;RP0=0, select bank0
-  2755  09C5  1303               	bcf	3,6	;RP1=0, select bank0
-  2756  09C6  086C               	movf	_key,w
-  2757  09C7  3A0C               	xorlw	12
+  2753                           
+  2754                           ;time_scheduler.h: 70: else if (key == 0b00000000)
+  2755  09C5  1283               	bcf	3,5	;RP0=0, select bank0
+  2756  09C6  1303               	bcf	3,6	;RP1=0, select bank0
+  2757  09C7  08EC               	movf	_key,f
   2758  09C8  1D03               	skipz
   2759  09C9  29E4               	goto	l2734
   2760                           
@@ -2982,46 +2982,46 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
   2970  08FD  2971               	goto	l2778
   2971                           
   2972                           ;time_scheduler.h: 103: {
-  2973                           ;time_scheduler.h: 104: if (key == 0b00000000)
-  2974  08FE  08EC               	movf	_key,f
-  2975  08FF  1D03               	skipz
-  2976  0900  291B               	goto	l2762
-  2977                           
-  2978                           ;time_scheduler.h: 105: {
-  2979                           ;time_scheduler.h: 106: savedHoursEnd = (savedHoursEnd + 1) % 24;
-  2980  0901  3018               	movlw	24
-  2981  0902  00A0               	movwf	___awmod@divisor
-  2982  0903  3000               	movlw	0
-  2983  0904  00A1               	movwf	___awmod@divisor+1
-  2984  0905  0868               	movf	_savedHoursEnd,w	;volatile
-  2985  0906  3E01               	addlw	1
-  2986  0907  00A2               	movwf	___awmod@dividend
-  2987  0908  3000               	movlw	0
-  2988  0909  1803               	skipnc
-  2989  090A  3001               	movlw	1
-  2990  090B  00A3               	movwf	___awmod@dividend+1
-  2991  090C  160A  118A  2640  120A  158A  	fcall	___awmod
-  2992  0911  1283               	bcf	3,5	;RP0=0, select bank0
-  2993  0912  1303               	bcf	3,6	;RP1=0, select bank0
-  2994  0913  0820               	movf	?___awmod,w
-  2995  0914  00C8               	movwf	??_setHoursEnd
-  2996  0915  0848               	movf	??_setHoursEnd,w
-  2997  0916  00E8               	movwf	_savedHoursEnd	;volatile
-  2998                           
-  2999                           ;time_scheduler.h: 107: sprintf(debugInfo, "INC: %02d", savedHoursEnd);
-  3000  0917  30D4               	movlw	low (STR_9| (0+32768))
-  3001  0918  00AE               	movwf	sprintf@f
-  3002  0919  3090               	movlw	high (STR_9| (0+32768))
-  3003  091A  2944               	goto	L4
-  3004  091B                     l2762:	
-  3005                           ;time_scheduler.h: 108: }
-  3006                           
+  2973                           ;time_scheduler.h: 104: if (key == 0b00000010)
+  2974  08FE  086C               	movf	_key,w
+  2975  08FF  3A02               	xorlw	2
+  2976  0900  1D03               	skipz
+  2977  0901  291C               	goto	l2762
+  2978                           
+  2979                           ;time_scheduler.h: 105: {
+  2980                           ;time_scheduler.h: 106: savedHoursEnd = (savedHoursEnd + 1) % 24;
+  2981  0902  3018               	movlw	24
+  2982  0903  00A0               	movwf	___awmod@divisor
+  2983  0904  3000               	movlw	0
+  2984  0905  00A1               	movwf	___awmod@divisor+1
+  2985  0906  0868               	movf	_savedHoursEnd,w	;volatile
+  2986  0907  3E01               	addlw	1
+  2987  0908  00A2               	movwf	___awmod@dividend
+  2988  0909  3000               	movlw	0
+  2989  090A  1803               	skipnc
+  2990  090B  3001               	movlw	1
+  2991  090C  00A3               	movwf	___awmod@dividend+1
+  2992  090D  160A  118A  2640  120A  158A  	fcall	___awmod
+  2993  0912  1283               	bcf	3,5	;RP0=0, select bank0
+  2994  0913  1303               	bcf	3,6	;RP1=0, select bank0
+  2995  0914  0820               	movf	?___awmod,w
+  2996  0915  00C8               	movwf	??_setHoursEnd
+  2997  0916  0848               	movf	??_setHoursEnd,w
+  2998  0917  00E8               	movwf	_savedHoursEnd	;volatile
+  2999                           
+  3000                           ;time_scheduler.h: 107: sprintf(debugInfo, "INC: %02d", savedHoursEnd);
+  3001  0918  30D4               	movlw	low (STR_9| (0+32768))
+  3002  0919  00AE               	movwf	sprintf@f
+  3003  091A  3090               	movlw	high (STR_9| (0+32768))
+  3004  091B  2944               	goto	L4
+  3005  091C                     l2762:	
+  3006                           ;time_scheduler.h: 108: }
   3007                           
-  3008                           ;time_scheduler.h: 109: else if (key == 0b00001100)
-  3009  091B  1283               	bcf	3,5	;RP0=0, select bank0
-  3010  091C  1303               	bcf	3,6	;RP1=0, select bank0
-  3011  091D  086C               	movf	_key,w
-  3012  091E  3A0C               	xorlw	12
+  3008                           
+  3009                           ;time_scheduler.h: 109: else if (key == 0b00000000)
+  3010  091C  1283               	bcf	3,5	;RP0=0, select bank0
+  3011  091D  1303               	bcf	3,6	;RP1=0, select bank0
+  3012  091E  08EC               	movf	_key,f
   3013  091F  1D03               	skipz
   3014  0920  293B               	goto	l2768
   3015                           
@@ -9909,7 +9909,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                   Mon May 20 07:54:26 2024
+Symbol Table                                                                                   Thu May 23 12:42:06 2024
 
                           pc 0002                 ?_displayTime 0070                  __CFG_CP$OFF 0000  
                          l69 1464                           fsr 0004          ___wmul@multiplicand 0022  
@@ -9962,13 +9962,13 @@ Symbol Table                                                                    
                        l2582 1760                         l2494 0BC4                         l2486 0BB8  
                        l2478 0BAD                         l2654 158F                         l2574 1688  
                        l2566 1675                         l2742 0A0C                         l2734 09E4  
-                       l2830 0A6D                         l2728 09C4                         l2744 0A1A  
-                       l2586 1787                         l2658 15A3                         l2762 091B  
+                       l2830 0A6E                         l2728 09C5                         l2744 0A1A  
+                       l2586 1787                         l2658 15A3                         l2762 091C  
                        l2932 14C6                         l2684 0716                         l2844 0AB5  
                        l2836 0A8D                         l2870 170B                         l2846 0AC3  
                        l2864 16FB                         l2856 16EB                         l2776 0963  
                        l2768 093B                         l1994 12F1                         l2778 0971  
-                       l2884 172B                         l2796 0B16                         l2878 171B  
+                       l2884 172B                         l2796 0B17                         l2878 171B  
                        l2994 05E0                         l2986 05D4                         STR_1 1047  
                        STR_2 110A                         STR_3 1111                         STR_4 1056  
                        STR_5 10E8                         STR_6 10FA                         STR_7 1102  

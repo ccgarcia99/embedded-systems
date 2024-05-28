@@ -4,8 +4,8 @@
 #include "common_dependencies.h"
 
 // KEY MASKS
-#define INCREMENT 0b00000000
-#define DECREMENT 0b00001100
+#define INCREMENT 0b00000010
+#define DECREMENT 0b00000000
 #define SET 0b00001101 // redundant
 #define ENABLE_FAN PORTCbits.RC4
 

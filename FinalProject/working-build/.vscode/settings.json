@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "dht11_module.h": "c"
+    }
+}

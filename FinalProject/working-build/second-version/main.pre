@@ -1931,12 +1931,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00000000)
+if (key == 0b00000010)
 {
 savedHoursStart = (savedHoursStart + 1) % 24;
 sprintf(debugInfo, "INC: %02d", savedHoursStart);
 }
-else if (key == 0b00001100)
+else if (key == 0b00000000)
 {
 savedHoursStart = (savedHoursStart - 1 + 24) % 24;
 sprintf(debugInfo, "DEC: %02d", savedHoursStart);
@@ -1970,12 +1970,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00000000)
+if (key == 0b00000010)
 {
 savedHoursEnd = (savedHoursEnd + 1) % 24;
 sprintf(debugInfo, "INC: %02d", savedHoursEnd);
 }
-else if (key == 0b00001100)
+else if (key == 0b00000000)
 {
 savedHoursEnd = (savedHoursEnd - 1 + 24) % 24;
 sprintf(debugInfo, "DEC: %02d", savedHoursEnd);
@@ -2008,12 +2008,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00000000)
+if (key == 0b00000010)
 {
 savedMinutesStart = (savedMinutesStart + 5) % 60;
 sprintf(debugInfo, "INC: %02d", savedMinutesStart);
 }
-else if (key == 0b00001100)
+else if (key == 0b00000000)
 {
 savedMinutesStart = (savedMinutesStart - 5 + 60) % 60;
 sprintf(debugInfo, "DEC: %02d", savedMinutesStart);
@@ -2046,12 +2046,12 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 
 if (keyValid && key != lastKeyState)
 {
-if (key == 0b00000000)
+if (key == 0b00000010)
 {
 savedMinutesEnd = (savedMinutesEnd + 5) % 60;
 sprintf(debugInfo, "INC: %02d", savedMinutesEnd);
 }
-else if (key == 0b00001100)
+else if (key == 0b00000000)
 {
 savedMinutesEnd = (savedMinutesEnd - 5 + 60) % 60;
 sprintf(debugInfo, "DEC: %02d", savedMinutesEnd);

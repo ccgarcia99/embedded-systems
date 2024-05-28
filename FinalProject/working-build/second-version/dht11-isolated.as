@@ -3148,8 +3148,9 @@ u3760:
 	
 l2790:	
 ;time_scheduler.h: 141: {
-;time_scheduler.h: 142: if (key == 0b00000000)
-	movf	(_key),f
+;time_scheduler.h: 142: if (key == 0b00000010)
+	movf	(_key),w
+	xorlw	02h
 	skipz
 	goto	u3771
 	goto	u3770
@@ -3204,11 +3205,10 @@ l2794:
 l223:	
 	
 l2796:	
-;time_scheduler.h: 147: else if (key == 0b00001100)
+;time_scheduler.h: 147: else if (key == 0b00000000)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movf	(_key),w
-	xorlw	0Ch
+	movf	(_key),f
 	skipz
 	goto	u3781
 	goto	u3780
@@ -3528,8 +3528,9 @@ u3850:
 	
 l2824:	
 ;time_scheduler.h: 179: {
-;time_scheduler.h: 180: if (key == 0b00000000)
-	movf	(_key),f
+;time_scheduler.h: 180: if (key == 0b00000010)
+	movf	(_key),w
+	xorlw	02h
 	skipz
 	goto	u3861
 	goto	u3860
@@ -3584,11 +3585,10 @@ l2828:
 l237:	
 	
 l2830:	
-;time_scheduler.h: 185: else if (key == 0b00001100)
+;time_scheduler.h: 185: else if (key == 0b00000000)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movf	(_key),w
-	xorlw	0Ch
+	movf	(_key),f
 	skipz
 	goto	u3871
 	goto	u3870
@@ -3908,8 +3908,9 @@ u3580:
 	
 l2722:	
 ;time_scheduler.h: 64: {
-;time_scheduler.h: 65: if (key == 0b00000000)
-	movf	(_key),f
+;time_scheduler.h: 65: if (key == 0b00000010)
+	movf	(_key),w
+	xorlw	02h
 	skipz
 	goto	u3591
 	goto	u3590
@@ -3964,11 +3965,10 @@ l2726:
 l195:	
 	
 l2728:	
-;time_scheduler.h: 70: else if (key == 0b00001100)
+;time_scheduler.h: 70: else if (key == 0b00000000)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movf	(_key),w
-	xorlw	0Ch
+	movf	(_key),f
 	skipz
 	goto	u3601
 	goto	u3600
@@ -4288,8 +4288,9 @@ u3670:
 	
 l2756:	
 ;time_scheduler.h: 103: {
-;time_scheduler.h: 104: if (key == 0b00000000)
-	movf	(_key),f
+;time_scheduler.h: 104: if (key == 0b00000010)
+	movf	(_key),w
+	xorlw	02h
 	skipz
 	goto	u3681
 	goto	u3680
@@ -4344,11 +4345,10 @@ l2760:
 l209:	
 	
 l2762:	
-;time_scheduler.h: 109: else if (key == 0b00001100)
+;time_scheduler.h: 109: else if (key == 0b00000000)
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	movf	(_key),w
-	xorlw	0Ch
+	movf	(_key),f
 	skipz
 	goto	u3691
 	goto	u3690

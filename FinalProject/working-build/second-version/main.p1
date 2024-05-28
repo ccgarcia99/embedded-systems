@@ -2153,9 +2153,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;time_scheduler.h: 64: {
 "64
 {
-[; ;time_scheduler.h: 65: if (key == 0b00000000)
+[; ;time_scheduler.h: 65: if (key == 0b00000010)
 "65
-[e $ ! == -> _key `i -> 0 `i 158  ]
+[e $ ! == -> _key `i -> 2 `i 158  ]
 [; ;time_scheduler.h: 66: {
 "66
 {
@@ -2171,8 +2171,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 159  ]
 "70
 [e :U 158 ]
-[; ;time_scheduler.h: 70: else if (key == 0b00001100)
-[e $ ! == -> _key `i -> 12 `i 160  ]
+[; ;time_scheduler.h: 70: else if (key == 0b00000000)
+[e $ ! == -> _key `i -> 0 `i 160  ]
 [; ;time_scheduler.h: 71: {
 "71
 {
@@ -2271,9 +2271,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;time_scheduler.h: 103: {
 "103
 {
-[; ;time_scheduler.h: 104: if (key == 0b00000000)
+[; ;time_scheduler.h: 104: if (key == 0b00000010)
 "104
-[e $ ! == -> _key `i -> 0 `i 170  ]
+[e $ ! == -> _key `i -> 2 `i 170  ]
 [; ;time_scheduler.h: 105: {
 "105
 {
@@ -2289,8 +2289,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 171  ]
 "109
 [e :U 170 ]
-[; ;time_scheduler.h: 109: else if (key == 0b00001100)
-[e $ ! == -> _key `i -> 12 `i 172  ]
+[; ;time_scheduler.h: 109: else if (key == 0b00000000)
+[e $ ! == -> _key `i -> 0 `i 172  ]
 [; ;time_scheduler.h: 110: {
 "110
 {
@@ -2389,9 +2389,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;time_scheduler.h: 141: {
 "141
 {
-[; ;time_scheduler.h: 142: if (key == 0b00000000)
+[; ;time_scheduler.h: 142: if (key == 0b00000010)
 "142
-[e $ ! == -> _key `i -> 0 `i 182  ]
+[e $ ! == -> _key `i -> 2 `i 182  ]
 [; ;time_scheduler.h: 143: {
 "143
 {
@@ -2407,8 +2407,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 183  ]
 "147
 [e :U 182 ]
-[; ;time_scheduler.h: 147: else if (key == 0b00001100)
-[e $ ! == -> _key `i -> 12 `i 184  ]
+[; ;time_scheduler.h: 147: else if (key == 0b00000000)
+[e $ ! == -> _key `i -> 0 `i 184  ]
 [; ;time_scheduler.h: 148: {
 "148
 {
@@ -2507,9 +2507,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;time_scheduler.h: 179: {
 "179
 {
-[; ;time_scheduler.h: 180: if (key == 0b00000000)
+[; ;time_scheduler.h: 180: if (key == 0b00000010)
 "180
-[e $ ! == -> _key `i -> 0 `i 194  ]
+[e $ ! == -> _key `i -> 2 `i 194  ]
 [; ;time_scheduler.h: 181: {
 "181
 {
@@ -2525,8 +2525,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 195  ]
 "185
 [e :U 194 ]
-[; ;time_scheduler.h: 185: else if (key == 0b00001100)
-[e $ ! == -> _key `i -> 12 `i 196  ]
+[; ;time_scheduler.h: 185: else if (key == 0b00000000)
+[e $ ! == -> _key `i -> 0 `i 196  ]
 [; ;time_scheduler.h: 186: {
 "186
 {
